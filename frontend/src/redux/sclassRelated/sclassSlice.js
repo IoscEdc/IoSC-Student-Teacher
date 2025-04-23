@@ -40,7 +40,7 @@ const sclassSlice = createSlice({
             state.sclassTeachers = action.payload;
             state.loading = false;
             state.error = null;
-            state.getresponse1 = null;
+            state.getresponse = null;
         },
         getSubjectsSuccess: (state, action) => {
             state.subjectsList = action.payload;

@@ -39,7 +39,6 @@ const ClassDetails = () => {
     error,
     response,
     getresponse,
-    getresponse1,
   } = useSelector((state) => state.sclass);
 
   const classID = params.id;
@@ -296,7 +295,7 @@ const teacherActions = [
   const ClassTeachersSection = () => {
     return (
       <>
-        {getresponse1 ? (
+        {getresponse ? (
           <>
             <Box
               sx={{

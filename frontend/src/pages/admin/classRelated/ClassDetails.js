@@ -332,9 +332,9 @@ const teacherActions = [
   };
 
   const ClassDetailsSection = () => {
-    const numberOfSubjects = subjectsList.length;
-    const numberOfStudents = sclassStudents.length;
-    const numberOfTeachers = sclassTeachers.length;
+    const numberOfSubjects = subjectsList?.length ?? 0;
+    const numberOfStudents = sclassStudents?.length ?? 0;
+    const numberOfTeachers = sclassTeachers?.length ?? 0;
 
     return (
       <>

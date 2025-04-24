@@ -6,6 +6,7 @@ export const RedButton = styled(Button)`
     background-color: #f00;
     color: white;
     margin-left: 4px;
+    padding: 5px;
     &:hover {
       background-color: #eb7979;
       border-color: #f26767;
@@ -19,6 +20,7 @@ export const BlackButton = styled(Button)`
     background-color: #000000;
     color: white;
     margin-left: 4px;
+    padding: 5px;
     &:hover {
       background-color: #212020;
       border-color: #212020;
@@ -31,6 +33,7 @@ export const DarkRedButton = styled(Button)`
   && {
     background-color: #650909;
     color: white;
+    padding: 5px;
     &:hover {
       background-color: #eb7979;
       border-color: #f26767;
@@ -43,6 +46,8 @@ export const BlueButton = styled(Button)`
   && {
     background-color: #080a43;
     color: #fff;
+    margin: 5px;
+    padding: 5px;
     &:hover {
       background-color: #0a1e82;
     }
@@ -53,6 +58,8 @@ export const PurpleButton = styled(Button)`
   && {
     background-color: #270843;
     color: #fff;
+    margin: 5px;
+    padding: 5px;
     &:hover {
       background-color: #3f1068;
     }
@@ -89,6 +96,7 @@ export const GreenButton = styled(Button)`
   && {
     background-color: #133104;
     color: #fff;
+    margin: 5px;
     &:hover {
       background-color: #266810;
     }

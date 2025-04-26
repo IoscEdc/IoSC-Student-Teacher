@@ -1,19 +1,24 @@
 
-
+// Sample student data to be stored in localStorage
 const sampleStudentData = {
-  studentId: '12345',  // Student ID
-  name: 'John Doe',     // Student Name
+  studentId: 'S12345',
+  name: 'John Doe',
   grades: [
-    { assignmentId: 'A1', name: 'Math Homework', score: 95, status: 'submitted' },
-    { assignmentId: 'A2', name: 'Science Project', score: 85, status: 'pending' }
+    { assignmentId: 'A1', name: 'Math Homework', score: 90, status: 'Completed' },
+    { assignmentId: 'A2', name: 'Science Homework', score: 85, status: 'Completed' },
   ],
   exams: [
-    { examId: 'E1', name: 'Midterm Exam', score: 78 }
-  ]
+    { examId: 'E1', name: 'Math Exam', score: 88 },
+    { examId: 'E2', name: 'Science Exam', score: 92 },
+  ],
 };
 
-// Store the data in localStorage
-localStorage.setItem('studentData', JSON.stringify(sampleStudentData));
+try {
+  // Attempt to store the student data in localStorage
+  localStorage.setItem('studentData', JSON.stringify(sampleStudentData));
+  console.log(localStorage.getItem('studentData'));  // Verify the data is stored
+} catch (error) {
+  console.error('Failed to store student data in localStorage:', error);  // Log any errors
+  // Optionally, notify the user or fallback behavior can be implemented here
+}
 
-// Verify the data is stored
-console.log(localStorage.getItem('studentData'));

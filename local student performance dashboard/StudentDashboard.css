@@ -1,0 +1,27 @@
+/* Dashboard styling */
+.dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #4CAF50;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+}

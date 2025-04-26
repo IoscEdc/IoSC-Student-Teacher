@@ -1,10 +1,16 @@
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
+const feedbackRoutes = require('./routes/feedback');
+require('dotenv').config();
+
+const express = require("express")
+const cors = require("cors")
+const mongoose = require("mongoose")
+const dotenv = require("dotenv")
 // const bodyParser = require("body-parser")
-const app = express();
-const Routes = require("./routes/route.js");
+const app = express()
+const Routes = require("./routes/route.js")
+const chatbotRoutes = require('./routes/chatbot');
+app.use('/api/feedback', feedbackRoutes);
+app.use('/api/chat', chatbotRoutes);
 
 const PORT = process.env.PORT || 5000;
 
@@ -35,6 +41,5 @@ mongoose
 app.use("/", Routes);
 
 app.listen(PORT, () => {
-  console.log(`Server started at port no. ${PORT}`);
-});
-
+    console.log(`Server started at port no. ${PORT}`)
+})

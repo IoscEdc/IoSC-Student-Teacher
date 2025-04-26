@@ -1,5 +1,4 @@
 
-// Sample student data to be stored in localStorage
 const sampleStudentData = {
   studentId: 'S12345',
   name: 'John Doe',
@@ -14,11 +13,8 @@ const sampleStudentData = {
 };
 
 try {
-  // Attempt to store the student data in localStorage
   localStorage.setItem('studentData', JSON.stringify(sampleStudentData));
-  console.log(localStorage.getItem('studentData'));  // Verify the data is stored
+  console.log(localStorage.getItem('studentData'));  // Verify data storage
 } catch (error) {
-  console.error('Failed to store student data in localStorage:', error);  // Log any errors
-  // Optionally, notify the user or fallback behavior can be implemented here
+  console.error('Failed to store student data in localStorage:', error);  // Log any error
 }
-

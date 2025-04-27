@@ -1,0 +1,16 @@
+/* Add this to StudentDashboard.css */
+.loading-spinner {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.loading-spinner::before {
+  content: '⏳ Loading...';
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

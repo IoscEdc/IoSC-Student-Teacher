@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const eventSchema = new mongoose.Schema({
             title:{
                 type: String,
-                require : true,
+                required : true,
                 min : 8
             },
             description: {
@@ -14,7 +14,7 @@ const eventSchema = new mongoose.Schema({
             startDate: Date,
             endDate: Date,
             eventType: String,
-            createdBy: {
+            school: {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: 'Admin'  // Who created the event
             }

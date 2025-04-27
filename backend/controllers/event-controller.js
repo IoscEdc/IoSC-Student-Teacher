@@ -83,4 +83,48 @@ const deleteEvent = async (req, res) => {
     }
 }
 
-module.exports = { eventCreate,  updateEvent, deleteEvent };
+// Get all events
+const getAllEvents = async (req, res) => {
+    try {
+        const events = await Event.find(); // Fetch all events from the database
+        res.status(200).json({
+            success: true,
+            message: 'Events fetched successfully',
+            data: events
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Internal Server Error',
+            error: error.message
+        });
+    }
+};
+
+
+// Get event by ID
+const getEventById = async (req, res) => {
+    try {
+        const event = await Event.findById(req.params.id); // Find event by ID
+        if (!event) {
+            return res.status(404).json({
+                success: false,
+                message: 'Event not found'
+            });
+        }
+        res.status(200).json({
+            success: true,
+            message: 'Event fetched successfully',
+            data: event
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Internal Server Error',
+            error: error.message
+        });
+    }
+};
+
+
+module.exports = { eventCreate,  updateEvent, deleteEvent ,getAllEvents, getEventById};

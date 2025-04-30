@@ -4,12 +4,12 @@ const eventSchema = new mongoose.Schema({
             title:{
                 type: String,
                 required : true,
-                min : 8
+                minLength : 8
             },
             description: {
                 type: String,
-                req: true,
-                min : 15
+                required: true,
+                minLength : 15
             },
             startDate: Date,
             endDate: Date,

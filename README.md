@@ -141,6 +141,47 @@ Feel free to fork this repo, create your branch, and submit a pull request!
 
 ---
 
+# 🛠️ After submitting a PR or after new PRs are merged:  
+## How to keep your local repo updated
+
+If you have **forked** the repo, always remember to follow these steps so that changes in the **original repo** are also reflected in your **local repo**.
+
+---
+
+✅ You need to run this **only once** (to set upstream):
+```bash
+git remote add upstream https://github.com/IoscEdc/IoSC-Student-Teacher.git
+```
+
+---
+
+✅ Then, **every time you want to update your local repo**:
+
+```bash
+git fetch upstream
+git checkout main
+git merge upstream/main
+```
+
+*(This will pull the latest code from the original repo into your local `main` branch.)*
+
+---
+
+If you want, you can also **push** these updates to your forked repo on GitHub (optional but recommended):
+
+```bash
+git push origin main
+```
+
+This way your **GitHub fork** stays updated too! 🚀
+
+---
+
+**shortcut** way where you don’t even have to manually merge:
+ (Using `git pull upstream main` directly!) 🚀 It saves a step!
+
+---
+
 ## 📦 Deployment Info
 
 - **Frontend:** Deployed on Netlify  

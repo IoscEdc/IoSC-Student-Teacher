@@ -7,6 +7,7 @@ const { adminRegister, adminLogIn, getAdminDetail} = require('../controllers/adm
 const { sclassCreate, sclassList, deleteSclass, deleteSclasses, getSclassDetail, getSclassStudents } = require('../controllers/class-controller.js');
 const { complainCreate, complainList } = require('../controllers/complain-controller.js');
 const { noticeCreate, noticeList, deleteNotices, deleteNotice, updateNotice } = require('../controllers/notice-controller.js');
+const { eventCreate, deleteEvent, updateEvent,getAllEvents,getEventById} = require('../controllers/event-controller.js');
 const {
     studentRegister,
     studentLogIn,
@@ -115,5 +116,13 @@ router.get("/Subject/:id", getSubjectDetail)
 router.delete("/Subject/:id", deleteSubject)
 router.delete("/Subjects/:id", deleteSubjects)
 router.delete("/SubjectsClass/:id", deleteSubjectsByClass)
+
+//Event
+
+router.post('/EventCreate', eventCreate);
+router.delete("/Event/:id", deleteEvent)
+router.get('/Events', getAllEvents); 
+router.get('/Event/:id', getEventById);
+router.put("/Event/:id", updateEvent);
 
 module.exports = router;

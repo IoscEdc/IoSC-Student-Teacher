@@ -1,3 +1,5 @@
+
+
 import axios from 'axios';
 import {
     authRequest,
@@ -12,7 +14,7 @@ import {
     getFailed,
     getError,
 } from './userSlice';
-
+const REACT_APP_BASE_URL = "https://localhost:5000";
 export const loginUser = (fields, role) => async (dispatch) => {
     dispatch(authRequest());
 

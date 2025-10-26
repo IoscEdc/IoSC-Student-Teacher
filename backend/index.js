@@ -1,3 +1,9 @@
+const attendanceRoutes = require('./routes/attendance');
+app.use('/api/attendance', attendanceRoutes);
+
+
+
+
 const feedbackRoutes = require('./routes/feedback');
 require('dotenv').config();
 

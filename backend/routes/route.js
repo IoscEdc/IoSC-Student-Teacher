@@ -27,7 +27,7 @@ const {
     removeStudentAttendance } = require('../controllers/student-controller.js');
 const { subjectCreate, classSubjects, deleteSubjectsByClass, getSubjectDetail, deleteSubject, freeSubjectList, allSubjects, deleteSubjects } = require('../controllers/subject-controller.js');
 const { teacherRegister, teacherLogIn, teacherForgotPassword, teacherResetPassword, getTeachers, getTeacherDetail, deleteTeachers, deleteTeachersByClass, deleteTeacher, updateTeacherSubject, teacherAttendance } = require('../controllers/teacher-controller.js');
-// const { getTimeTable , putTimeTable , getBatch , postBatch , deleteBatch , getCalendar , postCalendar , putCalendar , deleteCalendar } = require('../controllers/timetable-controller.js');
+const { getTimeTable , putTimeTable , getBatch , postBatch , deleteBatch , getCalendar , postCalendar , putCalendar , deleteCalendar } = require('../controllers/timetable-controller.js');
 
 // Admin (registration disabled)
 // router.post('/AdminReg', adminRegister); // Disabled - admins created by system administrators only
@@ -119,17 +119,17 @@ router.delete("/Sclasses/:id", deleteSclasses)
 router.delete("/Sclass/:id", deleteSclass)
 
 // TimeTable
-// router.get('/TimeTable/:batch', getTimeTable);
-// router.put('/TimeTable/:batch', putTimeTable);
-// router.get('/batches' ,getBatch);
-// router.post('/batches' , postBatch);
-// router.delete('/batches/:batch' , deleteBatch);
+router.get('/TimeTable/:batch', getTimeTable);
+router.put('/TimeTable/:batch', putTimeTable);
+router.get('/batches' ,getBatch);
+router.post('/batches' , postBatch);
+router.delete('/batches/:batch' , deleteBatch);
 
-// // Calendar
-// router.get('/Calender' , getCalendar)
-// router.post('/Calender' , postCalendar)
-// router.put('/Calender' , putCalendar);
-// router.delete('/Calender/:id' , deleteCalendar)
+// Calendar
+router.get('/Calender' , getCalendar)
+router.post('/Calender' , postCalendar)
+router.put('/Calender' , putCalendar);
+router.delete('/Calender/:id' , deleteCalendar)
 
 // Subject
 router.post('/SubjectCreate', subjectCreate);
@@ -142,5 +142,6 @@ router.get("/Subject/:id", getSubjectDetail)
 router.delete("/Subject/:id", deleteSubject)
 router.delete("/Subjects/:id", deleteSubjects)
 router.delete("/SubjectsClass/:id", deleteSubjectsByClass)
+
 
 module.exports = router;

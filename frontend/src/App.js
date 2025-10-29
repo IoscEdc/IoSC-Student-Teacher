@@ -15,10 +15,9 @@ import StudentResetPassword from './pages/StudentResetPassword';
 import TeacherResetPassword from './pages/TeacherResetPassword';
 import LoginSuccess from './pages/LoginSuccess';
 import Logout from './pages/Logout';
-
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
-
+    
   return (
     <Router>
       {/* Always accessible routes */}

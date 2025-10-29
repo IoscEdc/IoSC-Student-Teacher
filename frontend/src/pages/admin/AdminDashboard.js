@@ -43,6 +43,9 @@ import ClassDetails from './classRelated/ClassDetails';
 import ShowClasses from './classRelated/ShowClasses';
 import AccountMenu from '../../components/AccountMenu';
 
+import AdminTimeTable from './AdminTimeTable';
+import AdminCalender from './AdminCalender';
+
 const AdminDashboard = () => {
     const [open, setOpen] = useState(false);
     const theme = useTheme();
@@ -181,6 +184,10 @@ const AdminDashboard = () => {
                     <Route path="/Admin/teachers/choosesubject/:id" element={<ChooseSubject situation="Norm" />} />
                     <Route path="/Admin/teachers/choosesubject/:classID/:teacherID" element={<ChooseSubject situation="Teacher" />} />
                     <Route path="/Admin/teachers/addteacher/:id" element={<AddTeacher />} />
+
+                    {/* Time Table */}
+                    <Route path='/Admin/timetable' element={<AdminTimeTable />} />
+                    <Route path='/Admin/calender' element={<AdminCalender />} />
 
                     <Route path="/logout" element={<Logout />} />
                 </Routes>

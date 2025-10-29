@@ -19,11 +19,14 @@
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
+    "googleapis": "^164.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.8.7",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
     "nodemailer": "^7.0.10"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.1.10"
   }
 }

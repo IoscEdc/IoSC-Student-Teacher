@@ -11,6 +11,8 @@ import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined';
 import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined';
 import ReportIcon from '@mui/icons-material/Report';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 
 const SideBar = () => {
     const location = useLocation();
@@ -46,6 +48,18 @@ const SideBar = () => {
                         <PersonOutlineIcon color={location.pathname.startsWith("/Admin/students") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="Students" />
+                </ListItemButton>
+                <ListItemButton component={Link} to="/Admin/timetable">
+                    <ListItemIcon>
+                        <CalendarMonthIcon color={location.pathname.startsWith("/Admin/timetable") ? 'primary' : 'inherit'} />
+                    </ListItemIcon>
+                    <ListItemText primary="TimeTable" />
+                </ListItemButton>
+                <ListItemButton component={Link} to="/Admin/calender">
+                    <ListItemIcon>
+                        <EventAvailableIcon color={location.pathname.startsWith("/Admin/calender") ? 'primary' : 'inherit'} />
+                    </ListItemIcon>
+                    <ListItemText primary="Year Calender" />
                 </ListItemButton>
                 <ListItemButton component={Link} to="/Admin/notices">
                     <ListItemIcon>

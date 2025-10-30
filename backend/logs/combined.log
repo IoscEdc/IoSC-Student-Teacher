@@ -76652,3 +76652,130 @@
     "id": "perf_1761845331906_4lg828cll"
   }
 }
+{
+  "timestamp": "2025-10-30T18:08:27.664Z",
+  "level": "INFO",
+  "message": "Redis disabled, using memory cache only"
+}
+{
+  "timestamp": "2025-10-30T18:16:20.725Z",
+  "level": "INFO",
+  "message": "Redis disabled, using memory cache only"
+}
+{
+  "timestamp": "2025-10-30T18:17:07.046Z",
+  "level": "INFO",
+  "message": "Redis disabled, using memory cache only"
+}
+{
+  "timestamp": "2025-10-30T18:18:00.924Z",
+  "level": "INFO",
+  "message": "Redis disabled, using memory cache only"
+}
+{
+  "timestamp": "2025-10-30T18:18:43.610Z",
+  "level": "INFO",
+  "message": "Redis disabled, using memory cache only"
+}
+{
+  "timestamp": "2025-10-30T18:20:07.107Z",
+  "level": "INFO",
+  "message": "Redis disabled, using memory cache only"
+}
+{
+  "timestamp": "2025-10-30T18:21:29.799Z",
+  "level": "INFO",
+  "message": "Redis disabled, using memory cache only"
+}
+{
+  "timestamp": "2025-10-30T18:21:43.118Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6902126bf91c442b648f6ba0",
+      "timestamp": "2025-10-30T18:21:43.118Z",
+      "teacherId": "6902126bf91c442b648f6ba0"
+    },
+    "requestId": "att_1761848503117_fllulhcwb"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:43.123Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6902126bf91c442b648f6b95",
+    "subjectId": "6902126bf91c442b648f6b9c",
+    "teacherId": "6902126bf91c442b648f6ba0",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:43.162Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6902126bf91c442b648f6ba0",
+      "timestamp": "2025-10-30T18:21:43.118Z",
+      "teacherId": "6902126bf91c442b648f6ba0"
+    },
+    "requestId": "att_1761848503117_fllulhcwb",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:43.412Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6902126bf91c442b648f6ba0",
+      "timestamp": "2025-10-30T18:21:43.412Z",
+      "teacherId": "6902126bf91c442b648f6ba0"
+    },
+    "requestId": "att_1761848503411_46f439s22"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:43.418Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6902126bf91c442b648f6b95",
+    "subjectId": "6902126bf91c442b648f6b9c",
+    "teacherId": "6902126bf91c442b648f6ba0",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:43.451Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6902126bf91c442b648f6ba0",
+      "timestamp": "2025-10-30T18:21:43.412Z",
+      "teacherId": "6902126bf91c442b648f6ba0"
+    },
+    "requestId": "att_1761848503411_46f439s22",
+    "statusCode": 200
+  }
+}

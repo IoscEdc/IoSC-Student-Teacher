@@ -27339,3 +27339,311 @@
     "timestamp": "2025-10-30T17:50:00.542Z"
   }
 }
+{
+  "timestamp": "2025-10-30T18:20:46.190Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/attendance-simple/summary/student/690213114a29841c1f2a63ac",
+    "statusCode": 200,
+    "responseTime": 242.06,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 17500,
+    "memoryDelta": {
+      "rss": 2400256,
+      "heapUsed": 1694680,
+      "heapTotal": 1048576
+    },
+    "timestamp": "2025-10-30T18:20:46.190Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:20:46.375Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/attendance-simple/summary/student/690213114a29841c1f2a63ac",
+    "statusCode": 200,
+    "responseTime": 164.23,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 17500,
+    "memoryDelta": {
+      "rss": 409600,
+      "heapUsed": 916432,
+      "heapTotal": 1310720
+    },
+    "timestamp": "2025-10-30T18:20:46.374Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:20:57.399Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/NoticeList/6902126af91c442b648f6b8d",
+    "statusCode": 200,
+    "responseTime": 26.7,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 30,
+    "memoryDelta": {
+      "rss": 143360,
+      "heapUsed": -464192,
+      "heapTotal": -786432
+    },
+    "timestamp": "2025-10-30T18:20:57.399Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:20:57.444Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/Student/690213114a29841c1f2a63ac",
+    "statusCode": 500,
+    "responseTime": 65.36,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 29,
+    "memoryDelta": {
+      "rss": 143360,
+      "heapUsed": -325856,
+      "heapTotal": -786432
+    },
+    "timestamp": "2025-10-30T18:20:57.444Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:20:57.594Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/ClassSubjects/6902126bf91c442b648f6b95",
+    "statusCode": 200,
+    "responseTime": 79.71,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 1500,
+    "memoryDelta": {
+      "rss": 167936,
+      "heapUsed": -263032,
+      "heapTotal": -786432
+    },
+    "timestamp": "2025-10-30T18:20:57.592Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:20:57.773Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/NoticeList/6902126af91c442b648f6b8d",
+    "statusCode": 200,
+    "responseTime": 64.29,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 30,
+    "memoryDelta": {
+      "rss": 86016,
+      "heapUsed": 312560,
+      "heapTotal": 0
+    },
+    "timestamp": "2025-10-30T18:20:57.773Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:20:57.945Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/Student/690213114a29841c1f2a63ac",
+    "statusCode": 500,
+    "responseTime": 205.32,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 29,
+    "memoryDelta": {
+      "rss": 69632,
+      "heapUsed": 344416,
+      "heapTotal": 0
+    },
+    "timestamp": "2025-10-30T18:20:57.945Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:20:58.018Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/ClassSubjects/6902126bf91c442b648f6b95",
+    "statusCode": 200,
+    "responseTime": 25.89,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 1500,
+    "memoryDelta": {
+      "rss": 8192,
+      "heapUsed": 203832,
+      "heapTotal": 0
+    },
+    "timestamp": "2025-10-30T18:20:58.018Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:41.501Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/NoticeList/6902126af91c442b648f6b8d",
+    "statusCode": 200,
+    "responseTime": 49.69,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 30,
+    "memoryDelta": {
+      "rss": 606208,
+      "heapUsed": 581744,
+      "heapTotal": 262144
+    },
+    "timestamp": "2025-10-30T18:21:41.501Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:41.720Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/Sclass/Students/6902126bf91c442b648f6b95",
+    "statusCode": 200,
+    "responseTime": 200.82,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 32151,
+    "memoryDelta": {
+      "rss": 2830336,
+      "heapUsed": 1173080,
+      "heapTotal": 0
+    },
+    "timestamp": "2025-10-30T18:21:41.720Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:41.806Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/Subject/6902126bf91c442b648f6b9c",
+    "statusCode": 200,
+    "responseTime": 328,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 289,
+    "memoryDelta": {
+      "rss": 2674688,
+      "heapUsed": 1357680,
+      "heapTotal": 1835008
+    },
+    "timestamp": "2025-10-30T18:21:41.805Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:41.864Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/NoticeList/6902126af91c442b648f6b8d",
+    "statusCode": 200,
+    "responseTime": 115.29,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 30,
+    "memoryDelta": {
+      "rss": 126976,
+      "heapUsed": 346064,
+      "heapTotal": 0
+    },
+    "timestamp": "2025-10-30T18:21:41.864Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:41.963Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/Sclass/Students/6902126bf91c442b648f6b95",
+    "statusCode": 200,
+    "responseTime": 122.72,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 32151,
+    "memoryDelta": {
+      "rss": 3620864,
+      "heapUsed": 988440,
+      "heapTotal": 2097152
+    },
+    "timestamp": "2025-10-30T18:21:41.962Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:42.138Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/Subject/6902126bf91c442b648f6b9c",
+    "statusCode": 200,
+    "responseTime": 98.02,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 289,
+    "memoryDelta": {
+      "rss": -1826816,
+      "heapUsed": -1343280,
+      "heapTotal": 0
+    },
+    "timestamp": "2025-10-30T18:21:42.138Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:43.167Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/attendance/session-options?classId=6902126bf91c442b648f6b95&subjectId=6902126bf91c442b648f6b9c",
+    "statusCode": 200,
+    "responseTime": 92.53,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 353,
+    "memoryDelta": {
+      "rss": 114688,
+      "heapUsed": 519784,
+      "heapTotal": 0
+    },
+    "timestamp": "2025-10-30T18:21:43.167Z",
+    "userId": "6902126bf91c442b648f6ba0",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:21:43.456Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/attendance/session-options?classId=6902126bf91c442b648f6b95&subjectId=6902126bf91c442b648f6b9c",
+    "statusCode": 200,
+    "responseTime": 76.2,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 353,
+    "memoryDelta": {
+      "rss": 36864,
+      "heapUsed": 304904,
+      "heapTotal": 262144
+    },
+    "timestamp": "2025-10-30T18:21:43.456Z",
+    "userId": "6902126bf91c442b648f6ba0",
+    "userRole": "Teacher"
+  }
+}

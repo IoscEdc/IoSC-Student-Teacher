@@ -27761,3 +27761,79 @@
     "timestamp": "2025-10-30T18:22:46.491Z"
   }
 }
+{
+  "timestamp": "2025-10-30T18:24:51.835Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/Sclass/Students/6902126bf91c442b648f6b95",
+    "statusCode": 200,
+    "responseTime": 79.93,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 32151,
+    "memoryDelta": {
+      "rss": 4096,
+      "heapUsed": 102200,
+      "heapTotal": 0
+    },
+    "timestamp": "2025-10-30T18:24:51.835Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:24:51.911Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/Sclass/Students/6902126bf91c442b648f6b95",
+    "statusCode": 200,
+    "responseTime": 51.45,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 32151,
+    "memoryDelta": {
+      "rss": 16384,
+      "heapUsed": 943944,
+      "heapTotal": -786432
+    },
+    "timestamp": "2025-10-30T18:24:51.911Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:24:56.344Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/Sclass/Students/6902126bf91c442b648f6b95",
+    "statusCode": 200,
+    "responseTime": 80.58,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 32151,
+    "memoryDelta": {
+      "rss": 147456,
+      "heapUsed": 273864,
+      "heapTotal": 0
+    },
+    "timestamp": "2025-10-30T18:24:56.344Z"
+  }
+}
+{
+  "timestamp": "2025-10-30T18:24:56.423Z",
+  "level": "PERFORMANCE",
+  "message": "Performance: API Response Time",
+  "data": {
+    "method": "GET",
+    "url": "/api/Sclass/Students/6902126bf91c442b648f6b95",
+    "statusCode": 200,
+    "responseTime": 56.47,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "contentLength": 32151,
+    "memoryDelta": {
+      "rss": 446464,
+      "heapUsed": 370888,
+      "heapTotal": 262144
+    },
+    "timestamp": "2025-10-30T18:24:56.423Z"
+  }
+}

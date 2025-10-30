@@ -85,9 +85,7 @@ const adminLogIn = async (req, res) => {
     if (req.body.email && req.body.password) {
         let admin = await Admin.findOne({ email: req.body.email });
         if (admin) {
-            // Use bcrypt to compare hashed password
-            const isPasswordValid = await bcrypt.compare(req.body.password, admin.password);
-            if (isPasswordValid) {
+            if (req.body.password === admin.password) {
                 // Generate JWT token
                 const token = jwt.sign(
                     { id: admin._id, role: 'Admin' },

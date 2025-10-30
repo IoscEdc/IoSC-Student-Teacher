@@ -32,8 +32,8 @@ const StudentAttendance = ({ situation }) => {
     const [success, setSuccess] = useState('');
     const [loader, setLoader] = useState(false);
 
-    // Available sessions - matching the session configuration system
-    const availableSessions = ['Lecture 1', 'Lecture 2', 'Lecture 3', 'Lab', 'Tutorial'];    const submitHandler = async (event) => {
+    // Available sessions
+    const availableSessions = ['Lecture 1', 'Lecture 2', 'Lab 1', 'Tutorial 1'];    const submitHandler = async (event) => {
         event.preventDefault();
         
         // Get the correct subject ID
@@ -67,19 +67,25 @@ const StudentAttendance = ({ situation }) => {
                 session,
                 studentAttendance: [{
                     studentId: studentID,
-                    status: status.toLowerCase() // Convert to lowercase for backend compatibility
-                }],
-                userRole: 'Admin'
-            };            // Use the correct API endpoint
-            const response = await axios.post(
-                `${process.env.REACT_APP_BASE_URL}/attendance/mark`,
-                attendanceData,
-                {
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem('token')}`
+                    status
+                }]
+            };            let response;
+            try {
+                // Try the new attendance API first
+                response = await axios.post(
+                    '/api/attendance/mark',
+                    attendanceData,
+                    {
+                        headers: {
+                            Authorization: `Bearer ${localStorage.getItem('token')}`
+                        }
                     }
-                }
-            );
+                );
+            } catch (err) {
+                console.log('Main attendance API failed, trying fallback...');
+                // Fallback to simpler endpoint
+                response = await axios.post('/api/attendance-fallback/mark', attendanceData);
+            }
 
             if (response.data.success) {
                 setSuccess('Attendance marked successfully!');
@@ -234,8 +240,10 @@ const StudentAttendance = ({ situation }) => {
                                             onChange={(event) => setStatus(event.target.value)}
                                             required
                                         >
-                                            <MenuItem value="present">Present</MenuItem>
-                                            <MenuItem value="absent">Absent</MenuItem>
+                                            <MenuItem value="Present">Present</MenuItem>
+                                            <MenuItem value="Absent">Absent</MenuItem>
+                                            <MenuItem value="Late">Late</MenuItem>
+                                            <MenuItem value="Excused">Excused</MenuItem>
                                         </Select>
                                     </FormControl>
                                 </Stack>

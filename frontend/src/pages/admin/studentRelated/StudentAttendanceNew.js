@@ -29,29 +29,14 @@ const StudentAttendanceNew = ({ situation }) => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
-    // Get class and subject info based on user role with fallbacks
-    const getClassAndSubjectInfo = () => {
-        if (currentUser.role === 'Admin') {
-            return {
-                classId: params.classId || '6902126bf91c442b648f6b95',
-                subjectId: params.subjectId || '6902126bf91c442b648f6b9c',
-                className: 'AIDS B1',
-                defaultSubjectName: 'Data Structures'
-            };
-        } else {
-            return {
-                classId: currentUser.teachSclass?._id || '6902126bf91c442b648f6b95',
-                subjectId: currentUser.teachSubject?._id || '6902126bf91c442b648f6b9c',
-                className: currentUser.teachSclass?.sclassName || 'AIDS B1',
-                defaultSubjectName: currentUser.teachSubject?.subName || 'Data Structures'
-            };
-        }
-    };
-    
-    const { classId, subjectId, className, defaultSubjectName } = getClassAndSubjectInfo();
+    // Get class and subject info based on user role
+    const classId = currentUser.teachSclass?._id || params.classId;
+    const subjectId = currentUser.teachSubject?._id || params.subjectId;
+    const className = currentUser.teachSclass?.sclassName || 'Class';
+    const defaultSubjectName = currentUser.teachSubject?.subName || '';
 
-    // Available sessions - matching the session configuration system
-    const availableSessions = ['Lecture 1', 'Lecture 2', 'Lecture 3', 'Lab', 'Tutorial'];
+    // Available sessions
+    const availableSessions = ['Lecture 1', 'Lecture 2', 'Lab 1', 'Tutorial 1'];
 
     // Load students and subjects
     useEffect(() => {
@@ -66,7 +51,7 @@ const StudentAttendanceNew = ({ situation }) => {
                 
                 // Fetch students for the class
                 const studentsResponse = await axios.get(
-                    `${process.env.REACT_APP_BASE_URL}/attendance/class/${classId}/students`,
+                    `/api/attendance/class/${classId}/students`,
                     {
                         params: { subjectId: subjectId || 'all' },
                         headers: {
@@ -80,7 +65,7 @@ const StudentAttendanceNew = ({ situation }) => {
                 }                // If admin, also fetch subjects for the class
                 if (currentUser.role === 'Admin') {
                     const subjectsResponse = await axios.get(
-                        `${process.env.REACT_APP_BASE_URL}/Admin/Subject/${classId}`,
+                        `/api/ClassSubjects/${classId}`,
                         {
                             headers: {
                                 Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -155,13 +140,12 @@ const StudentAttendanceNew = ({ situation }) => {
                 session,
                 studentAttendance: [{
                     studentId: selectedStudent,
-                    status: status.toLowerCase() // Convert to lowercase for backend compatibility
-                }],
-                userRole: currentUser.role
+                    status
+                }]
             };
 
             const response = await axios.post(
-                `${process.env.REACT_APP_BASE_URL}/attendance/mark`,
+                '/api/attendance/mark',
                 attendanceData,
                 {
                     headers: {
@@ -296,8 +280,10 @@ const StudentAttendanceNew = ({ situation }) => {
                                 onChange={(e) => setStatus(e.target.value)}
                                 disabled={submitting}
                             >
-                                <MenuItem value="present">Present</MenuItem>
-                                <MenuItem value="absent">Absent</MenuItem>
+                                <MenuItem value="Present">Present</MenuItem>
+                                <MenuItem value="Absent">Absent</MenuItem>
+                                <MenuItem value="Late">Late</MenuItem>
+                                <MenuItem value="Excused">Excused</MenuItem>
                             </Select>
                         </FormControl>
 

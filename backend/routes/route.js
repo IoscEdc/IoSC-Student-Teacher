@@ -135,10 +135,6 @@ router.delete("/SubjectsClass/:id", deleteSubjectsByClass)
 // Attendance routes
 router.use('/attendance', attendanceRoutes);
 
-// Simple attendance routes (for testing)
-const attendanceRoutesSimple = require('./attendanceRoutesSimple');
-router.use('/attendance-simple', attendanceRoutesSimple);
-
 // Fallback attendance routes (for immediate testing)
 const attendanceFallback = require('./attendanceFallback');
 router.use('/attendance-fallback', attendanceFallback);

@@ -8054,3 +8054,497 @@
     "size": 314
   }
 }
+{
+  "timestamp": "2025-10-30T16:16:09.916Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761840969914_s8g6y7kzc",
+    "size": 442
+  }
+}
+{
+  "timestamp": "2025-10-30T16:16:09.945Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761840969914_s8g6y7kzc",
+    "ttl": 3600,
+    "size": 442
+  }
+}
+{
+  "timestamp": "2025-10-30T16:16:10.096Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761840970096_xkys9437t",
+    "size": 582
+  }
+}
+{
+  "timestamp": "2025-10-30T16:16:10.122Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761840970096_xkys9437t",
+    "ttl": 3600,
+    "size": 582
+  }
+}
+{
+  "timestamp": "2025-10-30T16:32:13.127Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761841933105_0lxj6ct30",
+    "size": 309
+  }
+}
+{
+  "timestamp": "2025-10-30T16:32:13.171Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761841933105_0lxj6ct30",
+    "ttl": 3600,
+    "size": 309
+  }
+}
+{
+  "timestamp": "2025-10-30T16:32:13.297Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761841933296_lrrei4swl",
+    "size": 305
+  }
+}
+{
+  "timestamp": "2025-10-30T16:32:13.301Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761841933296_lrrei4swl",
+    "ttl": 3600,
+    "size": 305
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:39.430Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843099398_bpkb8dgye",
+    "size": 328
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:39.459Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843099398_bpkb8dgye",
+    "ttl": 3600,
+    "size": 328
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:39.745Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843099743_jsz4pw1zm",
+    "ttl": 3600,
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:39.782Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843099781_oqg2h88kw",
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:39.790Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843099781_oqg2h88kw",
+    "ttl": 3600,
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:39.743Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843099743_jsz4pw1zm",
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.316Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761843100316_6v613v35n",
+    "size": 829
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.339Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761843100316_6v613v35n",
+    "ttl": 3600,
+    "size": 829
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.677Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843100677_zk12ezua7",
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.680Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843100677_zk12ezua7",
+    "ttl": 3600,
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:41.028Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843101028_8yxuxdigm",
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:41.046Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843101028_8yxuxdigm",
+    "ttl": 3600,
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:41.080Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843101080_7wbfe2ww6",
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:41.164Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843101080_7wbfe2ww6",
+    "ttl": 3600,
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:41.377Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761843101377_nm6x9wuki",
+    "size": 824
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:41.395Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761843101377_nm6x9wuki",
+    "ttl": 3600,
+    "size": 824
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:41.965Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843101964_jqeruzxvc",
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:42.061Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843101964_jqeruzxvc",
+    "ttl": 3600,
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:42.176Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843102176_3iqfkfvaj",
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:42.225Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843102176_3iqfkfvaj",
+    "ttl": 3600,
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:42.424Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761843102424_j2vf8iczs",
+    "size": 830
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:42.474Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761843102424_j2vf8iczs",
+    "ttl": 3600,
+    "size": 830
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:00.289Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843180289_1hej3h73b",
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:00.291Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843180289_1hej3h73b",
+    "ttl": 3600,
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:00.300Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843180299_xet1yzm9x",
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:00.303Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843180299_xet1yzm9x",
+    "ttl": 3600,
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:00.310Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843180310_802jnmd33",
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:00.312Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843180310_802jnmd33",
+    "ttl": 3600,
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:23.444Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843203444_3zaq3fsax",
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:23.508Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843203444_3zaq3fsax",
+    "ttl": 3600,
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:23.653Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843203653_baxjesdbr",
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:23.697Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843203653_baxjesdbr",
+    "ttl": 3600,
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:23.831Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843203830_20fz57wv0",
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:23.860Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843203830_20fz57wv0",
+    "ttl": 3600,
+    "size": 327
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.280Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843204280_i31j0riwk",
+    "size": 309
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.329Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843204280_i31j0riwk",
+    "ttl": 3600,
+    "size": 309
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.382Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761843204382_236i6z6sq",
+    "size": 328
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.387Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761843204382_236i6z6sq",
+    "ttl": 3600,
+    "size": 328
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.548Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761843204548_f5yk0vouk",
+    "size": 829
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.554Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761843204548_f5yk0vouk",
+    "ttl": 3600,
+    "size": 829
+  }
+}
+{
+  "timestamp": "2025-10-30T17:23:38.490Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761845018489_d3l23nkct",
+    "size": 636
+  }
+}
+{
+  "timestamp": "2025-10-30T17:23:38.493Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761845018489_d3l23nkct",
+    "ttl": 3600,
+    "size": 636
+  }
+}
+{
+  "timestamp": "2025-10-30T17:28:51.907Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761845331906_4lg828cll",
+    "size": 636
+  }
+}
+{
+  "timestamp": "2025-10-30T17:28:51.910Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761845331906_4lg828cll",
+    "ttl": 3600,
+    "size": 636
+  }
+}

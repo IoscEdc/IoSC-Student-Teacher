@@ -39,6 +39,7 @@ import {
 } from '@mui/icons-material';
 import { useSelector } from 'react-redux';
 import useStudentAttendance from '../../hooks/useStudentAttendance';
+import { testAuthAndAPI, testAttendanceAPI } from '../../utils/testAuth';
 import AttendanceChartSimple from './AttendanceChartSimple';
 import useStudentAttendanceSimple from '../../hooks/useStudentAttendanceSimple';
 
@@ -57,10 +58,25 @@ const AttendanceDashboardSimple = () => {
         error,
         lastUpdated,
         refreshAttendance
-    } = useStudentAttendance(currentUser?._id);
+    } = useStudentAttendanceSimple(currentUser?._id);
 
     const handleManualRefresh = () => {
         refreshAttendance();
+    };
+
+    const handleTestAuth = async () => {
+        console.log('🧪 Running authentication and API tests...');
+        console.log('🧪 Current user:', currentUser);
+        console.log('🧪 Current user ID:', currentUser?._id);
+        console.log('🧪 Environment base URL:', process.env.REACT_APP_BASE_URL);
+
+        const authResult = await testAuthAndAPI();
+        if (authResult) {
+            const apiResult = await testAttendanceAPI(currentUser?._id);
+            if (apiResult) {
+                console.log('🎉 All tests passed! API should be working.');
+            }
+        }
     };
 
     const handleSubjectClick = (subject) => {
@@ -172,10 +188,18 @@ const AttendanceDashboardSimple = () => {
                     <Button
                         variant="outlined"
                         onClick={handleManualRefresh}
-                        sx={{ mt: 2 }}
+                        sx={{ mt: 2, mr: 2 }}
                         startIcon={<RefreshIcon />}
                     >
                         Retry Loading Data
+                    </Button>
+                    <Button
+                        variant="contained"
+                        onClick={handleTestAuth}
+                        sx={{ mt: 2 }}
+                        color="secondary"
+                    >
+                        Test Auth & API
                     </Button>
                 </Paper>
             </Box>
@@ -229,15 +253,7 @@ const AttendanceDashboardSimple = () => {
                             >
                                 {overallPercentage.toFixed(1)}%
                             </Typography>
-                            <Chip
-                                label={`Grade: ${getAttendanceGrade(overallPercentage)}`}
-                                sx={{
-                                    backgroundColor: overallStatus.color,
-                                    color: 'white',
-                                    fontWeight: 'bold',
-                                    mt: 1
-                                }}
-                            />
+                           
                         </Box>
                     </Grid>
 

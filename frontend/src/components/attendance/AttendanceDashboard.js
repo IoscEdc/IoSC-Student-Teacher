@@ -45,6 +45,7 @@ import {
 import { useSelector } from 'react-redux';
 import AttendanceChart from './AttendanceChart';
 import useStudentAttendance from '../../hooks/useStudentAttendance';
+import { testAuthAndAPI, testAttendanceAPI } from '../../utils/testAuth';
 
 const AttendanceDashboard = () => {
     const theme = useTheme();
@@ -66,6 +67,17 @@ const AttendanceDashboard = () => {
 
     const handleManualRefresh = () => {
         refreshAttendance();
+    };
+
+    const handleTestAuth = async () => {
+        console.log('🧪 Running authentication and API tests...');
+        const authResult = await testAuthAndAPI();
+        if (authResult) {
+            const apiResult = await testAttendanceAPI(currentUser?._id);
+            if (apiResult) {
+                console.log('🎉 All tests passed! API should be working.');
+            }
+        }
     };
 
     const handleChartTypeChange = (event, newChartType) => {
@@ -155,9 +167,27 @@ const AttendanceDashboard = () => {
 
     if (error) {
         return (
-            <Alert severity="error" sx={{ m: 2 }}>
-                Error loading attendance data: {error}
-            </Alert>
+            <Box sx={{ m: 2 }}>
+                <Alert severity="error" sx={{ mb: 2 }}>
+                    Error loading attendance data: {error}
+                </Alert>
+                <Box sx={{ display: 'flex', gap: 2 }}>
+                    <Button
+                        variant="outlined"
+                        onClick={handleManualRefresh}
+                        startIcon={<RefreshIcon />}
+                    >
+                        Retry Loading Data
+                    </Button>
+                    <Button
+                        variant="contained"
+                        onClick={handleTestAuth}
+                        color="secondary"
+                    >
+                        Test Auth & API
+                    </Button>
+                </Box>
+            </Box>
         );
     }
 

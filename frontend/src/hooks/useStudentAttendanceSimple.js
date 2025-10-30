@@ -24,17 +24,12 @@ const useStudentAttendanceSimple = (studentId) => {
             setLoading(true);
             setError(null);
 
-            // Directly fetch attendance records instead of summaries
-            const recordsUrl = `${process.env.REACT_APP_BASE_URL}/attendance/records`;
-            console.log('📤 useStudentAttendanceSimple: Fetching records from:', recordsUrl);
+            // Fetch attendance summary using simple endpoint
+            const recordsUrl = `${process.env.REACT_APP_BASE_URL}/attendance-simple/summary/student/${studentId}`;
+            console.log('📤 useStudentAttendanceSimple: Fetching summary from:', recordsUrl);
+            console.log('📤 useStudentAttendanceSimple: Using SIMPLE hook for student:', studentId);
             
             const recordsResponse = await axios.get(recordsUrl, {
-                params: {
-                    studentId: studentId,
-                    limit: 1000,
-                    sortBy: 'date',
-                    sortOrder: 'desc'
-                },
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
@@ -43,15 +38,26 @@ const useStudentAttendanceSimple = (studentId) => {
             console.log('📥 useStudentAttendanceSimple: Records response:', recordsResponse.data);
 
             if (recordsResponse.data.success) {
-                const records = recordsResponse.data.data.records || [];
-                console.log('📊 useStudentAttendanceSimple: Found', records.length, 'records');
+                const summaries = recordsResponse.data.data || [];
+                console.log('📊 useStudentAttendanceSimple: Found', summaries.length, 'subject summaries');
+                console.log('📊 useStudentAttendanceSimple: Raw summaries:', summaries);
+                summaries.forEach((summary, index) => {
+                    console.log(`📋 Subject ${index + 1}:`, {
+                        name: summary.subjectId?.subName,
+                        code: summary.subjectId?.subCode,
+                        present: summary.presentCount,
+                        total: summary.totalSessions,
+                        percentage: summary.attendancePercentage
+                    });
+                });
 
-                // Process records to create summary data
-                const processedData = processRecordsToSummary(records);
+                // Convert summary data to the format expected by the dashboard
+                const processedData = processSummariesToDashboard(summaries);
+                console.log('📊 useStudentAttendanceSimple: Processed data:', processedData);
                 setAttendanceData(processedData);
                 setLastUpdated(new Date());
             } else {
-                throw new Error(recordsResponse.data.message || 'Failed to fetch attendance records');
+                throw new Error(recordsResponse.data.message || 'Failed to fetch attendance summaries');
             }
         } catch (err) {
             console.error('❌ useStudentAttendanceSimple: Error:', err);
@@ -151,6 +157,54 @@ const useStudentAttendanceSimple = (studentId) => {
             totalPresent,
             totalAbsent,
             lastUpdated: lastUpdated
+        };
+    };
+
+    const processSummariesToDashboard = (summaries) => {
+        if (!summaries || summaries.length === 0) {
+            return {
+                overallPercentage: 0,
+                subjects: [],
+                totalSessions: 0,
+                totalPresent: 0,
+                totalAbsent: 0,
+                lastUpdated: null
+            };
+        }
+
+        let totalSessions = 0;
+        let totalPresent = 0;
+        let totalAbsent = 0;
+        let lastUpdated = null;
+
+        const subjects = summaries.map(summary => {
+            totalSessions += summary.totalSessions || 0;
+            totalPresent += summary.presentCount || 0;
+            totalAbsent += summary.absentCount || 0;
+
+            return {
+                subjectId: summary.subjectId._id,
+                subject: summary.subjectId.subName,
+                teacher: summary.subjectId.teacher || null,
+                present: summary.presentCount || 0,
+                total: summary.totalSessions || 0,
+                percentage: summary.attendancePercentage || 0,
+                absent: summary.absentCount || 0,
+                late: summary.lateCount || 0,
+                excused: summary.excusedCount || 0,
+                records: summary.records || []
+            };
+        });
+
+        const overallPercentage = totalSessions > 0 ? (totalPresent / totalSessions) * 100 : 0;
+
+        return {
+            overallPercentage,
+            subjects,
+            totalSessions,
+            totalPresent,
+            totalAbsent,
+            lastUpdated: new Date()
         };
     };
 

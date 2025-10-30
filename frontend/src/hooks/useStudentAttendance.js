@@ -30,8 +30,8 @@ const useStudentAttendance = (studentId, subjectId = null) => {
                 params.subjectId = subjectId;
             }
 
-            // Fetch attendance summary
-            const summaryUrl = `${process.env.REACT_APP_BASE_URL}/attendance/summary/student/${studentId}`;
+            // Fetch attendance summary (using simple endpoint to bypass errors)
+            const summaryUrl = `${process.env.REACT_APP_BASE_URL}/attendance-simple/summary/student/${studentId}`;
             console.log('📤 useStudentAttendance: Fetching summary from:', summaryUrl);
             console.log('🔑 useStudentAttendance: Token exists:', !!localStorage.getItem('token'));
             
@@ -103,6 +103,7 @@ const useStudentAttendance = (studentId, subjectId = null) => {
         } catch (err) {
             console.error('❌ useStudentAttendance: Error fetching student attendance:', err);
             console.error('❌ useStudentAttendance: Error response:', err.response?.data);
+            console.error('❌ useStudentAttendance: Error details:', JSON.stringify(err.response?.data, null, 2));
             console.error('❌ useStudentAttendance: Error status:', err.response?.status);
             console.error('❌ useStudentAttendance: Request URL:', `${process.env.REACT_APP_BASE_URL}/attendance/summary/student/${studentId}`);
             console.error('❌ useStudentAttendance: Token present:', !!localStorage.getItem('token'));

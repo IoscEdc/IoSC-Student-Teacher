@@ -9841,3 +9841,1859 @@
     "severity": "info"
   }
 }
+{
+  "timestamp": "2025-10-30T16:13:05.727Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:13:05.697Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:13:05.821Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:13:05.792Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:13:09.696Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:13:09.554Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:13:09.939Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:13:09.927Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:17:38.342Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:17:38.327Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:18:08.315Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:18:08.306Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:18:20.338Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:18:20.329Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:20:18.436Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:20:18.422Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:20:18.523Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:20:18.509Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:20:23.245Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:20:23.229Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:20:23.429Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:20:23.419Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:20:35.121Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:20:35.109Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:20:35.269Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:20:35.255Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:24:54.676Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:24:54.632Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:24:54.855Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:24:54.843Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:27:22.173Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:27:22.142Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:27:22.252Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:27:22.236Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:28:30.069Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:28:30.053Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:28:30.211Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:28:30.198Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:28:41.266Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:28:41.253Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:28:41.408Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:28:41.396Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:28:43.287Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:28:43.273Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:28:43.429Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:28:43.401Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:30:19.326Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:30:19.313Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:31:49.044Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:31:49.029Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:31:49.331Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:31:49.314Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:32:15.662Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:32:15.645Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:32:15.844Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:32:15.827Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:33:28.355Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:33:28.344Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:34:49.900Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:34:49.877Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:34:50.263Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:34:50.248Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:38.157Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:38.157Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843098150_057mbj8h4"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:38.312Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:38.312Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843098311_munjio6yk"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:38.562Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:38.562Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843098562_jc6l2auij"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:38.689Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:38.689Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843098689_4m44mfr7s"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:38.744Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:38.744Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843098744_eyzum8wqp"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:39.841Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:38.312Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843098311_munjio6yk",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:39.895Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:38.562Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843098562_jc6l2auij",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.026Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:38.689Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843098689_4m44mfr7s",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.243Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:38.744Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843098744_eyzum8wqp",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.445Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:40.445Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843100445_zvyprxnim"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.492Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:40.492Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843100492_9g665c3hg"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.514Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:40.514Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843100514_kncw82s9b"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.542Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:40.541Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843100541_n1rre09fr"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.848Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:40.445Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843100445_zvyprxnim",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.910Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:40.514Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843100514_kncw82s9b",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:40.963Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:40.541Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843100541_n1rre09fr",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:41.257Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:38.157Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843098150_057mbj8h4",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:41.765Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:41.765Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843101764_00vot7x0a"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:42.392Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:40.492Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843100492_9g665c3hg",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:51:42.678Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:51:41.765Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843101764_00vot7x0a",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:52:59.087Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:52:59.087Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843179087_hk5lm780p"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:52:59.096Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:52:59.096Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843179096_gf7doyoaq"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:52:59.108Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:52:59.108Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843179108_o176m3urw"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:52:59.123Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:52:59.123Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843179123_7xtxdygk0"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:52:59.140Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:52:59.140Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843179140_48yghp9f1"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:52:59.627Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:52:59.087Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843179087_hk5lm780p",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:52:59.972Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:52:59.123Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843179123_7xtxdygk0",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:00.060Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:52:59.140Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843179140_48yghp9f1",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:00.323Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:52:59.108Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843179108_o176m3urw",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:00.346Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:52:59.096Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843179096_gf7doyoaq",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:20.858Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:20.858Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843200858_eaw6rue47"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:20.865Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:20.865Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843200865_dwnh2eyww"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:20.880Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:20.880Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843200880_ixy6iy7pu"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:21.106Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:21.106Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843201106_7czjav0rs"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:21.147Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:21.147Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843201147_gjadi744l"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:21.575Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:20.858Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843200858_eaw6rue47",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:21.680Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:20.865Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843200865_dwnh2eyww",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:22.023Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:21.106Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843201106_7czjav0rs",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:22.160Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:22.160Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843202160_lodl2kqqw"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:22.181Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:21.147Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843201147_gjadi744l",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:22.407Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:22.407Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843202407_uf47t2hca"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:22.507Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:22.507Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843202507_l2oijy0no"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:22.607Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:22.607Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843202607_mztou9rh0"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:22.915Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:22.160Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843202160_lodl2kqqw",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:23.297Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:22.407Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843202407_uf47t2hca",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.047Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:22.507Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843202507_l2oijy0no",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.170Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:22.607Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843202607_mztou9rh0",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.531Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:20.880Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843200880_ixy6iy7pu",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.663Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:24.663Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843204663_97qqjnylw"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:24.767Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:24.663Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843204663_97qqjnylw",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:35.852Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:35.852Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843215852_e2xi98aj1"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:35.862Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:35.862Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843215862_8wq7mzh89"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:36.429Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:35.852Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843215852_e2xi98aj1",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:36.510Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:36.510Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843216510_9xakw1g8j"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:36.537Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:36.537Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843216537_97ty3b91f"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:36.565Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:36.565Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843216565_099r5ndhy"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:36.590Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:35.862Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843215862_8wq7mzh89",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:36.745Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:36.745Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843216745_w1sov5wrq"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:36.830Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:36.830Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843216830_d3r5q511n"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:36.881Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:36.510Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843216510_9xakw1g8j",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:36.936Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:36.537Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843216537_97ty3b91f",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:36.989Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:36.565Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843216565_099r5ndhy",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:37.225Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:36.745Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843216745_w1sov5wrq",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:37.265Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:37.265Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843217265_mw5vivzg1"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:37.292Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:37.292Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843217292_6lk87pq10"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:37.306Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:37.306Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843217305_bsj7j006b"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:37.314Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:36.830Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843216830_d3r5q511n",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:37.521Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:37.265Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843217265_mw5vivzg1",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:37.565Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:37.292Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843217292_6lk87pq10",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:53:37.741Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:53:37.306Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843217305_bsj7j006b",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:55:13.446Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:55:13.446Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843313446_mtred6dsp"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:55:13.625Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:55:13.446Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843313446_mtred6dsp",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:55:13.695Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:55:13.695Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843313695_2c3bhukfb"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:55:13.880Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/records",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:55:13.695Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "requestId": "att_1761843313695_2c3bhukfb",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-10-30T16:56:27.126Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:56:27.114Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-10-30T16:56:28.423Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/690213114a29841c1f2a63ac",
+      "userRole": "Student",
+      "userId": "690213114a29841c1f2a63ac",
+      "timestamp": "2025-10-30T16:56:28.412Z",
+      "teacherId": "690213114a29841c1f2a63ac"
+    },
+    "severity": "info"
+  }
+}

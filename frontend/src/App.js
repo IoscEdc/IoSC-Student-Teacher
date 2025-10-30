@@ -8,6 +8,7 @@ import TeacherDashboard from './pages/teacher/TeacherDashboard';
 import LoginPage from './pages/LoginPage';
 import AdminRegisterPage from './pages/admin/AdminRegisterPage';
 import ChooseUser from './pages/ChooseUser';
+import AttendanceTest from './components/AttendanceTest';
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
     
@@ -21,9 +22,8 @@ const App = () => {
 
           <Route path="/Adminlogin" element={<LoginPage role="Admin" />} />
           <Route path="/Studentlogin" element={<LoginPage role="Student" />} />
-          <Route path="/Teacherlogin" element={<LoginPage role="Teacher" />} />
-
-          <Route path="/Adminregister" element={<AdminRegisterPage />} />
+          <Route path="/Teacherlogin" element={<LoginPage role="Teacher" />} />          <Route path="/Adminregister" element={<AdminRegisterPage />} />
+          <Route path="/test-attendance" element={<AttendanceTest />} />
 
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>}

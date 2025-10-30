@@ -6,7 +6,21 @@
   "scripts": {
     "start": "nodemon index.js",
     "build": "npm i",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --testTimeout=10000",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest --testPathIgnorePatterns=integration --testTimeout=10000",
+    "test:integration": "node tests/integration/run-integration-tests.js",
+    "test:integration:basic": "jest --testPathPatterns=attendance.integration.test.js --testTimeout=30000",
+    "test:integration:bulk": "jest --testPathPatterns=attendance-bulk.integration.test.js --testTimeout=30000",
+    "test:integration:analytics": "jest --testPathPatterns=attendance-analytics.integration.test.js --testTimeout=30000",
+    "test:integration:workflows": "jest --testPathPatterns=attendance-workflows.integration.test.js --testTimeout=45000",
+    "test:integration:performance": "jest --testPathPatterns=attendance-performance.integration.test.js --testTimeout=120000",
+    "test:all": "npm run test:unit && npm run test:integration",
+    "setup-database": "node scripts/setupDatabase.js",
+    "setup-indexes": "node scripts/setupIndexes.js",
+    "migrate": "node migrations/runMigration.js",
+    "migrate:rollback": "node migrations/runMigration.js attendance_system --rollback"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +37,13 @@
     "mongoose": "^7.8.7",
     "morgan": "^1.10.1",
     "multer": "^2.0.2",
-    "nodemon": "^3.1.10"
+    "node-cache": "^5.1.2",
+    "nodemon": "^3.1.10",
+    "redis": "^4.6.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^10.2.3",
+    "supertest": "^7.1.4"
   }
 }

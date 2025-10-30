@@ -13,6 +13,10 @@ import ReportIcon from '@mui/icons-material/Report';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+import AnalyticsIcon from '@mui/icons-material/Analytics';
+import GroupWorkIcon from '@mui/icons-material/GroupWork';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import HistoryIcon from '@mui/icons-material/History';
 
 const SideBar = () => {
     const location = useLocation();
@@ -72,6 +76,36 @@ const SideBar = () => {
                         <ReportIcon color={location.pathname.startsWith("/Admin/complains") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="Complains" />
+                </ListItemButton>
+            </React.Fragment>
+            <Divider sx={{ my: 1 }} />
+            <React.Fragment>
+                <ListSubheader component="div" inset>
+                    Attendance Management
+                </ListSubheader>
+                <ListItemButton component={Link} to="/Admin/attendance/analytics">
+                    <ListItemIcon>
+                        <AnalyticsIcon color={location.pathname.startsWith('/Admin/attendance/analytics') ? 'primary' : 'inherit'} />
+                    </ListItemIcon>
+                    <ListItemText primary="Analytics" />
+                </ListItemButton>
+                <ListItemButton component={Link} to="/Admin/attendance/bulk-management">
+                    <ListItemIcon>
+                        <GroupWorkIcon color={location.pathname.startsWith('/Admin/attendance/bulk-management') ? 'primary' : 'inherit'} />
+                    </ListItemIcon>
+                    <ListItemText primary="Bulk Management" />
+                </ListItemButton>
+                <ListItemButton component={Link} to="/Admin/attendance/reports">
+                    <ListItemIcon>
+                        <AssessmentIcon color={location.pathname.startsWith('/Admin/attendance/reports') ? 'primary' : 'inherit'} />
+                    </ListItemIcon>
+                    <ListItemText primary="Reports" />
+                </ListItemButton>
+                <ListItemButton component={Link} to="/Admin/attendance/audit-logs">
+                    <ListItemIcon>
+                        <HistoryIcon color={location.pathname.startsWith('/Admin/attendance/audit-logs') ? 'primary' : 'inherit'} />
+                    </ListItemIcon>
+                    <ListItemText primary="Audit Logs" />
                 </ListItemButton>
             </React.Fragment>
             <Divider sx={{ my: 1 }} />

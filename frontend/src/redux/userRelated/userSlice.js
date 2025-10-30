@@ -28,12 +28,15 @@ const userSlice = createSlice({
             state.response = null;
             state.error = null;
             state.tempDetails = action.payload;
-        },
-        authSuccess: (state, action) => {
+        },        authSuccess: (state, action) => {
             state.status = 'success';
             state.currentUser = action.payload;
             state.currentRole = action.payload.role;
             localStorage.setItem('user', JSON.stringify(action.payload));
+            // Store token separately if it exists
+            if (action.payload.token) {
+                localStorage.setItem('token', action.payload.token);
+            }
             state.response = null;
             state.error = null;
         },
@@ -44,9 +47,9 @@ const userSlice = createSlice({
         authError: (state, action) => {
             state.status = 'error';
             state.error = action.payload;
-        },
-        authLogout: (state) => {
+        },        authLogout: (state) => {
             localStorage.removeItem('user');
+            localStorage.removeItem('token');
             state.currentUser = null;
             state.status = 'idle';
             state.error = null;

@@ -1,0 +1,8056 @@
+{
+  "timestamp": "2025-10-29T13:23:56.085Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761744236084_tb7xb1qcq",
+    "size": 310
+  }
+}
+{
+  "timestamp": "2025-10-29T13:23:56.093Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761744236084_tb7xb1qcq",
+    "ttl": 3600,
+    "size": 310
+  }
+}
+{
+  "timestamp": "2025-10-29T13:23:56.217Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761744236217_a1br56x35",
+    "size": 602
+  }
+}
+{
+  "timestamp": "2025-10-29T13:23:56.224Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761744236217_a1br56x35",
+    "ttl": 3600,
+    "size": 602
+  }
+}
+{
+  "timestamp": "2025-10-29T13:37:09.493Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761745029492_tq683c8bb",
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-29T13:37:09.497Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761745029492_tq683c8bb",
+    "ttl": 3600,
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-29T13:37:09.746Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761745029745_ujslomhba",
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-29T13:37:09.751Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761745029745_ujslomhba",
+    "ttl": 3600,
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-29T13:37:09.779Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761745029778_0eymh6025",
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-29T13:37:09.781Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761745029778_0eymh6025",
+    "ttl": 3600,
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-29T13:37:09.836Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761745029836_nqpynrkyu",
+    "size": 306
+  }
+}
+{
+  "timestamp": "2025-10-29T13:37:09.838Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761745029836_nqpynrkyu",
+    "ttl": 3600,
+    "size": 306
+  }
+}
+{
+  "timestamp": "2025-10-29T16:16:10.904Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-29T16:16:10.906Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-29T16:16:10.985Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T16:16:10.988Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "ttl": 86400,
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T16:43:42.855Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761756222853_o1zj4bybi",
+    "size": 310
+  }
+}
+{
+  "timestamp": "2025-10-29T16:43:42.857Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761756222853_o1zj4bybi",
+    "ttl": 3600,
+    "size": 310
+  }
+}
+{
+  "timestamp": "2025-10-29T17:20:50.572Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-29T17:20:50.574Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-29T17:20:50.683Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T17:20:50.707Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "ttl": 86400,
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T17:25:57.878Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-29T17:25:57.883Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-29T17:25:57.977Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T17:25:57.986Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "ttl": 86400,
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T17:25:58.427Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902129bb949840291358b9f:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-29T17:25:58.440Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902129bb949840291358b9f:*"
+}
+{
+  "timestamp": "2025-10-29T17:25:58.442Z",
+  "level": "DEBUG",
+  "message": "Memory cache delete:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-29T17:25:58.444Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "class:6902126bf91c442b648f6b95:*",
+    "deletedCount": 1
+  }
+}
+{
+  "timestamp": "2025-10-29T17:25:58.446Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "class:6902126bf91c442b648f6b95:*"
+}
+{
+  "timestamp": "2025-10-29T17:25:58.448Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "school:6902126af91c442b648f6b8d:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-29T17:25:58.451Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "school:6902126af91c442b648f6b8d:*"
+}
+{
+  "timestamp": "2025-10-29T17:25:58.452Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "alerts:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-29T17:25:58.454Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "alerts:*"
+}
+{
+  "timestamp": "2025-10-29T17:38:30.624Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761759510623_wiapw4nyi",
+    "size": 314
+  }
+}
+{
+  "timestamp": "2025-10-29T17:38:31.482Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761759510623_wiapw4nyi",
+    "ttl": 3600,
+    "size": 314
+  }
+}
+{
+  "timestamp": "2025-10-29T17:41:16.222Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761759676221_origzyalf",
+    "size": 314
+  }
+}
+{
+  "timestamp": "2025-10-29T17:41:16.224Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761759676221_origzyalf",
+    "ttl": 3600,
+    "size": 314
+  }
+}
+{
+  "timestamp": "2025-10-29T17:41:16.609Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-29T17:41:16.612Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-29T17:41:16.685Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T17:41:16.687Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "ttl": 86400,
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T17:56:48.031Z",
+  "level": "DEBUG",
+  "message": "Cache hit (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-29T17:56:48.032Z",
+  "level": "DEBUG",
+  "message": "Cache hit for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-29T18:14:49.442Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-29T18:14:49.444Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-29T18:14:49.521Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T18:14:49.524Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "ttl": 86400,
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T18:20:31.684Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-29T18:20:31.686Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-29T18:20:31.774Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T18:20:31.777Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "ttl": 86400,
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-29T18:20:43.777Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761762043776_7qb2ug7e7",
+    "size": 315
+  }
+}
+{
+  "timestamp": "2025-10-29T18:20:43.912Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761762043776_7qb2ug7e7",
+    "ttl": 3600,
+    "size": 315
+  }
+}
+{
+  "timestamp": "2025-10-29T18:20:44.465Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761762044465_z3mtkb7t9",
+    "size": 577
+  }
+}
+{
+  "timestamp": "2025-10-29T18:20:44.505Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761762044465_z3mtkb7t9",
+    "ttl": 3600,
+    "size": 577
+  }
+}
+{
+  "timestamp": "2025-10-29T18:21:08.465Z",
+  "level": "DEBUG",
+  "message": "Cache hit (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-29T18:21:08.469Z",
+  "level": "DEBUG",
+  "message": "Cache hit for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-29T18:25:35.484Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:undefined:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-29T18:25:35.504Z",
+  "level": "DEBUG",
+  "message": "Memory cache delete:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-29T18:25:35.499Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:undefined:*"
+}
+{
+  "timestamp": "2025-10-29T18:25:35.519Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "school:6902126af91c442b648f6b8d:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-29T18:25:35.516Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "class:6902126bf91c442b648f6b95:*"
+}
+{
+  "timestamp": "2025-10-29T18:25:35.532Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "alerts:*"
+}
+{
+  "timestamp": "2025-10-29T18:25:35.529Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "alerts:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-29T18:25:35.522Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "school:6902126af91c442b648f6b8d:*"
+}
+{
+  "timestamp": "2025-10-29T18:25:35.510Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "class:6902126bf91c442b648f6b95:*",
+    "deletedCount": 1
+  }
+}
+{
+  "timestamp": "2025-10-29T19:21:24.625Z",
+  "level": "DEBUG",
+  "message": "Memory cache delete:",
+  "data": {
+    "key": "alert:db_1761762043776_7qb2ug7e7"
+  }
+}
+{
+  "timestamp": "2025-10-29T19:21:24.629Z",
+  "level": "DEBUG",
+  "message": "Memory cache expired:",
+  "data": {
+    "key": "alert:db_1761762043776_7qb2ug7e7"
+  }
+}
+{
+  "timestamp": "2025-10-29T19:21:24.630Z",
+  "level": "DEBUG",
+  "message": "Memory cache delete:",
+  "data": {
+    "key": "alert:perf_1761762044465_z3mtkb7t9"
+  }
+}
+{
+  "timestamp": "2025-10-29T19:21:24.633Z",
+  "level": "DEBUG",
+  "message": "Memory cache expired:",
+  "data": {
+    "key": "alert:perf_1761762044465_z3mtkb7t9"
+  }
+}
+{
+  "timestamp": "2025-10-30T05:27:26.808Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:undefined:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:27:26.835Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:undefined:*"
+}
+{
+  "timestamp": "2025-10-30T05:27:26.842Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "class:6902126bf91c442b648f6b95:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:27:26.845Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "class:6902126bf91c442b648f6b95:*"
+}
+{
+  "timestamp": "2025-10-30T05:27:26.848Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "school:6902126af91c442b648f6b8d:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:27:26.851Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "school:6902126af91c442b648f6b8d:*"
+}
+{
+  "timestamp": "2025-10-30T05:27:26.853Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "alerts:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:27:27.037Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "alerts:*"
+}
+{
+  "timestamp": "2025-10-30T05:31:04.470Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-30T05:31:04.475Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-30T05:31:04.555Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-30T05:31:04.558Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "ttl": 86400,
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.560Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902129bb949840291358b9f:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.572Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761802691572_jq9kyhoku",
+    "size": 615
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.576Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761802691572_jq9kyhoku",
+    "ttl": 3600,
+    "size": 615
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.592Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902129bb949840291358b9f:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.595Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62c6:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.606Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62cc:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.602Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.608Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.598Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62c6:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.613Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.610Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d0:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.623Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.615Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d4:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.629Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.641Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62dc:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.643Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.645Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e0:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.627Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d8:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.647Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.658Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e4:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.660Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.674Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62ec:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.692Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62ec:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.696Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.664Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e8:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.710Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.706Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f0:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.727Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.724Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f4:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.740Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62fc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.743Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62fc:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.737Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f8:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.748Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6300:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.758Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6300:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.761Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6304:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.764Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6304:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.773Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6308:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.780Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6308:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.792Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a630c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.795Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a630c:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.809Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6310:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.831Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6314:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.824Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6310:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.841Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6318:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.853Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6318:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.838Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6314:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.858Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a631c:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.862Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6320:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.871Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6324:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.856Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a631c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.864Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6320:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.893Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6328:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.906Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6328:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.909Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a632c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.874Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6324:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.963Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6330:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.969Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6330:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.961Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a632c:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.972Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6334:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.974Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6334:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.979Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6338:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.976Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6338:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.997Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a633c:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:11.998Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6340:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:11.981Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a633c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.007Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6344:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.005Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6340:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.009Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6344:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.011Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6348:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.024Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6348:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.026Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a634c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.046Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6350:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.044Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6350:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.040Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a634c:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.054Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6354:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.057Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6354:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.059Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6358:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.063Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6358:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.071Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a635c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.093Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6360:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.075Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a635c:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.077Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6360:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.095Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6364:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.105Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6368:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.097Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6364:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.109Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6368:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.114Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a636c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.124Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a636c:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.126Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6370:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.141Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6370:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.144Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6374:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.155Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6374:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.158Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6378:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.170Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a637c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.177Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a637c:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.160Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6378:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.179Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6380:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.193Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6384:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.198Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6384:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.206Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6388:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.190Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6380:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.256Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a638c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.258Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a638c:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.261Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6390:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.253Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6388:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.528Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6394:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.572Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6394:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.575Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6398:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.358Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6390:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.623Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a639c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.577Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6398:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.636Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.629Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a639c:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.640Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a0:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.642Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.645Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a4:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.655Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63ac:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.647Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.651Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a8:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.658Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.657Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63ac:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.662Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.663Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b4:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.665Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.660Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b0:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.672Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63bc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.669Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b8:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.676Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.677Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c0:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.679Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.674Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63bc:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.681Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c4:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.684Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.687Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c8:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.689Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.696Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d0:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.694Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.698Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.692Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63cc:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.707Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.709Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d8:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.711Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.715Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.713Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63dc:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.722Z",
+  "level": "DEBUG",
+  "message": "Memory cache delete:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.705Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d4:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.724Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "class:6902126bf91c442b648f6b95:*",
+    "deletedCount": 1
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.718Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63e0:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.728Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "school:6902126af91c442b648f6b8d:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.726Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "class:6902126bf91c442b648f6b95:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.731Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "alerts:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:38:12.730Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "school:6902126af91c442b648f6b8d:*"
+}
+{
+  "timestamp": "2025-10-30T05:38:12.734Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "alerts:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.920Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902129bb949840291358b9f:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.939Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761803578936_qfai1dci3",
+    "ttl": 3600,
+    "size": 614
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.950Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902129bb949840291358b9f:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.952Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62c6:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.955Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.954Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62c6:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.937Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761803578936_qfai1dci3",
+    "size": 614
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.961Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.965Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.958Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62cc:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.967Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d4:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.969Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.971Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d8:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.972Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.976Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.974Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62dc:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.979Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e0:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.982Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.963Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d0:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.985Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.989Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62ec:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.987Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e8:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.991Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62ec:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:58.993Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.997Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.984Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e4:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.000Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f4:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.001Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.006Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62fc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.004Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f8:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.008Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62fc:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.010Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6300:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.015Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6300:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.019Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6304:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:58.995Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f0:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.022Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6308:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.024Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6308:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.028Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a630c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.031Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a630c:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.034Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6310:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.039Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6314:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.020Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6304:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.043Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6314:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.047Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6318:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.036Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6310:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.052Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a631c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.056Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6320:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.050Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6318:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.058Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6320:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.066Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6324:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.069Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6324:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.071Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6328:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.073Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6328:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.076Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a632c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.054Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a631c:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.084Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6330:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.089Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6330:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.093Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6334:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.104Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6338:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.105Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a633c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.107Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a633c:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.110Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6340:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.114Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6340:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.116Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6344:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.118Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6344:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.120Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6348:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.123Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6348:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.124Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a634c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.128Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a634c:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.130Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6350:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.079Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a632c:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.098Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6334:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.135Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6354:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.139Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6358:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.137Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6354:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.142Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6358:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.146Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a635c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.149Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a635c:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.151Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6360:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.154Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6360:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.156Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6364:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.164Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6368:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.167Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6368:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.169Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a636c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.173Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a636c:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.176Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6370:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.179Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6370:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.182Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6374:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.184Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6374:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.186Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6378:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.188Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6378:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.190Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a637c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.194Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a637c:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.196Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6380:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.199Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6380:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.201Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6384:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.203Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6384:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.206Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6388:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.209Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6388:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.213Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a638c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.216Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a638c:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.218Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6390:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.220Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6390:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.101Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6338:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.229Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6394:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.231Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6398:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.233Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6398:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.236Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a639c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.238Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a639c:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.240Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.243Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a0:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.245Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.249Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a4:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.251Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.132Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6350:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.162Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6364:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.223Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6394:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.253Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a8:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.256Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63ac:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.261Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63ac:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.264Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.267Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b0:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.268Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.271Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b4:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.273Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.276Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b8:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.280Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63bc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.283Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63bc:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.285Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.288Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c0:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.290Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.296Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c4:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.298Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.300Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c8:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.304Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.307Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63cc:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.310Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.315Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d0:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.318Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.320Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d4:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.322Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.325Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d8:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.328Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.330Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63dc:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.332Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.334Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63e0:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.337Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "class:6902126bf91c442b648f6b95:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.339Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "class:6902126bf91c442b648f6b95:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.340Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "school:6902126af91c442b648f6b8d:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.343Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "school:6902126af91c442b648f6b8d:*"
+}
+{
+  "timestamp": "2025-10-30T05:52:59.348Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "alerts:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T05:52:59.350Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "alerts:*"
+}
+{
+  "timestamp": "2025-10-30T06:27:12.403Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761805632402_tty2ojd1t",
+    "size": 315
+  }
+}
+{
+  "timestamp": "2025-10-30T06:27:12.405Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761805632402_tty2ojd1t",
+    "ttl": 3600,
+    "size": 315
+  }
+}
+{
+  "timestamp": "2025-10-30T06:27:12.549Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761805632549_9tx5w13ln",
+    "size": 762
+  }
+}
+{
+  "timestamp": "2025-10-30T06:27:12.551Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761805632549_9tx5w13ln",
+    "ttl": 3600,
+    "size": 762
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.173Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902129bb949840291358b9f:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.184Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761805998184_1la1jmus1",
+    "size": 613
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.186Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761805998184_1la1jmus1",
+    "ttl": 3600,
+    "size": 613
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.202Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62c6:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.216Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62c6:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.220Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.225Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62cc:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.254Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.274Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d0:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.284Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.294Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.297Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d8:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.301Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.305Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62dc:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.307Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.309Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e0:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.312Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.314Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e4:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.318Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.197Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902129bb949840291358b9f:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.324Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62ec:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.328Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62ec:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.331Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.334Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f0:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.337Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.339Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f4:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.344Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.347Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f8:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.349Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62fc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.357Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6300:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.389Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6300:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.418Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6304:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.420Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6304:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.423Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6308:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.426Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6308:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.429Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a630c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.433Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a630c:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.436Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6310:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.440Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6310:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.443Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6314:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.445Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6314:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.448Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6318:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.453Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6318:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.462Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a631c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.467Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a631c:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.468Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6320:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.472Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6320:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.474Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6324:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.478Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6324:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.480Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6328:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.354Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62fc:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.292Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d4:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.321Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e8:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.491Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6328:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.494Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a632c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.498Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a632c:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.500Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6330:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.502Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6330:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.514Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6334:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.516Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6334:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.518Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6338:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.522Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6338:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.525Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a633c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.528Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a633c:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.540Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6340:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.546Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6340:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.549Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6344:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.580Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6344:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.583Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6348:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.587Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6348:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.590Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a634c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.605Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a634c:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.616Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6350:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.624Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6350:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.649Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6354:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.654Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6354:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.670Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6358:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.691Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6358:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.696Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a635c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.735Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a635c:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.745Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6360:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.796Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6360:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.800Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6364:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.888Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6364:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.897Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6368:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.920Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6368:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.949Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a636c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.953Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a636c:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.963Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6370:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.967Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6370:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.969Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6374:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.971Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6374:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.979Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6378:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.981Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6378:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.983Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a637c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.985Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a637c:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.986Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6380:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:18.988Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6380:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:18.996Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6384:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.041Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6384:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.080Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6388:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.119Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6388:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.181Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a638c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.206Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a638c:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.210Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6390:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.212Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6390:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.218Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6394:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.226Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6394:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.229Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6398:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.232Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6398:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.245Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a639c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.247Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a639c:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.253Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.257Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a0:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.258Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.264Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a4:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.266Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.268Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a8:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.271Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63ac:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.273Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63ac:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.274Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.276Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b0:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.279Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.281Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b4:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.283Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.285Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b8:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.289Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63bc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.291Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63bc:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.293Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.296Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c0:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.299Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.302Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c4:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.304Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.306Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c8:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.309Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.311Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63cc:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.313Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.316Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d0:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.319Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.321Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d4:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.324Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.327Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d8:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.329Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.331Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63dc:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.332Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.335Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63e0:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.336Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "class:6902126bf91c442b648f6b95:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.339Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "class:6902126bf91c442b648f6b95:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.341Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "school:6902126af91c442b648f6b8d:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.344Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "school:6902126af91c442b648f6b8d:*"
+}
+{
+  "timestamp": "2025-10-30T06:33:19.346Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "alerts:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:33:19.348Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "alerts:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:16.975Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902129bb949840291358b9f:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:16.998Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761807196984_qn0hz5nai",
+    "ttl": 3600,
+    "size": 616
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:16.985Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761807196984_qn0hz5nai",
+    "size": 616
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.008Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62c6:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.010Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62c6:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.012Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.014Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62cc:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.016Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.007Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902129bb949840291358b9f:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.020Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.023Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.022Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d4:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.025Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d8:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.026Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.028Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62dc:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.030Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.032Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e0:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.033Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.018Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d0:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.037Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.035Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e4:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.041Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62ec:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.039Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e8:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.044Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.046Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f0:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.048Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.043Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62ec:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.051Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.052Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f8:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.054Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62fc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.057Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6300:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.049Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f4:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.059Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6300:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.060Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6304:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.064Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6308:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.055Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62fc:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.066Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6308:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.067Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a630c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.069Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a630c:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.071Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6310:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.072Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6310:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.074Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6314:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.062Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6304:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.077Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6318:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.079Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6318:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.080Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a631c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.084Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6320:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.075Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6314:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.087Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6324:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.082Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a631c:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.088Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6324:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.090Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6328:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.092Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6328:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.094Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a632c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.085Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6320:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.098Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6330:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.100Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6330:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.102Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6334:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.104Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6334:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.106Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6338:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.109Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a633c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.107Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6338:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.111Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a633c:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.114Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6340:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.116Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6340:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.117Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6344:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.097Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a632c:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.121Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6348:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.123Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6348:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.125Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a634c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.119Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6344:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.131Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6350:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.128Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a634c:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.134Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6354:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.136Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6354:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.138Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6358:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.139Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6358:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.133Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6350:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.141Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a635c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.143Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a635c:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.145Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6360:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.148Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6360:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.149Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6364:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.153Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6364:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.155Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6368:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.157Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6368:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.159Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a636c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.161Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a636c:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.164Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6370:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.166Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6370:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.168Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6374:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.171Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6374:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.173Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6378:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.175Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6378:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.176Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a637c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.181Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a637c:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.183Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6380:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.185Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6380:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.186Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6384:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.188Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6384:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.190Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6388:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.193Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6388:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.197Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a638c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.200Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a638c:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.201Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6390:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.205Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6390:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.206Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6394:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.208Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6394:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.210Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6398:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.214Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6398:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.216Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a639c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.218Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a639c:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.220Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.222Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a0:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.224Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.226Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a4:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.228Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.231Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a8:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.233Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63ac:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.235Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63ac:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.236Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.239Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b0:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.240Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.242Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b4:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.243Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.246Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b8:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.248Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63bc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.251Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63bc:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.253Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.256Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c0:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.257Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.259Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c4:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.263Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.265Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c8:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.268Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.270Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63cc:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.272Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.275Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d0:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.276Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.280Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d4:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.282Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.285Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d8:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.287Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.289Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63dc:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.292Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.295Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63e0:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.297Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "class:6902126bf91c442b648f6b95:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.300Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "class:6902126bf91c442b648f6b95:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.301Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "school:6902126af91c442b648f6b8d:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.305Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "school:6902126af91c442b648f6b8d:*"
+}
+{
+  "timestamp": "2025-10-30T06:53:17.306Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "alerts:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:53:17.308Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "alerts:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.893Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902129bb949840291358b9f:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.904Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761807498904_2terqpnt5",
+    "size": 613
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.906Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761807498904_2terqpnt5",
+    "ttl": 3600,
+    "size": 613
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.914Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902129bb949840291358b9f:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.915Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62c6:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.919Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.921Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62cc:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.922Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.924Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d0:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.926Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.927Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d4:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.929Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.932Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.933Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62dc:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.935Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.937Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e0:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.938Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.940Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e4:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.941Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.943Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e8:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.945Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62ec:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.946Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62ec:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.947Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.949Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f0:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.951Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.952Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f4:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.954Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.917Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62c6:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.957Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62fc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.961Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6300:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.962Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6300:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.964Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6304:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.965Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6304:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.967Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6308:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.968Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6308:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.956Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f8:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.970Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a630c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.972Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a630c:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.973Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6310:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.975Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6310:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.930Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d8:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.978Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6314:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.979Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6318:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.981Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6318:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.983Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a631c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.984Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a631c:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.986Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6320:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.959Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62fc:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.989Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6324:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.991Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6324:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.992Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6328:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.994Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6328:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.995Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a632c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:18.997Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a632c:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.998Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6330:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.000Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6330:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.002Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6334:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.005Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6338:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.007Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6338:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.009Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a633c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.011Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a633c:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.012Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6340:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.014Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6340:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.016Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6344:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.018Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6344:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.020Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6348:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.021Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6348:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.023Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a634c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.025Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a634c:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.027Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6350:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.028Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6350:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.031Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6354:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.032Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6354:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.034Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6358:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.036Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6358:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.038Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a635c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.040Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a635c:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.041Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6360:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.043Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6360:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.045Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6364:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.052Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6364:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.053Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6368:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.055Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6368:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.057Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a636c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.059Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a636c:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.060Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6370:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.062Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6370:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.063Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6374:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.065Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6374:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.003Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6334:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.988Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6320:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.067Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6378:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.070Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a637c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.072Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a637c:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.074Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6380:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.075Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6380:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.077Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6384:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.078Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6384:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.080Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6388:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.069Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6378:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.081Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6388:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:18.976Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6314:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.083Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a638c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.085Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a638c:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.086Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6390:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.088Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6390:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.090Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6394:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.091Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6394:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.093Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6398:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.095Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6398:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.096Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a639c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.099Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a639c:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.100Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.102Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a0:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.104Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.106Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a4:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.108Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.111Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a8:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.112Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63ac:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.115Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63ac:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.116Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.118Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b0:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.120Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.121Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b4:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.123Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.125Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b8:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.127Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63bc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.128Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63bc:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.131Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.133Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c0:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.135Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.136Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c4:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.138Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.140Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c8:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.141Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.143Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63cc:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.145Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.147Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d0:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.148Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.150Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d4:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.152Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.154Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d8:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.156Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.158Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63dc:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.160Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.162Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63e0:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.164Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "class:6902126bf91c442b648f6b95:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.166Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "class:6902126bf91c442b648f6b95:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.167Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "school:6902126af91c442b648f6b8d:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.169Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "school:6902126af91c442b648f6b8d:*"
+}
+{
+  "timestamp": "2025-10-30T06:58:19.170Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "alerts:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T06:58:19.172Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "alerts:*"
+}
+{
+  "timestamp": "2025-10-30T07:00:53.369Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-30T07:00:53.371Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-30T07:00:53.470Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-30T07:00:53.472Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "ttl": 86400,
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-30T07:12:29.832Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902129bb949840291358b9f:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:12:29.852Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902129bb949840291358b9f:*"
+}
+{
+  "timestamp": "2025-10-30T07:12:29.853Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62c6:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:12:29.857Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62c6:*"
+}
+{
+  "timestamp": "2025-10-30T07:12:29.860Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:12:29.862Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62cc:*"
+}
+{
+  "timestamp": "2025-10-30T07:12:29.863Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "class:6902126bf91c442b648f6b95:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:12:29.865Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "class:6902126bf91c442b648f6b95:*"
+}
+{
+  "timestamp": "2025-10-30T07:12:29.867Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "school:6902126af91c442b648f6b8d:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:12:29.868Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "school:6902126af91c442b648f6b8d:*"
+}
+{
+  "timestamp": "2025-10-30T07:12:29.870Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "alerts:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:12:29.872Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "alerts:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.553Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902129bb949840291358b9f:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.564Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761808508563_2heglx2cm",
+    "size": 613
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.566Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761808508563_2heglx2cm",
+    "ttl": 3600,
+    "size": 613
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.574Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902129bb949840291358b9f:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.575Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62c6:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.577Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62c6:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.578Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.580Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62cc:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.581Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.583Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d0:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.584Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.586Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d4:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.587Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.589Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62d8:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.591Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.592Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62dc:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.594Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.595Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e0:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.597Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.599Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e4:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.601Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62e8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.602Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62e8:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.604Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130e4a29841c1f2a62ec:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.607Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130e4a29841c1f2a62ec:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.608Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.610Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f0:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.611Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.613Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f4:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.615Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62f8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.617Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62f8:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.618Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a62fc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.620Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a62fc:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.621Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6300:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.623Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6300:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.624Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6304:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.626Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6304:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.628Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6308:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.629Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6308:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.631Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a630c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.633Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a630c:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.634Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6310:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.636Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6310:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.638Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6314:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.640Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6314:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.641Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6318:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.643Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6318:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.644Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a631c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.646Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a631c:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.648Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6320:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.700Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6324:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.650Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6320:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.676Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6324:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.724Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6328:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.739Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6328:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.785Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a632c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.791Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a632c:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.799Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6330:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.811Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6330:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.836Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6334:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.863Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6334:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.873Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a6338:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.889Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a6338:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.896Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:6902130f4a29841c1f2a633c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.913Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:6902130f4a29841c1f2a633c:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.922Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6340:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.931Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6340:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.942Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6344:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:08.960Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6344:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:08.984Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6348:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.012Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6348:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.028Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a634c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.051Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a634c:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.062Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6350:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.092Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6354:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.075Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6350:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.113Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6354:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.132Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6358:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.202Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6358:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.258Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a635c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.313Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a635c:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.343Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6360:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.384Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6360:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.409Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6364:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.414Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6364:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.427Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6368:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.443Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6368:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.455Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a636c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.462Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a636c:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.465Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6370:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.469Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6370:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.480Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6374:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.485Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6374:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.492Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6378:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.500Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6378:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.503Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a637c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.508Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a637c:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.510Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6380:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.512Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6380:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.520Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6384:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.530Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6384:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.535Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6388:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.543Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6388:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.556Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a638c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.608Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a638c:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.672Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213104a29841c1f2a6390:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.674Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213104a29841c1f2a6390:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.722Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6394:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.741Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6394:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.748Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a6398:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.770Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a6398:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.794Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a639c:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.805Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a639c:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.810Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.828Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a0:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.836Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.845Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a4:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.856Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63a8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.859Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63a8:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.865Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63ac:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.868Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63ac:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.871Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.874Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b0:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.878Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.884Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b4:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.887Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63b8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.890Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63b8:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.894Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63bc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.898Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63bc:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.901Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.908Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c0:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.914Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.918Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c4:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.921Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63c8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.924Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63c8:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.932Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63cc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.936Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63cc:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.942Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.956Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d0:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.959Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d4:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.961Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d4:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.964Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63d8:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.970Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63d8:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.973Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63dc:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.984Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "student:690213114a29841c1f2a63e0:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.975Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63dc:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.988Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "student:690213114a29841c1f2a63e0:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.990Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "class:6902126bf91c442b648f6b95:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.992Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "class:6902126bf91c442b648f6b95:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.994Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "school:6902126af91c442b648f6b8d:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:09.997Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "school:6902126af91c442b648f6b8d:*"
+}
+{
+  "timestamp": "2025-10-30T07:15:09.999Z",
+  "level": "DEBUG",
+  "message": "Cache pattern delete:",
+  "data": {
+    "pattern": "alerts:*",
+    "deletedCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-30T07:15:10.002Z",
+  "level": "DEBUG",
+  "message": "Cache invalidated for pattern:",
+  "data": "alerts:*"
+}
+{
+  "timestamp": "2025-10-30T08:59:27.679Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-30T08:59:27.681Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-30T08:59:27.759Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-30T08:59:27.761Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "ttl": 86400,
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-30T09:01:44.443Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-30T09:01:44.445Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-30T09:01:44.523Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-30T09:01:44.525Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "class:6902126bf91c442b648f6b95:students:6902126bf91c442b648f6b9c",
+    "ttl": 86400,
+    "size": 5641
+  }
+}
+{
+  "timestamp": "2025-10-30T10:01:49.297Z",
+  "level": "DEBUG",
+  "message": "Cache miss:",
+  "data": {
+    "key": "student:6902129bb949840291358b9f:summary:6902126bf91c442b648f6b9c"
+  }
+}
+{
+  "timestamp": "2025-10-30T10:01:49.299Z",
+  "level": "DEBUG",
+  "message": "Cache miss for key:",
+  "data": "student:6902129bb949840291358b9f:summary:6902126bf91c442b648f6b9c"
+}
+{
+  "timestamp": "2025-10-30T10:01:49.379Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "student:6902129bb949840291358b9f:summary:6902126bf91c442b648f6b9c",
+    "size": 630
+  }
+}
+{
+  "timestamp": "2025-10-30T10:01:49.381Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "student:6902129bb949840291358b9f:summary:6902126bf91c442b648f6b9c",
+    "ttl": 1800,
+    "size": 630
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:49.730Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761819589729_k4s25f7ya",
+    "size": 442
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:49.733Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761819589729_k4s25f7ya",
+    "ttl": 3600,
+    "size": 442
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:50.010Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761819589969_yvr1rmv7y",
+    "ttl": 3600,
+    "size": 583
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:50.187Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761819590187_bu2hfa7o3",
+    "size": 309
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:50.189Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761819590187_bu2hfa7o3",
+    "ttl": 3600,
+    "size": 309
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:49.969Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761819589969_yvr1rmv7y",
+    "size": 583
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:50.601Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761819590601_t9dafpwul",
+    "size": 595
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:50.620Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761819590601_t9dafpwul",
+    "ttl": 3600,
+    "size": 595
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:50.804Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761819590804_ncpvxgtm6",
+    "size": 307
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:50.916Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761819590804_ncpvxgtm6",
+    "ttl": 3600,
+    "size": 307
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:51.673Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:perf_1761819591673_ea5qz6c34",
+    "size": 590
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:51.781Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:perf_1761819591673_ea5qz6c34",
+    "ttl": 3600,
+    "size": 590
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:52.505Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761819592504_mn7lw7e3f",
+    "size": 304
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:52.584Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761819592504_mn7lw7e3f",
+    "ttl": 3600,
+    "size": 304
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:52.927Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761819592927_9f6douai0",
+    "size": 309
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:53.021Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761819592927_9f6douai0",
+    "ttl": 3600,
+    "size": 309
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:53.243Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761819593242_lzxzpgb5o",
+    "size": 441
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:53.273Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761819593242_lzxzpgb5o",
+    "ttl": 3600,
+    "size": 441
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:53.452Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761819593452_ylo6v63in",
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:53.472Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761819593452_ylo6v63in",
+    "ttl": 3600,
+    "size": 308
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:53.592Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761819593592_ltzfhey8q",
+    "size": 306
+  }
+}
+{
+  "timestamp": "2025-10-30T10:19:53.614Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761819593592_ltzfhey8q",
+    "ttl": 3600,
+    "size": 306
+  }
+}
+{
+  "timestamp": "2025-10-30T14:21:02.322Z",
+  "level": "DEBUG",
+  "message": "Memory cache set:",
+  "data": {
+    "key": "alert:db_1761834062319_njy6ey0wo",
+    "size": 314
+  }
+}
+{
+  "timestamp": "2025-10-30T14:21:02.418Z",
+  "level": "DEBUG",
+  "message": "Cache set (Memory):",
+  "data": {
+    "key": "alert:db_1761834062319_njy6ey0wo",
+    "ttl": 3600,
+    "size": 314
+  }
+}

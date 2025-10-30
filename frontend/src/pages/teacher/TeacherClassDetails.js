@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
 import { getClassStudents } from "../../redux/sclassRelated/sclassHandle";
 import { Paper, Box, Typography, ButtonGroup, Button, Popper, Grow, ClickAwayListener, MenuList, MenuItem } from '@mui/material';
-import { BlackButton, BlueButton} from "../../components/buttonStyles";
+import { BlackButton, BlueButton, GreenButton} from "../../components/buttonStyles";
 import TableTemplate from "../../components/TableTemplate";
-import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
+import { KeyboardArrowDown, KeyboardArrowUp, Groups, History } from "@mui/icons-material";
 
 const TeacherClassDetails = () => {
     const navigate = useNavigate()
@@ -159,15 +159,35 @@ const TeacherClassDetails = () => {
                             </Box>
                         </>
                     ) : (
-                        <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-                            <Typography variant="h5" gutterBottom>
-                                Students List:
-                            </Typography>
+                        <>
+                            {/* New Attendance Interface Buttons */}
+                            <Box sx={{ display: 'flex', gap: 2, mb: 3, justifyContent: 'flex-end' }}>
+                                <GreenButton
+                                    variant="contained"
+                                    startIcon={<Groups />}
+                                    onClick={() => navigate('/Teacher/attendance/mark')}
+                                >
+                                    Mark Class Attendance
+                                </GreenButton>
+                                <BlueButton
+                                    variant="contained"
+                                    startIcon={<History />}
+                                    onClick={() => navigate('/Teacher/attendance/history')}
+                                >
+                                    View Attendance History
+                                </BlueButton>
+                            </Box>
 
-                            {Array.isArray(sclassStudents) && sclassStudents.length > 0 &&
-                                <TableTemplate buttonHaver={StudentsButtonHaver} columns={studentColumns} rows={studentRows} />
-                            }
-                        </Paper>
+                            <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+                                <Typography variant="h5" gutterBottom>
+                                    Students List:
+                                </Typography>
+
+                                {Array.isArray(sclassStudents) && sclassStudents.length > 0 &&
+                                    <TableTemplate buttonHaver={StudentsButtonHaver} columns={studentColumns} rows={studentRows} />
+                                }
+                            </Paper>
+                        </>
                     )}
                 </>
             )}

@@ -46,6 +46,23 @@ import AccountMenu from '../../components/AccountMenu';
 import AdminTimeTable from './AdminTimeTable';
 import AdminCalender from './AdminCalender';
 
+import {
+    AttendanceAnalytics,
+    BulkStudentManager,
+    TeacherAssignmentManager,
+    AttendanceReports,
+    AuditLogViewer
+} from './attendanceRelated';
+import AttendanceDebugger from '../../components/attendance/AttendanceDebugger';
+import SimpleAttendanceMarking from '../../components/attendance/SimpleAttendanceMarking';
+import FixedAttendanceMarking from '../../components/attendance/FixedAttendanceMarking';
+import AdminAttendanceMarking from '../../components/attendance/AdminAttendanceMarking';
+import AttendanceNavigation from '../../components/attendance/AttendanceNavigation';
+import AttendanceSystemTest from '../../components/attendance/AttendanceSystemTest';
+import AuthTest from '../../components/attendance/AuthTest';
+import SimpleTest from '../../components/attendance/SimpleTest';
+import MinimalAdminAttendance from '../../components/attendance/MinimalAdminAttendance';
+
 const AdminDashboard = () => {
     const [open, setOpen] = useState(false);
     const theme = useTheme();
@@ -188,6 +205,21 @@ const AdminDashboard = () => {
                     {/* Time Table */}
                     <Route path='/Admin/timetable' element={<AdminTimeTable />} />
                     <Route path='/Admin/calender' element={<AdminCalender />} />
+
+                    {/* Attendance Management */}
+                    <Route path="/Admin/attendance/analytics" element={<AttendanceAnalytics />} />
+                    <Route path="/Admin/attendance/bulk-management" element={<BulkStudentManager />} />
+                    <Route path="/Admin/attendance/teacher-assignments" element={<TeacherAssignmentManager />} />
+                    <Route path="/Admin/attendance/reports" element={<AttendanceReports />} />
+                    <Route path="/Admin/attendance/audit-logs" element={<AuditLogViewer />} />
+                    <Route path="/Admin/attendance/mark" element={<AdminAttendanceMarking />} />
+                    <Route path="/Admin/attendance/simple" element={<SimpleAttendanceMarking />} />
+                    <Route path="/Admin/attendance/debug" element={<AttendanceDebugger />} />
+                    <Route path="/Admin/attendance/test" element={<AttendanceSystemTest />} />
+                    <Route path="/Admin/attendance/auth-test" element={<AuthTest />} />
+                    <Route path="/Admin/attendance/simple-test" element={<SimpleTest />} />
+                    <Route path="/Admin/attendance/minimal" element={<MinimalAdminAttendance />} />
+                    <Route path="/Admin/attendance" element={<AttendanceNavigation />} />
 
                     <Route path="/logout" element={<Logout />} />
                 </Routes>

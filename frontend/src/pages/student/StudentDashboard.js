@@ -19,6 +19,10 @@ import StudentProfile from './StudentProfile';
 import StudentSubjects from './StudentSubjects';
 import ViewStdAttendance from './ViewStdAttendance';
 import StudentComplain from './StudentComplain';
+import StudentAttendanceDetail from './StudentAttendanceDetail';
+import AttendanceDashboard from '../../components/attendance/AttendanceDashboardSimple';
+import StudentPortalDebugger from '../../components/attendance/StudentPortalDebugger';
+import StudentPortalValidator from '../../components/attendance/StudentPortalValidator';
 import Logout from '../Logout'
 import AccountMenu from '../../components/AccountMenu';
 import { AppBar, Drawer } from '../../components/styles';
@@ -80,6 +84,10 @@ const StudentDashboard = () => {
 
                         <Route path="/Student/subjects" element={<StudentSubjects />} />
                         <Route path="/Student/attendance" element={<ViewStdAttendance />} />
+                        <Route path="/Student/attendance-dashboard" element={<AttendanceDashboard />} />
+                        <Route path="/Student/attendance-detail" element={<StudentAttendanceDetail />} />
+                        <Route path="/Student/attendance-debug" element={<StudentPortalDebugger />} />
+                        <Route path="/Student/attendance-validator" element={<StudentPortalValidator />} />
                         <Route path="/Student/complain" element={<StudentComplain />} />
 
                         <Route path='/Student/timetable' element={<StudentTimeTable />} />

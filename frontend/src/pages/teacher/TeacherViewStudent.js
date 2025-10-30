@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserDetails } from '../../redux/userRelated/userHandle';
 import { useNavigate, useParams } from 'react-router-dom'
-import { Box, Button, Collapse, Table, TableBody, TableHead, Typography } from '@mui/material';
-import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
+import { Box, Button, Collapse, Table, TableBody, TableHead, Typography, Paper, Chip, CircularProgress, Alert } from '@mui/material';
+import { KeyboardArrowDown, KeyboardArrowUp, TrendingUp, CalendarToday } from '@mui/icons-material';
 import { calculateOverallAttendancePercentage, calculateSubjectAttendancePercentage, groupAttendanceBySubject } from '../../components/attendanceCalculator';
 import CustomPieChart from '../../components/CustomPieChart'
-import { PurpleButton } from '../../components/buttonStyles';
+import { PurpleButton, BlueButton, GreenButton } from '../../components/buttonStyles';
 import { StyledTableCell, StyledTableRow } from '../../components/styles';
+import axios from 'axios';
 
 const TeacherViewStudent = () => {
 
@@ -32,6 +33,8 @@ const TeacherViewStudent = () => {
     const [studentSchool, setStudentSchool] = useState('');
     const [subjectMarks, setSubjectMarks] = useState('');
     const [subjectAttendance, setSubjectAttendance] = useState([]);
+    const [newAttendanceSummary, setNewAttendanceSummary] = useState(null);
+    const [loadingAttendance, setLoadingAttendance] = useState(false);
 
     const [openStates, setOpenStates] = useState({});
 
@@ -48,8 +51,36 @@ const TeacherViewStudent = () => {
             setStudentSchool(userDetails.school || '');
             setSubjectMarks(userDetails.examResult || '');
             setSubjectAttendance(userDetails.attendance || []);
+            
+            // Fetch new attendance summary
+            fetchNewAttendanceSummary();
         }
     }, [userDetails]);
+
+    // Fetch new attendance summary from the new API
+    const fetchNewAttendanceSummary = async () => {
+        if (!studentID || !teachSubjectID) return;
+        
+        try {
+            setLoadingAttendance(true);
+            const response = await axios.get(
+                `${process.env.REACT_APP_BASE_URL}/attendance/summary/student/${studentID}?subjectId=${teachSubjectID}`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem('token')}`
+                    }
+                }
+            );
+
+            if (response.data.success) {
+                setNewAttendanceSummary(response.data.summary);
+            }
+        } catch (error) {
+            console.error('Error fetching attendance summary:', error);
+        } finally {
+            setLoadingAttendance(false);
+        }
+    };
 
     const overallAttendancePercentage = calculateOverallAttendancePercentage(subjectAttendance);
     const overallAbsentPercentage = 100 - overallAttendancePercentage;
@@ -77,10 +108,65 @@ const TeacherViewStudent = () => {
                     School: {studentSchool.schoolName}
                     <br /><br />
 
-                    <h3>Attendance:</h3>
-                    {subjectAttendance && Array.isArray(subjectAttendance) && subjectAttendance.length > 0
-                        &&
-                        <>
+                    <h3>Attendance Summary:</h3>
+                    
+                    {/* New Attendance Summary */}
+                    {loadingAttendance ? (
+                        <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
+                            <CircularProgress size={24} />
+                            <Typography sx={{ ml: 2 }}>Loading attendance summary...</Typography>
+                        </Box>
+                    ) : newAttendanceSummary ? (
+                        <Paper sx={{ p: 3, mb: 3 }}>
+                            <Typography variant="h6" gutterBottom>
+                                <TrendingUp sx={{ mr: 1, verticalAlign: 'middle' }} />
+                                {teachSubject} - Current Summary
+                            </Typography>
+                            
+                            <Box sx={{ display: 'flex', gap: 2, mb: 2, flexWrap: 'wrap' }}>
+                                <Chip 
+                                    label={`Present: ${newAttendanceSummary.presentCount}`} 
+                                    color="success" 
+                                    variant="outlined"
+                                />
+                                <Chip 
+                                    label={`Absent: ${newAttendanceSummary.absentCount}`} 
+                                    color="error" 
+                                    variant="outlined"
+                                />
+                                <Chip 
+                                    label={`Late: ${newAttendanceSummary.lateCount}`} 
+                                    color="warning" 
+                                    variant="outlined"
+                                />
+                                <Chip 
+                                    label={`Excused: ${newAttendanceSummary.excusedCount}`} 
+                                    color="info" 
+                                    variant="outlined"
+                                />
+                            </Box>
+                            
+                            <Typography variant="h5" color="primary" gutterBottom>
+                                Attendance: {newAttendanceSummary.attendancePercentage?.toFixed(1)}%
+                            </Typography>
+                            
+                            <Typography variant="body2" color="text.secondary">
+                                Total Sessions: {newAttendanceSummary.totalSessions} | 
+                                Last Updated: {new Date(newAttendanceSummary.lastUpdated).toLocaleDateString()}
+                            </Typography>
+                        </Paper>
+                    ) : (
+                        <Alert severity="info" sx={{ mb: 3 }}>
+                            No attendance records found in the new system. Legacy data shown below.
+                        </Alert>
+                    )}
+
+                    {/* Legacy Attendance Display (for backward compatibility) */}
+                    {subjectAttendance && Array.isArray(subjectAttendance) && subjectAttendance.length > 0 && (
+                        <Paper sx={{ p: 2, mb: 3 }}>
+                            <Typography variant="h6" gutterBottom color="text.secondary">
+                                Legacy Attendance Records
+                            </Typography>
                             {Object.entries(groupAttendanceBySubject(subjectAttendance)).map(([subName, { present, allData, subId, sessions }], index) => {
                                 if (subName === teachSubject) {
                                     const subjectAttendancePercentage = calculateSubjectAttendancePercentage(present, sessions);
@@ -155,19 +241,28 @@ const TeacherViewStudent = () => {
                             </div>
 
                             <CustomPieChart data={chartData} />
-                        </>
-                    }
-                    <br /><br />
-                    <Button
-                        variant="contained"
-                        onClick={() =>
-                            navigate(
-                                `/Teacher/class/student/attendance/${studentID}/${teachSubjectID}`
-                            )
-                        }
-                    >
-                        Add Attendance
-                    </Button>
+                        </Paper>
+                    )}
+                    <br />
+                    <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
+                        <GreenButton
+                            variant="contained"
+                            startIcon={<CalendarToday />}
+                            onClick={() =>
+                                navigate(
+                                    `/Teacher/class/student/attendance/${studentID}/${teachSubjectID}`
+                                )
+                            }
+                        >
+                            Add Individual Attendance
+                        </GreenButton>
+                        <BlueButton
+                            variant="contained"
+                            onClick={() => navigate('/Teacher/attendance/mark')}
+                        >
+                            Mark Class Attendance
+                        </BlueButton>
+                    </Box>
                     <br /><br /><br />
                     <h3>Subject Marks:</h3>
 

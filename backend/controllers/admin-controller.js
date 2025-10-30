@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const Admin = require('../models/adminSchema.js');
 const Sclass = require('../models/sclassSchema.js');
 const Student = require('../models/studentSchema.js');
@@ -84,9 +85,21 @@ const adminLogIn = async (req, res) => {
     if (req.body.email && req.body.password) {
         let admin = await Admin.findOne({ email: req.body.email });
         if (admin) {
-            if (req.body.password === admin.password) {
+            // Use bcrypt to compare hashed password
+            const isPasswordValid = await bcrypt.compare(req.body.password, admin.password);
+            if (isPasswordValid) {
+                // Generate JWT token
+                const token = jwt.sign(
+                    { id: admin._id, role: 'Admin' },
+                    process.env.JWT_SECRET || 'your-secret-key',
+                    { expiresIn: '24h' }
+                );
+                
                 admin.password = undefined;
-                res.send(admin);
+                res.send({
+                    ...admin.toObject(),
+                    token
+                });
             } else {
                 res.send({ message: "Invalid password" });
             }

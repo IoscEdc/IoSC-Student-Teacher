@@ -1,8 +1,8 @@
-import Note from "../models/Note.js";
-import fs from "fs";
-import { uploadFileToDrive, makeFilePublic } from "../utils/driveHelper.js";
+const Note = require("../models/Note");
+const fs = require("fs");
+const { uploadFileToDrive, makeFilePublic } = require("../utils/driveHelper");
 
-export const uploadNote = async (req, res) => {
+const uploadNote = async (req, res) => {
   try {
     const file = req.file;
     const { title, subject, year } = req.body;
@@ -34,7 +34,7 @@ export const uploadNote = async (req, res) => {
   }
 };
 
-export const listNotes = async (req, res) => {
+const listNotes = async (req, res) => {
   try {
     const filter = {};
     if (req.query.subject) filter.subject = req.query.subject;
@@ -46,7 +46,7 @@ export const listNotes = async (req, res) => {
   }
 };
 
-export const getNote = async (req, res) => {
+const getNote = async (req, res) => {
   try {
     const note = await Note.findById(req.params.id);
     if (!note) return res.status(404).json({ message: "Not found" });
@@ -54,4 +54,10 @@ export const getNote = async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
+};
+
+module.exports = {
+  uploadNote,
+  listNotes,
+  getNote
 };

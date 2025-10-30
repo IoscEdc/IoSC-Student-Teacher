@@ -4,6 +4,9 @@ const router = require('express').Router();
 
 const { adminRegister, adminLogIn, getAdminDetail} = require('../controllers/admin-controller.js');
 
+// Import attendance routes
+const attendanceRoutes = require('./attendanceRoutes');
+
 const { sclassCreate, sclassList, deleteSclass, deleteSclasses, getSclassDetail, getSclassStudents } = require('../controllers/class-controller.js');
 const { complainCreate, complainList } = require('../controllers/complain-controller.js');
 const { noticeCreate, noticeList, deleteNotices, deleteNotice, updateNotice } = require('../controllers/notice-controller.js');
@@ -128,5 +131,12 @@ router.get("/Subject/:id", getSubjectDetail)
 router.delete("/Subject/:id", deleteSubject)
 router.delete("/Subjects/:id", deleteSubjects)
 router.delete("/SubjectsClass/:id", deleteSubjectsByClass)
+
+// Attendance routes
+router.use('/attendance', attendanceRoutes);
+
+// Fallback attendance routes (for immediate testing)
+const attendanceFallback = require('./attendanceFallback');
+router.use('/attendance-fallback', attendanceFallback);
 
 module.exports = router;

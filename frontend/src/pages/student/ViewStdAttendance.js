@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
-import { BottomNavigation, BottomNavigationAction, Box, Button, Collapse, Paper, Table, TableBody, TableHead, Typography } from '@mui/material';
-import { useDispatch, useSelector } from 'react-redux';
-import { getUserDetails } from '../../redux/userRelated/userHandle';
-import { calculateOverallAttendancePercentage, calculateSubjectAttendancePercentage, groupAttendanceBySubject } from '../../components/attendanceCalculator';
+import { BottomNavigation, BottomNavigationAction, Box, Button, Collapse, Paper, Table, TableBody, TableHead, Typography, CircularProgress, Alert } from '@mui/material';
+import { useSelector } from 'react-redux';
+import useStudentAttendance from '../../hooks/useStudentAttendance';
 
 import CustomBarChart from '../../components/CustomBarChart'
 
@@ -14,9 +13,8 @@ import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 import { StyledTableCell, StyledTableRow } from '../../components/styles';
 
 const ViewStdAttendance = () => {
-    const dispatch = useDispatch();
-
     const [openStates, setOpenStates] = useState({});
+    const [selectedSection, setSelectedSection] = useState('table');
 
     const handleOpen = (subId) => {
         setOpenStates((prevState) => ({
@@ -25,37 +23,24 @@ const ViewStdAttendance = () => {
         }));
     };
 
-    const { userDetails, currentUser, loading, response, error } = useSelector((state) => state.user);
+    const { currentUser } = useSelector((state) => state.user);
+    
+    // Use the new attendance API hook
+    const { 
+        attendanceData, 
+        loading, 
+        error 
+    } = useStudentAttendance(currentUser?._id);
 
-    useEffect(() => {
-        dispatch(getUserDetails(currentUser._id, "Student"));
-    }, [dispatch, currentUser._id]);
+    const overallPercentage = attendanceData?.overallPercentage || 0;
+    const subjects = attendanceData?.subjects || [];
 
-    if (response) { console.log(response) }
-    else if (error) { console.log(error) }
-
-    const [subjectAttendance, setSubjectAttendance] = useState([]);
-    const [selectedSection, setSelectedSection] = useState('table');
-
-    useEffect(() => {
-        if (userDetails) {
-            setSubjectAttendance(userDetails.attendance || []);
-        }
-    }, [userDetails])
-
-    const attendanceBySubject = groupAttendanceBySubject(subjectAttendance)
-
-    const overallAttendancePercentage = calculateOverallAttendancePercentage(subjectAttendance);
-
-    const subjectData = Object.entries(attendanceBySubject).map(([subName, { subCode, present, sessions }]) => {
-        const subjectAttendancePercentage = calculateSubjectAttendancePercentage(present, sessions);
-        return {
-            subject: subName,
-            attendancePercentage: subjectAttendancePercentage,
-            totalClasses: sessions,
-            attendedClasses: present
-        };
-    });
+    const subjectData = subjects.map(subject => ({
+        subject: subject.subject,
+        attendancePercentage: subject.percentage,
+        totalClasses: subject.total,
+        attendedClasses: subject.present
+    }));
 
     const handleSectionChange = (event, newSection) => {
         setSelectedSection(newSection);
@@ -77,26 +62,25 @@ const ViewStdAttendance = () => {
                             <StyledTableCell align="center">Actions</StyledTableCell>
                         </StyledTableRow>
                     </TableHead>
-                    {Object.entries(attendanceBySubject).map(([subName, { present, allData, subId, sessions }], index) => {
-                        const subjectAttendancePercentage = calculateSubjectAttendancePercentage(present, sessions);
+                    {subjects.map((subject, index) => {
 
                         return (
                             <TableBody key={index}>
                                 <StyledTableRow>
-                                    <StyledTableCell>{subName}</StyledTableCell>
-                                    <StyledTableCell>{present}</StyledTableCell>
-                                    <StyledTableCell>{sessions}</StyledTableCell>
-                                    <StyledTableCell>{subjectAttendancePercentage}%</StyledTableCell>
+                                    <StyledTableCell>{subject.subject}</StyledTableCell>
+                                    <StyledTableCell>{subject.present}</StyledTableCell>
+                                    <StyledTableCell>{subject.total}</StyledTableCell>
+                                    <StyledTableCell>{(subject.percentage || 0).toFixed(1)}%</StyledTableCell>
                                     <StyledTableCell align="center">
                                         <Button variant="contained"
-                                            onClick={() => handleOpen(subId)}>
-                                            {openStates[subId] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}Details
+                                            onClick={() => handleOpen(subject.subjectId)}>
+                                            {openStates[subject.subjectId] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}Details
                                         </Button>
                                     </StyledTableCell>
                                 </StyledTableRow>
                                 <StyledTableRow>
                                     <StyledTableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-                                        <Collapse in={openStates[subId]} timeout="auto" unmountOnExit>
+                                        <Collapse in={openStates[subject.subjectId]} timeout="auto" unmountOnExit>
                                             <Box sx={{ margin: 1 }}>
                                                 <Typography variant="h6" gutterBottom component="div">
                                                     Attendance Details
@@ -109,18 +93,32 @@ const ViewStdAttendance = () => {
                                                         </StyledTableRow>
                                                     </TableHead>
                                                     <TableBody>
-                                                        {allData.map((data, index) => {
+                                                                        {subject.records && subject.records.length > 0 ? subject.records.map((data, recordIndex) => {
                                                             const date = new Date(data.date);
                                                             const dateString = date.toString() !== "Invalid Date" ? date.toISOString().substring(0, 10) : "Invalid Date";
+                                                            const isPresent = data.status === 'present' || data.status === 'Present';
                                                             return (
-                                                                <StyledTableRow key={index}>
+                                                                <StyledTableRow key={recordIndex}>
                                                                     <StyledTableCell component="th" scope="row">
                                                                         {dateString}
                                                                     </StyledTableCell>
-                                                                    <StyledTableCell align="right">{data.status}</StyledTableCell>
+                                                                    <StyledTableCell align="right">
+                                                                        <span style={{ 
+                                                                            color: isPresent ? '#4caf50' : '#f44336',
+                                                                            fontWeight: 'bold'
+                                                                        }}>
+                                                                            {isPresent ? 'Present' : 'Absent'}
+                                                                        </span>
+                                                                    </StyledTableCell>
                                                                 </StyledTableRow>
                                                             )
-                                                        })}
+                                                        }) : (
+                                                            <StyledTableRow>
+                                                                <StyledTableCell colSpan={2} align="center">
+                                                                    No attendance records found
+                                                                </StyledTableCell>
+                                                            </StyledTableRow>
+                                                        )}
                                                     </TableBody>
                                                 </Table>
                                             </Box>
@@ -133,7 +131,7 @@ const ViewStdAttendance = () => {
                     )}
                 </Table>
                 <div>
-                    Overall Attendance Percentage: {overallAttendancePercentage.toFixed(2)}%
+                    Overall Attendance Percentage: {(overallPercentage || 0).toFixed(2)}%
                 </div>
             </>
         )
@@ -149,13 +147,17 @@ const ViewStdAttendance = () => {
 
     return (
         <>
-            {loading
-                ? (
-                    <div>Loading...</div>
-                )
-                :
+            {loading ? (
+                <Box display="flex" justifyContent="center" alignItems="center" minHeight="400px">
+                    <CircularProgress />
+                </Box>
+            ) : error ? (
+                <Alert severity="error" sx={{ m: 2 }}>
+                    Error loading attendance data: {error}
+                </Alert>
+            ) : (
                 <div>
-                    {subjectAttendance && Array.isArray(subjectAttendance) && subjectAttendance.length > 0 ?
+                    {subjects && subjects.length > 0 ?
                         <>
                             {selectedSection === 'table' && renderTableSection()}
                             {selectedSection === 'chart' && renderChartSection()}
@@ -176,14 +178,19 @@ const ViewStdAttendance = () => {
                             </Paper>
                         </>
                         :
-                        <>
-                            <Typography variant="h6" gutterBottom component="div">
-                                Currently You Have No Attendance Details
-                            </Typography>
-                        </>
+                        <Box sx={{ p: 3, textAlign: 'center' }}>
+                            <Alert severity="info">
+                                <Typography variant="h6" gutterBottom>
+                                    No Attendance Records Found
+                                </Typography>
+                                <Typography variant="body2">
+                                    Your attendance data will appear here once your teachers start marking attendance for your subjects.
+                                </Typography>
+                            </Alert>
+                        </Box>
                     }
                 </div>
-            }
+            )}
         </>
     )
 }

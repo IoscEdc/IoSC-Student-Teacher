@@ -56,14 +56,12 @@ const AdminCalendar = () => {
         'July', 'August', 'September', 'October', 'November', 'December'
     ];
 
-    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
-    useEffect(() => {
+    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];    useEffect(() => {
         fetchEvents();
     }, []);
 
     const fetchEvents = async () => {
-        axios.get("http://localhost:5000/Calender/")
+        axios.get(`${process.env.REACT_APP_BASE_URL}/Calender/`)
             .then(res => {
                 setEvents(res.data.calender);
             })
@@ -114,9 +112,8 @@ const AdminCalendar = () => {
                         console.log(res);
                     })
                     .catch(err => console.error(err));
-                fetchEvents();
-            } else {
-                const response = await axios.post('http://localhost:5000/Calender/', currentEvent);
+                fetchEvents();            } else {
+                const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/Calender/`, currentEvent);
                 setEvents([...events, response.data]);
                 showSnackbar('Event added successfully', 'success');
             }

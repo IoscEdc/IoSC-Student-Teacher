@@ -3,28 +3,25 @@ import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getClassStudents } from "../../redux/sclassRelated/sclassHandle";
-import { 
-    Paper, 
-    Box, 
-    Typography, 
-    ButtonGroup, 
-    Button, 
-    Popper, 
-    Grow, 
-    ClickAwayListener, 
-    MenuList, 
-    MenuItem, 
-    FormControl, 
-    InputLabel, 
-    Select,
+import {
+    Paper,
+    Box,
+    Typography,
+    ButtonGroup,
+    Button,
+    Popper,
+    Grow,
+    ClickAwayListener,
+    MenuList,
+    MenuItem,
     Card,
     CardContent,
     Grid,
     Chip
 } from '@mui/material';
-import { BlackButton, BlueButton } from "../../components/buttonStyles";
+import { BlackButton, BlueButton, GreenButton } from "../../components/buttonStyles";
 import TableTemplate from "../../components/TableTemplate";
-import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
+import { KeyboardArrowDown, KeyboardArrowUp, Groups, History } from "@mui/icons-material";
 
 const TeacherClassDetails = () => {
     const navigate = useNavigate();
@@ -84,7 +81,7 @@ const TeacherClassDetails = () => {
                 navigate(`/Teacher/class/student/attendance/${row.id}/${selectedAssignment.subjectcode}`);
             }
         };
-        
+
         const handleMarks = () => {
             if (selectedAssignment) {
                 navigate(`/Teacher/class/student/marks/${row.id}/${selectedAssignment.subjectcode}`);
@@ -179,8 +176,8 @@ const TeacherClassDetails = () => {
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                     {currentUser.assignments.map((assignment, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Card 
-                                sx={{ 
+                            <Card
+                                sx={{
                                     cursor: 'pointer',
                                     border: selectedIndex === index ? '2px solid #1976d2' : '1px solid #e0e0e0',
                                     transition: 'all 0.3s',
@@ -192,16 +189,20 @@ const TeacherClassDetails = () => {
                                 onClick={() => {
                                     setSelectedAssignment(assignment);
                                     setSelectedIndex(index);
+                                    // You still need to trigger the student fetch here.
+                                    // Uncomment the useEffect or dispatch the action directly.
+                                    // For example:
+                                    // dispatch(getClassStudents(assignment.className)); 
                                 }}
                             >
                                 <CardContent>
                                     <Typography variant="h6" gutterBottom color="primary">
                                         {assignment.subject}
                                     </Typography>
-                                    <Chip 
-                                        label={assignment.subjectcode} 
-                                        size="small" 
-                                        color="primary" 
+                                    <Chip
+                                        label={assignment.subjectcode}
+                                        size="small"
+                                        color="primary"
                                         variant="outlined"
                                         sx={{ mb: 1 }}
                                     />
@@ -255,43 +256,54 @@ const TeacherClassDetails = () => {
                 </Paper>
             )}
 
-            {/* Students List - Currently disabled, needs backend API modification */}
+            {/* Students List - Renders after a class is selected */}
             {selectedAssignment && (
-                <Paper sx={{ p: 2 }}>
-                    <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic' }}>
-                        Note: To display students, you need to modify your backend API to fetch students by className or create a proper class-subject relationship with IDs.
-                    </Typography>
-                </Paper>
-            )}
-
-            {/* Original student list code - uncomment when backend is ready
-            {loading ? (
-                <div>Loading...</div>
-            ) : (
                 <>
-                    {selectedAssignment && (
-                        getresponse ? (
-                            <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
-                                No Students Found
+                    {loading ? (
+                        <div>Loading...</div>
+                    ) : (
+                        <>
+                            {/* New Attendance Interface Buttons */}
+                            <Box sx={{ display: 'flex', gap: 2, mb: 3, justifyContent: 'flex-end' }}>
+                                <GreenButton
+                                    variant="contained"
+                                    startIcon={<Groups />}
+                                    onClick={() => navigate('/Teacher/attendance/mark')}
+                                >
+                                    Mark Class Attendance
+                                </GreenButton>
+                                <BlueButton
+                                    variant="contained"
+                                    startIcon={<History />}
+                                    onClick={() => navigate('/Teacher/attendance/history')}
+                                >
+                                    View Attendance History
+                                </BlueButton>
                             </Box>
-                        ) : (
-                            <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-                                <Typography variant="h5" gutterBottom sx={{ p: 2, pb: 0 }}>
-                                    Students List:
-                                </Typography>
-                                {Array.isArray(sclassStudents) && sclassStudents.length > 0 ? (
-                                    <TableTemplate buttonHaver={StudentsButtonHaver} columns={studentColumns} rows={studentRows} />
-                                ) : (
-                                    <Typography variant="body1" sx={{ p: 2 }}>
-                                        No students in this class.
+
+                            {/* This logic is from the original HEAD branch */}
+                            {getresponse ? (
+                                <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+                                    No Students Found
+                                </Box>
+                            ) : (
+                                <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+                                    <Typography variant="h5" gutterBottom sx={{ p: 2, pb: 0 }}>
+                                        Students List:
                                     </Typography>
-                                )}
-                            </Paper>
-                        )
+                                    {Array.isArray(sclassStudents) && sclassStudents.length > 0 ? (
+                                        <TableTemplate buttonHaver={StudentsButtonHaver} columns={studentColumns} rows={studentRows} />
+                                    ) : (
+                                        <Typography variant="body1" sx={{ p: 2 }}>
+                                            No students in this class.
+                                        </Typography>
+                                    )}
+                                </Paper>
+                            )}
+                        </>
                     )}
                 </>
             )}
-            */}
         </>
     );
 };

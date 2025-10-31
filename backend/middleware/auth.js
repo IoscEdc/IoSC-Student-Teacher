@@ -146,3 +146,8 @@ module.exports = {
     authenticateAdmin,
     authenticateTeacherOrAdmin
 };
+
+module.exports = {
+  authMiddleware,
+  authorizeRoles
+};

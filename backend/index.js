@@ -11,7 +11,20 @@ const chatbotRoutes = require('./routes/chatbot');
 const notesRoutes = require("./routes/notesRoutes");
 const assignmentsRoutes = require("./routes/assignmentsRoutes");
 
-// 2. INITIALIZATION
+// Error monitoring routes
+const errorMonitoringRoutes = require("./routes/errorMonitoringRoutes");
+const attendanceErrorMonitoringRoutes = require("./routes/attendanceErrorMonitoringRoutes");
+
+// Main routes (includes attendance routes)
+const mainRoutes = require("./routes/route");
+
+// Error middleware
+const { errorHandler } = require("./middleware/errorMiddleware");
+
+// Performance monitoring middleware
+const { performanceMonitor } = require("./middleware/performanceMiddleware");
+
+// Initialize app
 const app = express();
 const PORT = process.env.PORT || 5000;
 

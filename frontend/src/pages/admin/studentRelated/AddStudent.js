@@ -14,10 +14,9 @@ const AddStudent = ({ situation }) => {
 
     const userState = useSelector(state => state.user);
     const { status, currentUser, response, error } = userState;
-    const { sclassesList } = useSelector((state) => state.sclass);
-
-    const [name, setName] = useState('');
+    const { sclassesList } = useSelector((state) => state.sclass);    const [name, setName] = useState('');
     const [rollNum, setRollNum] = useState('');
+    const [universityId, setUniversityId] = useState('');
     const [password, setPassword] = useState('')
     const [className, setClassName] = useState('')
     const [sclassName, setSclassName] = useState('')
@@ -50,10 +49,9 @@ const AddStudent = ({ situation }) => {
             );
             setClassName(selectedClass.sclassName);
             setSclassName(selectedClass._id);
-        }
-    }
+        }    }
 
-    const fields = { name, rollNum, password, sclassName, adminID, role, attendance }
+    const fields = { name, rollNum, universityId: rollNum, password, sclassName, adminID, role, attendance }
 
     const submitHandler = (event) => {
         event.preventDefault()

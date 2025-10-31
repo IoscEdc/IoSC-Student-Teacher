@@ -11,6 +11,8 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import AnalyticsIcon from '@mui/icons-material/Analytics';
 
 const StudentSideBar = () => {
     const location = useLocation();
@@ -35,11 +37,12 @@ const StudentSideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary="TimeTable" />
                 </ListItemButton>
-                <ListItemButton component={Link} to="/Student/attendance">
+
+                <ListItemButton component={Link} to="/Student/attendance-dashboard">
                     <ListItemIcon>
-                        <ClassOutlinedIcon color={location.pathname.startsWith("/Student/attendance") ? 'primary' : 'inherit'} />
+                        <DashboardIcon color={location.pathname === "/Student/attendance-dashboard" ? 'primary' : 'inherit'} />
                     </ListItemIcon>
-                    <ListItemText primary="Attendance" />
+                    <ListItemText primary="Attendance Dashboard" />
                 </ListItemButton>
                 <ListItemButton component={Link} to="/Student/notices">
                     <ListItemIcon>
@@ -47,6 +50,7 @@ const StudentSideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary="Notice Board" />
                 </ListItemButton>
+
                 <ListItemButton component={Link} to="/Student/calender">
                     <ListItemIcon>
                         <EventAvailableIcon color={location.pathname.startsWith("/Student/calender") ? 'primary' : 'inherit'} />

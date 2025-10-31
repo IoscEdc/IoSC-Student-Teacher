@@ -1,89 +1,141 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { getUserDetails } from '../../../redux/userRelated/userHandle';
 import { getSubjectList } from '../../../redux/sclassRelated/sclassHandle';
-import { updateStudentFields } from '../../../redux/studentRelated/studentHandle';
+import axios from 'axios';
 
 import {
     Box, InputLabel,
     MenuItem, Select,
     Typography, Stack,
-    TextField, CircularProgress, FormControl
+    TextField, CircularProgress, FormControl,
+    Alert, Snackbar
 } from '@mui/material';
 import { PurpleButton } from '../../../components/buttonStyles';
-import Popup from '../../../components/Popup';
 
 const StudentAttendance = ({ situation }) => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const { currentUser, userDetails, loading } = useSelector((state) => state.user);
     const { subjectsList } = useSelector((state) => state.sclass);
-    const { response, error, statestatus } = useSelector((state) => state.student);
-    const params = useParams()
+    const params = useParams();
 
     const [studentID, setStudentID] = useState("");
     const [subjectName, setSubjectName] = useState("");
     const [chosenSubName, setChosenSubName] = useState("");
     const [status, setStatus] = useState('');
-    const [date, setDate] = useState('');
+    const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
+    const [session, setSession] = useState('');
+    
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+    const [loader, setLoader] = useState(false);
 
-    const [showPopup, setShowPopup] = useState(false);
-    const [message, setMessage] = useState("");
-    const [loader, setLoader] = useState(false)
+    // Available sessions
+    const availableSessions = ['Lecture 1', 'Lecture 2', 'Lab 1', 'Tutorial 1'];    const submitHandler = async (event) => {
+        event.preventDefault();
+        
+        // Get the correct subject ID
+        let subjectId = chosenSubName; // From URL params
+        if (!subjectId && subjectName) {
+            // Find subject ID from the selected subject name
+            const selectedSubject = subjectsList.find(subject => subject.subName === subjectName);
+            subjectId = selectedSubject ? selectedSubject._id : null;
+        }
+        
+        if (!subjectId || !status || !date || !session) {
+            setError("Please fill all required fields including session");
+            return;
+        }
+        
+        try {
+            setLoader(true);
+            setError('');
 
-    useEffect(() => {
-        if (situation === "Student") {
+            // Get class ID from user details
+            const classId = userDetails.sclassName?._id;
+            if (!classId) {
+                throw new Error('Class information not found');
+            }
+
+            // Use the new attendance API
+            const attendanceData = {
+                classId,
+                subjectId,
+                date,
+                session,
+                studentAttendance: [{
+                    studentId: studentID,
+                    status
+                }]
+            };            let response;
+            try {
+                // Try the new attendance API first
+                response = await axios.post(
+                    '/api/attendance/mark',
+                    attendanceData,
+                    {
+                        headers: {
+                            Authorization: `Bearer ${localStorage.getItem('token')}`
+                        }
+                    }
+                );
+            } catch (err) {
+                console.log('Main attendance API failed, trying fallback...');
+                // Fallback to simpler endpoint
+                response = await axios.post('/api/attendance-fallback/mark', attendanceData);
+            }
+
+            if (response.data.success) {
+                setSuccess('Attendance marked successfully!');
+                
+                // Navigate back after a delay
+                setTimeout(() => {
+                    navigate(-1);
+                }, 2000);
+            } else {
+                throw new Error(response.data.message || 'Failed to mark attendance');
+            }
+
+        } catch (err) {
+            console.error('Error marking attendance:', err);
+            setError(err.response?.data?.message || 'Failed to mark attendance');
+        } finally {
+            setLoader(false);
+        }
+    };
+
+    useEffect(() => {        if (situation === "Student") {
             setStudentID(params.id);
-            const stdID = params.id
+            const stdID = params.id;
             dispatch(getUserDetails(stdID, "Student"));
-        }
-        else if (situation === "Subject") {
-            const { studentID, subjectID } = params
+        }        else if (situation === "Subject") {
+            const { studentID, subjectID } = params;
             setStudentID(studentID);
-            dispatch(getUserDetails(studentID, "Student"));
-            setChosenSubName(subjectID);
+            dispatch(getUserDetails(studentID, "Student"));            setChosenSubName(subjectID);
         }
-    }, [situation]);
+    }, [situation, params.id, dispatch]);
 
     useEffect(() => {
         if (userDetails && userDetails.sclassName && situation === "Student") {
             dispatch(getSubjectList(userDetails.sclassName._id, "ClassSubjects"));
         }
-    }, [dispatch, userDetails]);
+    }, [dispatch, userDetails, situation]);
 
     const changeHandler = (event) => {
         const selectedSubject = subjectsList.find(
             (subject) => subject.subName === event.target.value
         );
-        setSubjectName(selectedSubject.subName);
-        setChosenSubName(selectedSubject._id);
-    }
-
-    const fields = { subName: chosenSubName, status, date }
-
-    const submitHandler = (event) => {
-        event.preventDefault()
-        setLoader(true)
-        dispatch(updateStudentFields(studentID, fields, "StudentAttendance"))
-    }
-
-    useEffect(() => {
-        if (response) {
-            setLoader(false)
-            setShowPopup(true)
-            setMessage(response)
+        
+        if (selectedSubject) {
+            setSubjectName(selectedSubject.subName);
+            setChosenSubName(selectedSubject._id);
         }
-        else if (error) {
-            setLoader(false)
-            setShowPopup(true)
-            setMessage("error")
-        }
-        else if (statestatus === "added") {
-            setLoader(false)
-            setShowPopup(true)
-            setMessage("Done Successfully")
-        }
-    }, [response, statestatus, error])
+    };
+
+    const handleCloseError = () => setError('');
+    const handleCloseSuccess = () => setSuccess('');
 
     return (
         <>
@@ -145,32 +197,54 @@ const StudentAttendance = ({ situation }) => {
                                                     </MenuItem>
                                                 }
                                             </Select>
-                                        </FormControl>
-                                    }
+                                        </FormControl>                                    }
+                                    
                                     <FormControl fullWidth>
-                                        <InputLabel id="demo-simple-select-label">Attendance Status</InputLabel>
+                                        <InputLabel id="session-select-label">Select Session</InputLabel>
                                         <Select
-                                            labelId="demo-simple-select-label"
-                                            id="demo-simple-select"
-                                            value={status}
-                                            label="Choose an option"
-                                            onChange={(event) => setStatus(event.target.value)}
+                                            labelId="session-select-label"
+                                            id="session-select"
+                                            value={session}
+                                            label="Select Session"
+                                            onChange={(event) => setSession(event.target.value)}
                                             required
                                         >
-                                            <MenuItem value="Present">Present</MenuItem>
-                                            <MenuItem value="Absent">Absent</MenuItem>
+                                            {availableSessions.map((sessionOption) => (
+                                                <MenuItem key={sessionOption} value={sessionOption}>
+                                                    {sessionOption}
+                                                </MenuItem>
+                                            ))}
                                         </Select>
                                     </FormControl>
+
                                     <FormControl>
                                         <TextField
                                             label="Select Date"
                                             type="date"
                                             value={date}
-                                            onChange={(event) => setDate(event.target.value)} required
+                                            onChange={(event) => setDate(event.target.value)} 
+                                            required
                                             InputLabelProps={{
                                                 shrink: true,
                                             }}
                                         />
+                                    </FormControl>
+
+                                    <FormControl fullWidth>
+                                        <InputLabel id="status-select-label">Attendance Status</InputLabel>
+                                        <Select
+                                            labelId="status-select-label"
+                                            id="status-select"
+                                            value={status}
+                                            label="Attendance Status"
+                                            onChange={(event) => setStatus(event.target.value)}
+                                            required
+                                        >
+                                            <MenuItem value="Present">Present</MenuItem>
+                                            <MenuItem value="Absent">Absent</MenuItem>
+                                            <MenuItem value="Late">Late</MenuItem>
+                                            <MenuItem value="Excused">Excused</MenuItem>
+                                        </Select>
                                     </FormControl>
                                 </Stack>
 
@@ -183,11 +257,33 @@ const StudentAttendance = ({ situation }) => {
                                     disabled={loader}
                                 >
                                     {loader ? <CircularProgress size={24} color="inherit" /> : "Submit"}
-                                </PurpleButton>
-                            </form>
+                                </PurpleButton>                            </form>
                         </Box>
                     </Box>
-                    <Popup message={message} setShowPopup={setShowPopup} showPopup={showPopup} />
+
+                    {/* Error Snackbar */}
+                    <Snackbar
+                        open={!!error}
+                        autoHideDuration={6000}
+                        onClose={handleCloseError}
+                        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                    >
+                        <Alert onClose={handleCloseError} severity="error" sx={{ width: '100%' }}>
+                            {error}
+                        </Alert>
+                    </Snackbar>
+
+                    {/* Success Snackbar */}
+                    <Snackbar
+                        open={!!success}
+                        autoHideDuration={4000}
+                        onClose={handleCloseSuccess}
+                        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                    >
+                        <Alert onClose={handleCloseSuccess} severity="success" sx={{ width: '100%' }}>
+                            {success}
+                        </Alert>
+                    </Snackbar>
                 </>
             }
         </>

@@ -16,6 +16,7 @@ import TeacherResetPassword from './pages/TeacherResetPassword';
 import LoginSuccess from './pages/LoginSuccess';
 import Logout from './pages/Logout';
 
+import AttendanceTest from './components/AttendanceTest';
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
 
@@ -39,10 +40,9 @@ const App = () => {
             <Route path="/register" element={<ChooseRegister />} />
 
             <Route path="/Adminlogin" element={<LoginPage role="Admin" />} />
-            <Route path="/Studentlogin" element={<LoginPage role="Student" />} />
             <Route path="/Student/login" element={<LoginPage role="Student" />} />
-            <Route path="/Teacherlogin" element={<LoginPage role="Teacher" />} />
             <Route path="/Teacher/login" element={<LoginPage role="Teacher" />} />
+            <Route path="/test-attendance" element={<AttendanceTest />} />
 
             <Route path="/Adminregister" element={<AdminRegisterPage />} />
             <Route path="/Teacherregister" element={<TeacherRegister />} />

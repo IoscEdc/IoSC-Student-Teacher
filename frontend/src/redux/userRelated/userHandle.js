@@ -5,7 +5,11 @@ import {
     authSuccess,
     authFailed,
     authError,
-    authLogout
+    authLogout,
+    doneSuccess,
+    getRequest,
+    getFailed,
+    getError,
 } from './userSlice';
 
 // Helper to safely get error message

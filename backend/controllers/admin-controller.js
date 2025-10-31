@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
+const jwt = require('jsonwebtoken');
 const Admin = require('../models/adminSchema.js');
 const Sclass = require('../models/sclassSchema.js');
 const Student = require('../models/studentSchema.js');

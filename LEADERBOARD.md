@@ -2,7 +2,7 @@
 
 | Rank | Username | Points |
 |------|----------|--------|
-| 1 | prefierolasoledad | 85 |
+| 1 | prefierolasoledad | 90 |
 | 2 | utkarsh-chauhannn | 50 |
 | 3 | AryanSachan12 | 25 |
 | 4 | coderabbitai[bot] | 18 |

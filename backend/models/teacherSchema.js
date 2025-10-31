@@ -40,7 +40,7 @@ const teacherSchema = new mongoose.Schema({
         className: { // Using 'className' as 'class' is a reserved keyword
             type: String,
             required: true
-        }}]
+        }}],
     // Legacy fields - kept for backward compatibility
     // New enhanced assignment structure
     assignedSubjects: [{

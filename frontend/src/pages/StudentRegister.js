@@ -33,8 +33,8 @@ const StudentRegister = () => {
     email: '',
     password: '',
     confirmPassword: '',
-    school: '',
     sclassName: '',
+    sbatchName: '',
     rollNum: ''
   });
   
@@ -46,10 +46,21 @@ const StudentRegister = () => {
   const [errors, setErrors] = useState({});
 
   const classOptions = [
-    { value: 'AIDS', label: 'AIDS' },
-    { value: 'AIML', label: 'AIML' },
-    { value: 'AR', label: 'AR' },
-    { value: 'IIOT', label: 'IIOT' }
+    { value: 'AIDS B1', label: 'AIDS B1' },
+    { value: 'AIDS B2', label: 'AIDS B2' },
+    { value: 'AIML B1', label: 'AIML B1' },
+    { value: 'AIML B2', label: 'AIML B2' },
+    { value: 'AR B1', label: 'AR B1' },
+    { value: 'AR B2', label: 'AR B2' },
+    { value: 'IIOT B1', label: 'IIOT B1' },
+    { value: 'IIOT B2', label: 'IIOT B2' },
+  ];
+
+  const batchOptions = [
+    { value: '2022-2026', label: '2022-2026' },
+    { value: '2023-2027', label: '2023-2027' },
+    { value: '2024-2028', label: '2024-2028' },
+    { value: '2025-2029', label: '2025-2029' }
   ];
 
   const handleInputChange = (e) => {
@@ -84,9 +95,9 @@ const StudentRegister = () => {
       newErrors.email = "Email must end with @std.ggsipu.ac.in or @ipu.ac.in";
     }
 
-    // School validation
-    if (!formData.school.trim()) {
-      newErrors.school = "School ID is required";
+    // Batch validation
+    if (!formData.sbatchName) {
+      newErrors.sbatchName = "Batch is required";
     }
 
     // Password validation
@@ -135,7 +146,7 @@ const StudentRegister = () => {
         name: formData.name.trim(),
         email: formData.email.toLowerCase(),
         password: formData.password,
-        school: formData.school.trim(),
+        sbatchName: formData.sbatchName,
         sclassName: formData.sclassName,
         rollNum: formData.rollNum,
         role: 'Student'
@@ -211,19 +222,6 @@ const StudentRegister = () => {
                 placeholder="yourname@std.ac.in"
               />
 
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="school"
-                label="School ID"
-                name="school"
-                value={formData.school}
-                onChange={handleInputChange}
-                error={!!errors.school}
-                helperText={errors.school || "Enter your school ID"}
-              />
-
               <FormControl fullWidth margin="normal" required error={!!errors.sclassName}>
                 <InputLabel id="class-label">Class</InputLabel>
                 <Select
@@ -246,6 +244,30 @@ const StudentRegister = () => {
                   </Typography>
                 )}
               </FormControl>
+
+              <FormControl fullWidth margin="normal" required error={!!errors.sbatchName}>
+                <InputLabel id="class-label">Batch</InputLabel>
+                <Select
+                  labelId="class-label"
+                  id="sbatchName"
+                  name="sbatchName"
+                  value={formData.sbatchName}
+                  label="Class"
+                  onChange={handleInputChange}
+                >
+                  {batchOptions.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </Select>
+                {errors.sbatchName && (
+                  <Typography variant="caption" color="error" sx={{ mt: 1, ml: 2 }}>
+                    {errors.sbatchName}
+                  </Typography>
+                )}
+              </FormControl>
+              
 
               <TextField
                 margin="normal"

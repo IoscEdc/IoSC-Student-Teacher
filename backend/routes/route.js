@@ -24,9 +24,10 @@ const {
     removeStudentAttendanceBySubject,
     forgotPassword,
     resetPassword,
+    verifyEmailStudent,
     removeStudentAttendance } = require('../controllers/student-controller.js');
 const { subjectCreate, classSubjects, deleteSubjectsByClass, getSubjectDetail, deleteSubject, freeSubjectList, allSubjects, deleteSubjects } = require('../controllers/subject-controller.js');
-const { teacherRegister, teacherLogIn, teacherForgotPassword, teacherResetPassword, getTeachers, getTeacherDetail, deleteTeachers, deleteTeachersByClass, deleteTeacher, updateTeacherSubject, teacherAttendance } = require('../controllers/teacher-controller.js');
+const { teacherRegister, teacherLogIn, teacherForgotPassword, teacherResetPassword, getTeachers, getTeacherDetail, deleteTeachers, deleteTeachersByClass, deleteTeacher, updateTeacherSubject,verifyEmailTeacher, teacherAttendance } = require('../controllers/teacher-controller.js');
 const { getTimeTable , putTimeTable , getBatch , postBatch , deleteBatch , getCalendar , postCalendar , putCalendar , deleteCalendar } = require('../controllers/timetable-controller.js');
 
 // Admin (registration disabled)
@@ -45,6 +46,7 @@ router.post('/StudentReg', studentRegister);
 router.post('/StudentLogin', studentLogIn)
 router.post('/StudentForgotPassword', forgotPassword);
 router.post('/StudentResetPassword/:token', resetPassword);
+router.get('/api/student/verify/:token', verifyEmailStudent);
 
 router.get("/Students/:id", getStudents)
 router.get("/Student/:id", getStudentDetail)
@@ -72,14 +74,15 @@ router.post('/TeacherLogin', teacherLogIn);
 router.post('/TeacherForgotPassword', teacherForgotPassword);
 router.post('/TeacherResetPassword/:token', teacherResetPassword);
 
-router.get("/Teachers/:id", getTeachers)
-router.get("/Teacher/:id", getTeacherDetail)
+router.get("/Teachers", getTeachers)
+router.get("/Teacher", getTeacherDetail)
 
 router.delete("/Teachers/:id", deleteTeachers)
 router.delete("/TeachersClass/:id", deleteTeachersByClass)
 router.delete("/Teacher/:id", deleteTeacher)
 
 router.put("/TeacherSubject", updateTeacherSubject)
+router.get('/api/teacher/verify/:token', verifyEmailTeacher);
 
 router.post('/TeacherAttendance/:id', teacherAttendance)
 

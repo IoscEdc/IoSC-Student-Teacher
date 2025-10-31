@@ -29,9 +29,6 @@ const TeacherRegister = () => {
         email: '',
         password: '',
         role: 'Teacher',
-        school: '',
-        teachSubject: '',
-        teachSclass: ''
     });
 
     const [showPassword, setShowPassword] = useState(false);
@@ -64,8 +61,6 @@ const TeacherRegister = () => {
         if (!formData.email.trim()) newErrors.email = 'Email is required';
         if (!formData.password) newErrors.password = 'Password is required';
         if (formData.password.length < 8) newErrors.password = 'Password must be at least 8 characters';
-        if (!formData.school.trim()) newErrors.school = 'School is required';
-        if (!formData.teachSclass.trim()) newErrors.teachSclass = 'Teaching class is required';
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -167,43 +162,6 @@ const TeacherRegister = () => {
                                     ),
                                 }}
                             />
-
-                            <TextField
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="school"
-                                label="School ID"
-                                name="school"
-                                value={formData.school}
-                                onChange={handleInputChange}
-                                error={!!errors.school}
-                                helperText={errors.school || "Enter the school ID you'll be teaching at"}
-                            />
-
-                            <TextField
-                                margin="normal"
-                                fullWidth
-                                id="teachSubject"
-                                label="Teaching Subject (Optional)"
-                                name="teachSubject"
-                                value={formData.teachSubject}
-                                onChange={handleInputChange}
-                                helperText="Enter the subject you'll be teaching"
-                            />
-
-                            <TextField
-                                margin="normal"
-                                fullWidth
-                                id="teachSclass"
-                                label="Teaching Class"
-                                required
-                                name="teachSclass"
-                                value={formData.teachSclass}
-                                onChange={handleInputChange}
-                                helperText="Enter the class ID you'll be teaching"
-                            />
-
                             <IndigoButton
                                 type="submit"
                                 fullWidth

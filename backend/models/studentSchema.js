@@ -7,6 +7,7 @@ const studentSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   school: { type: mongoose.Schema.Types.Mixed, required: true },
   sclassName: { type: mongoose.Schema.Types.Mixed, required: true },
+  sbatchName: { type: mongoose.Schema.Types.Mixed, required: true },
   rollNum: { type: String, required: true },
   password: { type: String, required: true },
   role: { type: String, default: "Student" },

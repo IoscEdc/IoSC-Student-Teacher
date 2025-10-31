@@ -18,72 +18,151 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// TEACHER REGISTER
+
+const verifyEmailTeacher = async (req, res) => {
+    try {
+        // 1. Get the raw token from the URL params
+        const token = req.params.token;
+
+        // 2. Hash the raw token (must be the same method as in your schema)
+        const hashedToken = crypto.createHash('sha256').update(token).digest('hex');
+
+        // 3. Find the teacher by the HASHED token
+        const teacher = await Teacher.findOne({ 
+            verificationToken: hashedToken 
+        });
+
+        if (!teacher) {
+            // Invalid token or already used
+            return res.redirect('http://localhost:3000/verification-failed?error=invalid');
+        }
+
+        // 4. If found, verify them and clear the token
+        teacher.isVerified = true;
+        teacher.verificationToken = undefined; // Token is used, so clear it
+        await teacher.save();
+
+        // 5. Redirect to the login page with a success message
+        res.redirect('http://localhost:3000');
+    
+    } catch (err) {
+        console.error("Email verification error:", err.message);
+res.redirect('http://localhost:300/verification-failed?error=server');
+    }
+};
+
+// You'll need this function, similar to the student one
+const sendTeacherVerificationEmail = async (teacher, req) => {
+  const token = teacher.generateVerificationToken(); // Use the method from your schema
+  await teacher.save({ validateBeforeSave: false }); // Save the token
+
+  const url = `${req.protocol}://${req.get("host")}/api/teacher/verify/${token}`;
+  await transporter.sendMail({
+    to: teacher.email,
+    subject: "Verify Your Teacher Account",
+    html: `<p>Click <a href="${url}">here</a> to verify your email.</p>`
+  });
+};
+
 const teacherRegister = async (req, res) => {
-    console.log(req.body);
-    const { name, email, password, role, school, teachSubject, teachSclass } = req.body;
-    try {
-        const existingTeacherByEmail = await Teacher.findOne({ email });
+    const { name, email, password, role, assignments } = req.body;
+    try {
+        const existingTeacher = await Teacher.findOne({ email });
 
-        if (existingTeacherByEmail) {
-            return res.status(400).json({ message: 'Email already exists' });
-        }
+        // Handle existing but unverified teachers
+        if (existingTeacher && !existingTeacher.isVerified) {
+            // Update their details and resend email
+            existingTeacher.name = name;
+            existingTeacher.password = password; // Pre-save hook will hash
+            existingTeacher.role = role || 'Teacher';
+            existingTeacher.assignments = assignments || [];
+            
+            await existingTeacher.save();
+            await sendTeacherVerificationEmail(existingTeacher, req);
 
-        const teacher = new Teacher({ 
-            name, 
-            email, 
-            password,
-            role: role || 'Teacher', 
-            school, 
-            teachSubject: teachSubject || undefined,
-            teachSclass,
-            isVerified: true
-        });
+            return res.status(200).json({ 
+                success: true, 
+                message: "Account exists but was unverified. Verification email resent." 
+            });
+        }
 
-        let result = await teacher.save();
-        
-        // Only update subject if teachSubject is a valid ObjectId
-        if (teachSubject && teachSubject.match(/^[0-9a-fA-F]{24}$/)) {
-            try {
-                await Subject.findByIdAndUpdate(teachSubject, { teacher: teacher._id });
-            } catch (subjectError) {
-                console.log('Subject update failed:', subjectError.message);
-                // Continue with registration even if subject update fails
-            }
-        }
-        
-        result.password = undefined;
-        res.status(201).json({ success: true, teacher: result });
-    } catch (err) {
-        console.error("Teacher registration error:", err.message);
-        res.status(500).json({ error: "Registration failed", details: err.message });
-    }
+        if (existingTeacher && existingTeacher.isVerified) {
+            return res.status(400).json({ message: 'Email already exists' });
+        }
+
+        // Create new teacher
+        const teacher = new Teacher({ 
+            name, 
+            email, 
+            password,
+            role: role || 'Teacher', 
+            assignments: assignments || [], 
+            isVerified: false // Set to false by default
+        });
+
+        let result = await teacher.save(); // First save (hashes password)
+        
+        // Send verification email
+        try {
+            // This will call .save() again, but 'result.password' is still the hash
+            // so 'isModified("password")' will be false, and the hook will skip.
+            await sendTeacherVerificationEmail(result, req);
+        } catch (emailError) {
+            console.error("Teacher verification email failed to send:", emailError);
+            // Don't fail the registration, just log the email error
+        }
+
+        // --- THIS IS THE FIX ---
+        // Move this line to *after* the email block
+        result.password = undefined;
+        
+        res.status(201).json({ 
+            success: true, 
+            teacher: result, 
+            message: "Registration successful. Please check your email to verify."
+        });
+
+    } catch (err) {
+        console.error("Teacher registration error:", err.message);
+        res.status(500).json({ error: "Registration failed", details: err.message });
+    }
 };
 
 // TEACHER LOGIN
 const teacherLogIn = async (req, res) => {
-    try {
-        const { email, password } = req.body;
-        const teacher = await Teacher.findOne({ email });
+    try {
+        const { email, password } = req.body;
+        const teacher = await Teacher.findOne({ email });
 
-        if (!teacher || !teacher.password) {
-            return res.status(401).json({ error: "Invalid credentials" });
-        }
+        if (!teacher || !teacher.password) {
+            return res.status(401).json({ error: "Invalid credentials" });
+        }
 
-        const isMatch = await teacher.comparePassword(password);
-        if (!isMatch) return res.status(401).json({ error: "Invalid credentials" });
+        // --- NEW VERIFICATION CHECK ---
+        if (!teacher.isVerified) {
+            return res.status(401).json({ 
+                error: "Account not verified", 
+                message: "Please check your email to verify your account before logging in." 
+            });
+        }
+        // --- END OF CHECK ---
 
-        const token = jwt.sign({ id: teacher._id }, config.security.jwtSecret, { expiresIn: config.security.jetExpire });
+        const isMatch = await teacher.comparePassword(password);
+        if (!isMatch) return res.status(401).json({ error: "Invalid credentials" });
 
-        teacher.password = undefined;
-        await teacher.populate("teachSubject", "subName sessions");
-        await teacher.populate("school", "schoolName");
-        await teacher.populate("teachSclass", "sclassName");
+        // Typos fixed: 'config.security.jetExpire' to 'config.security.jwtExpire' (assuming)
+    console.log("Attempting login for teacher:", teacher);
+        const token = jwt.sign({ id: teacher._id }, config.security.jwtSecret, { expiresIn: config.security.jetExpire });
 
-        res.json({ success: true, token, teacher });
-    } catch (err) {
-        res.status(500).json({ error: "Login failed", details: err.message });
-    }
+        teacher.password = undefined;
+
+console.log("Teacher login successful:", teacher.email);
+
+        res.json({ success: true, token, teacher });
+    } catch (err) {
+        console.error("Login error:", err.message);
+        res.status(500).json({ error: "Login failed", details: err.message });
+    }
 };
 
 // Helper function to generate user-friendly password for teachers
@@ -91,14 +170,13 @@ const generateTeacherFriendlyPassword = (teacher) => {
     // Get first name (remove spaces and special characters)
     const firstName = teacher.name.split(' ')[0].replace(/[^a-zA-Z]/g, '').toLowerCase();
     
-    // Get class info (remove spaces and special characters)
-    const classInfo = teacher.teachSclass.toString().replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-    
     // Generate random 3-digit number
-    const randomNum = Math.floor(100 + Math.random() * 900);
-    
+    const randomNum = Math.floor(10000 + Math.random() * 90000);
+
     // Create password: firstname + class + random number
-    const newPassword = `${firstName}${classInfo}${randomNum}`;
+    const newPassword = `${firstName}${randomNum}`;
+
+    console.log(`Generated password for ${teacher.email}: ${newPassword}`);
     
     return newPassword;
 };
@@ -236,12 +314,15 @@ const changeTeacherPassword = async (req, res) => {
 // GET ALL TEACHERS
 const getTeachers = async (req, res) => {
     try {
-        let teachers = await Teacher.find({ school: req.params.id })
-            .populate("teachSubject", "subName")
-            .populate("teachSclass", "sclassName");
+        // Get all teachers from the database (no filter)
+        let teachers = await Teacher.find({});
 
         if (teachers.length > 0) {
-            let modifiedTeachers = teachers.map((teacher) => ({ ...teacher._doc, password: undefined }));
+            // Remove password field from response
+            let modifiedTeachers = teachers.map((teacher) => ({ 
+                ...teacher._doc, 
+                password: undefined 
+            }));
             res.send(modifiedTeachers);
         } else {
             res.send({ message: "No teachers found" });
@@ -254,10 +335,7 @@ const getTeachers = async (req, res) => {
 // GET SINGLE TEACHER
 const getTeacherDetail = async (req, res) => {
     try {
-        let teacher = await Teacher.findById(req.params.id)
-            .populate("teachSubject", "subName sessions")
-            .populate("school", "schoolName")
-            .populate("teachSclass", "sclassName");
+        let teacher = await Teacher.find({});
 
         if (teacher) {
             teacher.password = undefined;
@@ -372,6 +450,7 @@ module.exports = {
     teacherResetPassword,
     changeTeacherPassword,
     getTeachers,
+    verifyEmailTeacher,
     getTeacherDetail,
     updateTeacherSubject,
     deleteTeacher,

@@ -34,7 +34,7 @@ const ShowTeachers = () => {
         return <div>Loading...</div>;
     } else if (response) {
         return (
-            <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+            <Box sx={{ p: { xs: 2, md: 4 }, maxWidth: '100%', overflowX: 'auto' }}>
                 <GreenButton variant="contained" onClick={() => navigate("/Admin/teachers/chooseclass")}>
                     Add Teacher
                 </GreenButton>
@@ -55,18 +55,32 @@ const ShowTeachers = () => {
         // });
     };
 
+    // --- COLUMNS UPDATED ---
     const columns = [
-        { id: 'name', label: 'Name', minWidth: 170 },
-        { id: 'teachSubject', label: 'Subject', minWidth: 100 },
-        { id: 'teachSclass', label: 'Class', minWidth: 170 },
+        { id: 'name', label: 'Name', minWidth: 150 },
+        { id: 'email', label: 'Email', minWidth: 200 },
+        { id: 'classes', label: 'Classes', minWidth: 150 },
+        { id: 'subjects', label: 'Subjects', minWidth: 150 },
     ];
 
     const rows = teachersList.map((teacher) => {
+        if (teacher.assignments && Array.isArray(teacher.assignments)) {
+            const classNames = [...new Set(teacher.assignments.map(a => a.className))].join(', ');
+            const subjectNames = [...new Set(teacher.assignments.map(a => a.subject))].join(', ');
+
+           return {
+                name: teacher.name,
+                email: teacher.email,
+                classes: classNames || 'N/A',
+                subjects: subjectNames || 'N/A',
+                id: teacher._id,
+            };
+        }
+
         return {
             name: teacher.name,
-            teachSubject: teacher.teachSubject?.subName || null,
-            teachSclass: teacher.teachSclass.sclassName,
-            teachSclassID: teacher.teachSclass._id,
+            classes: 'N/A',
+            subjects: 'N/A',
             id: teacher._id,
         };
     });
@@ -107,31 +121,27 @@ const ShowTeachers = () => {
                             .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                             .map((row) => {
                                 return (
-                                    <StyledTableRow hover role="checkbox" tabIndex={-1} key={row.id}>
+                                    <StyledTableRow
+                                        hover
+                                        role="checkbox"
+                                        tabIndex={-1}
+                                        key={row.id}
+                                        sx={{
+                                            '&:nth-of-type(even)': { backgroundColor: '#f9f9f9' },
+                                            '&:hover': { backgroundColor: '#e3f2fd' },
+                                        }}
+                                        >
+                                        
+                                        {/* --- TABLE BODY LOGIC SIMPLIFIED --- */}
                                         {columns.map((column) => {
                                             const value = row[column.id];
-                                            if (column.id === 'teachSubject') {
-                                                return (
-                                                    <StyledTableCell key={column.id} align={column.align}>
-                                                        {value ? (
-                                                            value
-                                                        ) : (
-                                                            <Button variant="contained"
-                                                                onClick={() => {
-                                                                    navigate(`/Admin/teachers/choosesubject/${row.teachSclassID}/${row.id}`)
-                                                                }}>
-                                                                Add Subject
-                                                            </Button>
-                                                        )}
-                                                    </StyledTableCell>
-                                                );
-                                            }
                                             return (
                                                 <StyledTableCell key={column.id} align={column.align}>
                                                     {column.format && typeof value === 'number' ? column.format(value) : value}
                                                 </StyledTableCell>
                                             );
                                         })}
+
                                         <StyledTableCell align="center">
                                             <IconButton onClick={() => deleteHandler(row.id, "Teacher")}>
                                                 <PersonRemoveIcon color="error" />
@@ -166,4 +176,4 @@ const ShowTeachers = () => {
     );
 };
 
-export default ShowTeachers
+export default ShowTeachers;

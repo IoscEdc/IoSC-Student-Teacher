@@ -38,10 +38,23 @@ api.interceptors.response.use(
     },
     (error) => {
         if (error.response?.status === 401) {
-            // Token expired or invalid
-            localStorage.removeItem('token');
-            sessionStorage.removeItem('token');
-            window.location.href = '/';
+            // Only redirect if user was logged in (has token)
+            const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+            
+            // Check if this is NOT a login endpoint
+            const isLoginEndpoint = error.config?.url?.includes('Login');
+            
+            if (token && !isLoginEndpoint) {
+                // Token expired for logged-in user - redirect to home
+                console.log('🔒 Token expired - logging out');
+                localStorage.removeItem('token');
+                sessionStorage.removeItem('token');
+                localStorage.removeItem('user');
+                window.location.href = '/';
+            } else {
+                // Login failed - let the component handle the error
+                console.log('❌ Login failed - staying on page');
+            }
         }
         return Promise.reject(error);
     }

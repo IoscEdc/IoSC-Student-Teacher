@@ -17,13 +17,8 @@ import {
     TextField,
     Button,
     Chip,
-    Divider,
     IconButton,
     Tooltip,
-    Dialog,
-    DialogTitle,
-    DialogContent,
-    DialogActions,
     Table,
     TableBody,
     TableCell,
@@ -33,36 +28,35 @@ import {
     TablePagination,
     Collapse,
     Avatar,
-    Badge,
     InputAdornment
 } from '@mui/material';
 import {
     Search as SearchIcon,
     FilterList as FilterIcon,
     Refresh as RefreshIcon,
-    Visibility as ViewIcon,
     ExpandMore as ExpandMoreIcon,
     ExpandLess as ExpandLessIcon,
     History as HistoryIcon,
-    Person as PersonIcon,
     Edit as EditIcon,
     Delete as DeleteIcon,
     Add as AddIcon,
     Warning as WarningIcon,
     Info as InfoIcon,
     Error as ErrorIcon,
-    CheckCircle as SuccessIcon
+    Visibility as ViewIcon,
+    FileDownload as ExportIcon
 } from '@mui/icons-material';
-// Using native date input instead of date picker library
-import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
+import { useSelector } from 'react-redux';
+import api from '../../../api/axiosConfig';
 
 const AuditLogViewer = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-    const dispatch = useDispatch();
     
     const { currentUser } = useSelector((state) => state.user);
+    
+    // Helper function for ISO date strings
+    const getISODateString = (date) => date.toISOString().split('T')[0];
     
     // State management
     const [loading, setLoading] = useState(false);
@@ -75,10 +69,10 @@ const AuditLogViewer = () => {
     const [rowsPerPage, setRowsPerPage] = useState(25);
     const [totalCount, setTotalCount] = useState(0);
     
-    // Filters
+    // Filters - Use ISO date strings
     const [filters, setFilters] = useState({
-        startDate: new Date(new Date().setDate(new Date().getDate() - 30)),
-        endDate: new Date(),
+        startDate: getISODateString(new Date(new Date().setDate(new Date().getDate() - 30))),
+        endDate: getISODateString(new Date()),
         action: '',
         userId: '',
         recordType: '',
@@ -88,12 +82,9 @@ const AuditLogViewer = () => {
     // Expanded rows for details
     const [expandedRows, setExpandedRows] = useState(new Set());
     
-    // Dialog states
-    const [detailDialog, setDetailDialog] = useState({ open: false, log: null });
-    
     // Data
     const [users, setUsers] = useState([]);
-    const [actionTypes, setActionTypes] = useState([]);
+    const [actionTypes, setActionTypes] = useState(['create', 'update', 'delete', 'view', 'export']);
     const [recordTypes, setRecordTypes] = useState([]);
 
     const actionIcons = {
@@ -101,7 +92,7 @@ const AuditLogViewer = () => {
         update: <EditIcon color="primary" />,
         delete: <DeleteIcon color="error" />,
         view: <ViewIcon color="info" />,
-        export: <SearchIcon color="secondary" />
+        export: <ExportIcon color="secondary" />
     };
 
     const actionColors = {
@@ -120,54 +111,81 @@ const AuditLogViewer = () => {
     };
 
     useEffect(() => {
-        loadInitialData();
-        loadAuditLogs();
-    }, []);
+        if (currentUser?._id) {
+            loadInitialData();
+        }
+    }, [currentUser]);
 
     useEffect(() => {
-        loadAuditLogs();
-    }, [filters, page, rowsPerPage]);
+        if (currentUser?._id) {
+            loadAuditLogs();
+        }
+    }, [currentUser, filters.action, filters.userId, filters.recordType, filters.startDate, filters.endDate, page, rowsPerPage]);
 
     useEffect(() => {
         applyFilters();
     }, [auditLogs, filters.searchTerm]);
 
     const loadInitialData = async () => {
+        if (!currentUser?._id) return;
+
         try {
-            const [usersRes, actionsRes, typesRes] = await Promise.all([
-                axios.get(`${process.env.REACT_APP_BASE_URL}/api/users/${currentUser.school}`),
-                axios.get(`${process.env.REACT_APP_BASE_URL}/api/attendance/audit/actions`),
-                axios.get(`${process.env.REACT_APP_BASE_URL}/api/attendance/audit/record-types`)
-            ]);
+            const schoolId = currentUser._id;
             
-            setUsers(usersRes.data || []);
-            setActionTypes(actionsRes.data || []);
-            setRecordTypes(typesRes.data || []);
+            // Load users for the school
+            const usersRes = await api.get(`/Teachers?school=${schoolId}`);
+            const usersData = Array.isArray(usersRes.data) 
+                ? usersRes.data 
+                : (usersRes.data?.teachers || usersRes.data?.data || []);
+            
+            setUsers(usersData);
+            
+            // Set default record types
+            setRecordTypes(['attendance', 'student', 'class', 'subject', 'teacher']);
+            
         } catch (err) {
             console.error('Error loading initial data:', err);
         }
     };
 
     const loadAuditLogs = async () => {
+        if (!currentUser?._id) return;
+
         setLoading(true);
         setError(null);
         
         try {
-            const response = await axios.get(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/audit/logs/${currentUser.school}`,
-                {
-                    params: {
-                        ...filters,
-                        page: page + 1,
-                        limit: rowsPerPage
-                    }
-                }
+            const schoolId = currentUser._id;
+            
+            const params = {
+                page: page + 1,
+                limit: rowsPerPage,
+                startDate: filters.startDate,
+                endDate: filters.endDate
+            };
+
+            // Only add filters if they have values
+            if (filters.action) params.action = filters.action;
+            if (filters.userId) params.userId = filters.userId;
+            if (filters.recordType) params.recordType = filters.recordType;
+            
+            const response = await api.get(
+                `/attendance/audit/logs/${schoolId}`,
+                { params }
             );
             
-            setAuditLogs(response.data.logs || []);
-            setTotalCount(response.data.totalCount || 0);
+            const logsData = Array.isArray(response.data) 
+                ? response.data 
+                : (response.data?.logs || response.data?.data || []);
+            
+            setAuditLogs(logsData);
+            setTotalCount(response.data?.totalCount || response.data?.total || logsData.length);
+            
         } catch (err) {
+            console.error('Error loading audit logs:', err);
             setError(err.response?.data?.message || 'Failed to load audit logs');
+            // Set empty array on error
+            setAuditLogs([]);
         } finally {
             setLoading(false);
         }
@@ -176,13 +194,14 @@ const AuditLogViewer = () => {
     const applyFilters = () => {
         let filtered = auditLogs;
         
-        if (filters.searchTerm) {
+        if (filters.searchTerm && Array.isArray(auditLogs)) {
             const searchLower = filters.searchTerm.toLowerCase();
-            filtered = filtered.filter(log => 
-                log.action.toLowerCase().includes(searchLower) ||
+            filtered = auditLogs.filter(log => 
+                log.action?.toLowerCase().includes(searchLower) ||
                 log.details?.toLowerCase().includes(searchLower) ||
                 log.userName?.toLowerCase().includes(searchLower) ||
-                log.recordId?.toLowerCase().includes(searchLower)
+                log.recordId?.toLowerCase().includes(searchLower) ||
+                log.reason?.toLowerCase().includes(searchLower)
             );
         }
         
@@ -199,8 +218,8 @@ const AuditLogViewer = () => {
 
     const clearFilters = () => {
         setFilters({
-            startDate: new Date(new Date().setDate(new Date().getDate() - 30)),
-            endDate: new Date(),
+            startDate: getISODateString(new Date(new Date().setDate(new Date().getDate() - 30))),
+            endDate: getISODateString(new Date()),
             action: '',
             userId: '',
             recordType: '',
@@ -230,6 +249,7 @@ const AuditLogViewer = () => {
     };
 
     const formatTimestamp = (timestamp) => {
+        if (!timestamp) return 'N/A';
         return new Date(timestamp).toLocaleString();
     };
 
@@ -237,7 +257,6 @@ const AuditLogViewer = () => {
         if (action === 'delete') return 'high';
         if (action === 'create') return 'low';
         if (action === 'update') {
-            // Determine severity based on what was changed
             if (changes?.attendance?.status) return 'medium';
             if (changes?.bulk) return 'medium';
             return 'low';
@@ -261,6 +280,7 @@ const AuditLogViewer = () => {
                 <Grid item xs={12} md={4}>
                     <TextField
                         fullWidth
+                        size="small"
                         label="Search"
                         value={filters.searchTerm}
                         onChange={(e) => handleFilterChange('searchTerm', e.target.value)}
@@ -282,8 +302,8 @@ const AuditLogViewer = () => {
                         size="small"
                         label="Start Date"
                         type="date"
-                        value={filters.startDate.toISOString().split('T')[0]}
-                        onChange={(e) => handleFilterChange('startDate', new Date(e.target.value))}
+                        value={filters.startDate}
+                        onChange={(e) => handleFilterChange('startDate', e.target.value)}
                         InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
@@ -294,8 +314,8 @@ const AuditLogViewer = () => {
                         size="small"
                         label="End Date"
                         type="date"
-                        value={filters.endDate.toISOString().split('T')[0]}
-                        onChange={(e) => handleFilterChange('endDate', new Date(e.target.value))}
+                        value={filters.endDate}
+                        onChange={(e) => handleFilterChange('endDate', e.target.value)}
                         InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
@@ -334,7 +354,7 @@ const AuditLogViewer = () => {
                             label="User"
                         >
                             <MenuItem value="">All Users</MenuItem>
-                            {users.map((user) => (
+                            {Array.isArray(users) && users.map((user) => (
                                 <MenuItem key={user._id} value={user._id}>
                                     {user.name} ({user.role})
                                 </MenuItem>
@@ -346,192 +366,216 @@ const AuditLogViewer = () => {
         </Paper>
     );
 
-    const renderAuditLogTable = () => (
-        <TableContainer component={Paper} elevation={2}>
-            <Table>
-                <TableHead>
-                    <TableRow>
-                        <TableCell width="50px"></TableCell>
-                        <TableCell>Timestamp</TableCell>
-                        <TableCell>User</TableCell>
-                        <TableCell>Action</TableCell>
-                        <TableCell>Record Type</TableCell>
-                        <TableCell>Record ID</TableCell>
-                        <TableCell>Severity</TableCell>
-                        <TableCell>Details</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {(filteredLogs.length > 0 ? filteredLogs : auditLogs).map((log) => {
-                        const isExpanded = expandedRows.has(log._id);
-                        const severity = getSeverityLevel(log.action, log.changes);
-                        
-                        return (
-                            <React.Fragment key={log._id}>
-                                <TableRow hover>
-                                    <TableCell>
-                                        <IconButton
-                                            size="small"
-                                            onClick={() => toggleRowExpansion(log._id)}
-                                        >
-                                            {isExpanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                                        </IconButton>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography variant="body2">
-                                            {formatTimestamp(log.performedAt)}
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                            <Avatar sx={{ width: 32, height: 32, mr: 1 }}>
-                                                {getUserName(log.performedBy).charAt(0)}
-                                            </Avatar>
-                                            <Box>
-                                                <Typography variant="body2">
-                                                    {getUserName(log.performedBy)}
-                                                </Typography>
-                                                <Typography variant="caption" color="text.secondary">
-                                                    {getUserRole(log.performedBy)}
-                                                </Typography>
-                                            </Box>
-                                        </Box>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Chip
-                                            icon={actionIcons[log.action]}
-                                            label={log.action.toUpperCase()}
-                                            color={actionColors[log.action]}
-                                            size="small"
-                                            variant="outlined"
-                                        />
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography variant="body2">
-                                            {log.recordType || 'Attendance'}
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography variant="body2" sx={{ fontFamily: 'monospace' }}>
-                                            {log.recordId?.substring(0, 8)}...
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                            {severityIcons[severity]}
-                                            <Typography 
-                                                variant="caption" 
-                                                sx={{ 
-                                                    ml: 0.5, 
-                                                    textTransform: 'uppercase',
-                                                    fontWeight: 'bold'
-                                                }}
+    const renderAuditLogTable = () => {
+        const displayLogs = filters.searchTerm && filteredLogs.length >= 0 ? filteredLogs : auditLogs;
+
+        if (!Array.isArray(displayLogs) || displayLogs.length === 0) {
+            return (
+                <Paper elevation={2} sx={{ p: 3, textAlign: 'center' }}>
+                    <Typography color="text.secondary">
+                        No audit logs found for the selected filters.
+                    </Typography>
+                </Paper>
+            );
+        }
+
+        return (
+            <TableContainer component={Paper} elevation={2}>
+                <Table size="small">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell width="50px"></TableCell>
+                            <TableCell>Timestamp</TableCell>
+                            <TableCell>User</TableCell>
+                            <TableCell>Action</TableCell>
+                            <TableCell>Record Type</TableCell>
+                            <TableCell>Record ID</TableCell>
+                            <TableCell>Severity</TableCell>
+                            <TableCell>Details</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {displayLogs.map((log) => {
+                            const isExpanded = expandedRows.has(log._id);
+                            const severity = getSeverityLevel(log.action, log.changes);
+                            
+                            return (
+                                <React.Fragment key={log._id || Math.random()}>
+                                    <TableRow hover>
+                                        <TableCell>
+                                            <IconButton
+                                                size="small"
+                                                onClick={() => toggleRowExpansion(log._id)}
                                             >
-                                                {severity}
+                                                {isExpanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                                            </IconButton>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Typography variant="body2">
+                                                {formatTimestamp(log.performedAt || log.timestamp || log.createdAt)}
                                             </Typography>
-                                        </Box>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography variant="body2" noWrap>
-                                            {log.reason || log.details || 'No details available'}
-                                        </Typography>
-                                    </TableCell>
-                                </TableRow>
-                                
-                                {/* Expanded Row Details */}
-                                <TableRow>
-                                    <TableCell colSpan={8} sx={{ py: 0 }}>
-                                        <Collapse in={isExpanded} timeout="auto" unmountOnExit>
-                                            <Box sx={{ p: 2, bgcolor: 'background.default' }}>
-                                                <Grid container spacing={2}>
-                                                    <Grid item xs={12} md={6}>
-                                                        <Typography variant="subtitle2" gutterBottom>
-                                                            Record Details
-                                                        </Typography>
-                                                        <Box sx={{ pl: 2 }}>
-                                                            <Typography variant="body2">
-                                                                <strong>Full Record ID:</strong> {log.recordId}
-                                                            </Typography>
-                                                            <Typography variant="body2">
-                                                                <strong>IP Address:</strong> {log.ipAddress || 'N/A'}
-                                                            </Typography>
-                                                            <Typography variant="body2">
-                                                                <strong>User Agent:</strong> {log.userAgent || 'N/A'}
-                                                            </Typography>
-                                                        </Box>
-                                                    </Grid>
-                                                    
-                                                    <Grid item xs={12} md={6}>
-                                                        <Typography variant="subtitle2" gutterBottom>
-                                                            Changes Made
-                                                        </Typography>
-                                                        <Box sx={{ pl: 2 }}>
-                                                            {log.oldValues && (
-                                                                <Box sx={{ mb: 1 }}>
-                                                                    <Typography variant="caption" color="error.main">
-                                                                        Old Values:
-                                                                    </Typography>
-                                                                    <pre style={{ 
-                                                                        fontSize: '0.75rem', 
-                                                                        margin: 0,
-                                                                        whiteSpace: 'pre-wrap',
-                                                                        wordBreak: 'break-word'
-                                                                    }}>
-                                                                        {JSON.stringify(log.oldValues, null, 2)}
-                                                                    </pre>
-                                                                </Box>
-                                                            )}
-                                                            
-                                                            {log.newValues && (
-                                                                <Box>
-                                                                    <Typography variant="caption" color="success.main">
-                                                                        New Values:
-                                                                    </Typography>
-                                                                    <pre style={{ 
-                                                                        fontSize: '0.75rem', 
-                                                                        margin: 0,
-                                                                        whiteSpace: 'pre-wrap',
-                                                                        wordBreak: 'break-word'
-                                                                    }}>
-                                                                        {JSON.stringify(log.newValues, null, 2)}
-                                                                    </pre>
-                                                                </Box>
-                                                            )}
-                                                        </Box>
-                                                    </Grid>
-                                                </Grid>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                                <Avatar sx={{ width: 32, height: 32, mr: 1, fontSize: '0.875rem' }}>
+                                                    {getUserName(log.performedBy || log.userId).charAt(0)}
+                                                </Avatar>
+                                                <Box>
+                                                    <Typography variant="body2">
+                                                        {getUserName(log.performedBy || log.userId)}
+                                                    </Typography>
+                                                    <Typography variant="caption" color="text.secondary">
+                                                        {getUserRole(log.performedBy || log.userId)}
+                                                    </Typography>
+                                                </Box>
                                             </Box>
-                                        </Collapse>
-                                    </TableCell>
-                                </TableRow>
-                            </React.Fragment>
-                        );
-                    })}
-                </TableBody>
-            </Table>
-            
-            <TablePagination
-                rowsPerPageOptions={[10, 25, 50, 100]}
-                component="div"
-                count={totalCount}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                onPageChange={(event, newPage) => setPage(newPage)}
-                onRowsPerPageChange={(event) => {
-                    setRowsPerPage(parseInt(event.target.value, 10));
-                    setPage(0);
-                }}
-            />
-        </TableContainer>
-    );
+                                        </TableCell>
+                                        <TableCell>
+                                            <Chip
+                                                icon={actionIcons[log.action] || actionIcons.view}
+                                                label={(log.action || 'unknown').toUpperCase()}
+                                                color={actionColors[log.action] || 'default'}
+                                                size="small"
+                                                variant="outlined"
+                                            />
+                                        </TableCell>
+                                        <TableCell>
+                                            <Typography variant="body2">
+                                                {log.recordType || 'Attendance'}
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Typography variant="body2" sx={{ fontFamily: 'monospace', fontSize: '0.75rem' }}>
+                                                {log.recordId ? `${log.recordId.substring(0, 8)}...` : 'N/A'}
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                                {severityIcons[severity]}
+                                                <Typography 
+                                                    variant="caption" 
+                                                    sx={{ 
+                                                        ml: 0.5, 
+                                                        textTransform: 'uppercase',
+                                                        fontWeight: 'bold'
+                                                    }}
+                                                >
+                                                    {severity}
+                                                </Typography>
+                                            </Box>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Typography variant="body2" noWrap>
+                                                {log.reason || log.details || 'No details available'}
+                                            </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                    
+                                    {/* Expanded Row Details */}
+                                    <TableRow>
+                                        <TableCell colSpan={8} sx={{ py: 0 }}>
+                                            <Collapse in={isExpanded} timeout="auto" unmountOnExit>
+                                                <Box sx={{ p: 2, bgcolor: 'background.default' }}>
+                                                    <Grid container spacing={2}>
+                                                        <Grid item xs={12} md={6}>
+                                                            <Typography variant="subtitle2" gutterBottom>
+                                                                Record Details
+                                                            </Typography>
+                                                            <Box sx={{ pl: 2 }}>
+                                                                <Typography variant="body2">
+                                                                    <strong>Full Record ID:</strong> {log.recordId || 'N/A'}
+                                                                </Typography>
+                                                                <Typography variant="body2">
+                                                                    <strong>IP Address:</strong> {log.ipAddress || 'N/A'}
+                                                                </Typography>
+                                                                <Typography variant="body2">
+                                                                    <strong>User Agent:</strong> {log.userAgent || 'N/A'}
+                                                                </Typography>
+                                                            </Box>
+                                                        </Grid>
+                                                        
+                                                        <Grid item xs={12} md={6}>
+                                                            <Typography variant="subtitle2" gutterBottom>
+                                                                Changes Made
+                                                            </Typography>
+                                                            <Box sx={{ pl: 2 }}>
+                                                                {log.oldValues && (
+                                                                    <Box sx={{ mb: 1 }}>
+                                                                        <Typography variant="caption" color="error.main">
+                                                                            Old Values:
+                                                                        </Typography>
+                                                                        <pre style={{ 
+                                                                            fontSize: '0.75rem', 
+                                                                            margin: 0,
+                                                                            whiteSpace: 'pre-wrap',
+                                                                            wordBreak: 'break-word'
+                                                                        }}>
+                                                                            {JSON.stringify(log.oldValues, null, 2)}
+                                                                        </pre>
+                                                                    </Box>
+                                                                )}
+                                                                
+                                                                {log.newValues && (
+                                                                    <Box>
+                                                                        <Typography variant="caption" color="success.main">
+                                                                            New Values:
+                                                                        </Typography>
+                                                                        <pre style={{ 
+                                                                            fontSize: '0.75rem', 
+                                                                            margin: 0,
+                                                                            whiteSpace: 'pre-wrap',
+                                                                            wordBreak: 'break-word'
+                                                                        }}>
+                                                                            {JSON.stringify(log.newValues, null, 2)}
+                                                                        </pre>
+                                                                    </Box>
+                                                                )}
+                                                                
+                                                                {!log.oldValues && !log.newValues && (
+                                                                    <Typography variant="body2" color="text.secondary">
+                                                                        No detailed changes recorded
+                                                                    </Typography>
+                                                                )}
+                                                            </Box>
+                                                        </Grid>
+                                                    </Grid>
+                                                </Box>
+                                            </Collapse>
+                                        </TableCell>
+                                    </TableRow>
+                                </React.Fragment>
+                            );
+                        })}
+                    </TableBody>
+                </Table>
+                
+                <TablePagination
+                    rowsPerPageOptions={[10, 25, 50, 100]}
+                    component="div"
+                    count={totalCount}
+                    rowsPerPage={rowsPerPage}
+                    page={page}
+                    onPageChange={(event, newPage) => setPage(newPage)}
+                    onRowsPerPageChange={(event) => {
+                        setRowsPerPage(parseInt(event.target.value, 10));
+                        setPage(0);
+                    }}
+                />
+            </TableContainer>
+        );
+    };
 
     const renderSummaryCards = () => {
-        const todayLogs = auditLogs.filter(log => 
-            new Date(log.performedAt).toDateString() === new Date().toDateString()
-        );
+        if (!Array.isArray(auditLogs)) return null;
+
+        const todayLogs = auditLogs.filter(log => {
+            const logDate = log.performedAt || log.timestamp || log.createdAt;
+            return logDate && new Date(logDate).toDateString() === new Date().toDateString();
+        });
         
         const actionCounts = auditLogs.reduce((acc, log) => {
-            acc[log.action] = (acc[log.action] || 0) + 1;
+            const action = log.action || 'unknown';
+            acc[action] = (acc[action] || 0) + 1;
             return acc;
         }, {});
 
@@ -620,6 +664,7 @@ const AuditLogViewer = () => {
         return (
             <Box display="flex" justifyContent="center" alignItems="center" minHeight="400px">
                 <CircularProgress />
+                <Typography sx={{ ml: 2 }}>Loading audit logs...</Typography>
             </Box>
         );
     }

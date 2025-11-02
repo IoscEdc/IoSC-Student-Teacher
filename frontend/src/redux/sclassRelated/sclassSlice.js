@@ -3,14 +3,16 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     sclassesList: [],
     sclassStudents: [],
-    sclassDetails: [],
+    sclassDetails: null,
     subjectsList: [],
-    subjectDetails: [],
+    subjectDetails: null,
     loading: false,
     subloading: false,
     error: null,
     response: null,
     getresponse: null,
+    studentGetResponse: false, // Renamed from getresponse
+    subjectGetResponse: false, // Added this new flag
 };
 
 const sclassSlice = createSlice({
@@ -30,10 +32,37 @@ const sclassSlice = createSlice({
             state.getresponse = null;
         },
         getStudentsSuccess: (state, action) => {
-            state.sclassStudents = action.payload;
             state.loading = false;
+            state.sclassStudents = action.payload;
+            state.status = 'success';
             state.error = null;
-            state.getresponse = null;
+            state.response = null;
+            state.studentGetResponse = false;
+        },
+        getStudentsFailed: (state, action) => {
+            state.loading = false;
+            state.sclassStudents = [];
+            state.status = 'failed';
+            state.error = action.payload;
+            state.response = action.payload; // Or just the message
+            state.studentGetResponse = true; // Use the specific flag
+        },
+        // --- SUBJECT REDUCERS (NEW) ---
+        getSubjectListSuccess: (state, action) => {
+            state.loading = false;
+            state.subjectsList = action.payload;
+            state.status = 'success';
+            state.error = null;
+            state.response = null;
+            state.subjectGetResponse = false; // Use the new flag
+        },
+        getSubjectListFailed: (state, action) => {
+            state.loading = false;
+            state.subjectsList = [];
+            state.status = 'failed';
+            state.error = action.payload;
+            state.response = action.payload; // Or just the message
+            state.subjectGetResponse = true; // Use the new flag
         },
         getSubjectsSuccess: (state, action) => {
             state.subjectsList = action.payload;
@@ -77,16 +106,32 @@ const sclassSlice = createSlice({
 
 export const {
     getRequest,
+    getSubDetailsRequest,
     getSuccess,
-    getFailed,
-    getError,
+    
+    // Student reducers
     getStudentsSuccess,
-    getSubjectsSuccess,
+    getStudentsFailed,     // <-- ADDED
+
+    // Subject List reducers
+    getSubjectListSuccess, // <-- ADDED
+    getSubjectListFailed,  // <-- ADDED
+
+    // Details reducers
     detailsSuccess,
-    getFailedTwo,
-    resetSubjects,
     getSubDetailsSuccess,
-    getSubDetailsRequest
+    
+    // Other reducers
+    getError,
+    resetSubjects,
+
+    getFailedTwo,
+
+    // --- REMOVED REDUNDANT REDUCERS ---
+    // getFailed, (replaced by getSubjectListFailed)
+    // getFailedTwo, (replaced by getStudentsFailed)
+    // getSubjectsSuccess, (replaced by getSubjectListSuccess)
+
 } = sclassSlice.actions;
 
 export const sclassReducer = sclassSlice.reducer;

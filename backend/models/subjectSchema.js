@@ -9,10 +9,6 @@ const subjectSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    sessions: {
-        type: String,
-        required: true,
-    },
     sclassName: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'sclass',
@@ -24,7 +20,7 @@ const subjectSchema = new mongoose.Schema({
     },
     teacher: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'teacher',
+        ref: 'Teacher',
     }
 }, { timestamps: true });
 

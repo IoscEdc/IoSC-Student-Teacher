@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const Routes = require("./routes/route.js");
 const feedbackRoutes = require('./routes/feedback');
 const chatbotRoutes = require('./routes/chatbot');
-const notesRoutes = require("./routes/notesRoutes");
+// const notesRoutes = require("./routes/notesRoutes");
 const assignmentsRoutes = require("./routes/assignmentsRoutes");
 
 // Error monitoring routes
@@ -42,7 +42,7 @@ app.use((req, res, next) => {
 // 4. ROUTES (All defined together)
 app.use('/api/feedback', feedbackRoutes);
 app.use('/api/chat', chatbotRoutes);
-app.use("/api/notes", notesRoutes);
+// app.use("/api/notes", notesRoutes);
 app.use("/api/assignments", assignmentsRoutes);
 app.use('/', Routes); // This should usually be last if it has "catch-all" routes
 

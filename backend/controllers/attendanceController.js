@@ -17,6 +17,7 @@ const attendanceErrorMonitoringService = require('../services/AttendanceErrorMon
  * Get students for attendance marking
  */
 const getClassStudentsForAttendance = asyncHandler(async (req, res) => {
+    console.log('req',req);
     const { classId } = req.params;
     const { subjectId } = req.query;
     const teacherId = req.user.id;
@@ -53,6 +54,8 @@ const markAttendance = asyncHandler(async (req, res) => {
     const startTime = Date.now();
     const { classId, subjectId, date, session, studentAttendance } = req.body;
     const teacherId = req.user.id;
+
+    console.log('req',req);
 
     // Validate required fields
     const missingFields = [];
@@ -190,6 +193,8 @@ const updateAttendance = asyncHandler(async (req, res) => {
  * Get attendance records with filtering
  */
 const getAttendanceRecords = async (req, res) => {
+
+    console.log('req',req);
     try {
         const filters = {
             classId: req.query.classId,
@@ -699,15 +704,38 @@ const getClassSummary = async (req, res) => {
  */
 const getSchoolAnalytics = async (req, res) => {
     try {
-        const { schoolId } = req.params;
+        // 1. Get schoolId from req.params.id (to match your route)
+        const { id: schoolId } = req.params;
+
+        // 2. Get all filters from req.query
+        const {
+            startDate,
+            endDate,
+            classId,
+            subjectId,
+            teacherId,
+            attendanceStatus, // This is the name from your frontend filter state
+            includeClassBreakdown,
+            includeSubjectBreakdown
+        } = req.query;
+
+        // 3. Build the options object
         const options = {
-            startDate: req.query.startDate,
-            endDate: req.query.endDate,
-            includeClassBreakdown: req.query.includeClassBreakdown !== 'false',
-            includeSubjectBreakdown: req.query.includeSubjectBreakdown !== 'false'
+            startDate: startDate,
+            endDate: endDate,
+            includeClassBreakdown: includeClassBreakdown !== 'false',
+            includeSubjectBreakdown: includeSubjectBreakdown !== 'false'
         };
 
-        // Check if user is admin
+        // 4. Add optional filters *only if they exist*
+        if (classId) options.classId = classId;
+        if (subjectId) options.subjectId = subjectId;
+        if (teacherId) options.teacherId = teacherId;
+        if (attendanceStatus && attendanceStatus !== 'all') {
+            options.status = attendanceStatus;
+        }
+
+        // 5. Check if user is admin (already handled by authorizeRoles, but good for safety)
         if (req.user.role !== 'Admin') {
             return res.status(403).json({
                 success: false,
@@ -715,18 +743,21 @@ const getSchoolAnalytics = async (req, res) => {
             });
         }
 
+        // 6. Pass BOTH schoolId and options to the service
+        //    (Your SummaryService must accept schoolId as the first argument)
         const analytics = await SummaryService.getSchoolAnalytics(schoolId, options);
 
         res.status(200).json({
             success: true,
-            data: analytics,
+            data: analytics, // The frontend expects response.data.data
             message: 'School analytics retrieved successfully'
         });
 
     } catch (error) {
+        console.error('❌ Error in getSchoolAnalytics:', error); // Better logging
         res.status(400).json({
             success: false,
-            message: error.message
+            message: 'Failed to get school analytics: ' + error.message
         });
     }
 };

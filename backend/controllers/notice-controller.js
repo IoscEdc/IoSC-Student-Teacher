@@ -50,9 +50,7 @@ const noticeCreate = async (req, res) => {
         const newNotice = await Notice.create(noticeData);
 
         const populatedNotice = await Notice.findById(newNotice._id)
-            .populate('teacher', 'name email')
             .populate('admin', 'name email')
-            .populate('school', 'schoolName');
 
         console.log('🔍 NOTICE CREATE DEBUG - Notice created successfully');
         res.status(201).json({ success: true, notice: populatedNotice });
@@ -78,19 +76,9 @@ const noticeList = async (req, res) => {
         console.log('🔍 NOTICE LIST DEBUG - Query:', query);
         
         const notices = await Notice.find(query)
-            .populate('teacher', 'name email')
-            .populate('admin', 'name email schoolName')
+            .populate('admin', 'name email')
             .sort({ createdAt: -1 });
-
-        console.log('🔍 NOTICE LIST DEBUG - Found notices:', notices.length);
-        console.log('🔍 NOTICE LIST DEBUG - Notices:', notices.map(n => ({ 
-            id: n._id, 
-            title: n.title, 
-            school: n.school,
-            admin: n.admin?.name,
-            teacher: n.teacher?.name
-        })));
-
+            
         res.json({ success: true, notices });
     } catch (error) {
         console.error("Notice fetch error:", error);

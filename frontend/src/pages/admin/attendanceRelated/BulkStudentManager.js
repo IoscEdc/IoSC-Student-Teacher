@@ -17,13 +17,8 @@ import {
     TextField,
     Button,
     Chip,
-    Divider,
     IconButton,
     Tooltip,
-    Dialog,
-    DialogTitle,
-    DialogContent,
-    DialogActions,
     List,
     ListItem,
     ListItemText,
@@ -37,7 +32,6 @@ import {
     AccordionDetails
 } from '@mui/material';
 import {
-    Upload as UploadIcon,
     Download as DownloadIcon,
     Person as PersonIcon,
     School as SchoolIcon,
@@ -48,13 +42,12 @@ import {
     ExpandMore as ExpandMoreIcon,
     Refresh as RefreshIcon
 } from '@mui/icons-material';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 
 const BulkStudentManager = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-    const dispatch = useDispatch();
     
     const { currentUser } = useSelector((state) => state.user);
     
@@ -63,7 +56,7 @@ const BulkStudentManager = () => {
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
     const [activeStep, setActiveStep] = useState(0);
-    const [operationType, setOperationType] = useState('assign'); // 'assign', 'transfer', 'bulk-mark'
+    const [operationType, setOperationType] = useState('assign');
     
     // Assignment state
     const [assignmentData, setAssignmentData] = useState({
@@ -101,35 +94,68 @@ const BulkStudentManager = () => {
         errors: []
     });
     
-    // Data
+    // Data - Initialize as empty arrays
     const [classes, setClasses] = useState([]);
     const [subjects, setSubjects] = useState([]);
     const [students, setStudents] = useState([]);
-    
-    // Dialog states
-    const [confirmDialog, setConfirmDialog] = useState({ open: false, data: null });
-    const [resultsDialog, setResultsDialog] = useState({ open: false, data: null });
 
     const steps = ['Configure Operation', 'Preview & Validate', 'Execute & Results'];
 
     useEffect(() => {
-        loadInitialData();
-    }, []);
+        if (currentUser?._id) {
+            loadInitialData();
+        }
+    }, [currentUser]);
 
     const loadInitialData = async () => {
+        if (!currentUser?._id) {
+            setError('User not authenticated');
+            return;
+        }
+
+        setLoading(true);
         try {
+            const schoolId = currentUser._id;
+            console.log('Loading data for school:', schoolId);
+
             const [classesRes, subjectsRes, studentsRes] = await Promise.all([
-                axios.get(`${process.env.REACT_APP_BASE_URL}/Sclass/${currentUser.school}`),
-                axios.get(`${process.env.REACT_APP_BASE_URL}/AllSubjects/${currentUser.school}`),
-                axios.get(`${process.env.REACT_APP_BASE_URL}/Students/${currentUser.school}`)
+                axios.get(`${process.env.REACT_APP_BASE_URL}/Sclasses/school/${schoolId}`),
+                axios.get(`${process.env.REACT_APP_BASE_URL}/AllSubjects/${schoolId}`),
+                axios.get(`${process.env.REACT_APP_BASE_URL}/Students/${schoolId}`)
             ]);
             
-            setClasses(classesRes.data || []);
-            setSubjects(subjectsRes.data || []);
-            setStudents(studentsRes.data || []);
+            console.log('Classes response:', classesRes.data);
+            console.log('Subjects response:', subjectsRes.data);
+            console.log('Students response:', studentsRes.data);
+
+            // Handle different response structures
+            const classesData = Array.isArray(classesRes.data) 
+                ? classesRes.data 
+                : (classesRes.data?.classes || classesRes.data?.data || []);
+            
+            const subjectsData = Array.isArray(subjectsRes.data) 
+                ? subjectsRes.data 
+                : (subjectsRes.data?.subjects || subjectsRes.data?.data || []);
+            
+            const studentsData = Array.isArray(studentsRes.data) 
+                ? studentsRes.data 
+                : (studentsRes.data?.students || studentsRes.data?.data || []);
+
+            setClasses(classesData);
+            setSubjects(subjectsData);
+            setStudents(studentsData);
+
+            console.log('Processed data:', {
+                classes: classesData.length,
+                subjects: subjectsData.length,
+                students: studentsData.length
+            });
+
         } catch (err) {
-            setError('Failed to load initial data');
             console.error('Error loading initial data:', err);
+            setError(`Failed to load initial data: ${err.response?.data?.message || err.message}`);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -140,26 +166,31 @@ const BulkStudentManager = () => {
         }
 
         setLoading(true);
+        setError(null);
         try {
             const response = await axios.post(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/bulk/validate-pattern`,
+                `${process.env.REACT_APP_BASE_URL}/attendance/bulk/validate-pattern`,
                 {
                     pattern: assignmentData.pattern,
                     classId: assignmentData.classId,
-                    schoolId: currentUser.school
+                    schoolId: currentUser._id
                 }
             );
             
             setAssignmentData(prev => ({
                 ...prev,
-                previewStudents: response.data.matchingStudents,
+                previewStudents: response.data.matchingStudents || [],
                 validationResults: response.data.validation
             }));
             
-            if (response.data.matchingStudents.length > 0) {
+            if (response.data.matchingStudents && response.data.matchingStudents.length > 0) {
                 setActiveStep(1);
+                setSuccess(`Found ${response.data.matchingStudents.length} matching students`);
+            } else {
+                setError('No students found matching this pattern');
             }
         } catch (err) {
+            console.error('Pattern validation error:', err);
             setError(err.response?.data?.message || 'Pattern validation failed');
         } finally {
             setLoading(false);
@@ -177,12 +208,12 @@ const BulkStudentManager = () => {
 
         try {
             const response = await axios.post(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/bulk/assign-students`,
+                `${process.env.REACT_APP_BASE_URL}/attendance/bulk/assign-students`,
                 {
                     pattern: assignmentData.pattern,
-                    classId: assignmentData.classId,
+                    targetClassId: assignmentData.classId,
                     subjectIds: assignmentData.subjectIds,
-                    schoolId: currentUser.school
+                    schoolId: currentUser._id
                 },
                 {
                     onUploadProgress: (progressEvent) => {
@@ -200,16 +231,17 @@ const BulkStudentManager = () => {
                 results: response.data
             }));
             
-            setSuccess(`Successfully assigned ${response.data.successCount} students`);
+            setSuccess(`Successfully assigned ${response.data.successCount || 0} students`);
             setActiveStep(2);
             
         } catch (err) {
+            console.error('Bulk assignment error:', err);
             setOperationProgress(prev => ({
                 ...prev,
                 isRunning: false,
                 errors: [err.response?.data?.message || 'Assignment failed']
             }));
-            setError('Bulk assignment failed');
+            setError(err.response?.data?.message || 'Bulk assignment failed');
         }
     };
 
@@ -229,12 +261,19 @@ const BulkStudentManager = () => {
 
         try {
             const response = await axios.put(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/bulk/transfer`,
+                `${process.env.REACT_APP_BASE_URL}/attendance/bulk/transfer`,
                 {
                     studentIds: transferData.studentIds,
                     fromClassId: transferData.fromClassId,
                     toClassId: transferData.toClassId,
-                    schoolId: currentUser.school
+                    migrateAttendance: true,
+                    schoolId: currentUser._id
+                },
+                {
+                    onUploadProgress: (progressEvent) => {
+                        const progress = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+                        setOperationProgress(prev => ({ ...prev, progress }));
+                    }
                 }
             );
             
@@ -246,21 +285,22 @@ const BulkStudentManager = () => {
                 results: response.data
             }));
             
-            setSuccess(`Successfully transferred ${response.data.successCount} students`);
+            setSuccess(`Successfully transferred ${response.data.successCount || 0} students`);
             setActiveStep(2);
             
         } catch (err) {
+            console.error('Student transfer error:', err);
             setOperationProgress(prev => ({
                 ...prev,
                 isRunning: false,
                 errors: [err.response?.data?.message || 'Transfer failed']
             }));
-            setError('Student transfer failed');
+            setError(err.response?.data?.message || 'Student transfer failed');
         }
     };
 
     const handleBulkMarkAttendance = async () => {
-        if (!bulkMarkData.classId || !bulkMarkData.subjectId || !bulkMarkData.date) {
+        if (!bulkMarkData.classId || !bulkMarkData.subjectId || !bulkMarkData.date || !bulkMarkData.session) {
             setError('Please fill all required fields for bulk attendance marking');
             return;
         }
@@ -274,16 +314,33 @@ const BulkStudentManager = () => {
         });
 
         try {
+            // Build student attendance array
+            const studentAttendance = bulkMarkData.studentIds.length > 0
+                ? bulkMarkData.studentIds.map(studentId => ({
+                    studentId,
+                    status: bulkMarkData.status
+                }))
+                : students
+                    .filter(s => s.sclassName?._id === bulkMarkData.classId || s.classId === bulkMarkData.classId)
+                    .map(student => ({
+                        studentId: student._id,
+                        status: bulkMarkData.status
+                    }));
+
             const response = await axios.post(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/bulk/mark`,
+                `${process.env.REACT_APP_BASE_URL}/attendance/mark`,
                 {
                     classId: bulkMarkData.classId,
                     subjectId: bulkMarkData.subjectId,
                     date: bulkMarkData.date,
                     session: bulkMarkData.session,
-                    status: bulkMarkData.status,
-                    studentIds: bulkMarkData.studentIds,
-                    schoolId: currentUser.school
+                    studentAttendance: studentAttendance
+                },
+                {
+                    onUploadProgress: (progressEvent) => {
+                        const progress = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+                        setOperationProgress(prev => ({ ...prev, progress }));
+                    }
                 }
             );
             
@@ -292,19 +349,21 @@ const BulkStudentManager = () => {
                 isRunning: false,
                 progress: 100,
                 currentOperation: 'Attendance marking completed',
-                results: response.data
+                results: response.data.data || response.data
             }));
             
-            setSuccess(`Successfully marked attendance for ${response.data.successCount} students`);
+            const successCount = response.data.data?.successCount || response.data.successCount || studentAttendance.length;
+            setSuccess(`Successfully marked attendance for ${successCount} students`);
             setActiveStep(2);
             
         } catch (err) {
+            console.error('Bulk attendance marking error:', err);
             setOperationProgress(prev => ({
                 ...prev,
                 isRunning: false,
                 errors: [err.response?.data?.message || 'Bulk attendance marking failed']
             }));
-            setError('Bulk attendance marking failed');
+            setError(err.response?.data?.message || 'Bulk attendance marking failed');
         }
     };
 
@@ -353,9 +412,13 @@ const BulkStudentManager = () => {
                         sx={{ 
                             cursor: 'pointer',
                             border: operationType === 'assign' ? 2 : 1,
-                            borderColor: operationType === 'assign' ? 'primary.main' : 'divider'
+                            borderColor: operationType === 'assign' ? 'primary.main' : 'divider',
+                            '&:hover': { boxShadow: 3 }
                         }}
-                        onClick={() => setOperationType('assign')}
+                        onClick={() => {
+                            setOperationType('assign');
+                            resetOperation();
+                        }}
                     >
                         <CardContent sx={{ textAlign: 'center' }}>
                             <AssignmentIcon color="primary" sx={{ fontSize: 48, mb: 1 }} />
@@ -372,9 +435,13 @@ const BulkStudentManager = () => {
                         sx={{ 
                             cursor: 'pointer',
                             border: operationType === 'transfer' ? 2 : 1,
-                            borderColor: operationType === 'transfer' ? 'primary.main' : 'divider'
+                            borderColor: operationType === 'transfer' ? 'primary.main' : 'divider',
+                            '&:hover': { boxShadow: 3 }
                         }}
-                        onClick={() => setOperationType('transfer')}
+                        onClick={() => {
+                            setOperationType('transfer');
+                            resetOperation();
+                        }}
                     >
                         <CardContent sx={{ textAlign: 'center' }}>
                             <PersonIcon color="primary" sx={{ fontSize: 48, mb: 1 }} />
@@ -391,9 +458,13 @@ const BulkStudentManager = () => {
                         sx={{ 
                             cursor: 'pointer',
                             border: operationType === 'bulk-mark' ? 2 : 1,
-                            borderColor: operationType === 'bulk-mark' ? 'primary.main' : 'divider'
+                            borderColor: operationType === 'bulk-mark' ? 'primary.main' : 'divider',
+                            '&:hover': { boxShadow: 3 }
                         }}
-                        onClick={() => setOperationType('bulk-mark')}
+                        onClick={() => {
+                            setOperationType('bulk-mark');
+                            resetOperation();
+                        }}
                     >
                         <CardContent sx={{ textAlign: 'center' }}>
                             <SchoolIcon color="primary" sx={{ fontSize: 48, mb: 1 }} />
@@ -433,11 +504,15 @@ const BulkStudentManager = () => {
                             onChange={(e) => setAssignmentData(prev => ({ ...prev, classId: e.target.value }))}
                             label="Target Class"
                         >
-                            {classes.map((cls) => (
-                                <MenuItem key={cls._id} value={cls._id}>
-                                    {cls.sclassName}
-                                </MenuItem>
-                            ))}
+                            {Array.isArray(classes) && classes.length > 0 ? (
+                                classes.map((cls) => (
+                                    <MenuItem key={cls._id} value={cls._id}>
+                                        {cls.sclassName || cls.className || 'Unnamed Class'}
+                                    </MenuItem>
+                                ))
+                            ) : (
+                                <MenuItem disabled>No classes available</MenuItem>
+                            )}
                         </Select>
                     </FormControl>
                 </Grid>
@@ -461,11 +536,15 @@ const BulkStudentManager = () => {
                                 </Box>
                             )}
                         >
-                            {subjects.map((subject) => (
-                                <MenuItem key={subject._id} value={subject._id}>
-                                    {subject.subName}
-                                </MenuItem>
-                            ))}
+                            {Array.isArray(subjects) && subjects.length > 0 ? (
+                                subjects.map((subject) => (
+                                    <MenuItem key={subject._id} value={subject._id}>
+                                        {subject.subName || 'Unnamed Subject'}
+                                    </MenuItem>
+                                ))
+                            ) : (
+                                <MenuItem disabled>No subjects available</MenuItem>
+                            )}
                         </Select>
                     </FormControl>
                 </Grid>
@@ -478,7 +557,7 @@ const BulkStudentManager = () => {
                             disabled={loading || !assignmentData.pattern || !assignmentData.classId}
                             startIcon={loading ? <CircularProgress size={20} /> : <CheckCircleIcon />}
                         >
-                            Validate Pattern
+                            {loading ? 'Validating...' : 'Validate Pattern'}
                         </Button>
                         <Button variant="outlined" onClick={resetOperation}>
                             Reset
@@ -488,6 +567,294 @@ const BulkStudentManager = () => {
             </Grid>
         </Paper>
     );
+
+    const renderTransferForm = () => (
+        <Paper elevation={2} sx={{ p: 3 }}>
+            <Typography variant="h6" gutterBottom>
+                Student Transfer Configuration
+            </Typography>
+            <Grid container spacing={3}>
+                <Grid item xs={12} md={6}>
+                    <FormControl fullWidth>
+                        <InputLabel>From Class</InputLabel>
+                        <Select
+                            value={transferData.fromClassId}
+                            onChange={(e) => {
+                                setTransferData(prev => ({ ...prev, fromClassId: e.target.value, studentIds: [] }));
+                                // Load students from this class
+                                loadStudentsFromClass(e.target.value);
+                            }}
+                            label="From Class"
+                        >
+                            {Array.isArray(classes) && classes.length > 0 ? (
+                                classes.map((cls) => (
+                                    <MenuItem key={cls._id} value={cls._id}>
+                                        {cls.sclassName || cls.className || 'Unnamed Class'}
+                                    </MenuItem>
+                                ))
+                            ) : (
+                                <MenuItem disabled>No classes available</MenuItem>
+                            )}
+                        </Select>
+                    </FormControl>
+                </Grid>
+                
+                <Grid item xs={12} md={6}>
+                    <FormControl fullWidth>
+                        <InputLabel>To Class</InputLabel>
+                        <Select
+                            value={transferData.toClassId}
+                            onChange={(e) => setTransferData(prev => ({ ...prev, toClassId: e.target.value }))}
+                            label="To Class"
+                        >
+                            {Array.isArray(classes) && classes.length > 0 ? (
+                                classes.map((cls) => (
+                                    <MenuItem key={cls._id} value={cls._id} disabled={cls._id === transferData.fromClassId}>
+                                        {cls.sclassName || cls.className || 'Unnamed Class'}
+                                    </MenuItem>
+                                ))
+                            ) : (
+                                <MenuItem disabled>No classes available</MenuItem>
+                            )}
+                        </Select>
+                    </FormControl>
+                </Grid>
+                
+                <Grid item xs={12}>
+                    <FormControl fullWidth>
+                        <InputLabel>Select Students to Transfer</InputLabel>
+                        <Select
+                            multiple
+                            value={transferData.studentIds}
+                            onChange={(e) => setTransferData(prev => ({ ...prev, studentIds: e.target.value }))}
+                            label="Select Students to Transfer"
+                            disabled={!transferData.fromClassId}
+                            renderValue={(selected) => (
+                                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                                    {selected.map((value) => {
+                                        const student = students.find(s => s._id === value);
+                                        return (
+                                            <Chip key={value} label={student?.name || value} size="small" />
+                                        );
+                                    })}
+                                </Box>
+                            )}
+                        >
+                            {Array.isArray(students) && students.length > 0 ? (
+                                students
+                                    .filter(student => student.sclassName?._id === transferData.fromClassId || student.classId === transferData.fromClassId)
+                                    .map((student) => (
+                                        <MenuItem key={student._id} value={student._id}>
+                                            {student.name || 'Unnamed Student'} - {student.rollNum || student.universityId || 'N/A'}
+                                        </MenuItem>
+                                    ))
+                            ) : (
+                                <MenuItem disabled>
+                                    {transferData.fromClassId ? 'No students in selected class' : 'Select a class first'}
+                                </MenuItem>
+                            )}
+                        </Select>
+                    </FormControl>
+                </Grid>
+                
+                <Grid item xs={12}>
+                    <Alert severity="info">
+                        Selected {transferData.studentIds.length} student(s) will be transferred from the source class to the target class.
+                    </Alert>
+                </Grid>
+                
+                <Grid item xs={12}>
+                    <Box sx={{ display: 'flex', gap: 2 }}>
+                        <Button
+                            variant="contained"
+                            onClick={handleStudentTransfer}
+                            disabled={loading || !transferData.fromClassId || !transferData.toClassId || transferData.studentIds.length === 0}
+                            startIcon={loading ? <CircularProgress size={20} /> : <PersonIcon />}
+                        >
+                            {loading ? 'Transferring...' : 'Execute Transfer'}
+                        </Button>
+                        <Button variant="outlined" onClick={resetOperation}>
+                            Reset
+                        </Button>
+                    </Box>
+                </Grid>
+            </Grid>
+        </Paper>
+    );
+
+    const renderBulkMarkForm = () => (
+        <Paper elevation={2} sx={{ p: 3 }}>
+            <Typography variant="h6" gutterBottom>
+                Bulk Attendance Marking Configuration
+            </Typography>
+            <Grid container spacing={3}>
+                <Grid item xs={12} md={6}>
+                    <FormControl fullWidth>
+                        <InputLabel>Class</InputLabel>
+                        <Select
+                            value={bulkMarkData.classId}
+                            onChange={(e) => {
+                                setBulkMarkData(prev => ({ ...prev, classId: e.target.value }));
+                                loadStudentsFromClass(e.target.value);
+                            }}
+                            label="Class"
+                        >
+                            {Array.isArray(classes) && classes.length > 0 ? (
+                                classes.map((cls) => (
+                                    <MenuItem key={cls._id} value={cls._id}>
+                                        {cls.sclassName || cls.className || 'Unnamed Class'}
+                                    </MenuItem>
+                                ))
+                            ) : (
+                                <MenuItem disabled>No classes available</MenuItem>
+                            )}
+                        </Select>
+                    </FormControl>
+                </Grid>
+                
+                <Grid item xs={12} md={6}>
+                    <FormControl fullWidth>
+                        <InputLabel>Subject</InputLabel>
+                        <Select
+                            value={bulkMarkData.subjectId}
+                            onChange={(e) => setBulkMarkData(prev => ({ ...prev, subjectId: e.target.value }))}
+                            label="Subject"
+                            disabled={!bulkMarkData.classId}
+                        >
+                            {Array.isArray(subjects) && subjects.length > 0 ? (
+                                subjects.map((subject) => (
+                                    <MenuItem key={subject._id} value={subject._id}>
+                                        {subject.subName || 'Unnamed Subject'}
+                                    </MenuItem>
+                                ))
+                            ) : (
+                                <MenuItem disabled>No subjects available</MenuItem>
+                            )}
+                        </Select>
+                    </FormControl>
+                </Grid>
+                
+                <Grid item xs={12} md={4}>
+                    <TextField
+                        fullWidth
+                        label="Date"
+                        type="date"
+                        value={bulkMarkData.date}
+                        onChange={(e) => setBulkMarkData(prev => ({ ...prev, date: e.target.value }))}
+                        InputLabelProps={{ shrink: true }}
+                    />
+                </Grid>
+                
+                <Grid item xs={12} md={4}>
+                    <TextField
+                        fullWidth
+                        label="Session"
+                        placeholder="e.g., Morning, Afternoon, Lecture 1"
+                        value={bulkMarkData.session}
+                        onChange={(e) => setBulkMarkData(prev => ({ ...prev, session: e.target.value }))}
+                    />
+                </Grid>
+                
+                <Grid item xs={12} md={4}>
+                    <FormControl fullWidth>
+                        <InputLabel>Status</InputLabel>
+                        <Select
+                            value={bulkMarkData.status}
+                            onChange={(e) => setBulkMarkData(prev => ({ ...prev, status: e.target.value }))}
+                            label="Status"
+                        >
+                            <MenuItem value="Present">Present</MenuItem>
+                            <MenuItem value="Absent">Absent</MenuItem>
+                            <MenuItem value="Late">Late</MenuItem>
+                            <MenuItem value="Excused">Excused</MenuItem>
+                        </Select>
+                    </FormControl>
+                </Grid>
+                
+                <Grid item xs={12}>
+                    <FormControl fullWidth>
+                        <InputLabel>Select Students (Optional - leave empty for all)</InputLabel>
+                        <Select
+                            multiple
+                            value={bulkMarkData.studentIds}
+                            onChange={(e) => setBulkMarkData(prev => ({ ...prev, studentIds: e.target.value }))}
+                            label="Select Students (Optional - leave empty for all)"
+                            disabled={!bulkMarkData.classId}
+                            renderValue={(selected) => (
+                                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                                    {selected.length === 0 ? (
+                                        <Chip label="All Students" size="small" color="primary" />
+                                    ) : (
+                                        selected.map((value) => {
+                                            const student = students.find(s => s._id === value);
+                                            return (
+                                                <Chip key={value} label={student?.name || value} size="small" />
+                                            );
+                                        })
+                                    )}
+                                </Box>
+                            )}
+                        >
+                            {Array.isArray(students) && students.length > 0 ? (
+                                students
+                                    .filter(student => student.sclassName?._id === bulkMarkData.classId || student.classId === bulkMarkData.classId)
+                                    .map((student) => (
+                                        <MenuItem key={student._id} value={student._id}>
+                                            {student.name || 'Unnamed Student'} - {student.rollNum || student.universityId || 'N/A'}
+                                        </MenuItem>
+                                    ))
+                            ) : (
+                                <MenuItem disabled>
+                                    {bulkMarkData.classId ? 'No students in selected class' : 'Select a class first'}
+                                </MenuItem>
+                            )}
+                        </Select>
+                    </FormControl>
+                </Grid>
+                
+                <Grid item xs={12}>
+                    <Alert severity="info">
+                        {bulkMarkData.studentIds.length === 0 
+                            ? 'Attendance will be marked for ALL students in the selected class'
+                            : `Attendance will be marked for ${bulkMarkData.studentIds.length} selected student(s)`
+                        }
+                    </Alert>
+                </Grid>
+                
+                <Grid item xs={12}>
+                    <Box sx={{ display: 'flex', gap: 2 }}>
+                        <Button
+                            variant="contained"
+                            onClick={handleBulkMarkAttendance}
+                            disabled={loading || !bulkMarkData.classId || !bulkMarkData.subjectId || !bulkMarkData.date || !bulkMarkData.session}
+                            startIcon={loading ? <CircularProgress size={20} /> : <SchoolIcon />}
+                        >
+                            {loading ? 'Marking...' : 'Mark Attendance'}
+                        </Button>
+                        <Button variant="outlined" onClick={resetOperation}>
+                            Reset
+                        </Button>
+                    </Box>
+                </Grid>
+            </Grid>
+        </Paper>
+    );
+
+    const loadStudentsFromClass = async (classId) => {
+        if (!classId) return;
+        
+        try {
+            const response = await axios.get(
+                `${process.env.REACT_APP_BASE_URL}/Students/${currentUser._id}`
+            );
+            const studentsData = Array.isArray(response.data) 
+                ? response.data 
+                : (response.data?.students || response.data?.data || []);
+            setStudents(studentsData);
+        } catch (err) {
+            console.error('Error loading students:', err);
+        }
+    };
 
     const renderPreviewResults = () => {
         if (operationType === 'assign' && assignmentData.previewStudents.length > 0) {
@@ -502,7 +869,7 @@ const BulkStudentManager = () => {
                             severity={assignmentData.validationResults.hasConflicts ? 'warning' : 'success'}
                             sx={{ mb: 2 }}
                         >
-                            {assignmentData.validationResults.message}
+                            {assignmentData.validationResults.message || 'Students validated successfully'}
                         </Alert>
                     )}
                     
@@ -514,8 +881,8 @@ const BulkStudentManager = () => {
                                         <PersonIcon />
                                     </ListItemIcon>
                                     <ListItemText
-                                        primary={student.name}
-                                        secondary={`ID: ${student.universityId} | Roll: ${student.rollNum}`}
+                                        primary={student.name || 'Unknown'}
+                                        secondary={`ID: ${student.universityId || student.rollNum || 'N/A'}`}
                                     />
                                     {student.conflict && (
                                         <Chip label="Conflict" color="warning" size="small" />
@@ -570,7 +937,7 @@ const BulkStudentManager = () => {
                 )}
                 
                 {operationProgress.results && (
-                    <Accordion>
+                    <Accordion defaultExpanded>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                             <Typography variant="subtitle1">
                                 Operation Results
@@ -591,7 +958,7 @@ const BulkStudentManager = () => {
                                     <Box sx={{ textAlign: 'center' }}>
                                         <ErrorIcon color="error" sx={{ fontSize: 48 }} />
                                         <Typography variant="h6" color="error.main">
-                                            {operationProgress.results.errorCount || 0}
+                                            {operationProgress.results.failureCount || operationProgress.results.errorCount || 0}
                                         </Typography>
                                         <Typography variant="body2">Failed</Typography>
                                     </Box>
@@ -607,24 +974,39 @@ const BulkStudentManager = () => {
                                 </Grid>
                             </Grid>
                             
-                            {operationProgress.results.errors && operationProgress.results.errors.length > 0 && (
+                            {operationProgress.errors && operationProgress.errors.length > 0 && (
                                 <Box sx={{ mt: 2 }}>
                                     <Typography variant="subtitle2" color="error.main" gutterBottom>
                                         Errors:
                                     </Typography>
-                                    {operationProgress.results.errors.map((error, index) => (
+                                    {operationProgress.errors.map((error, index) => (
                                         <Alert key={index} severity="error" sx={{ mb: 1 }}>
                                             {error}
                                         </Alert>
                                     ))}
                                 </Box>
                             )}
+
+                            <Box sx={{ mt: 2, display: 'flex', gap: 2 }}>
+                                <Button variant="contained" onClick={resetOperation}>
+                                    Start New Operation
+                                </Button>
+                            </Box>
                         </AccordionDetails>
                     </Accordion>
                 )}
             </Paper>
         );
     };
+
+    if (loading && classes.length === 0) {
+        return (
+            <Box display="flex" justifyContent="center" alignItems="center" minHeight="400px">
+                <CircularProgress />
+                <Typography sx={{ ml: 2 }}>Loading data...</Typography>
+            </Box>
+        );
+    }
 
     return (
         <Box sx={{ p: isMobile ? 2 : 3 }}>
@@ -634,7 +1016,7 @@ const BulkStudentManager = () => {
                     Bulk Student Management
                 </Typography>
                 <Tooltip title="Refresh Data">
-                    <IconButton onClick={loadInitialData}>
+                    <IconButton onClick={loadInitialData} disabled={loading}>
                         <RefreshIcon />
                     </IconButton>
                 </Tooltip>
@@ -668,6 +1050,8 @@ const BulkStudentManager = () => {
                 <>
                     {renderOperationSelector()}
                     {operationType === 'assign' && renderAssignmentForm()}
+                    {operationType === 'transfer' && renderTransferForm()}
+                    {operationType === 'bulk-mark' && renderBulkMarkForm()}
                 </>
             )}
 

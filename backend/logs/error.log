@@ -41815,3 +41815,15 @@
     }
   }
 }
+{
+  "timestamp": "2025-11-02T02:00:28.462Z",
+  "level": "ERROR",
+  "message": "Teacher assignment validation failed",
+  "data": {
+    "userId": "6906ba37e8663e966141ca47",
+    "classId": "6902126bf91c442b648f6b95",
+    "subjectId": "6902126bf91c442b648f6b9c",
+    "error": "Cannot read properties of undefined (reading 'toString')",
+    "stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at ValidationService.validateTeacherAssignment (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\ValidationService.js:42:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async AttendanceService.getClassStudentsForAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:30:13)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:36:22"
+  }
+}

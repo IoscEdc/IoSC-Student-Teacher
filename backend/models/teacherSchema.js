@@ -12,37 +12,36 @@ const teacherSchema = new mongoose.Schema({
     email: {
         type: String,
         unique: true,
-        required: true,
         trim: true,
         lowercase: true,
         match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email'],
-        index: true // Index for login queries
+        index: true
     },
     password: {
         type: String,
-        required: true,
         minlength: 6
     },
     role: {
         type: String,
         default: "Teacher",
-        enum: ["Teacher", "Admin"] // Restrict to valid roles
+        enum: ["Teacher", "Admin"]
     },
-     assignments: [{
-        subject: {
-            type: String,
-            required: true
-        },
-        subjectcode: {
-            type: String,
-            required: true
-        },
-        className: { // Using 'className' as 'class' is a reserved keyword
-            type: String,
-            required: true
-        }}],
-    // Legacy fields - kept for backward compatibility
-    // New enhanced assignment structure
+    // Legacy assignments field (kept for backward compatibility)
+    assignments: [{
+        subject: {
+            type: String,
+            required: true
+        },
+        subjectcode: {
+            type: String,
+            required: true
+        },
+        className: {
+            type: String,
+            required: true
+        }
+    }],
+    // Enhanced assignment structure with class reference
     assignedSubjects: [{
         subjectId: {
             type: mongoose.Schema.Types.ObjectId,
@@ -60,7 +59,28 @@ const teacherSchema = new mongoose.Schema({
             required: true
         }
     }],
-    // Additional fields for enhanced functionality
+    // Direct reference to school
+    school: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'admin',
+        required: true,
+        index: true
+    },
+    // Classes where teacher is class incharge
+    classInchargeOf: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'sclass'
+    }],
+    // Legacy fields for backward compatibility
+    teachSubject: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'subject'
+    },
+    teachSclass: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'sclass'
+    },
+    // Additional fields
     isActive: {
         type: Boolean,
         default: true,
@@ -69,35 +89,30 @@ const teacherSchema = new mongoose.Schema({
     lastLogin: {
         type: Date
     },
-    phoneNumber: {
-        type: String,
-        trim: true,
-        match: [/^\+?[\d\s-()]+$/, 'Please enter a valid phone number']
+    isVerified: { 
+        type: Boolean, 
+        default: false 
     },
-        isVerified: { 
-        type: Boolean, 
-        default: false 
-    },
-    verificationToken: String,
-    resetPasswordToken: String,
-    resetPasswordExpires: Date,
+    verificationToken: String,
+    resetPasswordToken: String,
+    resetPasswordExpires: Date,
     department: {
         type: String,
         trim: true,
         maxlength: 50
-    }
+    },
 }, { 
     timestamps: true,
-    // Compound indexes for optimal query performance
     indexes: [
-        { school: 1, isActive: 1 }, // For active teachers in school
-        { school: 1, teachSclass: 1 }, // For teachers in specific class
-        { 'assignedSubjects.subjectId': 1, 'assignedSubjects.classId': 1 }, // For subject-class assignments
-        { school: 1, department: 1 }, // For department-based queries
+        { school: 1, isActive: 1 },
+        { school: 1, teachSclass: 1 },
+        { 'assignedSubjects.subjectId': 1, 'assignedSubjects.classId': 1 },
+        { school: 1, department: 1 },
+        { 'assignedSubjects.classId': 1 }
     ]
 });
 
-// Text index for name search functionality
+// Text index for search functionality
 teacherSchema.index({ name: 'text', email: 'text' });
 
 // Pre-save middleware to sync legacy fields with assignedSubjects
@@ -112,7 +127,7 @@ teacherSchema.pre('save', function(next) {
         }];
     }
     
-    // If assignedSubjects has one item, sync with legacy fields for compatibility
+    // If assignedSubjects has one item, sync with legacy fields
     if (this.assignedSubjects && this.assignedSubjects.length === 1) {
         this.teachSubject = this.assignedSubjects[0].subjectId;
         this.teachSclass = this.assignedSubjects[0].classId;
@@ -137,7 +152,14 @@ teacherSchema.pre('save', function(next) {
     next();
 });
 
-// Instance method to check if teacher is assigned to a subject/class combination
+// Pre-save middleware for password hashing
+teacherSchema.pre("save", async function (next) {
+    if (!this.isModified("password")) return next();
+    this.password = await bcrypt.hash(this.password, 10);
+    next();
+});
+
+// Instance method to check if teacher is assigned to a subject/class
 teacherSchema.methods.isAssignedToSubject = function(subjectId, classId) {
     return this.assignedSubjects.some(assignment => 
         assignment.subjectId.toString() === subjectId.toString() &&
@@ -180,6 +202,25 @@ teacherSchema.methods.getTaughtSubjects = function() {
     return subjectIds;
 };
 
+// Instance method to check if teacher is class incharge
+teacherSchema.methods.isClassIncharge = function(classId) {
+    return this.classInchargeOf.some(id => id.toString() === classId.toString());
+};
+
+// Instance method to make teacher class incharge
+teacherSchema.methods.makeClassIncharge = function(classId) {
+    if (!this.isClassIncharge(classId)) {
+        this.classInchargeOf.push(classId);
+    }
+};
+
+// Instance method to remove teacher as class incharge
+teacherSchema.methods.removeClassIncharge = function(classId) {
+    this.classInchargeOf = this.classInchargeOf.filter(id => 
+        id.toString() !== classId.toString()
+    );
+};
+
 // Static method to find teachers assigned to a subject
 teacherSchema.statics.findAssignedToSubject = function(subjectId, classId = null) {
     const query = {
@@ -219,35 +260,43 @@ teacherSchema.statics.findBySchoolAndDepartment = function(schoolId, department 
     return this.find(query);
 };
 
-// --- METHODS (UNCHANGED) ---
+// Static method to find class incharge for a specific class
+teacherSchema.statics.findClassIncharge = function(classId) {
+    return this.findOne({
+        classInchargeOf: classId,
+        isActive: true
+    });
+};
 
-// Hash password before saving
-teacherSchema.pre("save", async function (next) {
-    if (!this.isModified("password")) return next();
-    this.password = await bcrypt.hash(this.password, 10);
-    next();
-});
+// Static method to find all teachers in a school
+teacherSchema.statics.findBySchool = function(schoolId, activeOnly = true) {
+    const query = { school: schoolId };
+    if (activeOnly) {
+        query.isActive = true;
+    }
+    return this.find(query);
+};
 
 // Compare password
 teacherSchema.methods.comparePassword = async function (enteredPassword) {
-    return await bcrypt.compare(enteredPassword, this.password);
+    return await bcrypt.compare(enteredPassword, this.password);
 };
 
 // Generate verification token
 teacherSchema.methods.generateVerificationToken = function () {
-    const token = crypto.randomBytes(32).toString("hex");
-    const hash = crypto.createHash('sha256').update(token).digest('hex');
-    this.verificationToken = hash;
-    return token; // return raw token for emailing
+    const token = crypto.randomBytes(32).toString("hex");
+    const hash = crypto.createHash('sha256').update(token).digest('hex');
+    this.verificationToken = hash;
+    return token;
 };
 
 // Generate reset password token
 teacherSchema.methods.generateResetToken = function () {
-    const token = crypto.randomBytes(32).toString("hex");
-    const hash = crypto.createHash('sha256').update(token).digest('hex');
-    this.resetPasswordToken = hash;
-    this.resetPasswordExpires = Date.now() + 3600000; // 1 hour
-    return token;
+    const token = crypto.randomBytes(32).toString("hex");
+    const hash = crypto.createHash('sha256').update(token).digest('hex');
+    this.resetPasswordToken = hash;
+    this.resetPasswordExpires = Date.now() + 3600000; // 1 hour
+    return token;
 };
 
-module.exports = mongoose.model("Teacher", teacherSchema) // Renamed to "Teacher" (standard practice)
+module.exports = mongoose.model("Teacher", teacherSchema);

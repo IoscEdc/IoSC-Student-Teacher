@@ -40,6 +40,21 @@ const sclassList = async (req, res) => {
     }
 };
 
+const classList = async (req, res) => {
+    try {
+        const sclasses = await Sclass.find({});
+                
+        if (sclasses.length === 0) {
+            return res.status(404).json({ message: "No classes found" });
+        }
+
+        res.status(200).json(sclasses);
+    } catch (err) {
+        console.error('🚨 CLASS LIST ERROR:', err);
+        res.status(500).json({ error: "Failed to retrieve classes", details: err.message });
+    }
+};
+
 const getSclassDetail = async (req, res) => {
     try {
         let sclass = await Sclass.findById(req.params.id);
@@ -102,4 +117,4 @@ const deleteSclasses = async (req, res) => {
 }
 
 
-module.exports = { sclassCreate, sclassList, deleteSclass, deleteSclasses, getSclassDetail, getSclassStudents };
+module.exports = { sclassCreate,classList, sclassList, deleteSclass, deleteSclasses, getSclassDetail, getSclassStudents };

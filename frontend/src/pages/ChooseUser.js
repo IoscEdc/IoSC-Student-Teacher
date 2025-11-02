@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  Grid,
+   Grid,
   Paper,
   Box,
   Container,
   CircularProgress,
   Backdrop,
+  Typography,
+  useTheme,
+  Button
 } from '@mui/material';
 import { AccountCircle, School, Group } from '@mui/icons-material';
 import styled from 'styled-components';
@@ -73,102 +76,153 @@ const ChooseUser = ({ visitor }) => {
     }
   }, [status, currentRole, navigate, currentUser]);
 
+    const brandDark = '#0f2b6e';
+  const brandPrimary = '#2176FF';
+  const brandAccent = '#33A1FD';
+
+  const CardStyle = {
+    p: 4,
+    textAlign: 'center',
+    borderRadius: 3,
+    transition: 'all 0.3s ease',
+    cursor: 'pointer',
+    backgroundColor: 'white',
+    boxShadow: `0 8px 20px rgba(0, 0, 0, 0.4)`,
+    border: '1px solid transparent',
+    '&:hover': {
+      transform: 'translateY(-8px)',
+      boxShadow: `0 15px 30px rgba(33, 118, 255, 0.3)`,
+      borderColor: brandPrimary,
+    },
+  };
+
+  const IconCircleStyle = {
+    background: `linear-gradient(135deg, ${brandPrimary}, ${brandDark})`,
+    width: 70,
+    height: 70,
+    margin: '0 auto 20px auto',
+    borderRadius: '50%',
+    color: 'white',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxShadow: `0 4px 15px rgba(33, 118, 255, 0.6)`,
+    mb: 3,
+  };
+
   return (
-    <PageWrapper>
-      <Container>
+    <Box
+      sx={{
+        // Full screen dark gradient background
+        background: `linear-gradient(145deg, ${brandDark} 0%, #1b263b 100%)`,
+        minHeight: '100vh', 
+        p: { xs: 4, sm: 8 },
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop:{md:'-5rem', xs:'0'}
+      }}
+    >
+      <Container maxWidth="md">
+        {/* --- Branding Header --- */}
+        <Box sx={{ textAlign: 'center', mb: { xs: 5, md: 8 } }}>
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 900,
+              letterSpacing: 4,
+              fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4rem' },
+              mb: 1,
+              // Gradient for text
+              background: `linear-gradient(90deg, ${brandAccent}, #fff)`,
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 3px 10px rgba(255, 255, 255, 0.2)',
+            }}
+          >
+            USAR Samvad
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              fontWeight: 400,
+              fontSize: { xs: '0.9rem', sm: '1.2rem' },
+              color: '#fff',
+              opacity: 0.84,
+              letterSpacing: 2,
+            }}
+          >
+            Choose Your Role
+          </Typography>
+        </Box>
+
+        {/* --- Role Selection Grid --- */}
         <Grid container spacing={4} justifyContent="center">
+          
+          {/* Admin Card */}
           <Grid item xs={12} sm={6} md={4}>
-            <UserCard onClick={() => navigateHandler('Admin')}>
-              <IconCircle>
-                <AccountCircle fontSize="large" />
-              </IconCircle>
-              <UserTitle>Admin</UserTitle>
-              <UserDesc>
+            <Paper onClick={() => navigateHandler('Admin')} sx={CardStyle}>
+              <Box sx={IconCircleStyle}>
+                <AccountCircle sx={{ fontSize: 40 }} />
+              </Box>
+              <Typography variant="h5" sx={{ color: brandDark, fontWeight: 800, mb: 1.5 }}>
+                Admin
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
                 Log in as an administrator to manage and oversee school operations.
-              </UserDesc>
-            </UserCard>
+              </Typography>
+            </Paper>
           </Grid>
+          
+          {/* Student Card */}
           <Grid item xs={12} sm={6} md={4}>
-            <UserCard onClick={() => navigateHandler('Student')}>
-              <IconCircle>
-                <School fontSize="large" />
-              </IconCircle>
-              <UserTitle>Student</UserTitle>
-              <UserDesc>
+            <Paper onClick={() => navigateHandler('Student')} sx={CardStyle}>
+              <Box sx={IconCircleStyle}>
+                <School sx={{ fontSize: 40 }} />
+              </Box>
+              <Typography variant="h5" sx={{ color: brandDark, fontWeight: 800, mb: 1.5 }}>
+                Student
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
                 Access learning materials, view attendance, and track your progress.
-              </UserDesc>
-            </UserCard>
+              </Typography>
+            </Paper>
           </Grid>
+          
+          {/* Teacher Card */}
           <Grid item xs={12} sm={6} md={4}>
-            <UserCard onClick={() => navigateHandler('Teacher')}>
-              <IconCircle>
-                <Group fontSize="large" />
-              </IconCircle>
-              <UserTitle>Teacher</UserTitle>
-              <UserDesc>
+            <Paper onClick={() => navigateHandler('Teacher')} sx={CardStyle}>
+              <Box sx={IconCircleStyle}>
+                <Group sx={{ fontSize: 40 }} />
+              </Box>
+              <Typography variant="h5" sx={{ color: brandDark, fontWeight: 800, mb: 1.5 }}>
+                Teacher
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
                 Manage your classes, assignments, and student performance.
-              </UserDesc>
-            </UserCard>
+              </Typography>
+            </Paper>
           </Grid>
         </Grid>
       </Container>
+      
+      {/* Footer Branding
+      <Box sx={{ position: 'fixed', bottom: 15, width: '100%', textAlign: 'center' }}>
+        <Typography variant="body2" sx={{ color: '#aaa', fontWeight: 500 }}>
+          Made with <span role="img" aria-label="heart" style={{ color: '#FF4136' }}>❤️</span> by IoSC-EDC
+        </Typography>
+      </Box> */}
 
+      {/* Backdrop and Popup (UNCHANGED) */}
       <Backdrop sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }} open={loader}>
         <CircularProgress color="inherit" />
-        Please Wait
+        <Typography sx={{ ml: 2 }}>Please Wait</Typography>
       </Backdrop>
       <Popup message={message} setShowPopup={setShowPopup} showPopup={showPopup} />
-    </PageWrapper>
+    </Box>
   );
 };
 
 export default ChooseUser;
-
-// Styled Components
-const PageWrapper = styled.div`
-  background: linear-gradient(145deg, #eaeaff, #ffffff);
-  min-height: 85vh;
-  padding: 60px 20px;
-  display: flex;
-  align-items: center;
-`;
-
-const UserCard = styled(Paper)`
-  && {
-    padding: 30px;
-    text-align: center;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    background-color: white;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.15);
-    }
-  }
-`;
-
-const IconCircle = styled(Box)`
-  background: linear-gradient(135deg,rgb(92, 66, 237),rgb(71, 30, 255));
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 16px auto;
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const UserTitle = styled.h2`
-  margin-bottom: 10px;
-  color:rgb(27, 27, 170);
-  font-weight: 700;
-`;
-
-const UserDesc = styled.p`
-  font-size: 0.95rem;
-  color: #555;
-`;
-

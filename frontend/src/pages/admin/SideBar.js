@@ -35,7 +35,7 @@ const SideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary="Classes" />
                 </ListItemButton>
-                <ListItemButton component={Link} to="/Admin/subjects">
+                {/* <ListItemButton component={Link} to="/Admin/subjects">
                     <ListItemIcon>
                         <AssignmentIcon color={location.pathname.startsWith("/Admin/subjects") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
@@ -52,7 +52,7 @@ const SideBar = () => {
                         <PersonOutlineIcon color={location.pathname.startsWith("/Admin/students") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="Students" />
-                </ListItemButton>
+                </ListItemButton> */}
                 <ListItemButton component={Link} to="/Admin/timetable">
                     <ListItemIcon>
                         <CalendarMonthIcon color={location.pathname.startsWith("/Admin/timetable") ? 'primary' : 'inherit'} />
@@ -71,12 +71,12 @@ const SideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary="Notices" />
                 </ListItemButton>
-                <ListItemButton component={Link} to="/Admin/complains">
+                {/* <ListItemButton component={Link} to="/Admin/complains">
                     <ListItemIcon>
                         <ReportIcon color={location.pathname.startsWith("/Admin/complains") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="Complains" />
-                </ListItemButton>
+                </ListItemButton> */}
             </React.Fragment>
             <Divider sx={{ my: 1 }} />
             <React.Fragment>
@@ -101,12 +101,12 @@ const SideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary="Reports" />
                 </ListItemButton>
-                <ListItemButton component={Link} to="/Admin/attendance/audit-logs">
+                {/* <ListItemButton component={Link} to="/Admin/attendance/audit-logs">
                     <ListItemIcon>
                         <HistoryIcon color={location.pathname.startsWith('/Admin/attendance/audit-logs') ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="Audit Logs" />
-                </ListItemButton>
+                </ListItemButton> */}
             </React.Fragment>
             <Divider sx={{ my: 1 }} />
             <React.Fragment>
@@ -119,7 +119,7 @@ const SideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary="Profile" />
                 </ListItemButton>
-                <ListItemButton component={Link} to="/logout">
+                <ListItemButton sx={{ mb: 5 }} component={Link} to="/logout">
                     <ListItemIcon>
                         <ExitToAppIcon color={location.pathname.startsWith("/logout") ? 'primary' : 'inherit'} />
                     </ListItemIcon>

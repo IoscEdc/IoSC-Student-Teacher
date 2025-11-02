@@ -1,60 +1,54 @@
+// src/api/axiosConfig.js
 import axios from 'axios';
 
-// Create axios instance with base URL
-const config = {
-    baseURL: 'http://localhost:5000',
-    timeout: 10000,
-    headers: {
-        'Content-Type': 'application/json',
-    },
-};
+const api = axios.create({
+    baseURL: process.env.REACT_APP_BASE_URL || 'http://localhost:5000'
+});
 
-if (process.env.NODE_ENV === 'development') {
-    console.log('Using baseURL:', config.baseURL);
-}
-
-const api = axios.create(config);
-
-// Request interceptor to add auth token
+// Request interceptor - Add token to all requests
 api.interceptors.request.use(
     (config) => {
-        const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+        // Get token from localStorage (or wherever you store it)
+        const userState = localStorage.getItem('user');
+        let token = null;
+        
+        if (userState) {
+            try {
+                const parsed = JSON.parse(userState);
+                token = parsed.token;
+            } catch (e) {
+                console.error('Error parsing user state:', e);
+            }
+        }
+        
+        // If token not in user state, try direct token storage
+        if (!token) {
+            token = localStorage.getItem('token');
+        }
+        
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
+            console.log('🔑 Request with token to:', config.url);
+        } else {
+            console.warn('⚠️ No token found for request to:', config.url);
         }
         
         return config;
     },
     (error) => {
-        console.error('🚨 AXIOS ERROR - Request interceptor error:', error);
+        console.error('❌ Request interceptor error:', error);
         return Promise.reject(error);
     }
 );
 
-// Response interceptor for error handling
+// Response interceptor - Handle errors globally
 api.interceptors.response.use(
-    (response) => {
-        return response;
-    },
+    (response) => response,
     (error) => {
         if (error.response?.status === 401) {
-            // Only redirect if user was logged in (has token)
-            const token = localStorage.getItem('token') || sessionStorage.getItem('token');
-            
-            // Check if this is NOT a login endpoint
-            const isLoginEndpoint = error.config?.url?.includes('Login');
-            
-            if (token && !isLoginEndpoint) {
-                // Token expired for logged-in user - redirect to home
-                console.log('🔒 Token expired - logging out');
-                localStorage.removeItem('token');
-                sessionStorage.removeItem('token');
-                localStorage.removeItem('user');
-                window.location.href = '/';
-            } else {
-                // Login failed - let the component handle the error
-                console.log('❌ Login failed - staying on page');
-            }
+            console.error('❌ 401 Unauthorized - Token may be invalid or expired');
+            // Optionally redirect to login
+            // window.location.href = '/login';
         }
         return Promise.reject(error);
     }

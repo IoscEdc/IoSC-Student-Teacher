@@ -20,8 +20,6 @@ import {
     Divider,
     IconButton,
     Tooltip,
-    Tab,
-    Tabs
 } from '@mui/material';
 import {
     Refresh as RefreshIcon,
@@ -33,7 +31,6 @@ import {
     Person as PersonIcon,
     Class as ClassIcon
 } from '@mui/icons-material';
-// Using native date input instead of date picker library
 import {
     BarChart,
     Bar,
@@ -48,16 +45,20 @@ import {
     Pie,
     Cell,
     Legend,
-    AreaChart,
-    Area
 } from 'recharts';
-import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
+import { useSelector } from 'react-redux'; // Removed useDispatch
+import axios from 'axios'; // Using axios from component, not api/axiosConfig
+
+import api from '../../../api/axiosConfig'
+
+// Helper function to format date strings
+const getISODateString = (date) => {
+    return date.toISOString().split('T')[0];
+};
 
 const AttendanceAnalytics = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-    const dispatch = useDispatch();
     
     const { currentUser } = useSelector((state) => state.user);
     
@@ -65,15 +66,17 @@ const AttendanceAnalytics = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [analyticsData, setAnalyticsData] = useState(null);
+    
+    // --- FIXED: Use string dates to avoid timezone issues ---
     const [filters, setFilters] = useState({
-        startDate: new Date(new Date().setMonth(new Date().getMonth() - 3)),
-        endDate: new Date(),
+        startDate: getISODateString(new Date(new Date().setMonth(new Date().getMonth() - 3))),
+        endDate: getISODateString(new Date()),
         classId: '',
         subjectId: '',
         teacherId: '',
         attendanceStatus: 'all'
     });
-    const [tabValue, setTabValue] = useState(0);
+    
     const [classes, setClasses] = useState([]);
     const [subjects, setSubjects] = useState([]);
     const [teachers, setTeachers] = useState([]);
@@ -81,43 +84,94 @@ const AttendanceAnalytics = () => {
     // Chart colors
     const colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'];
 
+    // --- FIXED: Load initial data for filters only when currentUser is available ---
     useEffect(() => {
-        loadInitialData();
-        loadAnalyticsData();
-    }, []);
+        if (currentUser?._id) {
+            loadInitialData();
+        }
+    }, [currentUser]);
 
     useEffect(() => {
-        loadAnalyticsData();
-    }, [filters]);
+        console.log('🔍 DEBUG - Current User:', currentUser);
+        console.log('🔍 DEBUG - LocalStorage user:', localStorage.getItem('user'));
+        console.log('🔍 DEBUG - LocalStorage token:', localStorage.getItem('token'));
+    }, [currentUser]);
+
+    // --- FIXED: Load analytics data when currentUser or filters change ---
+    useEffect(() => {
+        if (currentUser?._id) {
+            loadAnalyticsData();
+        }
+    }, [currentUser, filters]);
 
     const loadInitialData = async () => {
+        if (!currentUser?._id) return;
+        
         try {
+            // --- FIXED: Pass schoolId (currentUser._id) to all API calls ---
+            const schoolId = currentUser._id;
             const [classesRes, subjectsRes, teachersRes] = await Promise.all([
-                axios.get(`${process.env.REACT_APP_BASE_URL}/Sclass/${currentUser.school}`),
-                axios.get(`${process.env.REACT_APP_BASE_URL}/AllSubjects/${currentUser.school}`),
-                axios.get(`${process.env.REACT_APP_BASE_URL}/Teachers/${currentUser.school}`)
+                // These routes are based on your other backend files
+                axios.get(`${process.env.REACT_APP_BASE_URL}/Sclasses/school/${schoolId}`), 
+                axios.get(`${process.env.REACT_APP_BASE_URL}/AllSubjects/${schoolId}`),
+                axios.get(`${process.env.REACT_APP_BASE_URL}/Teachers?school=${schoolId}`)
             ]);
             
-            setClasses(classesRes.data || []);
-            setSubjects(subjectsRes.data || []);
-            setTeachers(teachersRes.data || []);
+            // --- FIXED: Defensively parse API responses ---
+            setClasses(classesRes.data.classes || classesRes.data || []);
+            setSubjects(subjectsRes.data.subjects || subjectsRes.data || []);
+            setTeachers(teachersRes.data.teachers || teachersRes.data || []);
         } catch (err) {
             console.error('Error loading initial data:', err);
+            setError("Failed to load filter data (classes, subjects, teachers).");
         }
     };
 
     const loadAnalyticsData = async () => {
+        if (!currentUser?._id) return;
+
         setLoading(true);
         setError(null);
         
         try {
-            const response = await axios.get(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/analytics/school/${currentUser.school}`,
-                { params: filters }
+            const schoolId = currentUser._id;
+            
+            // Build params object with all filters
+            const params = {
+                startDate: filters.startDate,
+                endDate: filters.endDate,
+                includeClassBreakdown: true,
+                includeSubjectBreakdown: true
+            };
+
+            // Only add optional filters if they have values
+            if (filters.classId) {
+                params.classId = filters.classId;
+            }
+            if (filters.subjectId) {
+                params.subjectId = filters.subjectId;
+            }
+            if (filters.teacherId) {
+                params.teacherId = filters.teacherId;
+            }
+            if (filters.attendanceStatus && filters.attendanceStatus !== 'all') {
+                params.attendanceStatus = filters.attendanceStatus;
+            }
+
+            console.log('📤 Sending request with params:', params);
+
+            // FIXED: Remove /attendance prefix and pass params
+            const response = await api.get(
+                `/attendance/analytics/school/${schoolId}`,
+                { params } // ✅ NOW PASSING PARAMS
             );
             
-            setAnalyticsData(response.data);
+            console.log('📥 Response received:', response.data);
+            
+            setAnalyticsData(response.data.data); 
+
         } catch (err) {
+            console.error('❌ Error loading analytics:', err);
             setError(err.response?.data?.message || 'Failed to load analytics data');
         } finally {
             setLoading(false);
@@ -136,11 +190,21 @@ const AttendanceAnalytics = () => {
     };
 
     const handleExport = async () => {
+        if (!currentUser?._id) {
+            setError('Cannot export: User not found.');
+            return;
+        }
         try {
+            // --- FIXED: Add schoolId to export params ---
+            const params = {
+                ...filters,
+                schoolId: currentUser._id
+            };
+
             const response = await axios.get(
                 `${process.env.REACT_APP_BASE_URL}/api/attendance/reports/export`,
                 { 
-                    params: filters,
+                    params: params,
                     responseType: 'blob'
                 }
             );
@@ -159,8 +223,8 @@ const AttendanceAnalytics = () => {
 
     const clearFilters = () => {
         setFilters({
-            startDate: new Date(new Date().setMonth(new Date().getMonth() - 3)),
-            endDate: new Date(),
+            startDate: getISODateString(new Date(new Date().setMonth(new Date().getMonth() - 3))),
+            endDate: getISODateString(new Date()),
             classId: '',
             subjectId: '',
             teacherId: '',
@@ -283,8 +347,8 @@ const AttendanceAnalytics = () => {
                         size="small"
                         label="Start Date"
                         type="date"
-                        value={filters.startDate.toISOString().split('T')[0]}
-                        onChange={(e) => handleFilterChange('startDate', new Date(e.target.value))}
+                        value={filters.startDate} // --- FIXED ---
+                        onChange={(e) => handleFilterChange('startDate', e.target.value)} // --- FIXED ---
                         InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
@@ -295,8 +359,8 @@ const AttendanceAnalytics = () => {
                         size="small"
                         label="End Date"
                         type="date"
-                        value={filters.endDate.toISOString().split('T')[0]}
-                        onChange={(e) => handleFilterChange('endDate', new Date(e.target.value))}
+                        value={filters.endDate} // --- FIXED ---
+                        onChange={(e) => handleFilterChange('endDate', e.target.value)} // --- FIXED ---
                         InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
@@ -336,6 +400,42 @@ const AttendanceAnalytics = () => {
                         </Select>
                     </FormControl>
                 </Grid>
+
+                {/* --- ADDED TEACHER FILTER --- */}
+                 <Grid item xs={12} sm={6} md={3}>
+                    <FormControl fullWidth size="small">
+                        <InputLabel>Teacher</InputLabel>
+                        <Select
+                            value={filters.teacherId}
+                            onChange={(e) => handleFilterChange('teacherId', e.target.value)}
+                            label="Teacher"
+                        >
+                            <MenuItem value="">All Teachers</MenuItem>
+                            {teachers.map((teacher) => (
+                                <MenuItem key={teacher._id} value={teacher._id}>
+                                    {teacher.name}
+                                </MenuItem>
+                            ))}
+                        </Select>
+                    </FormControl>
+                </Grid>
+
+                 {/* --- ADDED STATUS FILTER --- */}
+                 <Grid item xs={12} sm={6} md={3}>
+                    <FormControl fullWidth size="small">
+                        <InputLabel>Status</InputLabel>
+                        <Select
+                            value={filters.attendanceStatus}
+                            onChange={(e) => handleFilterChange('attendanceStatus', e.target.value)}
+                            label="Status"
+                        >
+                            <MenuItem value="all">All Statuses</MenuItem>
+                            <MenuItem value="Present">Present</MenuItem>
+                            <MenuItem value="Absent">Absent</MenuItem>
+                            <MenuItem value="Late">Late</MenuItem>
+                        </Select>
+                    </FormControl>
+                </Grid>
             </Grid>
         </Paper>
     );
@@ -345,6 +445,13 @@ const AttendanceAnalytics = () => {
 
         const { charts } = analyticsData;
 
+        // Ensure data is an array before rendering
+        const classWiseData = Array.isArray(charts.classWise) ? charts.classWise : [];
+        const subjectWiseData = Array.isArray(charts.subjectWise) ? charts.subjectWise : [];
+        const trendData = Array.isArray(charts.trend) ? charts.trend : [];
+        const distributionData = Array.isArray(charts.distribution) ? charts.distribution : [];
+        const lowAttendanceData = Array.isArray(charts.lowAttendanceStudents) ? charts.lowAttendanceStudents : [];
+
         return (
             <Grid container spacing={3}>
                 {/* Class-wise Attendance Chart */}
@@ -353,15 +460,17 @@ const AttendanceAnalytics = () => {
                         <Typography variant="h6" gutterBottom>
                             Class-wise Attendance
                         </Typography>
-                        <ResponsiveContainer width="100%" height={300}>
-                            <BarChart data={charts.classWise}>
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="className" />
-                                <YAxis domain={[0, 100]} />
-                                <RechartsTooltip />
-                                <Bar dataKey="percentage" fill={colors[0]} />
-                            </BarChart>
-                        </ResponsiveContainer>
+                        {classWiseData.length > 0 ? (
+                            <ResponsiveContainer width="100%" height={300}>
+                                <BarChart data={classWiseData}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="className" />
+                                    <YAxis domain={[0, 100]} />
+                                    <RechartsTooltip />
+                                    <Bar dataKey="percentage" fill={colors[0]} />
+                                </BarChart>
+                            </ResponsiveContainer>
+                        ) : (<Typography>No data for this period.</Typography>)}
                     </Paper>
                 </Grid>
 
@@ -371,15 +480,17 @@ const AttendanceAnalytics = () => {
                         <Typography variant="h6" gutterBottom>
                             Subject-wise Attendance
                         </Typography>
-                        <ResponsiveContainer width="100%" height={300}>
-                            <BarChart data={charts.subjectWise}>
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="subjectName" />
-                                <YAxis domain={[0, 100]} />
-                                <RechartsTooltip />
-                                <Bar dataKey="percentage" fill={colors[1]} />
-                            </BarChart>
-                        </ResponsiveContainer>
+                        {subjectWiseData.length > 0 ? (
+                            <ResponsiveContainer width="100%" height={300}>
+                                <BarChart data={subjectWiseData}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="subjectName" />
+                                    <YAxis domain={[0, 100]} />
+                                    <RechartsTooltip />
+                                    <Bar dataKey="percentage" fill={colors[1]} />
+                                </BarChart>
+                            </ResponsiveContainer>
+                        ) : (<Typography>No data for this period.</Typography>)}
                     </Paper>
                 </Grid>
 
@@ -389,21 +500,23 @@ const AttendanceAnalytics = () => {
                         <Typography variant="h6" gutterBottom>
                             Attendance Trend Over Time
                         </Typography>
-                        <ResponsiveContainer width="100%" height={400}>
-                            <LineChart data={charts.trend}>
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="date" />
-                                <YAxis domain={[0, 100]} />
-                                <RechartsTooltip />
-                                <Legend />
-                                <Line 
-                                    type="monotone" 
-                                    dataKey="percentage" 
-                                    stroke={colors[2]} 
-                                    strokeWidth={2}
-                                />
-                            </LineChart>
-                        </ResponsiveContainer>
+                        {trendData.length > 0 ? (
+                            <ResponsiveContainer width="100%" height={400}>
+                                <LineChart data={trendData}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="date" />
+                                    <YAxis domain={[0, 100]} />
+                                    <RechartsTooltip />
+                                    <Legend />
+                                    <Line 
+                                        type="monotone" 
+                                        dataKey="percentage" 
+                                        stroke={colors[2]} 
+                                        strokeWidth={2}
+                                    />
+                                </LineChart>
+                            </ResponsiveContainer>
+                        ) : (<Typography>No data for this period.</Typography>)}
                     </Paper>
                 </Grid>
 
@@ -413,52 +526,57 @@ const AttendanceAnalytics = () => {
                         <Typography variant="h6" gutterBottom>
                             Attendance Distribution
                         </Typography>
-                        <ResponsiveContainer width="100%" height={300}>
-                            <PieChart>
-                                <Pie
-                                    data={charts.distribution}
-                                    cx="50%"
-                                    cy="50%"
-                                    labelLine={false}
-                                    label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(1)}%`}
-                                    outerRadius={80}
-                                    fill="#8884d8"
-                                    dataKey="value"
-                                >
-                                    {charts.distribution?.map((entry, index) => (
-                                        <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-                                    ))}
-                                </Pie>
-                                <RechartsTooltip />
-                            </PieChart>
-                        </ResponsiveContainer>
+                        {distributionData.length > 0 && distributionData.some(d => d.value > 0) ? (
+                            <ResponsiveContainer width="100%" height={300}>
+                                <PieChart>
+                                    <Pie
+                                        data={distributionData}
+                                        cx="50%"
+                                        cy="50%"
+                                        labelLine={false}
+                                        label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(1)}%`}
+                                        outerRadius={100} // Increased size
+                                        fill="#8884d8"
+                                        dataKey="value"
+                                    >
+                                        {distributionData.map((entry, index) => (
+                                            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                                        ))}
+                                    </Pie>
+                                    <RechartsTooltip />
+                                    <Legend /> 
+                                </PieChart>
+                            </ResponsiveContainer>
+                        ) : (<Typography>No data for this period.</Typography>)}
                     </Paper>
                 </Grid>
 
                 {/* Low Attendance Students */}
                 <Grid item xs={12} md={6}>
-                    <Paper elevation={2} sx={{ p: 3 }}>
+                    <Paper elevation={2} sx={{ p: 3, height: '100%' }}>
                         <Typography variant="h6" gutterBottom>
                             Students Requiring Attention
                         </Typography>
-                        <Box sx={{ maxHeight: 300, overflowY: 'auto' }}>
-                            {charts.lowAttendanceStudents?.map((student, index) => (
-                                <Box key={student.id} sx={{ mb: 2, p: 2, bgcolor: 'background.default', borderRadius: 1 }}>
-                                    <Typography variant="subtitle2" sx={{ fontWeight: 'bold' }}>
-                                        {student.name}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Class: {student.className} | Attendance: {student.percentage}%
-                                    </Typography>
-                                    <Chip 
-                                        label={student.percentage < 65 ? 'Critical' : 'Warning'}
-                                        color={student.percentage < 65 ? 'error' : 'warning'}
-                                        size="small"
-                                        sx={{ mt: 1 }}
-                                    />
-                                </Box>
-                            ))}
-                        </Box>
+                        {lowAttendanceData.length > 0 ? (
+                            <Box sx={{ maxHeight: 300, overflowY: 'auto' }}>
+                                {lowAttendanceData.map((student) => (
+                                    <Box key={student.id} sx={{ mb: 2, p: 2, bgcolor: 'background.default', borderRadius: 1 }}>
+                                        <Typography variant="subtitle2" sx={{ fontWeight: 'bold' }}>
+                                            {student.name}
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                            Class: {student.className} | Attendance: {student.percentage}%
+                                        </Typography>
+                                        <Chip 
+                                            label={student.percentage < 65 ? 'Critical' : 'Warning'}
+                                            color={student.percentage < 65 ? 'error' : 'warning'}
+                                            size="small"
+                                            sx={{ mt: 1 }}
+                                        />
+                                    </Box>
+                                ))}
+                            </Box>
+                        ) : (<Typography>No students found with low attendance.</Typography>)}
                     </Paper>
                 </Grid>
             </Grid>
@@ -487,7 +605,7 @@ const AttendanceAnalytics = () => {
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="Export Data">
-                        <IconButton onClick={handleExport}>
+                        <IconButton onClick={handleExport} disabled={loading || !analyticsData}>
                             <DownloadIcon />
                         </IconButton>
                     </Tooltip>

@@ -34,7 +34,6 @@ import {
     TableContainer,
     TableHead,
     TableRow,
-    TablePagination,
     Checkbox,
     FormControlLabel,
     RadioGroup,
@@ -50,35 +49,32 @@ import {
     PictureAsPdf as PdfIcon,
     TableChart as ExcelIcon,
     Description as CsvIcon,
-    Print as PrintIcon,
     Schedule as ScheduleIcon,
-    Assessment as ReportIcon,
-    ExpandMore as ExpandMoreIcon,
-    DateRange as DateRangeIcon
+    Report as ReportIcon,
+    ExpandMore as ExpandMoreIcon
 } from '@mui/icons-material';
-// Using native date input instead of date picker library
-import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
+import { useSelector } from 'react-redux';
+import api from '../../../api/axiosConfig';
 
 const AttendanceReports = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-    const dispatch = useDispatch();
     
     const { currentUser } = useSelector((state) => state.user);
     
-    // State management
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
     
-    // Report configuration
+    // Get ISO date string helper
+    const getISODateString = (date) => date.toISOString().split('T')[0];
+    
     const [reportConfig, setReportConfig] = useState({
-        type: 'student-summary', // 'student-summary', 'class-summary', 'teacher-summary', 'detailed', 'low-attendance'
-        format: 'excel', // 'excel', 'pdf', 'csv'
+        type: 'student-summary',
+        format: 'excel',
         dateRange: {
-            startDate: new Date(new Date().setMonth(new Date().getMonth() - 1)),
-            endDate: new Date()
+            startDate: getISODateString(new Date(new Date().setMonth(new Date().getMonth() - 1))),
+            endDate: getISODateString(new Date())
         },
         filters: {
             classId: '',
@@ -87,7 +83,7 @@ const AttendanceReports = () => {
             studentId: '',
             attendanceThreshold: 75,
             includeExcused: true,
-            groupBy: 'class' // 'class', 'subject', 'teacher', 'date'
+            groupBy: 'class'
         },
         columns: {
             studentInfo: true,
@@ -98,26 +94,21 @@ const AttendanceReports = () => {
         }
     });
     
-    // Data
     const [classes, setClasses] = useState([]);
     const [subjects, setSubjects] = useState([]);
     const [teachers, setTeachers] = useState([]);
     const [students, setStudents] = useState([]);
     const [reportPreview, setReportPreview] = useState(null);
     const [savedReports, setSavedReports] = useState([]);
-    
-    // Dialog states
     const [previewDialog, setPreviewDialog] = useState({ open: false, data: null });
     const [scheduleDialog, setScheduleDialog] = useState({ open: false });
-    
-    // Scheduled reports
     const [scheduleConfig, setScheduleConfig] = useState({
         name: '',
-        frequency: 'weekly', // 'daily', 'weekly', 'monthly'
+        frequency: 'weekly',
         recipients: [],
         enabled: true
     });
-
+    
     const reportTypes = [
         { value: 'student-summary', label: 'Student Attendance Summary', description: 'Individual student attendance statistics' },
         { value: 'class-summary', label: 'Class Attendance Summary', description: 'Class-wise attendance overview' },
@@ -126,7 +117,7 @@ const AttendanceReports = () => {
         { value: 'low-attendance', label: 'Low Attendance Alert', description: 'Students below attendance threshold' },
         { value: 'trend-analysis', label: 'Attendance Trend Analysis', description: 'Attendance patterns over time' }
     ];
-
+    
     const formatOptions = [
         { value: 'excel', label: 'Excel (.xlsx)', icon: <ExcelIcon />, description: 'Spreadsheet format with charts' },
         { value: 'pdf', label: 'PDF (.pdf)', icon: <PdfIcon />, description: 'Formatted document for printing' },
@@ -134,50 +125,66 @@ const AttendanceReports = () => {
     ];
 
     useEffect(() => {
-        loadInitialData();
-        loadSavedReports();
-    }, []);
+        if (currentUser?._id) {
+            loadInitialData();
+            loadSavedReports();
+        }
+    }, [currentUser]);
 
     const loadInitialData = async () => {
+        if (!currentUser?._id) return;
+        
+        setLoading(true);
         try {
+            const schoolId = currentUser._id;
+            
             const [classesRes, subjectsRes, teachersRes, studentsRes] = await Promise.all([
-                axios.get(`${process.env.REACT_APP_BASE_URL}/Sclass/${currentUser.school}`),
-                axios.get(`${process.env.REACT_APP_BASE_URL}/AllSubjects/${currentUser.school}`),
-                axios.get(`${process.env.REACT_APP_BASE_URL}/Teachers/${currentUser.school}`),
-                axios.get(`${process.env.REACT_APP_BASE_URL}/Students/${currentUser.school}`)
+                api.get(`/Sclasses/school/${schoolId}`),
+                api.get(`/AllSubjects/${schoolId}`),
+                api.get(`/Teachers?school=${schoolId}`),
+                api.get(`/Students/${schoolId}`)
             ]);
             
-            setClasses(classesRes.data || []);
-            setSubjects(subjectsRes.data || []);
-            setTeachers(teachersRes.data || []);
-            setStudents(studentsRes.data || []);
+            // Handle different response structures
+            setClasses(Array.isArray(classesRes.data) ? classesRes.data : (classesRes.data?.classes || []));
+            setSubjects(Array.isArray(subjectsRes.data) ? subjectsRes.data : (subjectsRes.data?.subjects || []));
+            setTeachers(Array.isArray(teachersRes.data) ? teachersRes.data : (teachersRes.data?.teachers || []));
+            setStudents(Array.isArray(studentsRes.data) ? studentsRes.data : (studentsRes.data?.students || []));
+            
         } catch (err) {
-            setError('Failed to load initial data');
-            console.error('Error loading initial data:', err);
+            setError('Failed to load initial data. Please refresh.');
+            console.error('Error loading initial data:', err.response?.data || err.message);
+        } finally {
+            setLoading(false);
         }
     };
 
     const loadSavedReports = async () => {
+        if (!currentUser?._id) return;
+        
         try {
-            const response = await axios.get(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/reports/saved/${currentUser.school}`
-            );
-            setSavedReports(response.data || []);
+            const response = await api.get(`/attendance/reports/saved/${currentUser._id}`);
+            setSavedReports(Array.isArray(response.data) ? response.data : (response.data?.reports || []));
         } catch (err) {
             console.error('Error loading saved reports:', err);
         }
     };
 
     const handleGenerateReport = async () => {
+        if (!currentUser?._id) {
+            setError('User not authenticated');
+            return;
+        }
+
         setLoading(true);
         setError(null);
         
         try {
-            const response = await axios.post(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/reports/generate`,
+            const response = await api.post(
+                `/attendance/reports/generate`,
                 {
                     ...reportConfig,
-                    schoolId: currentUser.school
+                    schoolId: currentUser._id
                 },
                 {
                     responseType: reportConfig.format === 'excel' || reportConfig.format === 'pdf' ? 'blob' : 'json'
@@ -185,7 +192,6 @@ const AttendanceReports = () => {
             );
             
             if (reportConfig.format === 'excel' || reportConfig.format === 'pdf') {
-                // Handle file download
                 const url = window.URL.createObjectURL(new Blob([response.data]));
                 const link = document.createElement('a');
                 link.href = url;
@@ -195,29 +201,35 @@ const AttendanceReports = () => {
                 link.click();
                 link.remove();
                 window.URL.revokeObjectURL(url);
-                
                 setSuccess('Report downloaded successfully');
             } else {
-                // Handle CSV or preview data
                 setReportPreview(response.data);
                 setPreviewDialog({ open: true, data: response.data });
             }
             
         } catch (err) {
             setError(err.response?.data?.message || 'Failed to generate report');
+            console.error('Report generation error:', err);
         } finally {
             setLoading(false);
         }
     };
 
     const handlePreviewReport = async () => {
+        if (!currentUser?._id) {
+            setError('User not authenticated');
+            return;
+        }
+
         setLoading(true);
+        setError(null);
+        
         try {
-            const response = await axios.post(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/reports/preview`,
+            const response = await api.post(
+                `/attendance/reports/preview`,
                 {
                     ...reportConfig,
-                    schoolId: currentUser.school
+                    schoolId: currentUser._id
                 }
             );
             
@@ -225,19 +237,25 @@ const AttendanceReports = () => {
             setPreviewDialog({ open: true, data: response.data });
         } catch (err) {
             setError(err.response?.data?.message || 'Failed to preview report');
+            console.error('Preview error:', err);
         } finally {
             setLoading(false);
         }
     };
 
     const handleSaveReportConfig = async () => {
+        if (!currentUser?._id) {
+            setError('User not authenticated');
+            return;
+        }
+
         try {
-            await axios.post(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/reports/save-config`,
+            await api.post(
+                `/attendance/reports/save-config`,
                 {
                     name: `${reportConfig.type}-${new Date().toISOString().split('T')[0]}`,
                     config: reportConfig,
-                    schoolId: currentUser.school
+                    schoolId: currentUser._id
                 }
             );
             
@@ -245,17 +263,23 @@ const AttendanceReports = () => {
             loadSavedReports();
         } catch (err) {
             setError('Failed to save report configuration');
+            console.error('Save config error:', err);
         }
     };
 
     const handleScheduleReport = async () => {
+        if (!currentUser?._id) {
+            setError('User not authenticated');
+            return;
+        }
+
         try {
-            await axios.post(
-                `${process.env.REACT_APP_BASE_URL}/api/attendance/reports/schedule`,
+            await api.post(
+                `/attendance/reports/schedule`,
                 {
                     ...scheduleConfig,
                     reportConfig,
-                    schoolId: currentUser.school
+                    schoolId: currentUser._id
                 }
             );
             
@@ -263,41 +287,31 @@ const AttendanceReports = () => {
             setScheduleDialog({ open: false });
         } catch (err) {
             setError('Failed to schedule report');
+            console.error('Schedule report error:', err);
         }
     };
-
+    
     const updateReportConfig = (field, value) => {
-        setReportConfig(prev => ({
-            ...prev,
-            [field]: value
-        }));
+        setReportConfig(prev => ({ ...prev, [field]: value }));
     };
-
+    
     const updateFilters = (field, value) => {
         setReportConfig(prev => ({
             ...prev,
-            filters: {
-                ...prev.filters,
-                [field]: value
-            }
+            filters: { ...prev.filters, [field]: value }
         }));
     };
-
+    
     const updateColumns = (field, value) => {
         setReportConfig(prev => ({
             ...prev,
-            columns: {
-                ...prev.columns,
-                [field]: value
-            }
+            columns: { ...prev.columns, [field]: value }
         }));
     };
 
     const renderReportTypeSelector = () => (
         <Paper elevation={2} sx={{ p: 3, mb: 3 }}>
-            <Typography variant="h6" gutterBottom>
-                Report Type
-            </Typography>
+            <Typography variant="h6" gutterBottom>Report Type</Typography>
             <Grid container spacing={2}>
                 {reportTypes.map((type) => (
                     <Grid item xs={12} sm={6} md={4} key={type.value}>
@@ -306,7 +320,8 @@ const AttendanceReports = () => {
                                 cursor: 'pointer',
                                 border: reportConfig.type === type.value ? 2 : 1,
                                 borderColor: reportConfig.type === type.value ? 'primary.main' : 'divider',
-                                height: '100%'
+                                height: '100%',
+                                '&:hover': { boxShadow: 3 }
                             }}
                             onClick={() => updateReportConfig('type', type.value)}
                         >
@@ -327,9 +342,7 @@ const AttendanceReports = () => {
 
     const renderFormatSelector = () => (
         <Paper elevation={2} sx={{ p: 3, mb: 3 }}>
-            <Typography variant="h6" gutterBottom>
-                Export Format
-            </Typography>
+            <Typography variant="h6" gutterBottom>Export Format</Typography>
             <RadioGroup
                 value={reportConfig.format}
                 onChange={(e) => updateReportConfig('format', e.target.value)}
@@ -363,38 +376,33 @@ const AttendanceReports = () => {
                 <FilterIcon sx={{ mr: 1 }} />
                 <Typography variant="h6">Filters & Options</Typography>
             </Box>
-            
             <Grid container spacing={3}>
-                {/* Date Range */}
                 <Grid item xs={12} sm={6}>
                     <TextField
                         fullWidth
                         label="Start Date"
                         type="date"
-                        value={reportConfig.dateRange.startDate.toISOString().split('T')[0]}
-                        onChange={(e) => updateReportConfig('dateRange', { 
-                            ...reportConfig.dateRange, 
-                            startDate: new Date(e.target.value) 
+                        value={reportConfig.dateRange.startDate}
+                        onChange={(e) => updateReportConfig('dateRange', {
+                            ...reportConfig.dateRange,
+                            startDate: e.target.value
                         })}
                         InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
-                
                 <Grid item xs={12} sm={6}>
                     <TextField
                         fullWidth
                         label="End Date"
                         type="date"
-                        value={reportConfig.dateRange.endDate.toISOString().split('T')[0]}
-                        onChange={(e) => updateReportConfig('dateRange', { 
-                            ...reportConfig.dateRange, 
-                            endDate: new Date(e.target.value) 
+                        value={reportConfig.dateRange.endDate}
+                        onChange={(e) => updateReportConfig('dateRange', {
+                            ...reportConfig.dateRange,
+                            endDate: e.target.value
                         })}
                         InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
-                
-                {/* Class Filter */}
                 <Grid item xs={12} sm={6} md={3}>
                     <FormControl fullWidth>
                         <InputLabel>Class</InputLabel>
@@ -404,16 +412,14 @@ const AttendanceReports = () => {
                             label="Class"
                         >
                             <MenuItem value="">All Classes</MenuItem>
-                            {classes.map((cls) => (
+                            {Array.isArray(classes) && classes.map((cls) => (
                                 <MenuItem key={cls._id} value={cls._id}>
-                                    {cls.sclassName}
+                                    {cls.sclassName || cls.className || 'Unnamed Class'}
                                 </MenuItem>
                             ))}
                         </Select>
                     </FormControl>
                 </Grid>
-                
-                {/* Subject Filter */}
                 <Grid item xs={12} sm={6} md={3}>
                     <FormControl fullWidth>
                         <InputLabel>Subject</InputLabel>
@@ -423,16 +429,14 @@ const AttendanceReports = () => {
                             label="Subject"
                         >
                             <MenuItem value="">All Subjects</MenuItem>
-                            {subjects.map((subject) => (
+                            {Array.isArray(subjects) && subjects.map((subject) => (
                                 <MenuItem key={subject._id} value={subject._id}>
-                                    {subject.subName}
+                                    {subject.subName || 'Unnamed Subject'}
                                 </MenuItem>
                             ))}
                         </Select>
                     </FormControl>
                 </Grid>
-                
-                {/* Teacher Filter */}
                 <Grid item xs={12} sm={6} md={3}>
                     <FormControl fullWidth>
                         <InputLabel>Teacher</InputLabel>
@@ -442,28 +446,24 @@ const AttendanceReports = () => {
                             label="Teacher"
                         >
                             <MenuItem value="">All Teachers</MenuItem>
-                            {teachers.map((teacher) => (
+                            {Array.isArray(teachers) && teachers.map((teacher) => (
                                 <MenuItem key={teacher._id} value={teacher._id}>
-                                    {teacher.name}
+                                    {teacher.name || 'Unnamed Teacher'}
                                 </MenuItem>
                             ))}
                         </Select>
                     </FormControl>
                 </Grid>
-                
-                {/* Attendance Threshold */}
                 <Grid item xs={12} sm={6} md={3}>
                     <TextField
                         fullWidth
                         label="Attendance Threshold (%)"
                         type="number"
                         value={reportConfig.filters.attendanceThreshold}
-                        onChange={(e) => updateFilters('attendanceThreshold', parseInt(e.target.value))}
+                        onChange={(e) => updateFilters('attendanceThreshold', parseInt(e.target.value) || 75)}
                         inputProps={{ min: 0, max: 100 }}
                     />
                 </Grid>
-                
-                {/* Group By */}
                 <Grid item xs={12} sm={6}>
                     <FormControl fullWidth>
                         <InputLabel>Group By</InputLabel>
@@ -479,8 +479,6 @@ const AttendanceReports = () => {
                         </Select>
                     </FormControl>
                 </Grid>
-                
-                {/* Include Excused */}
                 <Grid item xs={12} sm={6}>
                     <FormControlLabel
                         control={
@@ -497,7 +495,7 @@ const AttendanceReports = () => {
     );
 
     const renderColumnSelector = () => (
-        <Accordion>
+        <Accordion sx={{ mb: 3 }}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="h6">Column Selection</Typography>
             </AccordionSummary>
@@ -553,8 +551,8 @@ const AttendanceReports = () => {
     );
 
     const renderPreviewDialog = () => (
-        <Dialog 
-            open={previewDialog.open} 
+        <Dialog
+            open={previewDialog.open}
             onClose={() => setPreviewDialog({ open: false, data: null })}
             maxWidth="lg"
             fullWidth
@@ -572,12 +570,9 @@ const AttendanceReports = () => {
                         <Typography variant="body2" color="text.secondary" gutterBottom>
                             Records: {reportPreview.totalRecords || 0}
                         </Typography>
-                        
                         <Divider sx={{ my: 2 }} />
-                        
-                        {/* Preview table or summary */}
                         <TableContainer component={Paper} sx={{ maxHeight: 400 }}>
-                            <Table stickyHeader>
+                            <Table stickyHeader size="small">
                                 <TableHead>
                                     <TableRow>
                                         {reportPreview.headers?.map((header, index) => (
@@ -596,9 +591,8 @@ const AttendanceReports = () => {
                                 </TableBody>
                             </Table>
                         </TableContainer>
-                        
                         {reportPreview.data?.length > 10 && (
-                            <Typography variant="caption" color="text.secondary" sx={{ mt: 1 }}>
+                            <Typography variant="caption" color="text.secondary" sx={{ mt: 1, display: 'block' }}>
                                 Showing first 10 rows of {reportPreview.data.length} total rows
                             </Typography>
                         )}
@@ -616,9 +610,17 @@ const AttendanceReports = () => {
         </Dialog>
     );
 
+    if (loading && classes.length === 0) {
+        return (
+            <Box display="flex" justifyContent="center" alignItems="center" minHeight="400px">
+                <CircularProgress />
+                <Typography sx={{ ml: 2 }}>Loading report data...</Typography>
+            </Box>
+        );
+    }
+
     return (
         <Box sx={{ p: isMobile ? 2 : 3 }}>
-            {/* Header */}
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
                 <Typography variant={isMobile ? "h5" : "h4"} sx={{ fontWeight: 'bold' }}>
                     Attendance Reports
@@ -630,7 +632,7 @@ const AttendanceReports = () => {
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="Refresh Data">
-                        <IconButton onClick={loadInitialData}>
+                        <IconButton onClick={loadInitialData} disabled={loading}>
                             <RefreshIcon />
                         </IconButton>
                     </Tooltip>
@@ -642,20 +644,17 @@ const AttendanceReports = () => {
                     {error}
                 </Alert>
             )}
-
             {success && (
                 <Alert severity="success" sx={{ mb: 3 }} onClose={() => setSuccess(null)}>
                     {success}
                 </Alert>
             )}
 
-            {/* Report Configuration */}
             {renderReportTypeSelector()}
             {renderFormatSelector()}
             {renderFilters()}
             {renderColumnSelector()}
 
-            {/* Action Buttons */}
             <Paper elevation={2} sx={{ p: 3, mt: 3 }}>
                 <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
                     <Button
@@ -672,19 +671,19 @@ const AttendanceReports = () => {
                         disabled={loading}
                         startIcon={loading ? <CircularProgress size={20} /> : <DownloadIcon />}
                     >
-                        Generate & Download
+                        {loading ? 'Generating...' : 'Generate & Download'}
                     </Button>
                     <Button
                         variant="outlined"
                         onClick={handleSaveReportConfig}
                         startIcon={<ScheduleIcon />}
+                        disabled={loading}
                     >
                         Save Configuration
                     </Button>
                 </Box>
             </Paper>
 
-            {/* Saved Reports */}
             {savedReports.length > 0 && (
                 <Paper elevation={2} sx={{ p: 3, mt: 3 }}>
                     <Typography variant="h6" gutterBottom>
@@ -712,12 +711,10 @@ const AttendanceReports = () => {
                 </Paper>
             )}
 
-            {/* Dialogs */}
             {renderPreviewDialog()}
 
-            {/* Schedule Dialog */}
-            <Dialog 
-                open={scheduleDialog.open} 
+            <Dialog
+                open={scheduleDialog.open}
                 onClose={() => setScheduleDialog({ open: false })}
                 maxWidth="sm"
                 fullWidth
@@ -730,7 +727,10 @@ const AttendanceReports = () => {
                                 fullWidth
                                 label="Report Name"
                                 value={scheduleConfig.name}
-                                onChange={(e) => setScheduleConfig(prev => ({ ...prev, name: e.target.value }))}
+                                onChange={(e) => setScheduleConfig(prev => ({
+                                    ...prev,
+                                    name: e.target.value
+                                }))}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -738,7 +738,10 @@ const AttendanceReports = () => {
                                 <InputLabel>Frequency</InputLabel>
                                 <Select
                                     value={scheduleConfig.frequency}
-                                    onChange={(e) => setScheduleConfig(prev => ({ ...prev, frequency: e.target.value }))}
+                                    onChange={(e) => setScheduleConfig(prev => ({
+                                        ...prev,
+                                        frequency: e.target.value
+                                    }))}
                                     label="Frequency"
                                 >
                                     <MenuItem value="daily">Daily</MenuItem>
@@ -752,9 +755,9 @@ const AttendanceReports = () => {
                                 fullWidth
                                 label="Email Recipients (comma separated)"
                                 value={scheduleConfig.recipients.join(', ')}
-                                onChange={(e) => setScheduleConfig(prev => ({ 
-                                    ...prev, 
-                                    recipients: e.target.value.split(',').map(email => email.trim()) 
+                                onChange={(e) => setScheduleConfig(prev => ({
+                                    ...prev,
+                                    recipients: e.target.value.split(',').map(email => email.trim())
                                 }))}
                                 helperText="Enter email addresses separated by commas"
                             />

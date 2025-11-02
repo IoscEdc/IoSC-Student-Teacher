@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
     Button,
@@ -10,7 +10,11 @@ import {
     CssBaseline,
     IconButton,
     InputAdornment,
-    CircularProgress
+    CircularProgress,
+    MenuItem,
+    FormControl,
+    InputLabel,
+    Select
 } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
@@ -29,15 +33,31 @@ const TeacherRegister = () => {
         email: '',
         password: '',
         role: 'Teacher',
+        department: '',
+        school: '' // School/Admin ID
     });
 
+    const [schools, setSchools] = useState([]);
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
     const [message, setMessage] = useState('');
     const [errors, setErrors] = useState({});
 
+    // Fetch schools on component mount
+    useEffect(() => {
+        fetchSchools();
+    }, []);
 
+    const fetchSchools = async () => {
+        try {
+            const response = await api.get('/schools'); // Adjust endpoint as needed
+            console.log('Fetched schools:', response.data);
+            setSchools(response.data || []);
+        } catch (error) {
+            console.error('Error fetching schools:', error);
+        }
+    };
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -59,8 +79,13 @@ const TeacherRegister = () => {
 
         if (!formData.name.trim()) newErrors.name = 'Name is required';
         if (!formData.email.trim()) newErrors.email = 'Email is required';
+        else if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(formData.email)) {
+            newErrors.email = 'Please enter a valid email';
+        }
         if (!formData.password) newErrors.password = 'Password is required';
-        if (formData.password.length < 8) newErrors.password = 'Password must be at least 8 characters';
+        else if (formData.password.length < 6) newErrors.password = 'Password must be at least 6 characters';
+        
+        if (!formData.school) newErrors.school = 'Please select a school';
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -98,7 +123,7 @@ const TeacherRegister = () => {
         <ThemeProvider theme={defaultTheme}>
             <Grid container component="main" sx={{ height: '100vh' }}>
                 <CssBaseline />
-                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{ overflowY: 'auto' }}>
                     <Box sx={{ my: 8, mx: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <Typography variant="h4" sx={{ mb: 2, color: "#2c2143" }}>
                             Teacher Registration
@@ -162,6 +187,37 @@ const TeacherRegister = () => {
                                     ),
                                 }}
                             />
+
+                            <FormControl fullWidth margin="normal" required error={!!errors.school}>
+                                <InputLabel id="school-label">School</InputLabel>
+                                <Select
+                                    labelId="school-label"
+                                    id="school"
+                                    name="school"
+                                    value={formData.school}
+                                    label="School"
+                                    onChange={handleInputChange}
+                                >
+                                    {schools.map((school) => (
+                                        <MenuItem key={school._id} value={school._id}>
+                                            {school.schoolName || school.name}
+                                        </MenuItem>
+                                    ))}
+                                </Select>
+                                {errors.school && <Typography variant="caption" color="error">{errors.school}</Typography>}
+                            </FormControl>
+
+                            <TextField
+                                margin="normal"
+                                fullWidth
+                                id="department"
+                                label="Department"
+                                name="department"
+                                value={formData.department}
+                                onChange={handleInputChange}
+                                placeholder="e.g., Mathematics, Science"
+                            />
+
                             <IndigoButton
                                 type="submit"
                                 fullWidth

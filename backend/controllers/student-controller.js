@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 const Student = require("../models/studentSchema.js");
 const Subject = require("../models/subjectSchema.js");
 const config=require("../config.js");
+const Sclass = require("../models/sclassSchema.js");
 
 dotenv.config();
 
@@ -17,7 +18,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendVerificationEmail = async (student, req) => {
-  const token = jwt.sign({ id: student._id }, config.security.jwtSecret, { expiresIn: config.security.jetExpire });
+  const token = jwt.sign({ id: student._id }, config.security.jwtSecret, { expiresIn: config.security.jwtExpire });
   const url = `${req.protocol}://${req.get("host")}/api/student/verify/${token}`;
   await transporter.sendMail({
     to: student.email,
@@ -27,74 +28,94 @@ const sendVerificationEmail = async (student, req) => {
 };
 
 // --- UPDATED FUNCTION ---
-
 const studentRegister = async (req, res) => {
-    try {
+    try {
         console.log("🔍 Registration request body:", req.body);
-        const { name, email, password, sclassName, sbatchName, rollNum } = req.body;
-        
-        if (!email) {
-            return res.status(400).json({ error: "Email required" });
-        }
+        
+        const { name, email, password, sclassName, rollNum } = req.body;
+        
+        if (!email) {
+            return res.status(400).json({ message: "Email required" });
+        }
 
-        const existingStudent = await Student.findOne({ email });
-        
-        // Case 1: User exists and is already verified
-        if (existingStudent && existingStudent.isVerified) {
-            return res.status(400).json({ error: "Email already exists" });
-        }
+        // --- 4. NEW LOGIC TO FIND CLASS AND SCHOOL ---
+        
+        // --- 3. THIS IS THE FIX (was 'Student') ---
+        const studentClass = await Sclass.findById(sclassName); 
+        
+        if (!studentClass) {
+            return res.status(404).json({ message: "Selected class not found." });
+        }
+        console.log("🔍 BACKEND DEBUG - Retrieved class for registration:", studentClass);
+        // Get the school ID directly from the class document
+        const schoolId = studentClass.school;
+        // --- END OF NEW LOGIC ---
 
-        let student;
+        const existingStudent = await Student.findOne({ email });
+        
+        // Case 1: User exists and is already verified
+        if (existingStudent && existingStudent.isVerified) {
+            return res.status(400).json({ message: "Email already exists" });
+        }
 
-        // Case 2: User exists but is NOT verified (re-registration attempt)
-        if (existingStudent && !existingStudent.isVerified) {
-            // Update their details instead of creating a new one
-            existingStudent.name = name;
-            existingStudent.password = password; // Pre-save middleware will re-hash
-            existingStudent.school = "USAR";
-            existingStudent.sclassName = sclassName;
-            existingStudent.sbatchName = sbatchName;
-            existingStudent.rollNum = rollNum;
-            student = existingStudent;
-        } 
-        // Case 3: New user
-        else {
-            student = new Student({ 
-                name, 
-                email, 
-                password, // Will be hashed by pre-save middleware
-                school:"USAR", 
-                sclassName, 
-                sbatchName,
-                rollNum,
-                isVerified: false
-            });
-        }
+        let student;
 
-        const result = await student.save();
-        result.password = undefined;
-        
-        // --- START: Send verification email ---
-        try {
-            // Call the function after saving, passing the saved student and request
-            await sendVerificationEmail(result, req);
-        } catch (emailError) {
-            // Log the error, but don't fail the entire registration
-            console.error("Verification email failed to send:", emailError);
-        }
-        // --- END: Send verification email ---
-        
-        // Send a success response
-        res.status(201).json({ 
-            success: true, 
-            student: result,
-            message: "Registration successful. Please check your email to verify your account." 
-        });
+        // Case 2: User exists but is NOT verified (re-registration attempt)
+        if (existingStudent && !existingStudent.isVerified) {
+            // Update their details instead of creating a new one
+            existingStudent.name = name;
+            existingStudent.password = password; // Pre-save middleware will re-hash
+            existingStudent.school = schoolId; // 5. Use the schoolId from the class
+            existingStudent.sclassName = sclassName;
+            existingStudent.rollNum = rollNum;
+            student = existingStudent;
+        } 
+        // Case 3: New user
+        else {
+            student = new Student({ 
+                name, 
+                email, 
+                password, // Will be hashed by pre-save middleware
+                school: schoolId, // 6. Use the schoolId from the class
+                sclassName, 
+                rollNum,
+                isVerified: false
+            });
+        }
 
-    } catch (err) {
-        console.error("Registration error:", err);
-        res.status(500).json({ error: "Registration failed", details: err.message });
-    }
+        const result = await student.save();
+        result.password = undefined;
+        
+        // --- START: Send verification email ---
+        try {
+            // 4. Uncomment this if you have the function ready
+            await sendVerificationEmail(result, req); 
+        } catch (emailError) {
+            // Log the error, but don't fail the entire registration
+            console.error("Verification email failed to send:", emailError);
+        }
+        // --- END: Send verification email ---
+        
+        // Send a success response
+        res.status(201).json({ 
+            success: true, 
+            student: result,
+            message: "Registration successful. Please check your email to verify your account." 
+        });
+
+    } catch (err) {
+        console.error("Registration error:", err);
+        // Handle specific duplicate key errors
+        if (err.code === 11000) {
+            if (err.keyPattern.email) {
+                return res.status(400).json({ message: "Email already exists." });
+            }
+            if (err.keyPattern.sclassName && err.keyPattern.rollNum) {
+                return res.status(400).json({ message: "Enrollment Number already exists in this class." });
+            }
+        }
+        res.status(500).json({ message: "Registration failed", error: err.message });
+    }
 };
 
 
@@ -154,7 +175,7 @@ const studentLogIn = async (req, res) => {
         const isMatch = await student.comparePassword(password);
         if (!isMatch) return res.status(401).json({ error: "Invalid credentials" });
 
-        const token = jwt.sign({ id: student._id }, config.security.jwtSecret , { expiresIn: config.security.jetExpire });
+        const token = jwt.sign({ id: student._id }, config.security.jwtSecret , { expiresIn: config.security.jwtExpire });
         
         student.password = undefined;
         res.json({ success: true, token, student });
@@ -307,7 +328,8 @@ const resetPassword = async (req, res) => {
 
 const getStudents = async (req, res) => {
     try {
-        let students = await Student.find({ school: req.params.id }).populate("sclassName", "sclassName");
+        let students = await Student.find({ school: req.params.id })
+        .populate("sclassName", "sclassName");
         students = students.map(s => ({ ...s._doc, password: undefined }));
         res.send(students);
     } catch (err) {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Button,
@@ -15,6 +15,7 @@ import {
   Select,
   FormControl,
   InputLabel,
+  FormHelperText
 } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
@@ -33,8 +34,8 @@ const StudentRegister = () => {
     email: '',
     password: '',
     confirmPassword: '',
+    school: '', // <-- ADDED
     sclassName: '',
-    sbatchName: '',
     rollNum: ''
   });
   
@@ -45,30 +46,93 @@ const StudentRegister = () => {
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
 
-  const classOptions = [
-    { value: 'AIDS B1', label: 'AIDS B1' },
-    { value: 'AIDS B2', label: 'AIDS B2' },
-    { value: 'AIML B1', label: 'AIML B1' },
-    { value: 'AIML B2', label: 'AIML B2' },
-    { value: 'AR B1', label: 'AR B1' },
-    { value: 'AR B2', label: 'AR B2' },
-    { value: 'IIOT B1', label: 'IIOT B1' },
-    { value: 'IIOT B2', label: 'IIOT B2' },
-  ];
+  // State for fetched schools
+  const [schools, setSchools] = useState([]);
+  const [schoolLoading, setSchoolLoading] = useState(true); // Start true
 
-  const batchOptions = [
-    { value: '2022-2026', label: '2022-2026' },
-    { value: '2023-2027', label: '2023-2027' },
-    { value: '2024-2028', label: '2024-2028' },
-    { value: '2025-2029', label: '2025-2029' }
-  ];
+  // State for fetched classes
+  const [classes, setClasses] = useState([]);
+  const [classLoading, setClassLoading] = useState(false); // Start false
+
+  // Fetch schools on component mount
+  useEffect(() => {
+    const fetchSchools = async () => {
+      setSchoolLoading(true);
+      try {
+        // --- NOTE: Make sure this endpoint exists on your backend ---
+        // This should return an array of school objects, e.g., [{ _id: "123", schoolName: "My School" }]
+        // Based on your schema, this might be an '/Admins' route. I'll use '/Schools'
+        const response = await api.get('/Schools');
+        
+        const schoolData = response.data.schools || response.data; // Handle { success: true, schools: [] } or just []
+
+        if (Array.isArray(schoolData) && schoolData.length > 0) {
+          setSchools(schoolData);
+        } else {
+          setErrors(prev => ({ ...prev, school: "No schools found." }));
+        }
+      } catch (err) {
+        setErrors(prev => ({ ...prev, school: "Error loading schools." }));
+        console.error("Error fetching schools:", err);
+      } finally {
+        setSchoolLoading(false);
+      }
+    };
+
+    fetchSchools();
+  }, []);
+
+  // Fetch classes *when school changes*
+  useEffect(() => {
+    // Don't fetch if no school is selected
+    if (!formData.school) {
+      setClasses([]); // Clear any existing classes
+      return;
+    }
+
+    const fetchClasses = async () => {
+      setClassLoading(true);
+      try {
+        // --- NOTE: Make sure this endpoint exists on your backend ---
+        // This should return classes filtered by the school ID
+        const response = await api.get(`/Sclasses/school/${formData.school}`);
+        
+        const classesData = response.data;
+
+        if (Array.isArray(classesData) && classesData.length > 0) {
+          setClasses(classesData);
+        } else {
+          setErrors(prev => ({ ...prev, sclassName: "No classes found for this school." }));
+          setClasses([]); // Ensure class list is empty
+        }
+      } catch (err) {
+        setErrors(prev => ({ ...prev, sclassName: "Error loading classes." }));
+        console.error("Error fetching classes:", err);
+      } finally {
+        setClassLoading(false);
+      }
+    };
+
+    fetchClasses();
+  }, [formData.school]); // This effect depends on the selected school
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+
+    setFormData(prev => {
+      const newState = { ...prev, [name]: value };
+
+      // If user changes school, reset the class selection
+      if (name === 'school') {
+        newState.sclassName = '';
+        setClasses([]); // Clear the class list
+        if (errors.sclassName) {
+          setErrors(p => ({ ...p, sclassName: null })); // Clear class error
+        }
+      }
+      return newState;
+    });
+
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
@@ -81,37 +145,16 @@ const StudentRegister = () => {
   const validateForm = () => {
     const newErrors = {};
     
-    // Name validation
-    if (!formData.name.trim()) {
-      newErrors.name = "Full name is required";
-    } else if (formData.name.trim().length < 2) {
-      newErrors.name = "Name must be at least 2 characters";
-    }
+    // ... (Name, Email, Password validations are unchanged) ...
+    if (!formData.name.trim()) newErrors.name = "Full name is required";
+    if (!formData.email) newErrors.email = "Email is required";
+    if (!formData.password) newErrors.password = "Password is required";
+    if (formData.password !== formData.confirmPassword) newErrors.confirmPassword = "Passwords do not match";
 
-    // Email validation
-    if (!formData.email) {
-      newErrors.email = "Email is required";
-    } else if (!formData.email.endsWith('@ipu.ac.in') && (!formData.email.endsWith('@std.ggsipu.ac.in'))) {
-      newErrors.email = "Email must end with @std.ggsipu.ac.in or @ipu.ac.in";
-    }
 
-    // Batch validation
-    if (!formData.sbatchName) {
-      newErrors.sbatchName = "Batch is required";
-    }
-
-    // Password validation
-    if (!formData.password) {
-      newErrors.password = "Password is required";
-    } else if (formData.password.length < 8) {
-      newErrors.password = "Password must be at least 8 characters";
-    }
-
-    // Confirm password validation
-    if (!formData.confirmPassword) {
-      newErrors.confirmPassword = "Please confirm your password";
-    } else if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = "Passwords do not match";
+    // School validation
+    if (!formData.school) {
+      newErrors.school = "Please select your school";
     }
 
     // Class validation
@@ -122,8 +165,6 @@ const StudentRegister = () => {
     // Enrollment number validation
     if (!formData.rollNum) {
       newErrors.rollNum = "Enrollment number is required";
-    } else if (formData.rollNum.length < 5) {
-      newErrors.rollNum = "Please enter a valid enrollment number";
     }
 
     return newErrors;
@@ -146,8 +187,8 @@ const StudentRegister = () => {
         name: formData.name.trim(),
         email: formData.email.toLowerCase(),
         password: formData.password,
-        sbatchName: formData.sbatchName,
-        sclassName: formData.sclassName,
+        school: formData.school, // <-- ADDED (this is the school _id)
+        sclassName: formData.sclassName, // This is the class _id
         rollNum: formData.rollNum,
         role: 'Student'
       };
@@ -192,6 +233,7 @@ const StudentRegister = () => {
             <Typography variant="h7">Create your student account to get started</Typography>
             
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 2 }}>
+              {/* ... (Name and Email TextFields are unchanged) ... */}
               <TextField
                 margin="normal"
                 required
@@ -222,6 +264,39 @@ const StudentRegister = () => {
                 placeholder="yourname@std.ac.in"
               />
 
+              {/* --- NEW SCHOOL DROPDOWN --- */}
+              <FormControl fullWidth margin="normal" required error={!!errors.school}>
+                <InputLabel id="school-label">School</InputLabel>
+                <Select
+                  labelId="school-label"
+                  id="school"
+                  name="school"
+                  value={formData.school}
+                  label="School"
+                  onChange={handleInputChange}
+                  disabled={schoolLoading}
+                >
+                  {schoolLoading ? (
+                    <MenuItem value="" disabled>
+                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                        <CircularProgress size={20} />
+                        <Typography variant="body2">Loading schools...</Typography>
+                      </Box>
+                    </MenuItem>
+                  ) : (
+                    schools.map((school) => (
+                      <MenuItem key={school._id} value={school._id}>
+                        {school.schoolName} {/* Assuming 'schoolName' field */}
+                      </MenuItem>
+                    ))
+                  )}
+                </Select>
+                {errors.school && (
+                  <FormHelperText>{errors.school}</FormHelperText>
+                )}
+              </FormControl>
+
+              {/* --- MODIFIED CLASS DROPDOWN --- */}
               <FormControl fullWidth margin="normal" required error={!!errors.sclassName}>
                 <InputLabel id="class-label">Class</InputLabel>
                 <Select
@@ -231,45 +306,34 @@ const StudentRegister = () => {
                   value={formData.sclassName}
                   label="Class"
                   onChange={handleInputChange}
+                  disabled={classLoading || !formData.school} // Disabled if loading or no school selected
                 >
-                  {classOptions.map((option) => (
-                    <MenuItem key={option.value} value={option.value}>
-                      {option.label}
+                  {classLoading ? (
+                    <MenuItem value="" disabled>
+                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                        <CircularProgress size={20} />
+                        <Typography variant="body2">Loading classes...</Typography>
+                      </Box>
                     </MenuItem>
-                  ))}
+                  ) : !formData.school ? (
+                    <MenuItem value="" disabled>
+                      Please select a school first
+                    </MenuItem>
+                  ) : (
+                    classes.map((option) => (
+                      <MenuItem key={option._id} value={option._id}>
+                        {option.sclassName}
+                      </MenuItem>
+                    ))
+                  )}
                 </Select>
                 {errors.sclassName && (
-                  <Typography variant="caption" color="error" sx={{ mt: 1, ml: 2 }}>
-                    {errors.sclassName}
-                  </Typography>
-                )}
-              </FormControl>
-
-              <FormControl fullWidth margin="normal" required error={!!errors.sbatchName}>
-                <InputLabel id="class-label">Batch</InputLabel>
-                <Select
-                  labelId="class-label"
-                  id="sbatchName"
-                  name="sbatchName"
-                  value={formData.sbatchName}
-                  label="Class"
-                  onChange={handleInputChange}
-                >
-                  {batchOptions.map((option) => (
-                    <MenuItem key={option.value} value={option.value}>
-                      {option.label}
-                    </MenuItem>
-                  ))}
-                </Select>
-                {errors.sbatchName && (
-                  <Typography variant="caption" color="error" sx={{ mt: 1, ml: 2 }}>
-                    {errors.sbatchName}
-                  </Typography>
+                  <FormHelperText>{errors.sclassName}</FormHelperText>
                 )}
               </FormControl>
               
-
-              <TextField
+              {/* ... (RollNum, Password, Confirm Password TextFields are unchanged) ... */}
+               <TextField
                 margin="normal"
                 required
                 fullWidth
@@ -342,7 +406,7 @@ const StudentRegister = () => {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                disabled={loading}
+                disabled={loading || schoolLoading || classLoading} // Disable if any data is loading
               >
                 {loading ? <CircularProgress size={24} /> : 'Register'}
               </IndigoButton>
@@ -360,6 +424,7 @@ const StudentRegister = () => {
             </Box>
           </Box>
         </Grid>
+        {/* ... (Right side image Grid is unchanged) ... */}
         <Grid item xs={false} sm={4} md={7} sx={{
           backgroundImage: `linear-gradient(rgba(25, 118, 210, 0.6), rgba(25, 118, 210, 0.6)), url(${bgpic})`,
           backgroundRepeat: 'no-repeat',

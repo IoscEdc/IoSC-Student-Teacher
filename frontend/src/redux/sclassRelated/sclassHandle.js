@@ -1,15 +1,22 @@
 import axios from 'axios';
 import {
     getRequest,
-    getSuccess,
-    getFailed,
     getError,
-    getStudentsSuccess,
     detailsSuccess,
-    getFailedTwo,
-    getSubjectsSuccess,
     getSubDetailsSuccess,
-    getSubDetailsRequest
+    getSubDetailsRequest,
+
+    // Keep these for getAllSclasses
+    getSuccess,
+    getFailedTwo,
+
+    // --- UPDATED IMPORTS ---
+    getStudentsSuccess,
+    getStudentsFailed,     // <-- IMPORT THIS
+    getSubjectListSuccess, // <-- IMPORT THIS
+    getSubjectListFailed   // <-- IMPORT THIS
+
+    // We no longer need getFailed or getSubjectsSuccess for these functions
 } from './sclassSlice';
 
 export const getAllSclasses = (id, address) => async (dispatch) => {
@@ -41,7 +48,9 @@ export const getClassStudents = (id) => async (dispatch) => {
         }
         const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/Sclass/Students/${id}`);
         if (result.data.message) {
-            dispatch(getFailedTwo(result.data.message));
+            // --- FIX ---
+            // Was: getFailedTwo(result.data.message)
+            dispatch(getStudentsFailed(result.data.message));
         } else {
             dispatch(getStudentsSuccess(result.data));
         }
@@ -76,10 +85,15 @@ export const getSubjectList = (id, address) => async (dispatch) => {
             return;
         }
         const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/${address}/${id}`);
+        console.log(result);
         if (result.data.message) {
-            dispatch(getFailed(result.data.message));
+            // --- FIX ---
+            // Was: getFailed(result.data.message)
+            dispatch(getSubjectListFailed(result.data.message));
         } else {
-            dispatch(getSubjectsSuccess(result.data));
+            // --- FIX ---
+            // Was: getSubjectsSuccess(result.data)
+            dispatch(getSubjectListSuccess(result.data));
         }
     } catch (error) {
         dispatch(getError(error.response?.data?.error || error.message || "Something went wrong"));
@@ -96,9 +110,13 @@ export const getTeacherFreeClassSubjects = (id) => async (dispatch) => {
         }
         const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/FreeSubjectList/${id}`);
         if (result.data.message) {
-            dispatch(getFailed(result.data.message));
+            // --- FIX ---
+            // Was: getFailed(result.data.message)
+            dispatch(getSubjectListFailed(result.data.message));
         } else {
-            dispatch(getSubjectsSuccess(result.data));
+            // --- FIX ---
+            // Was: getSubjectsSuccess(result.data)
+            dispatch(getSubjectListSuccess(result.data));
         }
     } catch (error) {
         dispatch(getError(error.response?.data?.error || error.message || "Something went wrong"));

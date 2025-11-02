@@ -76779,3 +76779,2188 @@
     "statusCode": 200
   }
 }
+{
+  "timestamp": "2025-10-31T03:58:11.997Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T03:58:12.202Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T03:58:12.315Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 9,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T03:58:12.445Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T03:58:12.769Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 13,
+    "optimizationRulesSize": 6,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T05:43:26.472Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T05:43:27.648Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T05:43:27.806Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 0,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T05:43:27.808Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T05:43:27.810Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 0,
+    "optimizationRulesSize": 0,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T06:43:26.466Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T06:43:27.640Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T06:43:27.810Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 12,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T06:43:27.810Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T06:43:27.812Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 13,
+    "optimizationRulesSize": 3,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T07:59:21.018Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T07:59:22.947Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 12,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T07:59:23.718Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 13,
+    "optimizationRulesSize": 3,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T07:59:23.329Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T07:59:22.349Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T08:59:20.975Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T08:59:22.405Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T08:59:22.748Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 12,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T08:59:23.353Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T08:59:23.791Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 13,
+    "optimizationRulesSize": 3,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T10:14:30.276Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T10:14:31.351Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T10:14:31.541Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 5,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T10:14:31.542Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T10:14:31.543Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 5,
+    "optimizationRulesSize": 0,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T11:14:30.279Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T11:14:31.356Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T11:14:31.543Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 5,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T11:14:31.544Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T11:14:31.545Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 5,
+    "optimizationRulesSize": 0,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T12:14:30.279Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T12:14:31.364Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T12:14:31.549Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 5,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T12:14:31.550Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T12:14:31.551Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 5,
+    "optimizationRulesSize": 0,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T13:14:31.850Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T13:14:32.930Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T13:14:33.117Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 6,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T13:14:33.117Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T13:14:33.118Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 6,
+    "optimizationRulesSize": 0,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T16:00:35.595Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T16:00:35.615Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 6,
+    "optimizationRulesSize": 0,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T16:00:35.598Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 6,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T16:00:35.597Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T16:00:35.610Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T17:00:35.598Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T17:00:35.596Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T17:00:35.600Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 6,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T17:00:35.613Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-10-31T17:00:35.636Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 6,
+    "optimizationRulesSize": 0,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T03:01:40.371Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T03:01:41.813Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T03:01:42.095Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 11,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T03:01:42.096Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T03:01:42.097Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 12,
+    "optimizationRulesSize": 2,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T04:25:56.054Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T04:25:55.900Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T04:25:56.268Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 12,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T04:25:56.384Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T04:25:56.514Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 16,
+    "optimizationRulesSize": 3,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T05:25:55.904Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T05:25:56.062Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T05:25:56.268Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 12,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T05:25:56.394Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T05:25:56.520Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 16,
+    "optimizationRulesSize": 4,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T06:25:55.906Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T06:25:56.027Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T06:25:56.240Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 12,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T06:25:56.363Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T06:25:56.489Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 16,
+    "optimizationRulesSize": 4,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T08:25:22.857Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T08:25:23.076Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T08:25:23.080Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 12,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T08:25:23.873Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T08:25:24.296Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 16,
+    "optimizationRulesSize": 4,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T09:25:22.869Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T09:25:23.085Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T09:25:23.093Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 12,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T09:25:23.883Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T09:25:24.312Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 16,
+    "optimizationRulesSize": 4,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T16:24:32.527Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T16:24:32.880Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T16:24:33.178Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 12,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T16:24:33.414Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T16:24:33.560Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 16,
+    "optimizationRulesSize": 4,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T17:35:47.100Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T17:35:47.869Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T17:35:47.993Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 10,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T17:35:47.994Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T17:35:47.996Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 10,
+    "optimizationRulesSize": 2,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T18:45:18.567Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T18:45:18.579Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T18:45:18.592Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 10,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T18:45:18.600Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-01T18:45:18.627Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 10,
+    "optimizationRulesSize": 2,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T02:00:28.391Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T02:00:28.391Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762048828390_dvmjgh60p"
+  }
+}
+{
+  "timestamp": "2025-11-02T02:00:28.394Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6902126bf91c442b648f6b95",
+    "subjectId": "6902126bf91c442b648f6b9c",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T02:00:28.400Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "student_retrieval",
+    "context": {
+      "method": "GET",
+      "path": "/class/6902126bf91c442b648f6b95/students",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T02:00:28.400Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762048828400_yjtio2vsa"
+  }
+}
+{
+  "timestamp": "2025-11-02T02:00:28.431Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_students_for_attendance",
+  "data": {
+    "classId": "6902126bf91c442b648f6b95",
+    "subjectId": "6902126bf91c442b648f6b9c",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T02:00:28.438Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T02:00:28.391Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762048828390_dvmjgh60p",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T02:00:28.462Z",
+  "level": "ERROR",
+  "message": "Teacher assignment validation failed",
+  "data": {
+    "userId": "6906ba37e8663e966141ca47",
+    "classId": "6902126bf91c442b648f6b95",
+    "subjectId": "6902126bf91c442b648f6b9c",
+    "error": "Cannot read properties of undefined (reading 'toString')",
+    "stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at ValidationService.validateTeacherAssignment (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\ValidationService.js:42:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async AttendanceService.getClassStudentsForAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:30:13)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:36:22"
+  }
+}
+{
+  "timestamp": "2025-11-02T02:00:28.467Z",
+  "level": "INFO",
+  "message": "Info Error Tracked",
+  "data": {
+    "error": {
+      "timestamp": "2025-11-02T02:00:28.466Z",
+      "message": "Teacher assignment validation failed: Cannot read properties of undefined (reading 'toString')",
+      "stack": "ValidationError: Teacher assignment validation failed: Cannot read properties of undefined (reading 'toString')\n    at ValidationService.validateTeacherAssignment (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\ValidationService.js:69:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async AttendanceService.getClassStudentsForAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:30:13)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:36:22",
+      "name": "ValidationError",
+      "code": "VALIDATION_ERROR",
+      "statusCode": 400,
+      "context": {
+        "method": "GET",
+        "path": "/class/6902126bf91c442b648f6b95/students",
+        "userRole": "Teacher",
+        "userId": "6906ba37e8663e966141ca47",
+        "timestamp": "2025-11-02T02:00:28.465Z",
+        "classId": "6902126bf91c442b648f6b95",
+        "subjectId": "6902126bf91c442b648f6b9c",
+        "teacherId": "6906ba37e8663e966141ca47",
+        "operation": "attendance_generic",
+        "errorCategory": "attendance"
+      },
+      "severity": "info"
+    },
+    "stats": {
+      "count": 1,
+      "firstOccurrence": "2025-11-02T02:00:28.466Z",
+      "lastOccurrence": "2025-11-02T02:00:28.466Z",
+      "severity": "info",
+      "contexts": [
+        "{\"method\":\"GET\",\"path\":\"/class/6902126bf91c442b648f6b95/students\",\"userRole\":\"Teacher\",\"userId\":\"6906ba37e8663e966141ca47\",\"timestamp\":\"2025-11-02T02:00:28.465Z\",\"classId\":\"6902126bf91c442b648f6b95\",\"subjectId\":\"6902126bf91c442b648f6b9c\",\"teacherId\":\"6906ba37e8663e966141ca47\",\"operation\":\"attendance_generic\",\"errorCategory\":\"attendance\"}"
+      ]
+    }
+  }
+}
+{
+  "timestamp": "2025-11-02T02:00:28.468Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Teacher assignment validation failed: Cannot read properties of undefined (reading 'toString')",
+    "context": {
+      "method": "GET",
+      "path": "/class/6902126bf91c442b648f6b95/students",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T02:00:28.465Z",
+      "classId": "6902126bf91c442b648f6b95",
+      "subjectId": "6902126bf91c442b648f6b9c",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-02T02:00:28.473Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_retrieval",
+    "context": {
+      "method": "GET",
+      "path": "/class/6902126bf91c442b648f6b95/students",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T02:00:28.465Z",
+      "classId": "6902126bf91c442b648f6b95",
+      "subjectId": "6902126bf91c442b648f6b9c",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "error": "Teacher assignment validation failed: Cannot read properties of undefined (reading 'toString')",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 400
+  }
+}
+{
+  "timestamp": "2025-11-02T02:01:04.009Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T02:01:04.009Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762048864009_ke6gdikgk"
+  }
+}
+{
+  "timestamp": "2025-11-02T02:01:04.010Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6902126bf91c442b648f6b95",
+    "subjectId": "6902126bf91c442b648f6b9c",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T02:01:04.039Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T02:01:04.009Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762048864009_ke6gdikgk",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T02:01:25.231Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T02:01:25.231Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762048885231_sdeor8j4r"
+  }
+}
+{
+  "timestamp": "2025-11-02T02:01:25.231Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6902126bf91c442b648f6b95",
+    "subjectId": "6902126bf91c442b648f6b9c",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T02:01:25.269Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T02:01:25.231Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762048885231_sdeor8j4r",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T05:12:04.280Z",
+  "level": "WARN",
+  "message": "Database performance warning",
+  "data": {
+    "type": "database",
+    "severity": "warning",
+    "queryKey": "find_subjects",
+    "executionTime": 1135,
+    "threshold": 1000,
+    "timestamp": "2025-11-02T05:12:04.273Z",
+    "queryData": {
+      "operation": "find",
+      "collection": "subjects",
+      "executionTime": 1135,
+      "queryHash": "4798e08c",
+      "resultCount": 1,
+      "error": null
+    },
+    "id": "db_1762060324273_zwmi6x7bl"
+  }
+}
+{
+  "timestamp": "2025-11-02T05:12:04.282Z",
+  "level": "INFO",
+  "message": "Index suggestion generated",
+  "data": {
+    "collection": "subjects",
+    "fields": [
+      "sclassName"
+    ],
+    "type": "single"
+  }
+}
+{
+  "timestamp": "2025-11-02T05:12:04.465Z",
+  "level": "INFO",
+  "message": "Index suggestion generated",
+  "data": {
+    "collection": "teachers",
+    "fields": [
+      "teachSclass",
+      "assignedSubjects.classId",
+      "isActive"
+    ],
+    "type": "compound"
+  }
+}
+{
+  "timestamp": "2025-11-02T05:12:04.463Z",
+  "level": "WARN",
+  "message": "Database performance warning",
+  "data": {
+    "type": "database",
+    "severity": "warning",
+    "queryKey": "find_teachers",
+    "executionTime": 1310,
+    "threshold": 1000,
+    "timestamp": "2025-11-02T05:12:04.463Z",
+    "queryData": {
+      "operation": "find",
+      "collection": "teachers",
+      "executionTime": 1310,
+      "queryHash": "f440b3ee",
+      "resultCount": 1,
+      "error": null
+    },
+    "id": "db_1762060324463_evta1lysq"
+  }
+}
+{
+  "timestamp": "2025-11-02T08:05:21.397Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T08:05:22.241Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T08:05:22.365Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 10,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T08:05:22.366Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T08:05:22.367Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 15,
+    "optimizationRulesSize": 2,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T09:22:59.930Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:22:59.929Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762075379929_z8fbhcdnx"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:26:44.588Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:26:44.588Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762075604587_6v7nctl5a"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:41:21.949Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:41:21.949Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076481948_opp1u8je0"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:41:22.109Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:41:21.949Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076481948_opp1u8je0",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T09:45:12.537Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:45:12.537Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076712537_lwwo4rbbm"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:45:12.569Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:45:12.537Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076712537_lwwo4rbbm",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T09:47:05.870Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:47:05.870Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076825870_0c9gytwmi"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:47:05.872Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:47:05.870Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076825870_0c9gytwmi",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T09:47:10.284Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:47:10.284Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076830284_p423x6ozt"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:47:10.286Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:47:10.284Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076830284_p423x6ozt",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T09:47:13.791Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:47:13.791Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076833791_np8gf04kb"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:47:13.793Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:47:13.791Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076833791_np8gf04kb",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T09:47:19.109Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:47:19.109Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076839109_irmjb0x3w"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:47:19.116Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:47:19.109Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076839109_irmjb0x3w",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T09:47:25.917Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:47:25.917Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076845917_0bszw65er"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:47:25.918Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:47:25.917Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076845917_0bszw65er",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T09:48:06.382Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:48:06.382Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076886382_ish281ery"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:48:06.414Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:48:06.382Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076886382_ish281ery",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T09:48:12.783Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:48:12.783Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076892783_sh8zwaxf0"
+  }
+}
+{
+  "timestamp": "2025-11-02T09:48:12.816Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T09:48:12.783Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762076892783_sh8zwaxf0",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T10:19:43.152Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:19:43.152Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762078783152_5sbxiyb0j"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:19:43.199Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:19:43.152Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762078783152_5sbxiyb0j",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T10:19:50.722Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:19:50.721Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762078790721_thml952f2"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:19:50.727Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:19:50.721Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762078790721_thml952f2",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T10:19:53.003Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:19:53.003Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762078793003_8x90xqyuk"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:19:53.007Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:19:53.003Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762078793003_8x90xqyuk",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T10:41:09.949Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:41:09.949Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080069948_i1mk2ayz6"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:42:07.253Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:42:07.253Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080127253_3913sqwpa"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:42:10.435Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:42:10.435Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080130435_eq0lc8sat"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:44:23.045Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/audit/logs/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:44:23.045Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080263045_kxsyn338m"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:44:38.600Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/audit/logs/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:44:38.600Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080278600_btnuj8icv"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:44:47.566Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/audit/logs/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:44:47.566Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080287566_o91jfpajm"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:51:59.338Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:51:59.338Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080719338_343w9nynq"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:52:01.541Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:52:01.541Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080721541_8zph1spas"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:52:01.583Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:52:01.541Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080721541_8zph1spas",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T10:52:03.555Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:52:03.555Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080723555_sebjqamoh"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:52:04.455Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/audit/logs/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:52:04.455Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080724455_7m0y3odnx"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:52:06.876Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/audit/logs/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:52:06.876Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080726876_pl3an62za"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:52:09.870Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/audit/logs/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:52:09.870Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080729870_8u8qj5ksr"
+  }
+}
+{
+  "timestamp": "2025-11-02T10:52:10.977Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T10:52:10.977Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762080730977_rp64956o5"
+  }
+}
+{
+  "timestamp": "2025-11-02T11:46:21.517Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/audit/logs/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T11:46:21.517Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762083981515_9wv4dwek0"
+  }
+}
+{
+  "timestamp": "2025-11-02T11:47:51.046Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T11:47:51.046Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762084071046_ra82zunxf"
+  }
+}
+{
+  "timestamp": "2025-11-02T11:47:54.376Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T11:47:54.376Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762084074376_mfoyneonn"
+  }
+}
+{
+  "timestamp": "2025-11-02T11:48:05.113Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/audit/logs/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T11:48:05.113Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762084085113_jaiajqphy"
+  }
+}
+{
+  "timestamp": "2025-11-02T11:49:38.831Z",
+  "level": "INFO",
+  "message": "Error monitoring cleanup completed",
+  "data": {
+    "recentErrorsCount": 0,
+    "errorStatsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T11:49:39.666Z",
+  "level": "INFO",
+  "message": "Attendance error monitoring cleanup completed",
+  "data": {
+    "attendanceErrorsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T11:49:39.823Z",
+  "level": "INFO",
+  "message": "Performance metrics cleanup completed",
+  "data": {
+    "apiEndpoints": 0,
+    "dbQueryTypes": 7,
+    "alertsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T11:49:39.824Z",
+  "level": "INFO",
+  "message": "Database performance metrics cleanup completed",
+  "data": {
+    "slowQueriesCount": 0,
+    "metricsCount": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T11:49:39.825Z",
+  "level": "INFO",
+  "message": "Query optimizer cleanup completed",
+  "data": {
+    "queryCacheSize": 10,
+    "optimizationRulesSize": 0,
+    "indexSuggestionsSize": 0
+  }
+}
+{
+  "timestamp": "2025-11-02T11:50:10.802Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/audit/logs/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T11:50:10.802Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762084210800_ork6jsfa6"
+  }
+}
+{
+  "timestamp": "2025-11-02T11:50:25.880Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T11:50:25.880Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762084225880_kws93osu0"
+  }
+}
+{
+  "timestamp": "2025-11-02T12:28:18.532Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T12:28:18.532Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762086498532_zvesyc91f"
+  }
+}
+{
+  "timestamp": "2025-11-02T12:28:18.573Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T12:28:18.532Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762086498532_zvesyc91f",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T12:35:39.419Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T12:35:39.419Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762086939418_uz8g7rbsy"
+  }
+}

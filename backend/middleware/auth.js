@@ -3,18 +3,147 @@ const Student = require('../models/studentSchema');
 const Teacher = require('../models/teacherSchema');
 const Admin = require('../models/adminSchema');
 
-const config=require("../config.js");
+const config = require("../config.js");
+
+const authMiddleware = async (req, res, next) => {
+    try {
+        // Get token from header or query
+        const token = req.header("Authorization")?.replace("Bearer ", "") || req.query.token;
+        
+        console.log('🔑 AUTH MIDDLEWARE - Token received:', token ? 'Yes' : 'No');
+        
+        if (!token) {
+            console.log('❌ AUTH MIDDLEWARE - No token provided');
+            return res.status(401).json({ 
+                success: false,
+                message: "No token provided" 
+            });
+        }
+
+        // Try both JWT secrets (for backward compatibility)
+        let decoded;
+        try {
+            decoded = jwt.verify(token, config.security.jwtSecret);
+            console.log('✅ AUTH MIDDLEWARE - Token verified with config.security.jwtSecret');
+        } catch (err) {
+            try {
+                decoded = jwt.verify(token, process.env.JWT_SECRET);
+                console.log('✅ AUTH MIDDLEWARE - Token verified with process.env.JWT_SECRET');
+            } catch (err2) {
+                console.log('❌ AUTH MIDDLEWARE - Token verification failed with both secrets');
+                return res.status(401).json({ 
+                    success: false,
+                    message: "Invalid token" 
+                });
+            }
+        }
+
+        console.log('🔍 AUTH MIDDLEWARE - Decoded token:', { id: decoded.id, role: decoded.role });
+
+        // Try to find user in different collections based on role
+        let user = null;
+        
+        if (decoded.role === 'Admin') {
+            user = await Admin.findById(decoded.id).select("-password");
+            console.log('👤 AUTH MIDDLEWARE - Admin user found:', !!user);
+        } else if (decoded.role === 'Student') {
+            user = await Student.findById(decoded.id).select("-password");
+            console.log('👤 AUTH MIDDLEWARE - Student user found:', !!user);
+        } else if (decoded.role === 'Teacher') {
+            user = await Teacher.findById(decoded.id)
+                .populate('school', 'schoolName')
+                .populate('assignedSubjects.subjectId', 'subName')
+                .populate('assignedSubjects.classId', 'sclassName')
+                .select("-password");
+            console.log('👤 AUTH MIDDLEWARE - Teacher user found:', !!user);
+            
+            if (user) {
+                console.log('📚 AUTH MIDDLEWARE - Teacher assignments:', {
+                    assignedSubjects: user.assignedSubjects?.length || 0,
+                    classInchargeOf: user.classInchargeOf?.length || 0
+                });
+            }
+        }
+        
+        if (!user) {
+            console.log('❌ AUTH MIDDLEWARE - User not found in database');
+            return res.status(401).json({ 
+                success: false,
+                message: "Invalid token - user not found" 
+            });
+        }
+
+        // CRITICAL: Set req.user with all necessary fields
+        req.user = {
+            ...user.toObject(),
+            id: user._id.toString(),
+            role: decoded.role,
+            school: user.school?._id || user.school // Ensure school ID is available
+        };
+
+        console.log('✅ AUTH MIDDLEWARE - req.user set:', {
+            id: req.user.id,
+            role: req.user.role,
+            name: req.user.name,
+            school: req.user.school
+        });
+
+        next();
+    } catch (err) {
+        console.error('❌ AUTH MIDDLEWARE - Error:', err.message);
+        res.status(401).json({ 
+            success: false,
+            message: "Token not valid",
+            error: err.message 
+        });
+    }
+};
+
+const authorizeRoles = (...roles) => {
+    return (req, res, next) => {
+        console.log(`🔒 AUTHORIZE ROLES - Checking role: '${req.user?.role}' against [${roles}]`);
+
+        if (!req.user) {
+            console.log('❌ AUTHORIZE ROLES - No user in request');
+            return res.status(401).json({ 
+                success: false,
+                message: 'User not authenticated' 
+            });
+        }
+
+        if (!roles.includes(req.user.role)) {
+            console.log('❌ AUTHORIZE ROLES - Role authorization FAILED');
+            return res.status(403).json({ 
+                success: false,
+                message: 'User role is not authorized to access this resource',
+                requiredRoles: roles,
+                userRole: req.user.role
+            });
+        }
+
+        console.log('✅ AUTHORIZE ROLES - Role authorization PASSED');
+        next();
+    };
+};
 
 const authenticateToken = async (req, res, next) => {
     try {
         const authHeader = req.headers['authorization'];
-        const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
+        const token = authHeader && authHeader.split(' ')[1];
 
         if (!token) {
-            return res.status(401).json({ error: 'Access token required' });
+            return res.status(401).json({ 
+                success: false,
+                error: 'Access token required' 
+            });
         }
 
-        const decoded = jwt.verify(token, config.security.jwtSecret);
+        let decoded;
+        try {
+            decoded = jwt.verify(token, config.security.jwtSecret);
+        } catch (err) {
+            decoded = jwt.verify(token, process.env.JWT_SECRET);
+        }
         
         // Try to find user in Student, Teacher, or Admin collections
         let user = await Student.findById(decoded.id).select('-password');
@@ -26,13 +155,23 @@ const authenticateToken = async (req, res, next) => {
         }
 
         if (!user) {
-            return res.status(401).json({ error: 'Invalid token' });
+            return res.status(401).json({ 
+                success: false,
+                error: 'Invalid token' 
+            });
         }
 
-        req.user = user;
+        req.user = {
+            ...user.toObject(),
+            id: user._id.toString(),
+            role: decoded.role
+        };
         next();
     } catch (error) {
-        return res.status(403).json({ error: 'Invalid or expired token' });
+        return res.status(403).json({ 
+            success: false,
+            error: 'Invalid or expired token' 
+        });
     }
 };
 
@@ -42,20 +181,39 @@ const authenticateStudent = async (req, res, next) => {
         const token = authHeader && authHeader.split(' ')[1];
 
         if (!token) {
-            return res.status(401).json({ error: 'Access token required' });
+            return res.status(401).json({ 
+                success: false,
+                error: 'Access token required' 
+            });
         }
 
-        const decoded = jwt.verify(token, config.security.jwtSecret);
+        let decoded;
+        try {
+            decoded = jwt.verify(token, config.security.jwtSecret);
+        } catch (err) {
+            decoded = jwt.verify(token, process.env.JWT_SECRET);
+        }
+
         const student = await Student.findById(decoded.id).select('-password');
 
         if (!student) {
-            return res.status(401).json({ error: 'Invalid student token' });
+            return res.status(401).json({ 
+                success: false,
+                error: 'Invalid student token' 
+            });
         }
 
-        req.user = student;
+        req.user = {
+            ...student.toObject(),
+            id: student._id.toString(),
+            role: 'Student'
+        };
         next();
     } catch (error) {
-        return res.status(403).json({ error: 'Invalid or expired token' });
+        return res.status(403).json({ 
+            success: false,
+            error: 'Invalid or expired token' 
+        });
     }
 };
 
@@ -65,20 +223,42 @@ const authenticateTeacher = async (req, res, next) => {
         const token = authHeader && authHeader.split(' ')[1];
 
         if (!token) {
-            return res.status(401).json({ error: 'Access token required' });
+            return res.status(401).json({ 
+                success: false,
+                error: 'Access token required' 
+            });
         }
 
-        const decoded = jwt.verify(token, config.security.jwtSecret);
-        const teacher = await Teacher.findById(decoded.id).select('-password');
+        let decoded;
+        try {
+            decoded = jwt.verify(token, config.security.jwtSecret);
+        } catch (err) {
+            decoded = jwt.verify(token, process.env.JWT_SECRET);
+        }
+
+        const teacher = await Teacher.findById(decoded.id)
+            .populate('assignedSubjects.subjectId')
+            .populate('assignedSubjects.classId')
+            .select('-password');
 
         if (!teacher) {
-            return res.status(401).json({ error: 'Invalid teacher token' });
+            return res.status(401).json({ 
+                success: false,
+                error: 'Invalid teacher token' 
+            });
         }
 
-        req.user = teacher;
+        req.user = {
+            ...teacher.toObject(),
+            id: teacher._id.toString(),
+            role: 'Teacher'
+        };
         next();
     } catch (error) {
-        return res.status(403).json({ error: 'Invalid or expired token' });
+        return res.status(403).json({ 
+            success: false,
+            error: 'Invalid or expired token' 
+        });
     }
 };
 
@@ -88,54 +268,88 @@ const authenticateAdmin = async (req, res, next) => {
         const token = authHeader && authHeader.split(' ')[1];
 
         if (!token) {
-            return res.status(401).json({ error: 'Access token required' });
+            return res.status(401).json({ 
+                success: false,
+                error: 'Access token required' 
+            });
         }
 
-        const decoded = jwt.verify(token, config.security.jwtSecret);
+        let decoded;
+        try {
+            decoded = jwt.verify(token, config.security.jwtSecret);
+        } catch (err) {
+            decoded = jwt.verify(token, process.env.JWT_SECRET);
+        }
+
         const admin = await Admin.findById(decoded.id).select('-password');
 
         if (!admin) {
-            return res.status(401).json({ error: 'Invalid admin token' });
+            return res.status(401).json({ 
+                success: false,
+                error: 'Invalid admin token' 
+            });
         }
 
-        req.user = admin;
+        req.user = {
+            ...admin.toObject(),
+            id: admin._id.toString(),
+            role: 'Admin'
+        };
         next();
     } catch (error) {
-        return res.status(403).json({ error: 'Invalid or expired token' });
+        return res.status(403).json({ 
+            success: false,
+            error: 'Invalid or expired token' 
+        });
     }
 };
 
-// Middleware to authenticate either teacher or admin
 const authenticateTeacherOrAdmin = async (req, res, next) => {
     try {
         const authHeader = req.headers['authorization'];
         const token = authHeader && authHeader.split(' ')[1];
 
         if (!token) {
-            return res.status(401).json({ error: 'Access token required' });
+            return res.status(401).json({ 
+                success: false,
+                error: 'Access token required' 
+            });
         }
 
-        const decoded = jwt.verify(token, config.security.jwtSecret);
+        let decoded;
+        try {
+            decoded = jwt.verify(token, config.security.jwtSecret);
+        } catch (err) {
+            decoded = jwt.verify(token, process.env.JWT_SECRET);
+        }
         
         // Try to find user as teacher first, then admin
         let user = await Teacher.findById(decoded.id).select('-password');
-        if (user) {
-            user.role = 'Teacher';
-        } else {
+        let role = 'Teacher';
+        
+        if (!user) {
             user = await Admin.findById(decoded.id).select('-password');
-            if (user) {
-                user.role = 'Admin';
-            }
+            role = 'Admin';
         }
 
         if (!user) {
-            return res.status(401).json({ error: 'Invalid token - must be teacher or admin' });
+            return res.status(401).json({ 
+                success: false,
+                error: 'Invalid token - must be teacher or admin' 
+            });
         }
 
-        req.user = user;
+        req.user = {
+            ...user.toObject(),
+            id: user._id.toString(),
+            role: role
+        };
         next();
     } catch (error) {
-        return res.status(403).json({ error: 'Invalid or expired token' });
+        return res.status(403).json({ 
+            success: false,
+            error: 'Invalid or expired token' 
+        });
     }
 };
 
@@ -144,10 +358,7 @@ module.exports = {
     authenticateStudent,
     authenticateTeacher,
     authenticateAdmin,
-    authenticateTeacherOrAdmin
-};
-
-module.exports = {
-  authMiddleware,
-  authorizeRoles
+    authenticateTeacherOrAdmin,
+    authMiddleware, 
+    authorizeRoles
 };

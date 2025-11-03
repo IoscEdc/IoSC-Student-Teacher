@@ -17702,3 +17702,235 @@
     "statusCode": 200
   }
 }
+{
+  "timestamp": "2025-11-03T22:36:55.451Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T22:36:55.449Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762209415439_j73h1p42e"
+  }
+}
+{
+  "timestamp": "2025-11-03T22:36:55.568Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T22:36:55.449Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762209415439_j73h1p42e",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T22:37:05.441Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T22:37:05.441Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762209425440_kkwoyg6l8"
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:01.803Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T22:38:01.802Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762209481798_u8n1gg1eh"
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:01.806Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:01.832Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "student_retrieval",
+    "context": {
+      "method": "GET",
+      "path": "/class/6906afc0cc59f531bb1e949f/students",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T22:38:01.832Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762209481831_ysierqu9s"
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:01.897Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_students_for_attendance",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:01.913Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T22:38:01.802Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762209481798_u8n1gg1eh",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:02.007Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "student_retrieval",
+    "context": {
+      "method": "GET",
+      "path": "/class/6906afc0cc59f531bb1e949f/students",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T22:38:01.832Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762209481831_ysierqu9s",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:17.538Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T22:38:17.538Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-04",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762209497537_uvjwzhj7d"
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:17.672Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-04",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:18.253Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_success",
+  "data": {
+    "operation": "marking",
+    "responseTime": 689,
+    "context": {
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "studentCount": 1,
+      "successCount": 1,
+      "failureCount": 0
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:18.255Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_complete",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "successCount": 1,
+    "failureCount": 0,
+    "responseTime": 689
+  }
+}
+{
+  "timestamp": "2025-11-03T22:38:18.261Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T22:38:17.538Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-04",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762209497537_uvjwzhj7d",
+    "statusCode": 200
+  }
+}

@@ -70,7 +70,7 @@ const AdminCalendar = () => {
 
     const fetchEvents = async () => {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/Calender/`);
+            const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/Calendar/`);
             setEvents(response.data.calender || []);
         } catch (err) {
             console.error(err);
@@ -116,7 +116,7 @@ const AdminCalendar = () => {
     const handleSubmit = async () => {
         try {
             if (editMode) {
-                await axios.put(`${process.env.REACT_APP_BASE_URL}/Calender/`, {
+                await axios.put(`${process.env.REACT_APP_BASE_URL}/Calendar/`, {
                     id: currentEvent._id,
                     date: currentEvent.date,
                     type: currentEvent.type,

@@ -19,7 +19,7 @@ const noticeSchema = new mongoose.Schema({
     },
     teacher: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'teacher'
+        ref: 'Teacher'
     },
     admin: {
         type: mongoose.Schema.Types.ObjectId,

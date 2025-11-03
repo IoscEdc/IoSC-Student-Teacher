@@ -53,16 +53,37 @@ export const updateTeachSubject = (teacherId, teachSubject) => async (dispatch) 
 }
 
 export const getClassTeachers = (id) => async (dispatch) => {
+    console.log("🔍 Fetching teachers for class:", id);
     dispatch(getRequest());
+    
     try {
-        // This endpoint comes from your teacherController's 'getTeachersByClass' function.
-        // Make sure this route matches your backend API route.
-        const result =await axios.get(`${process.env.REACT_APP_BASE_URL}/teachers/class/${id}`);
+        const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/teachers/class/${id}`);
+        
+        console.log("📥 API Response:", result.data);
+        
+        // Handle different response structures
         if (result.data) {
-            console.log("Class Teachers fetched:", result.data);
-            dispatch(doneSuccess(result.data));
-        }   
+            const teachers = result.data.teachers || result.data.data || result.data;
+            
+            console.log("👥 Teachers found:", teachers);
+            
+            // ✅ FIX: Use getClassTeachersSuccess instead of doneSuccess
+            if (Array.isArray(teachers)) {
+                dispatch(getClassTeachersSuccess(teachers));
+            } else {
+                dispatch(getClassTeachersSuccess([]));
+            }
+        } else {
+            dispatch(getClassTeachersSuccess([]));
+        }
     } catch (error) {
-        dispatch(getError(error));
+        console.error("❌ Error fetching class teachers:", error.response?.data || error.message);
+        
+        // If 404 or no teachers, set empty array
+        if (error.response?.status === 404) {
+            dispatch(getClassTeachersSuccess([]));
+        } else {
+            dispatch(getError(error));
+        }
     }
 };

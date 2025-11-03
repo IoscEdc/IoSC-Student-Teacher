@@ -15,13 +15,13 @@ const attendanceRecordSchema = new mongoose.Schema({
     },
     teacherId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'teacher',
+        ref: 'Teacher',
         required: true,
         index: true
     },
     studentId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'student',
+        ref: 'Student',
         required: true,
         index: true
     },
@@ -43,7 +43,7 @@ const attendanceRecordSchema = new mongoose.Schema({
     },
     markedBy: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'teacher',
+        ref: 'Teacher',
         required: true
     },
     markedAt: {
@@ -53,7 +53,7 @@ const attendanceRecordSchema = new mongoose.Schema({
     },
     lastModifiedBy: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'teacher'
+        ref: 'Teacher'
     },
     lastModifiedAt: {
         type: Date

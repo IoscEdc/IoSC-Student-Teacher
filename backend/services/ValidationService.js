@@ -110,34 +110,81 @@ class ValidationService {
     }
 
     /**
-     * Validate session configuration for a class and subject
-     * @param {string} classId - Class ID
-     * @param {string} subjectId - Subject ID
-     * @param {string} session - Session name (e.g., "Lecture 1", "Lab 2")
-     * @returns {Promise<Object>} Session configuration if valid, throws error if not
-     */
-    async validateSessionConfiguration(classId, subjectId, session) {
-        try {
-            // Check if session name is valid for the subject-class combination
-            const validationResult = await SessionConfiguration.validateSessionName(
-                subjectId, 
-                classId, 
-                session
-            );
+ * Validate session configuration for a class and subject
+ * @param {string} classId - Class ID
+ * @param {string} subjectId - Subject ID
+ * @param {string} session - Session name (e.g., "Lecture 1", "Lab 2")
+ * @returns {Promise<Object>} Session configuration if valid, throws error if not
+ */
+async validateSessionConfiguration(classId, subjectId, session) {
+    try {
+        // Check if session name is valid for the subject-class combination
+        const validationResult = await SessionConfiguration.validateSessionName(
+            subjectId, 
+            classId, 
+            session
+        );
 
-            if (!validationResult.isValid) {
-                // Get all valid session names for better error message
-                const validSessions = await SessionConfiguration.getAllSessionNames(subjectId, classId);
-                throw new Error(
-                    `Invalid session "${session}". Valid sessions are: ${validSessions.join(', ')}`
-                );
+        if (!validationResult.isValid) {
+            // Get all valid session names for better error message
+            const validSessions = await SessionConfiguration.getAllSessionNames(subjectId, classId);
+            
+            // ⭐ ADD THIS: If no configurations exist, allow default sessions
+            if (!validSessions || validSessions.length === 0) {
+                const defaultSessions = ['Lecture 1', 'Lecture 2', 'Lecture 3', 'Lecture 4', 'Lab', 'Tutorial'];
+                
+                if (!defaultSessions.includes(session)) {
+                    throw new Error(
+                        `Invalid session "${session}". Valid default sessions are: ${defaultSessions.join(', ')}`
+                    );
+                }
+                
+                // Return a mock configuration for default sessions
+                logger.warn('No session configurations found, using default sessions', {
+                    classId,
+                    subjectId,
+                    session
+                });
+                
+                return {
+                    isValid: true,
+                    configuration: {
+                        sessionName: session,
+                        isDefault: true
+                    }
+                };
             }
-
-            return validationResult.configuration;
-        } catch (error) {
-            throw new Error(`Session configuration validation failed: ${error.message}`);
+            
+            throw new Error(
+                `Invalid session "${session}". Valid sessions are: ${validSessions.join(', ')}`
+            );
         }
+
+        return validationResult.configuration;
+    } catch (error) {
+        // ⭐ ADD THIS: Catch and handle when no configurations exist at all
+        if (error.message.includes('No session configurations found') || 
+            error.message.includes('Valid sessions are: ')) {
+            
+            const defaultSessions = ['Lecture 1', 'Lecture 2', 'Lecture 3', 'Lecture 4', 'Lab', 'Tutorial'];
+            
+            if (defaultSessions.includes(session)) {
+                logger.warn('Using default session configuration', {
+                    classId,
+                    subjectId,
+                    session
+                });
+                
+                return {
+                    sessionName: session,
+                    isDefault: true
+                };
+            }
+        }
+        
+        throw new Error(`Session configuration validation failed: ${error.message}`);
     }
+}
 
     /**
      * Validate that the attendance date is within acceptable range

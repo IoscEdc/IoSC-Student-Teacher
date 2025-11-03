@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import {
     Box,
     Typography,
@@ -66,19 +67,21 @@ const ImprovedAttendanceMarking = ({ situation = "Subject" }) => {
     const [messageType, setMessageType] = useState('info');
 
     // Smart class and subject ID detection
-    const getClassAndSubjectIds = () => {
-        let classId, subjectId, className, subjectName;
+    // const getClassAndSubjectIds = () => {
+    //     let classId, subjectId, className, subjectName;
 
-        // Use hardcoded values for testing
-        classId = '6902126bf91c442b648f6b95'; // AIDS B1
-        subjectId = '6902126bf91c442b648f6b9c'; // Data Structures
-        className = 'AIDS B1';
-        subjectName = 'Data Structures';
+    //     // Use hardcoded values for testing
+    //     classId = '6902126bf91c442b648f6b95'; // AIDS B1
+    //     subjectId = '6902126bf91c442b648f6b9c'; // Data Structures
+    //     className = 'AIDS B1';
+    //     subjectName = 'Data Structures';
 
-        return { classId, subjectId, className, subjectName };
-    };
+    //     return { classId, subjectId, className, subjectName };
+    // };
 
-    const { classId, subjectId, className, subjectName } = getClassAndSubjectIds();  
+    const location = useLocation();
+
+    const { classId, subjectId, className, subjectName } = location.state || {};
   // Load sessions
     useEffect(() => {
         const fetchSessions = async () => {

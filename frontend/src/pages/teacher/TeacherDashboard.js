@@ -5,19 +5,20 @@ import {
     Toolbar,
     List,
     Typography,
+    useTheme,
     Divider,
     IconButton,
 } from '@mui/material';
-import TeacherUploadNotes from './TeacherUploadNotes';
-import TeacherUploadAssignment from './TeacherUploadAssignment';
-
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import TeacherSideBar from './TeacherSideBar';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Logout from '../Logout'
-import AccountMenu from '../../components/AccountMenu';
 import { AppBar, Drawer } from '../../components/styles';
+import Logout from '../Logout';
+import TeacherSideBar from './TeacherSideBar';
+import AccountMenu from '../../components/AccountMenu';
+
+import TeacherUploadNotes from './TeacherUploadNotes';
+import TeacherUploadAssignment from './TeacherUploadAssignment';
 import StudentAttendance from '../admin/studentRelated/StudentAttendance';
 import { AttendanceMarkingInterface, SimpleCheckboxTest, WorkingAttendanceMarking, BareMinimumTest } from '../../components/attendance';
 import FreshAttendanceMarking from '../../components/attendance/FreshAttendanceMarking';
@@ -45,127 +46,224 @@ import TeacherAttendanceHistory from './TeacherAttendanceHistory';
 import StudentExamMarks from '../admin/studentRelated/StudentExamMarks';
 
 const TeacherDashboard = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
+    const theme = useTheme(); 
+
+    const brandDark = '#0f2b6e';
+    const brandPrimary = '#2176FF';
+    
     const toggleDrawer = () => {
         setOpen(!open);
     };
 
     return (
-        <>
-            <Box sx={{ display: 'flex' }}>
-                <CssBaseline />
-                <AppBar open={open} position='absolute'>
-                    <Toolbar sx={{ pr: '24px' }}>
-                        <IconButton
-                            edge="start"
-                            color="inherit"
-                            aria-label="open drawer"
-                            onClick={toggleDrawer}
-                            sx={{
-                                marginRight: '36px',
-                                ...(open && { display: 'none' }),
-                            }}
-                        >
-                            <MenuIcon />
+        <Box sx={{ display: 'flex', minHeight: '100vh', marginTop: 7, marginLeft: 10}}>
+            <CssBaseline />
+            
+            {/* App Bar */}
+            <AppBar 
+                open={open}
+                position="fixed" 
+                sx={{
+                    backgroundColor: brandDark,
+                    color: '#ffffff',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+                    borderBottom: 'none',
+                    height: 64,
+                }}
+            >
+                <Toolbar sx={{ px: 3 }}>
+                    <IconButton
+                        edge="start"
+                        color="inherit"
+                        aria-label="open drawer"
+                        onClick={toggleDrawer}
+                        sx={{
+                            marginRight: 3,
+                            ...(open && { display: 'none' }),
+                        }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="div"
+                        sx={{ 
+                            flexGrow: 1,
+                            fontWeight: 700,
+                            fontSize: '1.35rem',
+                            letterSpacing: '0.5px'
+                        }}
+                    >
+                        Teacher Dashboard
+                    </Typography>
+                    <AccountMenu />
+                </Toolbar>
+            </AppBar>
+            
+            {/* Sidebar */}
+            {/* Sidebar */}
+            <Box
+                sx={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    height: '100vh',
+                    // --- 1. CHANGED WIDTH ---
+                    width: open ? 260 : 80,
+                    zIndex: 1300,
+                    overflowY: 'auto',
+                }}
+            >
+                <Drawer
+                    variant="permanent"
+                    open={open}
+                    PaperProps={{
+                        sx: {
+                            // --- 2. CHANGED WIDTH ---
+                            width: open ? 260 : 80,
+                            height: '100vh',
+                            overflowY: 'auto',
+                            backgroundColor: brandDark,
+                            color: theme.palette.common.white,
+                            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                        },
+                    }}
+                    sx={{
+                        '& .MuiDrawer-paper': {
+                            // --- 3. CHANGED WIDTH ---
+                            width: open ? 260 : 80,
+                            borderRight: 'none',
+                        },
+                        '& .MuiList-root': {
+                            backgroundColor: 'transparent',
+                        },
+                        '& .MuiListSubheader-root': {
+                            backgroundColor: 'transparent',
+                            color: 'rgba(255, 255, 255, 0.7)',
+                            fontWeight: 600,
+                            paddingTop: '16px',
+                            paddingLeft: open ? '24px' : '16px',
+                            paddingBottom: '8px',
+                            textTransform: 'uppercase',
+                            fontSize: '0.75rem',
+                            letterSpacing: '1px',
+                            ...(!open && {
+                                display: 'none',
+                            }),
+                        },
+                        '& .MuiListItemIcon-root': {
+                            color: 'rgba(255, 255, 255, 0.8)',
+                            minWidth: '40px',
+                        },
+                        '& .MuiListItemText-primary': {
+                            color: 'rgba(255, 255, 255, 0.9)', 
+                            fontWeight: 500,
+                        },
+                        '& .Mui-selected, & .Mui-selected:hover': {
+                            backgroundColor: brandPrimary,
+                            '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
+                                color: theme.palette.common.white,
+                            },
+                        },
+                        '& .MuiListItem-root:hover': {
+                            backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                        },
+                    }}
+                >
+                    <Toolbar sx={{ 
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'flex-end',
+                        px: 2,
+                        minHeight: '64px !important'
+                    }}>
+                        <IconButton onClick={toggleDrawer} sx={{ color: 'white' }}>
+                            {open ? <ChevronLeftIcon /> : <MenuIcon />}
                         </IconButton>
-                        <Typography
-                            component="h1"
-                            variant="h6"
-                            color="inherit"
-                            noWrap
-                            sx={{ flexGrow: 1 }}
-                        >
-                            Teacher Dashboard
-                        </Typography>
-                        <AccountMenu />
                     </Toolbar>
-                </AppBar>
-                <Drawer variant="permanent" open={open} sx={open ? styles.drawerStyled : styles.hideDrawer}>
-                    <Toolbar sx={styles.toolBarStyled}>
-                        <IconButton onClick={toggleDrawer}>
-                            <ChevronLeftIcon />
-                        </IconButton>
-                    </Toolbar>
-                    <Divider />
-                    <List component="nav">
-                        <TeacherSideBar />
-                    </List>
+                    <Divider sx={{ borderColor: 'rgba(255, 255, 255, 0.12)' }} />
+
+                    <Box 
+                        sx={{ 
+                            overflow: 'auto',
+                            ...(!open && {
+                                '& .MuiListItemText-root': {
+                                    display: 'none',
+                                },
+                                '& .MuiListItemButton-root': {
+                                    justifyContent: 'center',
+                                    paddingLeft: 0,
+                                    paddingRight: 0,
+                                },
+                                '& .MuiListItemIcon-root': {
+                                    minWidth: 0,
+                                    margin: 0,
+                                },
+                            }),
+                        }}
+                    >
+                        <TeacherSideBar open={open} />
+                    </Box>
                 </Drawer>
-                <Box component="main" sx={styles.boxStyled}>
-                    <Toolbar />
-                    <Routes>
-                        <Route path="/" element={<TeacherHomePage />} />
-                        <Route path='*' element={<Navigate to="/" />} />
-                        <Route path="/Teacher/dashboard" element={<TeacherHomePage />} />
-                        <Route path="/Teacher/profile" element={<TeacherProfile />} />
-
-                        <Route path="/Teacher/complain" element={<TeacherComplain />} />
-                        <Route path="/Teacher/notices" element={<TeacherNotices />} />
-
-                        <Route path="/Teacher/class" element={<TeacherClassDetails />} />
-                        <Route path="/Teacher/class/student/:id" element={<TeacherViewStudent />} />
-
-                        {/* Legacy individual attendance route - maintained for backward compatibility */}
-                        <Route path="/Teacher/class/student/attendance/:studentID/:subjectID" element={<StudentAttendance situation="Subject" />} />
-                        <Route path="/Teacher/class/student/marks/:studentID/:subjectID" element={<StudentExamMarks situation="Subject" />} />
-                          
-                        <Route path="/Teacher/upload-notes" element={<TeacherUploadNotes />} />
-                        <Route path="/Teacher/upload-assignment" element={<TeacherUploadAssignment />} />
-
-
-                        {/* New attendance interface routes */}
-                        <Route path="/Teacher/attendance/mark" element={<ImprovedTeacherAttendance />} />
-                        <Route path="/Teacher/attendance/working" element={<WorkingAttendanceMarking situation="Subject" />} />
-                        <Route path="/Teacher/attendance/fixed" element={<FixedAttendanceMarking situation="Subject" />} />
-                        <Route path="/Teacher/attendance/original" element={<AttendanceMarkingInterface situation="Subject" />} />
-                        <Route path="/Teacher/attendance/simple" element={<SimpleAttendanceMarking />} />
-                        <Route path="/Teacher/attendance/history" element={<TeacherAttendanceHistory />} />
-                        <Route path="/Teacher/attendance/debug" element={<AttendanceDebugger />} />
-                        <Route path="/Teacher/attendance/debug-mark" element={<DebugAttendanceMarking />} />
-                        <Route path="/Teacher/attendance" element={<AttendanceNavigation />} />
-                        <Route path="/Teacher/attendance/test" element={<QuickAPITest />} />
-                        <Route path="/Teacher/attendance/connection" element={<ConnectionTest />} />
-                        <Route path="/Teacher/attendance/system-test" element={<AttendanceSystemTest />} />
-                        <Route path="/Teacher/attendance/checkbox-test" element={<SimpleCheckboxTest />} />
-                        <Route path="/Teacher/attendance/bare-minimum" element={<BareMinimumTest />} />
-                        <Route path="/Teacher/attendance/pure-react" element={<PureReactTest />} />
-                        <Route path="/Teacher/attendance/radio-test" element={<RadioButtonTest />} />
-                        <Route path="/Teacher/attendance/dom-test" element={<DirectDOMTest />} />
-                        <Route path="/Teacher/attendance/extensive-logging" element={<ExtensiveLoggingTest />} />
-
-                        <Route path="/logout" element={<Logout />} />
-                    </Routes>
-                </Box>
             </Box>
-        </>
+            
+            {/* Main Content */}
+            <Box 
+                component="main" 
+                sx={{ 
+                    flexGrow: 1, 
+                    p: { xs: 2, sm: 3 },
+                    backgroundColor: theme.palette.mode === 'dark' 
+                        ? theme.palette.background.default 
+                        : '#f4f7fa',
+                    minHeight: '100vh',
+                    pt: '88px' 
+                }}
+            >
+                <Routes>
+                    <Route path="/" element={<TeacherHomePage />} />
+                    <Route path='*' element={<Navigate to="/" />} />
+                    <Route path="/Teacher/dashboard" element={<TeacherHomePage />} />
+                    <Route path="/Teacher/profile" element={<TeacherProfile />} />
+
+                    <Route path="/Teacher/complain" element={<TeacherComplain />} />
+                    <Route path="/Teacher/notices" element={<TeacherNotices />} />
+
+                    <Route path="/Teacher/class/:classId" element={<TeacherClassDetails />}/>
+                    <Route path="/Teacher/class/student/:id" element={<TeacherViewStudent />} />
+
+                    <Route path="/Teacher/class/student/attendance/:studentID/:subjectID" element={<StudentAttendance situation="Subject" />} />
+                    <Route path="/Teacher/class/student/marks/:studentID/:subjectID" element={<StudentExamMarks situation="Subject" />} />
+                      
+                    <Route path="/Teacher/upload-notes" element={<TeacherUploadNotes />} />
+                    <Route path="/Teacher/upload-assignment" element={<TeacherUploadAssignment />} />
+
+                    <Route path="/Teacher/attendance/mark" element={<ImprovedTeacherAttendance />} />
+                    <Route path="/Teacher/attendance/working" element={<WorkingAttendanceMarking situation="Subject" />} />
+                    <Route path="/Teacher/attendance/fixed" element={<FixedAttendanceMarking situation="Subject" />} />
+                    <Route path="/Teacher/attendance/original" element={<AttendanceMarkingInterface situation="Subject" />} />
+                    <Route path="/Teacher/attendance/simple" element={<SimpleAttendanceMarking />} />
+                    <Route path="/Teacher/attendance/history" element={<TeacherAttendanceHistory />} />
+                    <Route path="/Teacher/attendance/debug" element={<AttendanceDebugger />} />
+                    <Route path="/Teacher/attendance/debug-mark" element={<DebugAttendanceMarking />} />
+                    <Route path="/Teacher/attendance" element={<AttendanceNavigation />} />
+                    <Route path="/Teacher/attendance/test" element={<QuickAPITest />} />
+                    <Route path="/Teacher/attendance/connection" element={<ConnectionTest />} />
+                    <Route path="/Teacher/attendance/system-test" element={<AttendanceSystemTest />} />
+                    <Route path="/Teacher/attendance/checkbox-test" element={<SimpleCheckboxTest />} />
+                    <Route path="/Teacher/attendance/bare-minimum" element={<BareMinimumTest />} />
+                    <Route path="/Teacher/attendance/pure-react" element={<PureReactTest />} />
+                    <Route path="/Teacher/attendance/radio-test" element={<RadioButtonTest />} />
+                    <Route path="/Teacher/attendance/dom-test" element={<DirectDOMTest />} />
+                    <Route path="/Teacher/attendance/extensive-logging" element={<ExtensiveLoggingTest />} />
+
+                    <Route path="/logout" element={<Logout />} />
+                </Routes>
+            </Box>
+        </Box>
     );
 }
 
-export default TeacherDashboard
-
-const styles = {
-    boxStyled: {
-        backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
-        flexGrow: 1,
-        height: '100vh',
-        overflow: 'auto',
-    },
-    toolBarStyled: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        px: [1],
-    },
-    drawerStyled: {
-        display: "flex"
-    },
-    hideDrawer: {
-        display: 'flex',
-        '@media (max-width: 600px)': {
-            display: 'none',
-        },
-    },
-}
+export default TeacherDashboard;

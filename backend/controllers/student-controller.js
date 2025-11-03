@@ -159,29 +159,66 @@ const setPassword = async (req, res) => {
         res.status(500).json({ error: "Failed to set password" });
     }
 };
+
 const studentLogIn = async (req, res) => {
     try {
         const { email, password } = req.body;
-        const student = await Student.findOne({ email });
+        const student = await Student.findOne({ email })
+            .populate("school", "schoolName")
+            .populate("sclassName", "sclassName");
         
         if (!student || !student.password) {
-            return res.status(401).json({ error: "Invalid credentials" });
+            console.log("🔍 BACKEND DEBUG - Student not found or no password");
+            return res.status(401).json({ 
+                success: false,
+                error: "Invalid credentials" 
+            });
         }
 
         if(student && !student.isVerified) {
-            return res.status(401).json({ error: "Email not verified" });
+            return res.status(401).json({ 
+                success: false,
+                error: "Email not verified",
+                message: "Please check your email to verify your account before logging in."
+            });
         }
 
         const isMatch = await student.comparePassword(password);
-        if (!isMatch) return res.status(401).json({ error: "Invalid credentials" });
+        console.log("🔍 BACKEND DEBUG - Password match result:", isMatch);
+        
+        if (!isMatch) {
+            return res.status(401).json({ 
+                success: false,
+                error: "Invalid credentials" 
+            });
+        }
 
-        const token = jwt.sign({ id: student._id }, config.security.jwtSecret , { expiresIn: config.security.jwtExpire });
+        // ✅ FIX: Include role in the token
+        const token = jwt.sign(
+            { 
+                id: student._id, 
+                role: 'Student'  // ← THIS IS THE FIX!
+            }, 
+            config.security.jwtSecret, 
+            { expiresIn: config.security.jwtExpire }
+        );
         
         student.password = undefined;
-        res.json({ success: true, token, student });
+        
+        console.log("✅ Student login successful:", student.email, "Role: Student");
+        
+        res.json({ 
+            success: true, 
+            token, 
+            student 
+        });
     } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: "Login failed" });
+        console.error("❌ Student login error:", err);
+        res.status(500).json({ 
+            success: false,
+            error: "Login failed",
+            details: err.message 
+        });
     }
 };
 

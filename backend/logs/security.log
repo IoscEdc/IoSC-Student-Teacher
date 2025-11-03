@@ -9040,3 +9040,405 @@
     ]
   }
 }
+{
+  "timestamp": "2025-11-03T02:40:23.883Z",
+  "level": "SECURITY",
+  "message": "Security event: attendance_administrator_alert",
+  "data": {
+    "alert": {
+      "type": "attendance_consecutive_failures",
+      "timestamp": "2025-11-03T02:40:23.881Z",
+      "data": {
+        "operation": "marking",
+        "failureCount": 3,
+        "timeWindow": 15,
+        "errors": [
+          {
+            "timestamp": "2025-11-03T02:40:23.881Z",
+            "error": {
+              "name": "DatabaseError",
+              "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+              "code": "DATABASE_ERROR",
+              "statusCode": 500,
+              "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+            },
+            "context": {
+              "operation": "marking",
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "sessionInfo": {
+                "date": "2025-11-03",
+                "session": "Lecture 1"
+              },
+              "bulkInfo": null
+            },
+            "severity": "critical",
+            "impact": {
+              "level": "medium",
+              "affectedUsers": 10,
+              "affectedOperations": [
+                "marking"
+              ],
+              "businessImpact": "moderate"
+            }
+          },
+          {
+            "timestamp": "2025-11-03T02:36:26.068Z",
+            "error": {
+              "name": "DatabaseError",
+              "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+              "code": "DATABASE_ERROR",
+              "statusCode": 500,
+              "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+            },
+            "context": {
+              "operation": "marking",
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "sessionInfo": {
+                "date": "2025-11-03",
+                "session": "Lecture 1"
+              },
+              "bulkInfo": null
+            },
+            "severity": "critical",
+            "impact": {
+              "level": "medium",
+              "affectedUsers": 10,
+              "affectedOperations": [
+                "marking"
+              ],
+              "businessImpact": "moderate"
+            }
+          },
+          {
+            "timestamp": "2025-11-03T02:26:27.543Z",
+            "error": {
+              "name": "DatabaseError",
+              "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+              "code": "DATABASE_ERROR",
+              "statusCode": 500,
+              "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+            },
+            "context": {
+              "operation": "marking",
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "sessionInfo": {
+                "date": "2025-11-03",
+                "session": "Lecture 1"
+              },
+              "bulkInfo": null
+            },
+            "severity": "critical",
+            "impact": {
+              "level": "medium",
+              "affectedUsers": 10,
+              "affectedOperations": [
+                "marking"
+              ],
+              "businessImpact": "moderate"
+            }
+          }
+        ]
+      },
+      "severity": "high",
+      "category": "attendance"
+    },
+    "notificationSent": true,
+    "recipients": [
+      "admin@school.edu",
+      "attendance-admin@school.edu"
+    ]
+  }
+}
+{
+  "timestamp": "2025-11-03T02:40:23.895Z",
+  "level": "SECURITY",
+  "message": "Security event: administrator_alert",
+  "data": {
+    "alert": {
+      "type": "critical_error_threshold",
+      "timestamp": "2025-11-03T02:40:23.892Z",
+      "data": {
+        "count": 5,
+        "timeWindow": 5,
+        "errors": [
+          {
+            "timestamp": "2025-11-03T02:40:23.891Z",
+            "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+            "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24",
+            "name": "DatabaseError",
+            "code": "DATABASE_ERROR",
+            "statusCode": 500,
+            "context": {
+              "method": "POST",
+              "path": "/mark",
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "timestamp": "2025-11-03T02:40:23.891Z",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "date": "2025-11-03",
+              "session": "Lecture 1",
+              "totalRecords": 1,
+              "operation": "attendance_marking",
+              "errorCategory": "attendance"
+            },
+            "severity": "critical"
+          },
+          {
+            "timestamp": "2025-11-03T02:40:23.886Z",
+            "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+            "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24",
+            "name": "DatabaseError",
+            "code": "DATABASE_ERROR",
+            "statusCode": 500,
+            "context": {
+              "operation": "marking",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "date": "2025-11-03",
+              "session": "Lecture 1",
+              "studentCount": 1,
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "responseTime": 117,
+              "category": "attendance",
+              "subcategory": "marking"
+            },
+            "severity": "critical"
+          },
+          {
+            "timestamp": "2025-11-03T02:36:26.072Z",
+            "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+            "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24",
+            "name": "DatabaseError",
+            "code": "DATABASE_ERROR",
+            "statusCode": 500,
+            "context": {
+              "method": "POST",
+              "path": "/mark",
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "timestamp": "2025-11-03T02:36:26.071Z",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "date": "2025-11-03",
+              "session": "Lecture 1",
+              "totalRecords": 1,
+              "operation": "attendance_generic",
+              "errorCategory": "attendance"
+            },
+            "severity": "critical"
+          },
+          {
+            "timestamp": "2025-11-03T02:36:26.071Z",
+            "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+            "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24",
+            "name": "DatabaseError",
+            "code": "DATABASE_ERROR",
+            "statusCode": 500,
+            "context": {
+              "method": "POST",
+              "path": "/mark",
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "timestamp": "2025-11-03T02:36:26.071Z",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "date": "2025-11-03",
+              "session": "Lecture 1",
+              "totalRecords": 1,
+              "operation": "attendance_marking",
+              "errorCategory": "attendance"
+            },
+            "severity": "critical"
+          },
+          {
+            "timestamp": "2025-11-03T02:36:26.069Z",
+            "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+            "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24",
+            "name": "DatabaseError",
+            "code": "DATABASE_ERROR",
+            "statusCode": 500,
+            "context": {
+              "operation": "marking",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "date": "2025-11-03",
+              "session": "Lecture 1",
+              "studentCount": 1,
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "responseTime": 134,
+              "category": "attendance",
+              "subcategory": "marking"
+            },
+            "severity": "critical"
+          }
+        ]
+      },
+      "severity": "high"
+    },
+    "notificationSent": true,
+    "recipients": [
+      "admin@school.edu"
+    ]
+  }
+}
+{
+  "timestamp": "2025-11-03T02:40:23.904Z",
+  "level": "SECURITY",
+  "message": "Security event: administrator_alert",
+  "data": {
+    "alert": {
+      "type": "critical_error_threshold",
+      "timestamp": "2025-11-03T02:40:23.902Z",
+      "data": {
+        "count": 6,
+        "timeWindow": 5,
+        "errors": [
+          {
+            "timestamp": "2025-11-03T02:40:23.902Z",
+            "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+            "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24",
+            "name": "DatabaseError",
+            "code": "DATABASE_ERROR",
+            "statusCode": 500,
+            "context": {
+              "method": "POST",
+              "path": "/mark",
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "timestamp": "2025-11-03T02:40:23.891Z",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "date": "2025-11-03",
+              "session": "Lecture 1",
+              "totalRecords": 1,
+              "operation": "attendance_generic",
+              "errorCategory": "attendance"
+            },
+            "severity": "critical"
+          },
+          {
+            "timestamp": "2025-11-03T02:40:23.891Z",
+            "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+            "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24",
+            "name": "DatabaseError",
+            "code": "DATABASE_ERROR",
+            "statusCode": 500,
+            "context": {
+              "method": "POST",
+              "path": "/mark",
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "timestamp": "2025-11-03T02:40:23.891Z",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "date": "2025-11-03",
+              "session": "Lecture 1",
+              "totalRecords": 1,
+              "operation": "attendance_marking",
+              "errorCategory": "attendance"
+            },
+            "severity": "critical"
+          },
+          {
+            "timestamp": "2025-11-03T02:40:23.886Z",
+            "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+            "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24",
+            "name": "DatabaseError",
+            "code": "DATABASE_ERROR",
+            "statusCode": 500,
+            "context": {
+              "operation": "marking",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "date": "2025-11-03",
+              "session": "Lecture 1",
+              "studentCount": 1,
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "responseTime": 117,
+              "category": "attendance",
+              "subcategory": "marking"
+            },
+            "severity": "critical"
+          },
+          {
+            "timestamp": "2025-11-03T02:36:26.072Z",
+            "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+            "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24",
+            "name": "DatabaseError",
+            "code": "DATABASE_ERROR",
+            "statusCode": 500,
+            "context": {
+              "method": "POST",
+              "path": "/mark",
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "timestamp": "2025-11-03T02:36:26.071Z",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "date": "2025-11-03",
+              "session": "Lecture 1",
+              "totalRecords": 1,
+              "operation": "attendance_generic",
+              "errorCategory": "attendance"
+            },
+            "severity": "critical"
+          },
+          {
+            "timestamp": "2025-11-03T02:36:26.071Z",
+            "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+            "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24",
+            "name": "DatabaseError",
+            "code": "DATABASE_ERROR",
+            "statusCode": 500,
+            "context": {
+              "method": "POST",
+              "path": "/mark",
+              "userRole": "Teacher",
+              "userId": "6906ba37e8663e966141ca47",
+              "timestamp": "2025-11-03T02:36:26.071Z",
+              "classId": "6906afc0cc59f531bb1e949f",
+              "subjectId": "6906c81d0fb3897fd4284849",
+              "teacherId": "6906ba37e8663e966141ca47",
+              "date": "2025-11-03",
+              "session": "Lecture 1",
+              "totalRecords": 1,
+              "operation": "attendance_marking",
+              "errorCategory": "attendance"
+            },
+            "severity": "critical"
+          }
+        ]
+      },
+      "severity": "high"
+    },
+    "notificationSent": true,
+    "recipients": [
+      "admin@school.edu"
+    ]
+  }
+}

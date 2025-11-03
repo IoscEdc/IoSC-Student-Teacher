@@ -12843,3 +12843,4862 @@
     "requestId": "att_1762086939418_uz8g7rbsy"
   }
 }
+{
+  "timestamp": "2025-11-02T13:39:43.274Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T13:39:43.273Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762090783273_epyah697b"
+  }
+}
+{
+  "timestamp": "2025-11-02T13:39:43.321Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T13:39:43.273Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762090783273_epyah697b",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T13:39:46.489Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T13:39:46.489Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762090786488_yhe308f1x"
+  }
+}
+{
+  "timestamp": "2025-11-02T13:40:52.509Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T13:40:52.509Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762090852509_45xjuydwv"
+  }
+}
+{
+  "timestamp": "2025-11-02T18:27:10.094Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T18:27:10.094Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762108030092_88j3t7uhg"
+  }
+}
+{
+  "timestamp": "2025-11-02T18:27:10.142Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T18:27:10.094Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762108030092_88j3t7uhg",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T19:06:18.761Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T19:06:18.761Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762110378760_rbe6eqi81"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:14:39.039Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T19:14:39.039Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762110879038_4cjit6vsg"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:17:40.667Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T19:17:40.667Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762111060666_l8n4zdqck"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:18:02.053Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T19:18:02.053Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762111082053_i3b7uivxa"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:18:24.461Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T19:18:24.461Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762111104461_o17mupf36"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:29:46.700Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T19:29:46.700Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762111786700_sov4chzqk"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:29:46.736Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T19:29:46.700Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762111786700_sov4chzqk",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T19:29:49.150Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-02T19:29:49.150Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762111789150_fyef8i20f"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:30:57.739Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:30:57.739Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762111857739_4z722511b"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:30:57.741Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:30:57.751Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "student_retrieval",
+    "context": {
+      "method": "GET",
+      "path": "/class/6906afc0cc59f531bb1e949f/students",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:30:57.751Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762111857751_uw2an51o7"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:30:57.772Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_students_for_attendance",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:30:57.779Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:30:57.739Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762111857739_4z722511b",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T19:30:57.846Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "student_retrieval",
+    "context": {
+      "method": "GET",
+      "path": "/class/6906afc0cc59f531bb1e949f/students",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:30:57.751Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762111857751_uw2an51o7",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T19:31:11.620Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:31:11.620Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762111871620_18033v8pc"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:31:11.622Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:31:11.659Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:31:11.620Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762111871620_18033v8pc",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T19:31:42.537Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:31:42.537Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762111902537_2u9on82ki"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:31:42.538Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:31:42.572Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:31:42.537Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762111902537_2u9on82ki",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T19:32:15.183Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:32:15.183Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762111935183_lpd38vr57"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:32:15.185Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:32:15.215Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:32:15.183Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762111935183_lpd38vr57",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T19:41:26.986Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:41:26.986Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762112486986_xvh9g2w6j"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:41:26.994Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:41:27.033Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:41:26.986Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762112486986_xvh9g2w6j",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T19:42:57.215Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:42:57.215Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762112577214_k2bpmdnj5"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:42:57.216Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T19:42:57.252Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T19:42:57.215Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762112577214_k2bpmdnj5",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T20:06:36.697Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:06:36.696Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762113996696_ztm35yh05"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:06:36.742Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:06:36.696Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762113996696_ztm35yh05",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T20:11:16.033Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:11:16.033Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114276033_2t0zjwbmz"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:11:16.034Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:11:16.072Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:11:16.033Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114276033_2t0zjwbmz",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T20:13:29.674Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:13:29.674Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114409673_xv4l20u4f"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:13:29.675Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:13:29.710Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:13:29.674Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114409673_xv4l20u4f",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T20:13:34.551Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:13:34.551Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114414551_rtiiklrsi"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:13:34.552Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:13:34.589Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:13:34.551Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114414551_rtiiklrsi",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T20:17:42.599Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:17:42.599Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114662599_f4ygniwug"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:17:42.604Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:17:42.642Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:17:42.599Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114662599_f4ygniwug",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T20:18:56.248Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:18:56.248Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114736248_4n5k8vk58"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:18:56.251Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:18:56.285Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:18:56.248Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114736248_4n5k8vk58",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-02T20:19:10.796Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:19:10.796Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114750796_hga60r8lf"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:19:10.797Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-02T20:19:10.831Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-02T20:19:10.796Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762114750796_hga60r8lf",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T01:19:48.215Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T01:19:48.215Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762132788214_7uge9oa0z"
+  }
+}
+{
+  "timestamp": "2025-11-03T01:19:48.227Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T01:19:48.268Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T01:19:48.215Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762132788214_7uge9oa0z",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T01:35:21.059Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T01:35:21.059Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762133721059_zck9t7v4j"
+  }
+}
+{
+  "timestamp": "2025-11-03T01:35:21.061Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T01:35:21.092Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T01:35:21.059Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762133721059_zck9t7v4j",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T01:39:44.103Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T01:39:44.103Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762133984103_649gjm5y4"
+  }
+}
+{
+  "timestamp": "2025-11-03T01:39:44.104Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T01:39:44.136Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T01:39:44.103Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762133984103_649gjm5y4",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:09:00.340Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:09:00.340Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762135740340_84x31r4pv"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:09:00.342Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:09:00.385Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:09:00.340Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762135740340_84x31r4pv",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:09:29.654Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:09:29.654Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762135769654_y02o7f2pp"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:09:29.655Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:09:29.690Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:09:29.654Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762135769654_y02o7f2pp",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:10:27.233Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:10:27.233Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762135827233_zqbk3e3dc"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:10:27.255Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T02:10:27.380Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T02:10:27.383Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:10:27.382Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:10:27.387Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:10:27.382Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:10:27.388Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:10:27.382Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T02:11:22.538Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:11:22.538Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762135882537_4zorysjvs"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:11:22.540Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:11:22.573Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:11:22.538Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762135882537_4zorysjvs",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:11:31.177Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:11:31.177Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762135891175_e43u2kj0f"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:11:31.199Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T02:11:31.295Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T02:11:31.299Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:11:31.298Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:11:31.301Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:11:31.298Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:11:31.303Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:11:31.298Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:06.960Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:20:06.960Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762136406959_4dmdl3oys"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:06.988Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:07.085Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:07.090Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:20:07.089Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:07.095Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:20:07.089Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:07.099Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:20:07.089Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:34.561Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:20:34.561Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762136434561_me6y4ol1b"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:34.593Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:34.699Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:34.704Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:20:34.703Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:34.707Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:20:34.703Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:20:34.709Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:20:34.703Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T02:26:19.996Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:26:19.996Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762136779995_g9kgcgc8g"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:26:19.998Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:26:20.033Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:26:19.996Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762136779995_g9kgcgc8g",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:26:27.403Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:26:27.403Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762136787403_vkk8qextr"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:26:27.426Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T02:26:27.544Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T02:26:27.547Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:26:27.546Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:26:27.550Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:26:27.546Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:26:27.551Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:26:27.546Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T02:33:48.554Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:33:48.554Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137228554_0f1330rzx"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:33:48.556Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:33:48.591Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:33:48.554Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137228554_0f1330rzx",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:35:29.517Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:35:29.517Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137329517_8ug7gk8k5"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:35:29.518Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:35:29.555Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:35:29.517Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137329517_8ug7gk8k5",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:23.308Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:36:23.308Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137383308_1mjutvjj8"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:23.309Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:23.346Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:36:23.308Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137383308_1mjutvjj8",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:25.933Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:36:25.933Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762137385933_hlhzgl8yd"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:25.955Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:26.068Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:26.072Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:36:26.071Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:26.075Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:36:26.071Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:26.077Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:36:26.071Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:41.042Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:36:41.042Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137401042_zkgolisso"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:41.046Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:36:41.082Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:36:41.042Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137401042_zkgolisso",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:39:52.670Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:39:52.670Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137592670_pvtgidkaq"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:39:52.673Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:39:52.709Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:39:52.670Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137592670_pvtgidkaq",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:40:23.762Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:40:23.762Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762137623762_dfx56juy5"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:40:23.778Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T02:40:23.886Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T02:40:23.901Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:40:23.891Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:40:23.911Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:40:23.891Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:40:23.912Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:40:23.891Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T02:41:42.624Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:41:42.624Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137702624_mqs438wp3"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:41:42.626Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:41:42.660Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:41:42.624Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762137702624_mqs438wp3",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:43:34.000Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:43:34.000Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762137814000_3djw3zphe"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:43:34.029Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T02:43:34.138Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T02:43:34.143Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:43:34.141Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:43:34.147Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:43:34.141Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:43:34.148Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:43:34.141Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T02:49:18.691Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:49:18.690Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762138158688_ejxh761c3"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:49:18.709Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:49:18.750Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:49:18.690Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762138158688_ejxh761c3",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T02:49:27.089Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:49:27.089Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762138167089_f0ub1s9it"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:49:27.114Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T02:49:27.216Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T02:49:27.221Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:49:27.219Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:49:27.224Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:49:27.219Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T02:49:27.226Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T02:49:27.219Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T03:07:09.529Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:07:09.529Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762139229529_qk8a34tr0"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:07:09.549Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T03:07:09.644Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T03:07:09.648Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:07:09.647Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:07:09.651Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:07:09.647Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:07:09.653Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:07:09.647Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T03:19:42.465Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:19:42.465Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762139982464_dp7g9ksqp"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:19:42.485Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T03:19:42.593Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "InvalidSessionError",
+      "message": "Invalid session specified",
+      "code": "INVALID_SESSION",
+      "statusCode": 400,
+      "stack": "InvalidSessionError: Invalid session specified\n    at ValidationService.validateSessionConfiguration (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\ValidationService.js:102:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:105:13)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "medium",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 1,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T03:19:42.597Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Invalid session specified",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:19:42.596Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1,
+      "providedSession": "Invalid session \"Lecture 1\". Valid sessions are: ",
+      "validSessions": {
+        "classId": "6906afc0cc59f531bb1e949f",
+        "subjectId": "6906c81d0fb3897fd4284849",
+        "session": "Lecture 1",
+        "validSessions": []
+      }
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:19:42.599Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Invalid session specified",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:19:42.596Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1,
+      "providedSession": "Invalid session \"Lecture 1\". Valid sessions are: ",
+      "validSessions": {
+        "classId": "6906afc0cc59f531bb1e949f",
+        "subjectId": "6906c81d0fb3897fd4284849",
+        "session": "Lecture 1",
+        "validSessions": []
+      }
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:19:42.600Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:19:42.596Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1,
+      "providedSession": "Invalid session \"Lecture 1\". Valid sessions are: ",
+      "validSessions": {
+        "classId": "6906afc0cc59f531bb1e949f",
+        "subjectId": "6906c81d0fb3897fd4284849",
+        "session": "Lecture 1",
+        "validSessions": []
+      }
+    },
+    "error": "Invalid session specified",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 400
+  }
+}
+{
+  "timestamp": "2025-11-03T03:22:23.474Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:22:23.474Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762140143473_h7u0s9kyd"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:22:23.500Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T03:22:23.617Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_tracked",
+  "data": {
+    "error": {
+      "name": "DatabaseError",
+      "message": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+      "code": "DATABASE_ERROR",
+      "statusCode": 500,
+      "stack": "DatabaseError: Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: \n    at AttendanceService.bulkMarkAttendance (C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\services\\AttendanceService.js:213:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Lenovo\\OneDrive\\Desktop\\IOSC\\IoSC-Student-Teacher\\backend\\controllers\\attendanceController.js:100:24"
+    },
+    "context": {
+      "operation": "marking",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "sessionInfo": {
+        "date": "2025-11-03",
+        "session": "Lecture 1"
+      },
+      "bulkInfo": null
+    },
+    "severity": "critical",
+    "impact": {
+      "level": "medium",
+      "affectedUsers": 10,
+      "affectedOperations": [
+        "marking"
+      ],
+      "businessImpact": "moderate"
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T03:22:23.622Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance marking_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:22:23.620Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:22:23.626Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:22:23.620Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "severity": "critical"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:22:23.628Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:22:23.620Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "error": "Bulk attendance marking failed: Session configuration validation failed: Invalid session \"Lecture 1\". Valid sessions are: ",
+    "userRole": "Teacher",
+    "userId": "6906ba37e8663e966141ca47",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T03:24:29.436Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:24:29.435Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762140269433_5k157uqb0"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:24:29.477Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_start",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "date": "2025-11-03",
+    "session": "Lecture 1",
+    "studentCount": 1
+  }
+}
+{
+  "timestamp": "2025-11-03T03:24:29.871Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_success",
+  "data": {
+    "operation": "marking",
+    "responseTime": 429,
+    "context": {
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "studentCount": 1,
+      "successCount": 1,
+      "failureCount": 0
+    }
+  }
+}
+{
+  "timestamp": "2025-11-03T03:24:29.872Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance mark_attendance_complete",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "successCount": 1,
+    "failureCount": 0,
+    "responseTime": 429
+  }
+}
+{
+  "timestamp": "2025-11-03T03:24:29.874Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "marking",
+    "context": {
+      "method": "POST",
+      "path": "/mark",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:24:29.435Z",
+      "classId": "6906afc0cc59f531bb1e949f",
+      "subjectId": "6906c81d0fb3897fd4284849",
+      "teacherId": "6906ba37e8663e966141ca47",
+      "date": "2025-11-03",
+      "session": "Lecture 1",
+      "totalRecords": 1
+    },
+    "requestId": "att_1762140269433_5k157uqb0",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T03:35:02.661Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:35:02.661Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762140902661_06qp2ndkq"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:35:02.664Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T03:35:02.709Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T03:35:02.661Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762140902661_06qp2ndkq",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T04:48:39.804Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T04:48:39.804Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762145319803_q8t1x4jh9"
+  }
+}
+{
+  "timestamp": "2025-11-03T04:48:39.807Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T04:48:39.839Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T04:48:39.804Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762145319803_q8t1x4jh9",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T04:52:17.687Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T04:52:17.687Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762145537687_cj9aldynr"
+  }
+}
+{
+  "timestamp": "2025-11-03T04:52:17.688Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T04:52:17.716Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T04:52:17.687Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762145537687_cj9aldynr",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:01:56.715Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T05:01:56.715Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762146116714_5dklpd6tq"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:01:56.716Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:01:56.754Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T05:01:56.715Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762146116714_5dklpd6tq",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:37:08.167Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T05:37:08.167Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762148228167_0j64389pf"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:37:08.169Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:37:08.203Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T05:37:08.167Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762148228167_0j64389pf",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:47:32.033Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:47:32.033Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148852033_267rs05jv"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:47:32.067Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:47:32.033Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148852033_267rs05jv",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:47:34.992Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:47:34.992Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148854992_kuhkq8wip"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:47:45.414Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:47:45.414Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148865414_7xhhmor09"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:47:45.416Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:47:45.414Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148865414_7xhhmor09",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:47:47.681Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:47:47.681Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148867681_nxm2ndnsw"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:47:47.682Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:47:47.681Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148867681_nxm2ndnsw",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:47:49.771Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:47:49.771Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148869771_i7xe7bpnd"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:47:49.772Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:47:49.771Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148869771_i7xe7bpnd",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:23.847Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:23.847Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148903847_jajbr1lf4"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:23.849Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:23.847Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148903847_jajbr1lf4",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:29.663Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/reports/saved/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:29.663Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148909662_o6krh2s8u"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:45.000Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:45.000Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148925000_hvc6uy34z"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:45.034Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:45.000Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148925000_hvc6uy34z",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:45.887Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:45.887Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148925887_6cscmc0ib"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:45.928Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:45.887Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148925887_6cscmc0ib",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:49.271Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:49.271Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148929271_c41z73cl3"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:49.316Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:49.271Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148929271_c41z73cl3",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:52.669Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:52.669Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148932669_i8i0tkoht"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:52.703Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:52.669Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148932669_i8i0tkoht",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:59.635Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:59.635Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148939635_v86ag1fa5"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:48:59.636Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:48:59.635Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148939635_v86ag1fa5",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:49:01.963Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:49:01.963Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148941963_07j3a4o71"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:49:01.964Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:49:01.963Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148941963_07j3a4o71",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T05:49:04.134Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:49:04.134Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148944134_99cq72etf"
+  }
+}
+{
+  "timestamp": "2025-11-03T05:49:04.135Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "analytics",
+    "context": {
+      "method": "GET",
+      "path": "/analytics/school/67f207325c121644cfdc4d5f",
+      "userRole": "Admin",
+      "userId": "67f207325c121644cfdc4d5f",
+      "timestamp": "2025-11-03T05:49:04.134Z",
+      "teacherId": "67f207325c121644cfdc4d5f"
+    },
+    "requestId": "att_1762148944134_99cq72etf",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T12:45:00.751Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T12:45:00.750Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762173900749_bzon1oj9n"
+  }
+}
+{
+  "timestamp": "2025-11-03T12:45:00.761Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance get_session_options",
+  "data": {
+    "classId": "6906afc0cc59f531bb1e949f",
+    "subjectId": "6906c81d0fb3897fd4284849",
+    "teacherId": "6906ba37e8663e966141ca47",
+    "userRole": "Teacher"
+  }
+}
+{
+  "timestamp": "2025-11-03T12:45:00.802Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "generic",
+    "context": {
+      "method": "GET",
+      "path": "/session-options",
+      "userRole": "Teacher",
+      "userId": "6906ba37e8663e966141ca47",
+      "timestamp": "2025-11-03T12:45:00.750Z",
+      "teacherId": "6906ba37e8663e966141ca47"
+    },
+    "requestId": "att_1762173900749_bzon1oj9n",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T19:37:12.459Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:37:12.456Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-11-03T19:48:29.499Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:48:29.497Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-11-03T19:51:35.179Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance analytics_error",
+  "data": {
+    "error": "Role Student not authorized for analytics operation",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:51:35.177Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "info"
+  }
+}
+{
+  "timestamp": "2025-11-03T19:53:42.548Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:53:42.543Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T19:53:42.550Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:53:42.543Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T19:53:44.034Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:53:44.034Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T19:53:44.035Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:53:44.034Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T19:53:45.107Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:53:45.106Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T19:53:45.107Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:53:45.106Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T19:53:46.335Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:53:46.334Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T19:53:46.335Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:53:46.334Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T19:58:32.967Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:58:32.964Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T19:58:32.968Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T19:58:32.964Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:02:29.922Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:02:29.916Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:02:29.924Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:02:29.916Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:04:41.326Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:04:41.324Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:04:41.327Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:04:41.324Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:05:18.510Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:05:18.507Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:05:18.511Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:05:18.507Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:07:42.983Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:07:42.977Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:07:42.984Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:07:42.977Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:20:38.483Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:20:38.475Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:20:38.485Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:20:38.475Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:29:01.067Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:29:01.065Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:29:01.069Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:29:01.065Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:32:39.169Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:32:39.162Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:32:39.171Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:32:39.162Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:36:04.505Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:36:04.503Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:36:04.506Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:36:04.503Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:45:05.342Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:45:05.340Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:45:05.344Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:45:05.340Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:47:33.103Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:47:33.101Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:47:33.104Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:47:33.101Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:50:44.220Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:50:44.217Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:50:44.222Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:50:44.217Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T20:51:43.265Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:51:43.252Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:51:43.268Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:51:43.252Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 500
+  }
+}
+{
+  "timestamp": "2025-11-03T20:52:31.879Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance generic_error",
+  "data": {
+    "error": "Students can only view their own attendance summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:52:31.873Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "severity": "warning"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:52:31.882Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance error_handled",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:52:31.873Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "error": "Students can only view their own attendance summary",
+    "userRole": "Student",
+    "userId": "6906fb262777557591ec1b69",
+    "statusCode": 403
+  }
+}
+{
+  "timestamp": "2025-11-03T20:55:22.809Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:55:22.809Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "requestId": "att_1762203322807_iupeknjzm"
+  }
+}
+{
+  "timestamp": "2025-11-03T20:55:22.958Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T20:55:22.809Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "requestId": "att_1762203322807_iupeknjzm",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T21:26:54.734Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T21:26:54.734Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "requestId": "att_1762205214731_dyz26o9cy"
+  }
+}
+{
+  "timestamp": "2025-11-03T21:26:54.864Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T21:26:54.734Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "requestId": "att_1762205214731_dyz26o9cy",
+    "statusCode": 200
+  }
+}
+{
+  "timestamp": "2025-11-03T21:59:26.372Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_started",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T21:59:26.372Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "requestId": "att_1762207166370_x8uqkjk1b"
+  }
+}
+{
+  "timestamp": "2025-11-03T21:59:26.519Z",
+  "level": "ATTENDANCE",
+  "message": "Attendance operation_completed",
+  "data": {
+    "operation": "student_summary",
+    "context": {
+      "method": "GET",
+      "path": "/summary/student/6906fb262777557591ec1b69",
+      "userRole": "Student",
+      "userId": "6906fb262777557591ec1b69",
+      "timestamp": "2025-11-03T21:59:26.372Z",
+      "teacherId": "6906fb262777557591ec1b69"
+    },
+    "requestId": "att_1762207166370_x8uqkjk1b",
+    "statusCode": 200
+  }
+}

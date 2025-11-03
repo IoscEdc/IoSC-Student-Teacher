@@ -82,7 +82,7 @@ const studentSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        select: false // Good practice: hides password from default queries
+        // select: false // Good practice: hides password from default queries
     },
     role: {
         type: String,

@@ -1,7 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import SimpleAttendanceHistory from '../../components/attendance/SimpleAttendanceHistory';
-import { Box, Typography, Alert } from '@mui/material';
+import { 
+    Box, 
+    Typography, 
+    Alert, 
+    // --- REMOVED Container, Paper, and Divider ---
+} from '@mui/material';
 
 const TeacherAttendanceHistory = () => {
     const { currentUser } = useSelector((state) => state.user);
@@ -9,46 +14,53 @@ const TeacherAttendanceHistory = () => {
     const classId = currentUser.teachSclass?._id;
     const subjectId = currentUser.teachSubject?._id;
     const teacherId = currentUser._id;
-    const className = currentUser.teachSclass?.sclassName;
-    const subjectName = currentUser.teachSubject?.subName;
+    
+    // --- REMOVED className and subjectName, as we're removing the redundant header ---
 
     console.log('🔍 TeacherAttendanceHistory - Current User:', {
         classId,
         subjectId,
         teacherId,
-        className,
-        subjectName,
-        fullUser: currentUser
     });
 
+    // --- Check for IDs and render error or content ---
     if (!classId || !subjectId) {
-        console.log('❌ Missing classId or subjectId:', { classId, subjectId });
+        // We *only* add padding to the error message, 
+        // so it isn't stuck to the screen edges.
         return (
-            <Box sx={{ p: 3 }}>
-                <Alert severity="error">
-                    Unable to load attendance history. Please ensure you are assigned to a class and subject.
-                    <br />
-                    Debug: classId={classId}, subjectId={subjectId}
+            <Box sx={{ p: { xs: 2, sm: 3 } }}>
+                <Alert 
+                    severity="error" 
+                    sx={{ '& .MuiAlert-message': { width: '100%' } }}
+                >
+                    <Typography fontWeight="medium">
+                        Unable to load attendance history.
+                    </Typography>
+                    <Typography variant="body2" sx={{ mt: 1 }}>
+                        Please ensure you are assigned to a primary class and subject.
+                    </Typography>
+                    <Typography 
+                        variant="caption" 
+                        color="text.secondary" 
+                        sx={{ mt: 2, display: 'block', wordBreak: 'break-all' }}
+                    >
+                        {/* Use String() to safely print null/undefined */}
+                        Debug: classId=({String(classId)}), subjectId=({String(subjectId)})
+                    </Typography>
                 </Alert>
             </Box>
         );
     }
 
+    // --- Success State ---
+    // Render the child component *directly* without any wrappers.
+    // SimpleAttendanceHistory already has its own internal padding and layout.
     return (
-        <Box sx={{ p: 3 }}>
-            <Typography variant="h4" gutterBottom>
-                Attendance History
-            </Typography>
-            <Typography variant="h6" color="text.secondary" gutterBottom>
-                {className} - {subjectName}
-            </Typography>
-            
-            <SimpleAttendanceHistory 
-                classId={classId}
-                subjectId={subjectId}
-                teacherId={teacherId}
-            />
-        </Box>
+        <SimpleAttendanceHistory 
+            classId={classId}
+            subjectId={subjectId}
+            teacherId={teacherId}
+        />
     );
 };
 

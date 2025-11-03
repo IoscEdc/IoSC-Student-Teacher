@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const attendanceSummarySchema = new mongoose.Schema({
     studentId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'student',
+        ref: 'Student',
         required: true,
         index: true
     },

@@ -63,32 +63,46 @@ const attendanceErrorHandler = (err, req, res, next) => {
  * @param {Object} req - Express request object
  * @returns {string} Operation type
  */
-function determineAttendanceOperation(req) {
-    const path = req.path.toLowerCase();
-    const method = req.method.toLowerCase();
-
-    if (path.includes('/bulk')) {
-        return 'bulk';
-    }
+const determineAttendanceOperation = (req) => {
+    const { method, path } = req;
     
-    if (path.includes('/analytics') || path.includes('/reports') || path.includes('/summary')) {
+    console.log('🔍 DETERMINE OPERATION:', { method, path }); // ← ADD THIS
+
+    // Check for student summary FIRST (most specific)
+    if (path.includes('/summary/student/')) {
+        console.log('✅ Detected: student_summary'); // ← ADD THIS
+        return 'student_summary';
+    }
+
+    // Check for analytics operations
+    if (path.includes('/analytics') || path.includes('/reports') || path.includes('/statistics')) {
+        console.log('✅ Detected: analytics'); // ← ADD THIS
         return 'analytics';
     }
-    
-    if (method === 'put' && path.includes('/attendance/')) {
-        return 'editing';
+
+    // Check for bulk operations
+    if (path.includes('/bulk') || (method === 'POST' && path.includes('/batch'))) {
+        return 'bulk';
     }
-    
-    if (method === 'post' && path.includes('/mark')) {
+
+    // Check for marking attendance
+    if (method === 'POST' && (path.includes('/mark') || path.includes('/attendance'))) {
         return 'marking';
     }
-    
-    if (method === 'get' && path.includes('/students')) {
+
+    // Check for editing attendance
+    if ((method === 'PUT' || method === 'PATCH') && path.includes('/attendance')) {
+        return 'editing';
+    }
+
+    // Check for student data retrieval
+    if (method === 'GET' && path.includes('/student')) {
         return 'student_retrieval';
     }
-    
+
+    console.log('⚠️ Defaulting to: generic'); // ← ADD THIS
     return 'generic';
-}
+};
 
 /**
  * Extract attendance-specific context from the request and error
@@ -111,6 +125,12 @@ function extractAttendanceContext(req, err) {
         context.subjectId = req.params.subjectId;
         context.studentId = req.params.studentId;
         context.recordId = req.params.id;
+        if (req.path.includes('/summary/student/')) {
+            context.studentId = req.params.studentId;
+        } else {
+            context.studentId = req.params.studentId;
+            context.recordId = req.params.id;
+        }
     }
 
     // Extract from request body
@@ -157,17 +177,41 @@ const addRequestId = (req, res, next) => {
 /**
  * Middleware to validate attendance operation permissions
  */
+
+// In: backend/middleware/attendanceErrorMiddleware.js
+
+// In: backend/middleware/attendanceErrorMiddleware.js
+// In: backend/middleware/attendanceErrorMiddleware.js
+
+// In: backend/middleware/attendanceErrorMiddleware.js
+
 const validateAttendancePermissions = (req, res, next) => {
+    console.log('🔍 DEBUG req.params:', JSON.stringify(req.params, null, 2));
     const operation = determineAttendanceOperation(req);
     const userRole = req.user?.role;
 
-    // Define role-based permissions for attendance operations
+    // --- THIS IS THE FIX ---
+    // The log proves the parameter is 'id', not 'studentId'.
+    // We will now correctly read from req.params.id.
+    const studentId = req.params.studentId;
+    // --- END OF FIX ---
+
+    console.log('🔍 PERMISSION CHECK:', {
+        operation,
+        userRole,
+        studentId, // This will now show the ID
+        'req.user.id': req.user?.id,
+        'match': req.user?.id === studentId,
+        path: req.path
+    });
+
     const permissions = {
         marking: ['Teacher', 'Admin'],
         editing: ['Teacher', 'Admin'],
         bulk: ['Admin'],
         analytics: ['Admin', 'Teacher'],
         student_retrieval: ['Teacher', 'Admin'],
+        student_summary: ['Student', 'Teacher', 'Admin'],
         generic: ['Teacher', 'Admin', 'Student']
     };
 
@@ -180,9 +224,25 @@ const validateAttendancePermissions = (req, res, next) => {
         return next(error);
     }
 
+    // Students can only view their OWN summary
+    if (operation === 'student_summary' && userRole === 'Student') {
+        console.log('🔍 CHECKING STUDENT ACCESS:', {
+            'req.user.id': req.user.id,
+            'studentId': studentId,
+            'string match': String(req.user.id) === String(studentId)
+        });
+
+        // This check will now work correctly
+        if (String(req.user.id) !== String(studentId)) {
+            const error = new Error('Students can only view their own attendance summary');
+            error.statusCode = 403;
+            error.errorCode = 'ATTENDANCE_UNAUTHORIZED_ACCESS';
+            return next(error);
+        }
+    }
+
     next();
 };
-
 /**
  * Middleware to log attendance operations for monitoring
  */

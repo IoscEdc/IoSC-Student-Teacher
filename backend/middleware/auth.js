@@ -46,12 +46,33 @@ const authMiddleware = async (req, res, next) => {
         if (decoded.role === 'Admin') {
             user = await Admin.findById(decoded.id).select("-password");
             console.log('👤 AUTH MIDDLEWARE - Admin user found:', !!user);
+            
+            if (user) {
+                // ✅ FIX: For Admin, the school IS the admin's _id
+                req.user = {
+                    ...user.toObject(),
+                    id: user._id.toString(),
+                    role: decoded.role,
+                    school: user._id.toString() // Admin IS the school
+                };
+            }
         } else if (decoded.role === 'Student') {
-            user = await Student.findById(decoded.id).select("-password");
+            user = await Student.findById(decoded.id)
+                .populate('school', '_id schoolName')
+                .select("-password");
             console.log('👤 AUTH MIDDLEWARE - Student user found:', !!user);
+            
+            if (user) {
+                req.user = {
+                    ...user.toObject(),
+                    id: user._id.toString(),
+                    role: decoded.role,
+                    school: user.school?._id?.toString() || user.school?.toString() || user.school
+                };
+            }
         } else if (decoded.role === 'Teacher') {
             user = await Teacher.findById(decoded.id)
-                .populate('school', 'schoolName')
+                .populate('school', '_id schoolName')
                 .populate('assignedSubjects.subjectId', 'subName')
                 .populate('assignedSubjects.classId', 'sclassName')
                 .select("-password");
@@ -62,6 +83,13 @@ const authMiddleware = async (req, res, next) => {
                     assignedSubjects: user.assignedSubjects?.length || 0,
                     classInchargeOf: user.classInchargeOf?.length || 0
                 });
+                
+                req.user = {
+                    ...user.toObject(),
+                    id: user._id.toString(),
+                    role: decoded.role,
+                    school: user.school?._id?.toString() || user.school?.toString() || user.school
+                };
             }
         }
         
@@ -72,14 +100,6 @@ const authMiddleware = async (req, res, next) => {
                 message: "Invalid token - user not found" 
             });
         }
-
-        // CRITICAL: Set req.user with all necessary fields
-        req.user = {
-            ...user.toObject(),
-            id: user._id.toString(),
-            role: decoded.role,
-            school: user.school?._id || user.school // Ensure school ID is available
-        };
 
         console.log('✅ AUTH MIDDLEWARE - req.user set:', {
             id: req.user.id,
@@ -147,11 +167,15 @@ const authenticateToken = async (req, res, next) => {
         
         // Try to find user in Student, Teacher, or Admin collections
         let user = await Student.findById(decoded.id).select('-password');
+        let schoolId = user?.school;
+        
         if (!user) {
             user = await Teacher.findById(decoded.id).select('-password');
+            schoolId = user?.school;
         }
         if (!user) {
             user = await Admin.findById(decoded.id).select('-password');
+            schoolId = user?._id; // Admin IS the school
         }
 
         if (!user) {
@@ -164,7 +188,8 @@ const authenticateToken = async (req, res, next) => {
         req.user = {
             ...user.toObject(),
             id: user._id.toString(),
-            role: decoded.role
+            role: decoded.role,
+            school: schoolId?.toString() || schoolId
         };
         next();
     } catch (error) {
@@ -206,7 +231,8 @@ const authenticateStudent = async (req, res, next) => {
         req.user = {
             ...student.toObject(),
             id: student._id.toString(),
-            role: 'Student'
+            role: 'Student',
+            school: student.school?.toString() || student.school
         };
         next();
     } catch (error) {
@@ -251,7 +277,8 @@ const authenticateTeacher = async (req, res, next) => {
         req.user = {
             ...teacher.toObject(),
             id: teacher._id.toString(),
-            role: 'Teacher'
+            role: 'Teacher',
+            school: teacher.school?.toString() || teacher.school
         };
         next();
     } catch (error) {
@@ -293,7 +320,8 @@ const authenticateAdmin = async (req, res, next) => {
         req.user = {
             ...admin.toObject(),
             id: admin._id.toString(),
-            role: 'Admin'
+            role: 'Admin',
+            school: admin._id.toString() // Admin IS the school
         };
         next();
     } catch (error) {
@@ -326,10 +354,12 @@ const authenticateTeacherOrAdmin = async (req, res, next) => {
         // Try to find user as teacher first, then admin
         let user = await Teacher.findById(decoded.id).select('-password');
         let role = 'Teacher';
+        let schoolId = user?.school;
         
         if (!user) {
             user = await Admin.findById(decoded.id).select('-password');
             role = 'Admin';
+            schoolId = user?._id; // Admin IS the school
         }
 
         if (!user) {
@@ -342,7 +372,8 @@ const authenticateTeacherOrAdmin = async (req, res, next) => {
         req.user = {
             ...user.toObject(),
             id: user._id.toString(),
-            role: role
+            role: role,
+            school: schoolId?.toString() || schoolId
         };
         next();
     } catch (error) {

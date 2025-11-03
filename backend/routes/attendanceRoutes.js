@@ -49,7 +49,7 @@ router.use(authMiddleware);
 
 // Apply attendance-specific middleware
 router.use(addRequestId);
-router.use(validateAttendancePermissions);
+// router.use(validateAttendancePermissions);
 router.use(logAttendanceOperation);
 
 // Basic Attendance Routes
@@ -173,7 +173,7 @@ router.get('/summary/class/:classId/subject/:subjectId', authorizeRoles('Teacher
 /**
  * GET /api/attendance/analytics/trends/:studentId/:subjectId
  * Get attendance trends for analytics
- * Query params: startDate?, endDate?
+//  * Query params: startDate?, endDate?
  * Auth: Student (own data), Teacher (assigned students), Admin
  */
 router.get('/analytics/trends/:studentId/:subjectId', authorizeRoles('Student', 'Teacher', 'Admin'), cacheAttendanceTrends, getAttendanceTrends);

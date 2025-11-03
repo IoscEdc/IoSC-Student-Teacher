@@ -2,11 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     teachersList: [],
-    teacherDetails: [],
-    classTeachersList: [],
+    classTeachersList: [], // Add this
     loading: false,
     error: null,
     response: null,
+    getresponse: null,
+    currentTeacher: null,
 };
 
 const teacherSlice = createSlice({
@@ -15,37 +16,18 @@ const teacherSlice = createSlice({
     reducers: {
         getRequest: (state) => {
             state.loading = true;
-        },
-        doneSuccess: (state, action) => {
-            state.teacherDetails = action.payload;
-            state.loading = false;
-            state.status = 'success';
             state.error = null;
-            state.response = null;
         },
         getSuccess: (state, action) => {
-            state.teachersList = action.payload;
+            state.teachersList = action.payload.teachers || action.payload;
             state.loading = false;
-            state.status = 'success';
             state.error = null;
+            state.getresponse = null;
             state.response = null;
-        },
-        getClassTeachersSuccess: (state, action) => {
-            state.loading = false;
-            state.classTeachersList = action.payload; // Updates the new list
-            state.status = 'success';
-            state.error = null;
-            state.response = null;
-        },
-        
-        // This resets the list when the component unmounts
-        resetClassTeachers: (state) => {
-            state.classTeachersList = [];
-            state.status = 'idle';
         },
         getFailed: (state, action) => {
-            state.response = action.payload;
             state.loading = false;
+            state.getresponse = action.payload;
             state.error = null;
         },
         getError: (state, action) => {
@@ -55,8 +37,32 @@ const teacherSlice = createSlice({
         postDone: (state) => {
             state.loading = false;
             state.error = null;
+            state.response = "Success";
+        },
+        doneSuccess: (state, action) => {
+            state.currentTeacher = action.payload;
+            state.loading = false;
+            state.error = null;
             state.response = null;
-        }
+        },
+        // Add this new reducer for class teachers
+        getClassTeachersSuccess: (state, action) => {
+            console.log("🔄 Redux: Setting classTeachersList to:", action.payload);
+            state.classTeachersList = action.payload;
+            state.loading = false;
+            state.error = null;
+            state.getresponse = action.payload.length === 0 ? "No teachers found" : null;
+        },
+        // Add this to reset class teachers
+        resetClassTeachers: (state) => {
+            state.classTeachersList = [];
+            state.getresponse = null;
+        },
+        underControl: (state) => {
+            state.loading = false;
+            state.response = null;
+            state.error = null;
+        },
     },
 });
 
@@ -65,10 +71,11 @@ export const {
     getSuccess,
     getFailed,
     getError,
-    doneSuccess,
     postDone,
-    getClassTeachersSuccess,
-    resetClassTeachers
+    doneSuccess,
+    getClassTeachersSuccess, // Export this
+    resetClassTeachers, // Export this
+    underControl
 } = teacherSlice.actions;
 
 export const teacherReducer = teacherSlice.reducer;

@@ -23,14 +23,23 @@ import {
     Link,
     Switch,
     FormControlLabel,
-    Chip
+    Chip,
+    Card,
+    CardContent,
+    Grid,
+    useMediaQuery,
+    useTheme,
+    Stack
 } from '@mui/material';
-import { ArrowBack, CheckCircle, Cancel } from '@mui/icons-material';
+import { ArrowBack, CheckCircle, Cancel, Person } from '@mui/icons-material';
 import axios from 'axios';
 
 const ImprovedTeacherAttendance = () => {
     const { currentUser } = useSelector((state) => state.user);
     const navigate = useNavigate();
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     
     const [students, setStudents] = useState([]);
     const [sessions, setSessions] = useState([]);
@@ -53,18 +62,16 @@ const ImprovedTeacherAttendance = () => {
         let classId, subjectId, className, subjectName;
 
         if (currentUser.role === 'Teacher') {
-            // For teachers, use their assigned class and subject
             classId = currentUser.teachSclass?._id;
             subjectId = currentUser.teachSubject?._id;
             className = currentUser.teachSclass?.sclassName;
             subjectName = currentUser.teachSubject?.subName;
         }
 
-        // Fallback to hardcoded values if assignments are not available
         if (!classId || !subjectId) {
             console.log('⚠️ Teacher assignments not found, using fallback values');
-            classId = '6902126bf91c442b648f6b95'; // AIDS B1
-            subjectId = '6902126bf91c442b648f6b9c'; // Data Structures
+            classId = '6902126bf91c442b648f6b95';
+            subjectId = '6902126bf91c442b648f6b9c';
             className = 'AIDS B1';
             subjectName = 'Data Structures';
         }
@@ -138,7 +145,6 @@ const ImprovedTeacherAttendance = () => {
                     const studentList = response.data.data;
                     setStudents(studentList);
                     
-                    // Initialize attendance with all students absent
                     const initialAttendance = {};
                     studentList.forEach((student) => {
                         const studentId = student._id || student.id || student.studentId;
@@ -208,7 +214,6 @@ const ImprovedTeacherAttendance = () => {
 
         setSubmitting(true);
         try {
-            // Convert object to array format expected by backend
             const studentAttendance = [];
             Object.entries(attendance).forEach(([studentId, status]) => {
                 studentAttendance.push({
@@ -225,6 +230,8 @@ const ImprovedTeacherAttendance = () => {
                 studentAttendance,
                 userRole: 'Teacher'
             };
+
+            console.log('Submitting attendance data:', attendanceData);
 
             const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/attendance/mark`, attendanceData, {
                 headers: {
@@ -252,210 +259,340 @@ const ImprovedTeacherAttendance = () => {
         }
     };
 
-
-
     const summary = getAttendanceSummary();
 
+    // Mobile Card View for Students
+    const MobileStudentCard = ({ student, index }) => {
+        const studentId = student._id || student.id || student.studentId || `student-${index}`;
+        const currentStatus = attendance[studentId] || 'absent';
+        
+        return (
+            <Card 
+                sx={{ 
+                    mb: 2,
+                    backgroundColor: currentStatus === 'present' ? 'rgba(76, 175, 80, 0.08)' : 'rgba(244, 67, 54, 0.08)',
+                    border: `2px solid ${currentStatus === 'present' ? '#4CAF50' : '#F44336'}`,
+                }}
+            >
+                <CardContent sx={{ p: 2, '&:last-child': { pb: 2 } }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1.5 }}>
+                        <Box sx={{ flex: 1 }}>
+                            <Typography variant="subtitle2" color="text.secondary" sx={{ fontSize: '0.75rem' }}>
+                                Roll No: {student.rollNum}
+                            </Typography>
+                            <Typography variant="h6" sx={{ fontSize: '1rem', fontWeight: 600, mt: 0.5 }}>
+                                {student.name}
+                            </Typography>
+                        </Box>
+                        <Chip
+                            label={currentStatus.toUpperCase()}
+                            color={currentStatus === 'present' ? 'success' : 'error'}
+                            size="small"
+                            sx={{ fontWeight: 'bold' }}
+                        />
+                    </Box>
+                    
+                    <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
+                        <FormControlLabel
+                            control={
+                                <Switch
+                                    checked={currentStatus === 'present'}
+                                    onChange={(e) => {
+                                        const newStatus = e.target.checked ? 'present' : 'absent';
+                                        handleAttendanceChange(studentId, newStatus);
+                                    }}
+                                    disabled={submitting}
+                                    sx={{
+                                        '& .MuiSwitch-switchBase.Mui-checked': {
+                                            color: '#4CAF50',
+                                        },
+                                        '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+                                            backgroundColor: '#4CAF50',
+                                        },
+                                    }}
+                                />
+                            }
+                            label={
+                                <Typography variant="body2" fontWeight="bold">
+                                    {currentStatus === 'present' ? 'Present' : 'Absent'}
+                                </Typography>
+                            }
+                            labelPlacement="start"
+                        />
+                    </Box>
+                </CardContent>
+            </Card>
+        );
+    };
+
     return (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: { xs: 2, sm: 3 }, maxWidth: '1400px', mx: 'auto' }}>
             {/* Header */}
             <Box sx={{ mb: 3 }}>
-                <Breadcrumbs sx={{ mb: 2 }}>
+                <Breadcrumbs sx={{ mb: 2, fontSize: { xs: '0.875rem', sm: '1rem' } }}>
                     <Link 
                         color="inherit" 
                         href="#" 
                         onClick={() => navigate(-1)}
-                        sx={{ display: 'flex', alignItems: 'center' }}
+                        sx={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
                     >
-                        <ArrowBack sx={{ mr: 0.5 }} fontSize="inherit" />
+                        <ArrowBack sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.25rem' } }} />
                         Back
                     </Link>
-                    <Typography color="text.primary">Mark Attendance</Typography>
+                    <Typography color="text.primary" sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}>
+                        Mark Attendance
+                    </Typography>
                 </Breadcrumbs>
 
-                <Typography variant="h4" gutterBottom>
+                <Typography variant={isMobile ? "h5" : "h4"} gutterBottom fontWeight="bold">
                     Mark Attendance
                 </Typography>
-                <Typography variant="h6" color="text.secondary">
+                <Typography variant={isMobile ? "body1" : "h6"} color="text.secondary">
                     {className} - {subjectName}
                 </Typography>
                 
                 {/* Teacher Info */}
-                <Box sx={{ mt: 2, display: 'flex', gap: 1, alignItems: 'center' }}>
+                <Stack direction={isMobile ? "column" : "row"} spacing={1} sx={{ mt: 2 }}>
                     <Chip 
-                        label={`Teacher: ${currentUser.name}`} 
+                        icon={<Person />}
+                        label={`${currentUser.name}`} 
                         color="primary" 
                         variant="outlined" 
-                        size="small" 
+                        size={isMobile ? "small" : "medium"}
                     />
                     <Chip 
-                        label={`Role: ${currentUser.role}`} 
+                        label={`${currentUser.role}`} 
                         color="secondary" 
                         variant="outlined" 
-                        size="small" 
+                        size={isMobile ? "small" : "medium"}
                     />
-                </Box>
+                </Stack>
             </Box>
 
             {/* Message Alert */}
             {message && (
-                <Alert severity={messageType} sx={{ mb: 3 }}>
+                <Alert severity={messageType} sx={{ mb: 3, fontSize: { xs: '0.875rem', sm: '1rem' } }}>
                     {message}
                 </Alert>
             )}
 
             {/* Session Selection */}
-            <Paper sx={{ p: 3, mb: 3 }}>
-                <Typography variant="h6" gutterBottom>
+            <Paper sx={{ p: { xs: 2, sm: 3 }, mb: 3 }}>
+                <Typography variant={isMobile ? "subtitle1" : "h6"} gutterBottom fontWeight="bold">
                     Session Details
                 </Typography>
-                <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
-                    <TextField
-                        label="Date"
-                        type="date"
-                        value={selectedDate}
-                        onChange={(e) => setSelectedDate(e.target.value)}
-                        InputLabelProps={{ shrink: true }}
-                        sx={{ minWidth: 200 }}
-                        disabled={submitting}
-                    />
-                    
-                    <FormControl sx={{ minWidth: 200 }}>
-                        <InputLabel>Session</InputLabel>
-                        <Select
-                            value={selectedSession}
-                            label="Session"
-                            onChange={(e) => setSelectedSession(e.target.value)}
+                <Grid container spacing={2} sx={{ mb: 2 }}>
+                    <Grid item xs={12} sm={6}>
+                        <TextField
+                            label="Date"
+                            type="date"
+                            value={selectedDate}
+                            onChange={(e) => setSelectedDate(e.target.value)}
+                            InputLabelProps={{ shrink: true }}
+                            fullWidth
                             disabled={submitting}
-                        >
-                            {sessions.map((session) => (
-                                <MenuItem key={session.value} value={session.value}>
-                                    {session.label}
-                                </MenuItem>
-                            ))}
-                        </Select>
-                    </FormControl>
-                </Box>
-
-                {/* Summary and Bulk Actions */}
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-                    <Typography variant="h6" sx={{ 
-                        display: 'flex',
-                        gap: 3
-                    }}>
-                        <span style={{ color: '#4CAF50', fontWeight: 'bold' }}>
-                            <CheckCircle sx={{ mr: 0.5, verticalAlign: 'middle' }} />
-                            Present: {summary.present}
-                        </span>
-                        <span style={{ color: '#F44336', fontWeight: 'bold' }}>
-                            <Cancel sx={{ mr: 0.5, verticalAlign: 'middle' }} />
-                            Absent: {summary.absent}
-                        </span>
-                        <span style={{ color: '#2196F3', fontWeight: 'bold' }}>
-                            Total: {students.length}
-                        </span>
-                    </Typography>
+                            size={isMobile ? "small" : "medium"}
+                        />
+                    </Grid>
                     
+                    <Grid item xs={12} sm={6}>
+                        <FormControl fullWidth size={isMobile ? "small" : "medium"}>
+                            <InputLabel>Session</InputLabel>
+                            <Select
+                                value={selectedSession}
+                                label="Session"
+                                onChange={(e) => setSelectedSession(e.target.value)}
+                                disabled={submitting}
+                            >
+                                {sessions.map((session) => (
+                                    <MenuItem key={session.value} value={session.value}>
+                                        {session.label}
+                                    </MenuItem>
+                                ))}
+                            </Select>
+                        </FormControl>
+                    </Grid>
+                </Grid>
 
-                </Box>
+                {/* Summary */}
+                <Paper 
+                    elevation={0} 
+                    sx={{ 
+                        p: 2, 
+                        backgroundColor: 'rgba(33, 150, 243, 0.08)',
+                        border: '1px solid rgba(33, 150, 243, 0.3)'
+                    }}
+                >
+                    <Grid container spacing={2}>
+                        <Grid item xs={4}>
+                            <Box sx={{ textAlign: 'center' }}>
+                                <CheckCircle sx={{ color: '#4CAF50', fontSize: { xs: '1.5rem', sm: '2rem' } }} />
+                                <Typography variant={isMobile ? "h6" : "h5"} fontWeight="bold" color="#4CAF50">
+                                    {summary.present}
+                                </Typography>
+                                <Typography variant="caption" color="text.secondary">
+                                    Present
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Box sx={{ textAlign: 'center' }}>
+                                <Cancel sx={{ color: '#F44336', fontSize: { xs: '1.5rem', sm: '2rem' } }} />
+                                <Typography variant={isMobile ? "h6" : "h5"} fontWeight="bold" color="#F44336">
+                                    {summary.absent}
+                                </Typography>
+                                <Typography variant="caption" color="text.secondary">
+                                    Absent
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Box sx={{ textAlign: 'center' }}>
+                                <Person sx={{ color: '#2196F3', fontSize: { xs: '1.5rem', sm: '2rem' } }} />
+                                <Typography variant={isMobile ? "h6" : "h5"} fontWeight="bold" color="#2196F3">
+                                    {students.length}
+                                </Typography>
+                                <Typography variant="caption" color="text.secondary">
+                                    Total
+                                </Typography>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Paper>
             </Paper>
 
             {/* Loading State */}
             {loading && (
-                <Box sx={{ display: 'flex', justifyContent: 'center', p: 4 }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', p: 4 }}>
                     <CircularProgress />
-                    <Typography sx={{ ml: 2 }}>Loading students...</Typography>
+                    <Typography sx={{ mt: 2 }}>Loading students...</Typography>
                 </Box>
             )}
 
-            {/* Students Table with Individual Controls */}
+            {/* Students List - Responsive View */}
             {!loading && students.length > 0 && (
-                <TableContainer component={Paper}>
-                    <Table>
-                        <TableHead>
-                            <TableRow>
-                                <TableCell sx={{ fontWeight: 'bold' }}>Student</TableCell>
-                                <TableCell align="center" sx={{ fontWeight: 'bold' }}>Attendance</TableCell>
-                                <TableCell align="center" sx={{ fontWeight: 'bold' }}>Status</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {students.map((student, index) => {
-                                const studentId = student._id || student.id || student.studentId || `student-${index}`;
-                                const currentStatus = attendance[studentId] || 'absent';
-                                
-                                return (
-                                    <TableRow key={studentId} sx={{ 
-                                        '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.04)' },
-                                        backgroundColor: currentStatus === 'present' ? 'rgba(76, 175, 80, 0.08)' : 'rgba(244, 67, 54, 0.08)'
-                                    }}>
-                                        <TableCell>
-                                            <Typography variant="body2" fontWeight="bold" component="span">
-                                                {student.rollNum}
-                                            </Typography>
-                                            <Typography variant="body2" component="span" sx={{ ml: 1 }}>
-                                                - {student.name}
-                                            </Typography>
-                                        </TableCell>
-                                        <TableCell align="center">
-                                            <FormControlLabel
-                                                control={
-                                                    <Switch
-                                                        checked={currentStatus === 'present'}
-                                                        onChange={(e) => {
-                                                            const newStatus = e.target.checked ? 'present' : 'absent';
-                                                            handleAttendanceChange(studentId, newStatus);
-                                                        }}
-                                                        disabled={submitting}
-                                                        sx={{
-                                                            '& .MuiSwitch-switchBase.Mui-checked': {
-                                                                color: '#4CAF50',
-                                                            },
-                                                            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-                                                                backgroundColor: '#4CAF50',
-                                                            },
-                                                        }}
-                                                    />
-                                                }
-                                                label={currentStatus === 'present' ? 'Present' : 'Absent'}
-                                                labelPlacement="start"
-                                            />
-                                        </TableCell>
-                                        <TableCell align="center">
-                                            <Chip
-                                                label={currentStatus.toUpperCase()}
-                                                color={currentStatus === 'present' ? 'success' : 'error'}
-                                                size="small"
-                                                variant="filled"
-                                            />
-                                        </TableCell>
+                <>
+                    {/* Mobile/Tablet Card View */}
+                    {isTablet ? (
+                        <Box>
+                            {students.map((student, index) => (
+                                <MobileStudentCard key={student._id || index} student={student} index={index} />
+                            ))}
+                        </Box>
+                    ) : (
+                        /* Desktop Table View */
+                        <TableContainer component={Paper}>
+                            <Table>
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell sx={{ fontWeight: 'bold' }}>Student</TableCell>
+                                        <TableCell align="center" sx={{ fontWeight: 'bold' }}>Attendance</TableCell>
+                                        <TableCell align="center" sx={{ fontWeight: 'bold' }}>Status</TableCell>
                                     </TableRow>
-                                );
-                            })}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
+                                </TableHead>
+                                <TableBody>
+                                    {students.map((student, index) => {
+                                        const studentId = student._id || student.id || student.studentId || `student-${index}`;
+                                        const currentStatus = attendance[studentId] || 'absent';
+                                        
+                                        return (
+                                            <TableRow key={studentId} sx={{ 
+                                                '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.04)' },
+                                                backgroundColor: currentStatus === 'present' ? 'rgba(76, 175, 80, 0.08)' : 'rgba(244, 67, 54, 0.08)'
+                                            }}>
+                                                <TableCell>
+                                                    <Typography variant="body2" fontWeight="bold" component="span">
+                                                        {student.rollNum}
+                                                    </Typography>
+                                                    <Typography variant="body2" component="span" sx={{ ml: 1 }}>
+                                                        - {student.name}
+                                                    </Typography>
+                                                </TableCell>
+                                                <TableCell align="center">
+                                                    <FormControlLabel
+                                                        control={
+                                                            <Switch
+                                                                checked={currentStatus === 'present'}
+                                                                onChange={(e) => {
+                                                                    const newStatus = e.target.checked ? 'present' : 'absent';
+                                                                    handleAttendanceChange(studentId, newStatus);
+                                                                }}
+                                                                disabled={submitting}
+                                                                sx={{
+                                                                    '& .MuiSwitch-switchBase.Mui-checked': {
+                                                                        color: '#4CAF50',
+                                                                    },
+                                                                    '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+                                                                        backgroundColor: '#4CAF50',
+                                                                    },
+                                                                }}
+                                                            />
+                                                        }
+                                                        label={currentStatus === 'present' ? 'Present' : 'Absent'}
+                                                        labelPlacement="start"
+                                                    />
+                                                </TableCell>
+                                                <TableCell align="center">
+                                                    <Chip
+                                                        label={currentStatus.toUpperCase()}
+                                                        color={currentStatus === 'present' ? 'success' : 'error'}
+                                                        size="small"
+                                                        variant="filled"
+                                                    />
+                                                </TableCell>
+                                            </TableRow>
+                                        );
+                                    })}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    )}
+                </>
             )}
 
-            {/* Submit Button */}
+            {/* Submit Button - Fixed at bottom on mobile */}
             {!loading && students.length > 0 && (
-                <Box sx={{ mt: 3, display: 'flex', justifyContent: 'center' }}>
+                <Box 
+                    sx={{ 
+                        mt: 3, 
+                        display: 'flex', 
+                        justifyContent: 'center',
+                        position: { xs: 'sticky', sm: 'static' },
+                        bottom: { xs: 0, sm: 'auto' },
+                        left: 0,
+                        right: 0,
+                        p: { xs: 2, sm: 0 },
+                        backgroundColor: { xs: 'background.paper', sm: 'transparent' },
+                        boxShadow: { xs: '0 -2px 10px rgba(0,0,0,0.1)', sm: 'none' },
+                        zIndex: { xs: 1000, sm: 'auto' }
+                    }}
+                >
                     <Button
                         variant="contained"
-                        size="large"
+                        size={isMobile ? "medium" : "large"}
                         onClick={handleSubmit}
                         disabled={submitting || !selectedSession}
+                        fullWidth={isMobile}
                         sx={{ 
-                            px: 4, 
-                            py: 1.5, 
-                            fontSize: '1.1rem',
+                            px: { xs: 3, sm: 4 }, 
+                            py: { xs: 1.5, sm: 1.5 }, 
+                            fontSize: { xs: '0.95rem', sm: '1.1rem' },
                             backgroundColor: '#4CAF50',
-                            '&:hover': { backgroundColor: '#45a049' }
+                            '&:hover': { backgroundColor: '#45a049' },
+                            fontWeight: 'bold'
                         }}
                     >
-                        {submitting ? 'Submitting...' : `Mark Attendance (${summary.present} Present, ${summary.absent} Absent)`}
+                        {submitting ? 'Submitting...' : isMobile ? 
+                            `Submit (${summary.present}P / ${summary.absent}A)` : 
+                            `Mark Attendance (${summary.present} Present, ${summary.absent} Absent)`
+                        }
                     </Button>
                 </Box>
+            )}
+
+            {/* Add bottom padding on mobile to prevent content being hidden by sticky button */}
+            {isMobile && !loading && students.length > 0 && (
+                <Box sx={{ height: '80px' }} />
             )}
         </Box>
     );

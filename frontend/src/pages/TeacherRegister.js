@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import {
     Button,
     Grid,
@@ -12,22 +12,43 @@ import {
     InputAdornment,
     CircularProgress,
     MenuItem,
+    Select,
     FormControl,
     InputLabel,
-    Select
+    FormHelperText // <-- Added this import
 } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import styled from 'styled-components';
 import bgpic from "../assets/designlogin.jpg";
 import { IndigoButton } from '../components/buttonStyles';
 import Popup from '../components/Popup';
 import api from '../api/axiosConfig';
 
-const defaultTheme = createTheme();
+// --- DESIGN SYNC: Copied theme from LoginPage ---
+const usArSamvadTheme = createTheme({
+    palette: {
+        primary: {
+            main: '#2176FF', // Light Blue (Primary Accent)
+            dark: '#0f2b6e', // Dark Blue (Primary Dark)
+        },
+        secondary: {
+            main: '#33A1FD', // A lighter blue accent
+        },
+        background: {
+            default: '#f4f7f9',
+            paper: '#ffffff',
+        },
+    },
+    typography: {
+        fontFamily: 'Roboto, sans-serif',
+    },
+});
 
 const TeacherRegister = () => {
     const navigate = useNavigate();
 
+    // --- All of your existing logic is preserved ---
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -43,21 +64,29 @@ const TeacherRegister = () => {
     const [showPopup, setShowPopup] = useState(false);
     const [message, setMessage] = useState('');
     const [errors, setErrors] = useState({});
+    const [schoolLoading, setSchoolLoading] = useState(true); // Added this state
 
     // Fetch schools on component mount
     useEffect(() => {
+        const fetchSchools = async () => {
+            setSchoolLoading(true); // Set loading true at the start
+            try {
+                const response = await api.get('/Schools');
+                const schoolData = response.data.schools || response.data;
+                if (Array.isArray(schoolData) && schoolData.length > 0) {
+                    setSchools(schoolData);
+                } else {
+                    setErrors(prev => ({ ...prev, school: "No schools found." }));
+                }
+            } catch (err) {
+                setErrors(prev => ({ ...prev, school: "Error loading schools." }));
+                console.error("Error fetching schools:", err);
+            } finally {
+                setSchoolLoading(false); // Set loading false at the end
+            }
+        };
         fetchSchools();
     }, []);
-
-    const fetchSchools = async () => {
-        try {
-            const response = await api.get('/schools'); // Adjust endpoint as needed
-            console.log('Fetched schools:', response.data);
-            setSchools(response.data || []);
-        } catch (error) {
-            console.error('Error fetching schools:', error);
-        }
-    };
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -65,11 +94,10 @@ const TeacherRegister = () => {
             ...prev,
             [name]: value
         }));
-        // Clear error when user starts typing
         if (errors[name]) {
             setErrors(prev => ({
                 ...prev,
-                [name]: false
+                [name]: '' // Clear error string
             }));
         }
     };
@@ -93,14 +121,10 @@ const TeacherRegister = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         if (!validateForm()) return;
-
         setLoading(true);
-
         try {
             const response = await api.post('/TeacherReg', formData);
-
             if (response.data.success) {
                 setMessage('Registration successful! You can now login.');
                 setShowPopup(true);
@@ -118,19 +142,107 @@ const TeacherRegister = () => {
             setLoading(false);
         }
     };
+    // --- End of existing logic ---
+
+
+    // --- DESIGN SYNC: Copied MobileBranding from LoginPage ---
+    const MobileBranding = () => (
+        <Box 
+            sx={{
+                display: { xs: 'flex', sm: 'none' }, // Show only on mobile
+                flexDirection: 'column',
+                alignItems: 'center',
+                mb: 4,
+                pt: 2,
+            }}
+        >
+            <Typography
+                variant="h4"
+                sx={{
+                    fontWeight: 900,
+                    letterSpacing: 2,
+                    fontSize: "2rem",
+                    mb: 0.5,
+                    background: 'linear-gradient(90deg, #2176FF, #33A1FD)',
+                    backgroundClip: 'text',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                }}
+            >
+                USAR Samvad
+            </Typography>
+            <Typography
+                variant="subtitle1"
+                sx={{
+                    fontWeight: 400,
+                    fontSize: "0.9rem",
+                    color: usArSamvadTheme.palette.primary.dark,
+                    opacity: 0.76,
+                    letterSpacing: 1.5,
+                }}
+            >
+                powered by IoSC EDC
+            </Typography>
+        </Box>
+    );
 
     return (
-        <ThemeProvider theme={defaultTheme}>
+        // --- DESIGN SYNC: Use usArSamvadTheme ---
+        <ThemeProvider theme={usArSamvadTheme}>
             <Grid container component="main" sx={{ height: '100vh' }}>
                 <CssBaseline />
-                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{ overflowY: 'auto' }}>
-                    <Box sx={{ my: 8, mx: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <Typography variant="h4" sx={{ mb: 2, color: "#2c2143" }}>
+
+                {/* --- DESIGN SYNC: Left Side (Form) --- */}
+                <Grid item xs={12} sm={7} md={5}
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        background: usArSamvadTheme.palette.primary.dark, 
+                        boxShadow: { md: 6 },
+                    }}
+                >
+                    {/* --- DESIGN SYNC: White Form Box --- */}
+                    <Box
+                        sx={{
+                            width: { xs: "90%", sm: 400 },
+                            backgroundColor: "rgba(255,255,255,0.95)",
+                            borderRadius: 4,
+                            boxShadow: 5,
+                            px: { xs: 2, sm: 4 },
+                            py: { xs: 3, sm: 4 }, 
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            maxHeight: { xs: '95vh', sm: 'auto' },
+                            overflowY: { xs: 'auto', sm: 'hidden' }
+                        }}
+                    >
+                        
+                        <MobileBranding />
+
+                        {/* --- DESIGN SYNC: Styled Title --- */}
+                        <Typography
+                            variant="h5"
+                            sx={{
+                                mb: 1,
+                                fontWeight: 800,
+                                color: usArSamvadTheme.palette.primary.dark,
+                                letterSpacing: 1,
+                            }}
+                        >
                             Teacher Registration
                         </Typography>
-                        <Typography variant="h7">Create your teacher account to get started</Typography>
-
-                        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 2 }}>
+                        
+                        {/* --- DESIGN SYNC: Styled Subtitle --- */}
+                        <Typography
+                            variant="body2"
+                            sx={{ mb: 1, color: usArSamvadTheme.palette.primary.main, fontWeight: 500 }}
+                        >
+                            Create your teacher account
+                        </Typography>
+                        
+                        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ width: "100%", mt: 1 }}>
                             <TextField
                                 margin="normal"
                                 required
@@ -144,8 +256,9 @@ const TeacherRegister = () => {
                                 onChange={handleInputChange}
                                 error={!!errors.name}
                                 helperText={errors.name}
+                                size="small"
                             />
-
+                            
                             <TextField
                                 margin="normal"
                                 required
@@ -158,6 +271,7 @@ const TeacherRegister = () => {
                                 onChange={handleInputChange}
                                 error={!!errors.email}
                                 helperText={errors.email}
+                                size="small"
                             />
 
                             <TextField
@@ -173,6 +287,7 @@ const TeacherRegister = () => {
                                 onChange={handleInputChange}
                                 error={!!errors.password}
                                 helperText={errors.password}
+                                size="small"
                                 InputProps={{
                                     endAdornment: (
                                         <InputAdornment position="end">
@@ -188,7 +303,7 @@ const TeacherRegister = () => {
                                 }}
                             />
 
-                            <FormControl fullWidth margin="normal" required error={!!errors.school}>
+                            <FormControl fullWidth margin="normal" required error={!!errors.school} size="small">
                                 <InputLabel id="school-label">School</InputLabel>
                                 <Select
                                     labelId="school-label"
@@ -197,14 +312,24 @@ const TeacherRegister = () => {
                                     value={formData.school}
                                     label="School"
                                     onChange={handleInputChange}
+                                    disabled={schoolLoading}
                                 >
-                                    {schools.map((school) => (
-                                        <MenuItem key={school._id} value={school._id}>
-                                            {school.schoolName || school.name}
+                                    {schoolLoading ? (
+                                        <MenuItem value="" disabled>
+                                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                                <CircularProgress size={20} />
+                                                <Typography variant="body2">Loading schools...</Typography>
+                                            </Box>
                                         </MenuItem>
-                                    ))}
+                                    ) : (
+                                        schools.map((school) => (
+                                            <MenuItem key={school._id} value={school._id}>
+                                                {school.schoolName || school.name}
+                                            </MenuItem>
+                                        ))
+                                    )}
                                 </Select>
-                                {errors.school && <Typography variant="caption" color="error">{errors.school}</Typography>}
+                                {errors.school && <FormHelperText>{errors.school}</FormHelperText>}
                             </FormControl>
 
                             <TextField
@@ -216,55 +341,122 @@ const TeacherRegister = () => {
                                 value={formData.department}
                                 onChange={handleInputChange}
                                 placeholder="e.g., Mathematics, Science"
+                                size="small"
                             />
 
+                            {/* --- DESIGN SYNC: Styled Button --- */}
                             <IndigoButton
                                 type="submit"
                                 fullWidth
                                 variant="contained"
-                                sx={{ mt: 3, mb: 2 }}
-                                disabled={loading}
+                                sx={{
+                                    mt: 3,
+                                    height: 46,
+                                    fontWeight: 700,
+                                    fontSize: '1rem',
+                                    borderRadius: 2,
+                                    background: `linear-gradient(90deg, ${usArSamvadTheme.palette.primary.main} 40%, ${usArSamvadTheme.palette.secondary.main} 100%)`,
+                                    '&:hover': {
+                                        background: usArSamvadTheme.palette.primary.dark,
+                                    },
+                                    boxShadow: '0 4px 10px rgba(33, 118, 255, 0.4)',
+                                }}
+                                disabled={loading || schoolLoading}
                             >
                                 {loading ? <CircularProgress size={24} color="inherit" /> : 'Register'}
                             </IndigoButton>
 
-                            <Grid container justifyContent="center">
-                                <Grid item>
-                                    <Button
-                                        onClick={() => navigate('/Teacher/login')}
-                                        sx={{ color: '#2c2143' }}
-                                    >
-                                        Already have an account? Sign In
-                                    </Button>
-                                </Grid>
-                            </Grid>
+                            {/* --- DESIGN SYNC: Styled Link --- */}
+                            <Box sx={{ textAlign: 'center', mt: 2 }}>
+                                <Typography variant="body2" color="text.secondary">
+                                    Already have an account? 
+                                    <StyledLink to="/Teacher/login">
+                                        &nbsp;Sign In
+                                    </StyledLink>
+                                </Typography>
+                            </Box>
                         </Box>
                     </Box>
                 </Grid>
-
-                <Grid item xs={false} sm={4} md={7} sx={{
-                    backgroundImage: `linear-gradient(rgba(25, 118, 210, 0.6), rgba(25, 118, 210, 0.6)), url(${bgpic})`,
-                    backgroundRepeat: 'no-repeat',
-                    backgroundColor: '#1976d2',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: '#fff',
-                    textAlign: 'center',
-                    padding: 4
-                }}>
+                
+                {/* --- DESIGN SYNC: Right Side (Banner) --- */}
+                <Grid
+                    item
+                    xs={false}
+                    sm={5}
+                    md={7}
+                    sx={{
+                        backgroundImage: `linear-gradient(135deg, ${usArSamvadTheme.palette.primary.dark} 70%, #1b263b 100%), url(${bgpic})`,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        display: { xs: 'none', sm: 'flex' },
+                        flexDirection: "column",
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: '#fff',
+                        textAlign: 'center',
+                        px: { xs: 2, sm: 7 },
+                    }}
+                >
                     <Box>
-                        <Typography variant="h4" fontWeight="bold" gutterBottom>Join Our Faculty</Typography>
-                        <Typography variant="subtitle1">"Empowering minds, shaping futures — where great teachers make the difference."</Typography>
+                        <Typography
+                            variant="h2"
+                            sx={{
+                                fontWeight: 900,
+                                letterSpacing: 3,
+                                fontSize: { xs: "2rem", sm: "2.7rem", md: "3.3rem" },
+                                mb: 1,
+                                background: 'linear-gradient(90deg, #2176FF, #33A1FD)',
+                                backgroundClip: 'text',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                textShadow: "0 2px 16px rgba(60,100,200,0.27)"
+                            }}
+                        >
+                            USAR Samvad
+                        </Typography>
+                        <Typography
+                            variant="h6"
+                            sx={{
+                                fontWeight: 400,
+                                fontSize: "1.05rem",
+                                color: "#fff",
+                                opacity: 0.84,
+                                letterSpacing: 2,
+                                mb: 4
+                            }}
+                        >
+                            powered by IoSC EDC
+                        </Typography>
+                        <Typography
+                            variant="h4"
+                            fontWeight="bold"
+                            gutterBottom
+                            sx={{ color: "#fff", mb: 2, textShadow: "0 1px 8px rgba(0,0,0,0.13)" }}
+                        >
+                            Join Our Faculty
+                        </Typography>
+                        <Typography variant="subtitle1" sx={{ color: "#d7efff", fontSize: "1.1rem", opacity: 0.76 }}>
+                            "Empowering minds, shaping futures — where great teachers make the difference."
+                        </Typography>
                     </Box>
                 </Grid>
             </Grid>
-
             <Popup message={message} setShowPopup={setShowPopup} showPopup={showPopup} />
         </ThemeProvider>
     );
 };
 
 export default TeacherRegister;
+
+// --- DESIGN SYNC: Copied StyledLink from LoginPage ---
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: ${usArSamvadTheme.palette.primary.main}; 
+    font-weight: 600;
+    transition: color 0.3s;
+    &:hover {
+        color: ${usArSamvadTheme.palette.primary.dark};
+    }
+`;

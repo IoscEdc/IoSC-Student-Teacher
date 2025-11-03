@@ -31,7 +31,7 @@ const AdminHomePage = () => {
 
     const numberOfStudents = studentsList && studentsList.length;
     const numberOfClasses = sclassesList && sclassesList.length;
-    const numberOfTeachers = teachersList && teachersList.count;
+    const numberOfTeachers = teachersList && teachersList.length;
 
     // --- Brand Colors (consistent with other pages) ---
     const brandDark = '#0f2b6e';

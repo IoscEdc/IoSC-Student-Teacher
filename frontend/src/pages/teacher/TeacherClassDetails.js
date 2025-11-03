@@ -1,55 +1,136 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { getClassStudents } from "../../redux/sclassRelated/sclassHandle";
+import { useNavigate, useParams } from 'react-router-dom';
 import {
     Paper,
     Box,
     Typography,
-    ButtonGroup,
     Button,
-    Popper,
-    Grow,
-    ClickAwayListener,
-    MenuList,
-    MenuItem,
     Card,
     CardContent,
     Grid,
-    Chip
+    CircularProgress,
+    styled,
 } from '@mui/material';
-import { BlackButton, BlueButton, GreenButton } from "../../components/buttonStyles";
+import { BlueButton, GreenButton } from "../../components/buttonStyles";
 import TableTemplate from "../../components/TableTemplate";
-import { KeyboardArrowDown, KeyboardArrowUp, Groups, History } from "@mui/icons-material";
+import { Groups, History } from "@mui/icons-material"; 
+import { getClassDetails, getClassStudents, getSubjectDetails } from "../../redux/sclassRelated/sclassHandle";
+
+// --- Styled Components ---
+const HeaderCard = styled(Card)(({ theme }) => ({
+    marginBottom: theme.spacing(3),
+    padding: theme.spacing(2),
+    background: 'linear-gradient(135deg, #0f2b6e 0%, #2176FF 100%)',
+    color: 'white',
+    borderRadius: '16px',
+    boxShadow: '0 8px 24px rgba(33, 118, 255, 0.3)',
+}));
+
+const InfoBox = styled(Box)({
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '4px',
+});
+
+const InfoLabel = styled(Typography)(({ theme }) => ({
+    fontSize: '0.875rem',
+    color: 'rgba(255, 255, 255, 0.7)',
+    fontWeight: 500,
+    textTransform: 'uppercase',
+}));
+
+const InfoValue = styled(Typography)(({ theme }) => ({
+    fontSize: '1.5rem',
+    fontWeight: 700,
+    color: 'white',
+    [theme.breakpoints.down('sm')]: {
+        fontSize: '1.25rem',
+    },
+}));
+
+const ActionsBox = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    gap: theme.spacing(2),
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+        justifyContent: 'flex-start',
+        marginTop: theme.spacing(2),
+        flexWrap: 'wrap',
+    },
+}));
+
+const StyledPaper = styled(Paper)(({ theme }) => ({
+    borderRadius: '16px',
+    overflow: 'hidden',
+    border: '1px solid rgba(0, 0, 0, 0.12)',
+}));
 
 const TeacherClassDetails = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { sclassStudents, loading, error, getresponse } = useSelector((state) => state.sclass);
+    const { classId } = useParams(); 
+    
+    const { sclassStudents, sclassDetails, loading, error, getresponse } = useSelector((state) => state.sclass);
     const { currentUser } = useSelector((state) => state.user);
 
-    // State for selected assignment
-    const [selectedAssignment, setSelectedAssignment] = useState(null);
-    const [selectedIndex, setSelectedIndex] = useState('');
+    // Get the assignment for this class
+    const assignment = currentUser.assignedSubjects?.find(
+        (item) => item.classId?._id === classId
+    );
 
-    // Fetch students when assignment is selected
-    // Note: You'll need to modify this based on how your backend fetches students
-    // For now, I'm commenting it out since we need class ID, not just className
-    // useEffect(() => {
-    //     if (selectedAssignment) {
-    //         // You might need to fetch class by className or modify your backend
-    //         dispatch(getClassStudents(selectedAssignment.className));
-    //     }
-    // }, [dispatch, selectedAssignment]);
+    const subjectID = assignment?.subjectId?._id;
+    const subjectName = assignment?.subjectId?.subName || '...';
+    
+    useEffect(() => {
+        if (classId && subjectID) {
+            dispatch(getClassDetails(classId, "Sclass"));
+            dispatch(getSubjectDetails(subjectID, "Subject"));
+            dispatch(getClassStudents(classId));
+        }
+    }, [dispatch, classId, subjectID]);
 
-    if (error) {
-        console.log(error);
-    }
+    const studentCount = sclassStudents?.length || 0;
+    const className = sclassDetails?.sclassName || '...';
+
+    // Navigation handlers with class and subject context
+    const handleMarkAttendance = () => {
+        if (classId && subjectID) {
+            // Navigate to attendance marking with class and subject IDs
+            navigate('/Teacher/attendance/mark', { 
+                state: { 
+                    classId, 
+                    subjectId: subjectID,
+                    className,
+                    subjectName
+                } 
+            });
+        } else {
+            alert('Class or Subject information is missing');
+        }
+    };
+
+    const handleViewHistory = () => {
+        if (classId && subjectID) {
+            // Navigate to attendance history with class and subject IDs
+            navigate('/Teacher/attendance/history', { 
+                state: { 
+                    classId, 
+                    subjectId: subjectID,
+                    className,
+                    subjectName
+                } 
+            });
+        } else {
+            alert('Class or Subject information is missing');
+        }
+    };
 
     const studentColumns = [
-        { id: 'name', label: 'Name', minWidth: 170 },
-        { id: 'rollNum', label: 'Roll Number', minWidth: 100 },
+        { id: 'name', label: 'Name' },
+        { id: 'rollNum', label: 'Roll Number' },
     ];
 
     const studentRows = sclassStudents && Array.isArray(sclassStudents) ? sclassStudents.map((student) => {
@@ -61,250 +142,100 @@ const TeacherClassDetails = () => {
     }) : [];
 
     const StudentsButtonHaver = ({ row }) => {
-        const options = ['Take Attendance', 'Provide Marks'];
-
-        const [open, setOpen] = React.useState(false);
-        const anchorRef = React.useRef(null);
-        const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-        const handleClick = () => {
-            if (selectedIndex === 0) {
-                handleAttendance();
-            } else if (selectedIndex === 1) {
-                handleMarks();
-            }
-        };
-
-        const handleAttendance = () => {
-            if (selectedAssignment) {
-                // Navigate with subject code or subject name
-                navigate(`/Teacher/class/student/attendance/${row.id}/${selectedAssignment.subjectcode}`);
-            }
-        };
-
-        const handleMarks = () => {
-            if (selectedAssignment) {
-                navigate(`/Teacher/class/student/marks/${row.id}/${selectedAssignment.subjectcode}`);
-            }
-        };
-
-        const handleMenuItemClick = (event, index) => {
-            setSelectedIndex(index);
-            setOpen(false);
-        };
-
-        const handleToggle = () => {
-            setOpen((prevOpen) => !prevOpen);
-        };
-
-        const handleClose = (event) => {
-            if (anchorRef.current && anchorRef.current.contains(event.target)) {
-                return;
-            }
-            setOpen(false);
-        };
-
-        return (
-            <>
-                <BlueButton
-                    variant="contained"
-                    onClick={() => navigate("/Teacher/class/student/" + row.id)}
-                >
-                    View
-                </BlueButton>
-                <React.Fragment>
-                    <ButtonGroup variant="contained" ref={anchorRef} aria-label="split button">
-                        <Button onClick={handleClick}>{options[selectedIndex]}</Button>
-                        <BlackButton
-                            size="small"
-                            aria-controls={open ? 'split-button-menu' : undefined}
-                            aria-expanded={open ? 'true' : undefined}
-                            aria-label="select merge strategy"
-                            aria-haspopup="menu"
-                            onClick={handleToggle}
-                        >
-                            {open ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-                        </BlackButton>
-                    </ButtonGroup>
-                    <Popper
-                        sx={{ zIndex: 1 }}
-                        open={open}
-                        anchorEl={anchorRef.current}
-                        role={undefined}
-                        transition
-                        disablePortal
-                    >
-                        {({ TransitionProps, placement }) => (
-                            <Grow
-                                {...TransitionProps}
-                                style={{
-                                    transformOrigin:
-                                        placement === 'bottom' ? 'center top' : 'center bottom',
-                                }}
-                            >
-                                <Paper>
-                                    <ClickAwayListener onClickAway={handleClose}>
-                                        <MenuList id="split-button-menu" autoFocusItem>
-                                            {options.map((option, index) => (
-                                                <MenuItem
-                                                    key={option}
-                                                    selected={index === selectedIndex}
-                                                    onClick={(event) => handleMenuItemClick(event, index)}
-                                                >
-                                                    {option}
-                                                </MenuItem>
-                                            ))}
-                                        </MenuList>
-                                    </ClickAwayListener>
-                                </Paper>
-                            </Grow>
-                        )}
-                    </Popper>
-                </React.Fragment>
-            </>
-        );
+        return null;
     };
 
     return (
-        <>
-            <Typography variant="h4" align="center" gutterBottom>
-                My Classes
-            </Typography>
-
-            {/* Display all assignments as cards */}
-            {currentUser.assignments && currentUser.assignments.length > 0 ? (
-                <Grid container spacing={3} sx={{ mb: 4 }}>
-                    {currentUser.assignments.map((assignment, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Card
-                                sx={{
-                                    cursor: 'pointer',
-                                    border: selectedIndex === index ? '2px solid #1976d2' : '1px solid #e0e0e0',
-                                    transition: 'all 0.3s',
-                                    '&:hover': {
-                                        boxShadow: 6,
-                                        transform: 'translateY(-4px)'
-                                    }
-                                }}
-                                onClick={() => {
-                                    setSelectedAssignment(assignment);
-                                    setSelectedIndex(index);
-                                    // You still need to trigger the student fetch here.
-                                    // Uncomment the useEffect or dispatch the action directly.
-                                    // For example:
-                                    // dispatch(getClassStudents(assignment.className)); 
-                                }}
-                            >
-                                <CardContent>
-                                    <Typography variant="h6" gutterBottom color="primary">
-                                        {assignment.subject}
-                                    </Typography>
-                                    <Chip
-                                        label={assignment.subjectcode}
-                                        size="small"
-                                        color="primary"
-                                        variant="outlined"
-                                        sx={{ mb: 1 }}
-                                    />
-                                    <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-                                        <strong>Class:</strong> {assignment.className}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        <strong>Batch:</strong> {assignment.batch}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            ) : (
-                <Box sx={{ textAlign: 'center', py: 4 }}>
-                    <Typography variant="h6" color="text.secondary">
-                        No classes assigned yet
-                    </Typography>
+        <Box sx={{ p: { xs: 1, sm: 2 } }}>
+            {loading ? (
+                <Box sx={{ display: 'flex', justifyContent: 'center', my: 3 }}>
+                    <CircularProgress />
                 </Box>
-            )}
-
-            {/* Selected Class Details */}
-            {selectedAssignment && (
-                <Paper sx={{ p: 3, mb: 3, bgcolor: '#f5f5f5' }}>
-                    <Typography variant="h5" gutterBottom>
-                        Selected Class Details
-                    </Typography>
-                    <Grid container spacing={2}>
-                        <Grid item xs={12} sm={6}>
-                            <Typography variant="body1">
-                                <strong>Subject:</strong> {selectedAssignment.subject}
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <Typography variant="body1">
-                                <strong>Subject Code:</strong> {selectedAssignment.subjectcode}
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <Typography variant="body1">
-                                <strong>Class:</strong> {selectedAssignment.className}
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <Typography variant="body1">
-                                <strong>Batch:</strong> {selectedAssignment.batch}
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </Paper>
-            )}
-
-            {/* Students List - Renders after a class is selected */}
-            {selectedAssignment && (
+            ) : (
                 <>
-                    {loading ? (
-                        <div>Loading...</div>
-                    ) : (
-                        <>
-                            {/* New Attendance Interface Buttons */}
-                            <Box sx={{ display: 'flex', gap: 2, mb: 3, justifyContent: 'flex-end' }}>
-                                <GreenButton
-                                    variant="contained"
-                                    startIcon={<Groups />}
-                                    onClick={() => navigate('/Teacher/attendance/mark')}
-                                >
-                                    Mark Class Attendance
-                                </GreenButton>
-                                <BlueButton
-                                    variant="contained"
-                                    startIcon={<History />}
-                                    onClick={() => navigate('/Teacher/attendance/history')}
-                                >
-                                    View Attendance History
-                                </BlueButton>
+                    {/* Header Card */}
+                    <HeaderCard elevation={4}>
+                        <Grid container spacing={2} alignItems="center">
+                            <Grid item xs={12} md={6}>
+                                <Grid container spacing={3}>
+                                    <Grid item xs={12} sm={6}>
+                                        <InfoBox>
+                                            <InfoLabel>Class</InfoLabel>
+                                            <InfoValue>{className}</InfoValue>
+                                        </InfoBox>
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <InfoBox>
+                                            <InfoLabel>Subject</InfoLabel>
+                                            <InfoValue>{subjectName}</InfoValue>
+                                        </InfoBox>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <ActionsBox>
+                                    <GreenButton
+                                        variant="contained"
+                                        startIcon={<Groups />}
+                                        onClick={handleMarkAttendance}
+                                        sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
+                                    >
+                                        Mark Attendance
+                                    </GreenButton>
+                                    <BlueButton
+                                        variant="contained"
+                                        startIcon={<History />}
+                                        onClick={handleViewHistory}
+                                        sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
+                                    >
+                                        View History
+                                    </BlueButton>
+                                </ActionsBox>
+                            </Grid>
+                        </Grid>
+                    </HeaderCard>
+                    
+                    {/* Student Table */}
+                    <StyledPaper>
+                        <Typography 
+                            variant="h5" 
+                            gutterBottom 
+                            sx={{ 
+                                p: 2, 
+                                pb: 0, 
+                                fontWeight: 700, 
+                                color: '#0f2b6e',
+                                fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                            }}
+                        >
+                            Students List ({studentCount})
+                        </Typography>
+                        
+                        {getresponse ? (
+                            <Box sx={{ p: 3, textAlign: 'center' }}>
+                                <Typography variant="h6" color="text.secondary">
+                                    No Students Found in this Class.
+                                </Typography>
                             </Box>
-
-                            {/* This logic is from the original HEAD branch */}
-                            {getresponse ? (
-                                <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
-                                    No Students Found
-                                </Box>
+                        ) : (
+                            Array.isArray(sclassStudents) && sclassStudents.length > 0 ? (
+                                <TableTemplate 
+                                    buttonHaver={StudentsButtonHaver} 
+                                    columns={studentColumns} 
+                                    rows={studentRows} 
+                                />
                             ) : (
-                                <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-                                    <Typography variant="h5" gutterBottom sx={{ p: 2, pb: 0 }}>
-                                        Students List:
+                                <Box sx={{ p: 3, textAlign: 'center' }}>
+                                    <Typography variant="body1" color="text.secondary">
+                                        No students found.
                                     </Typography>
-                                    {Array.isArray(sclassStudents) && sclassStudents.length > 0 ? (
-                                        <TableTemplate buttonHaver={StudentsButtonHaver} columns={studentColumns} rows={studentRows} />
-                                    ) : (
-                                        <Typography variant="body1" sx={{ p: 2 }}>
-                                            No students in this class.
-                                        </Typography>
-                                    )}
-                                </Paper>
-                            )}
-                        </>
-                    )}
+                                </Box>
+                            )
+                        )}
+                    </StyledPaper>
                 </>
             )}
-        </>
+        </Box>
     );
 };
 

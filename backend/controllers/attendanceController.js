@@ -605,6 +605,7 @@ const getBulkOperationStats = async (req, res) => {
  * Get student attendance summary
  */
 const getStudentSummary = async (req, res) => {
+    console.log('req',req);
     try {
         const { studentId } = req.params;
         
